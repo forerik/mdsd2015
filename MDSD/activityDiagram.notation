@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cf2SsIt7EeWuJKZGLyKm7w" type="PapyrusUMLActivityDiagram" name="Activity Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_cf2SsYt7EeWuJKZGLyKm7w" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_cf2Ssot7EeWuJKZGLyKm7w" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_cf2Ss4t7EeWuJKZGLyKm7w" type="5002"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_cf2StIt7EeWuJKZGLyKm7w" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cf2StYt7EeWuJKZGLyKm7w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cf2Stot7EeWuJKZGLyKm7w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cf2St4t7EeWuJKZGLyKm7w"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_cf2SuIt7EeWuJKZGLyKm7w" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cf2SuYt7EeWuJKZGLyKm7w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cf2Suot7EeWuJKZGLyKm7w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cf2Su4t7EeWuJKZGLyKm7w"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_cf2SvIt7EeWuJKZGLyKm7w" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cf2SvYt7EeWuJKZGLyKm7w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cf2Svot7EeWuJKZGLyKm7w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cf2Sv4t7EeWuJKZGLyKm7w"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_cf2SwIt7EeWuJKZGLyKm7w" type="7004">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cf2SwYt7EeWuJKZGLyKm7w"/>
+    </children>
+    <element xmi:type="uml:Activity" href="activityDiagram.uml#_cc5FUIt7EeWuJKZGLyKm7w"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cf2Swot7EeWuJKZGLyKm7w" width="316" height="253"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_cf2Sw4t7EeWuJKZGLyKm7w" name="diagram_compatibility_version" stringValue="1.1.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_cf2SxIt7EeWuJKZGLyKm7w"/>
+  <styles xmi:type="style:PapyrusViewStyle" xmi:id="_cf2SxYt7EeWuJKZGLyKm7w">
+    <owner xmi:type="uml:Model" href="activityDiagram.uml#_cZLC8It7EeWuJKZGLyKm7w"/>
+  </styles>
+  <element xmi:type="uml:Activity" href="activityDiagram.uml#_cc5FUIt7EeWuJKZGLyKm7w"/>
+</notation:Diagram>
