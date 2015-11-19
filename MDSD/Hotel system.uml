@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cZLC8It7EeWuJKZGLyKm7w" name="RootElement">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_r0FGII66EeWxlOh2fo_7kA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
   <packagedElement xmi:type="uml:Activity" xmi:id="_cc5FUIt7EeWuJKZGLyKm7w" name="Booking" node="_7NDxUI0EEeWp3bWgDtnSXw __Ql5sI4sEeWpV8VnqXxBKg _TZwnYI4tEeWpV8VnqXxBKg _OeNd8I4uEeWpV8VnqXxBKg _7MxNAI4uEeWpV8VnqXxBKg _SiReYI4wEeWpV8VnqXxBKg _jK7SsI4wEeWpV8VnqXxBKg _wPWLQI4wEeWpV8VnqXxBKg _8lxVYI4wEeWpV8VnqXxBKg _-_GkQI4wEeWpV8VnqXxBKg _GM7c4I4xEeWpV8VnqXxBKg _cSAdoI4xEeWpV8VnqXxBKg _lTRCwI4xEeWpV8VnqXxBKg _H98PcI6dEeW8f6BALQlNMg _MKQe4I6dEeW8f6BALQlNMg _X14YgI6dEeW8f6BALQlNMg" group="_3PRKwI4wEeWpV8VnqXxBKg _MffAEI4xEeWpV8VnqXxBKg">
     <ownedBehavior xmi:type="uml:Activity" xmi:id="_mGqycI4tEeWpV8VnqXxBKg" name="Available rooms" node="_xhvuoI4tEeWpV8VnqXxBKg _c5FzII4uEeWpV8VnqXxBKg _kx6wkI4uEeWpV8VnqXxBKg _OFYcUI4wEeWpV8VnqXxBKg _9Sq3oI4wEeWpV8VnqXxBKg _-G04cI4wEeWpV8VnqXxBKg" group="_sswDsI4vEeWpV8VnqXxBKg">
       <edge xmi:type="uml:ControlFlow" xmi:id="_gr7LkI4uEeWpV8VnqXxBKg" target="_c5FzII4uEeWpV8VnqXxBKg" source="_xhvuoI4tEeWpV8VnqXxBKg"/>
