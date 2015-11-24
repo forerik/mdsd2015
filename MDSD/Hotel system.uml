@@ -60,4 +60,11 @@
     <node xmi:type="uml:OpaqueAction" xmi:id="_MKQe4I6dEeW8f6BALQlNMg" name="Payment" incoming="_OstNgI6dEeW8f6BALQlNMg" outgoing="_RYfeUI6dEeW8f6BALQlNMg"/>
     <node xmi:type="uml:MergeNode" xmi:id="_X14YgI6dEeW8f6BALQlNMg" name="" incoming="_RYfeUI6dEeW8f6BALQlNMg _dUhLcI6dEeW8f6BALQlNMg" outgoing="_gsjeQI6dEeW8f6BALQlNMg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_j1QZoJKEEeW9h7ibhzFKTA" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_z1e_MJKIEeW9h7ibhzFKTA" name="Guest"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2tlNsJKIEeW9h7ibhzFKTA" name="SingleRoom">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_345U0JKJEeW9h7ibhzFKTA" client="_2tlNsJKIEeW9h7ibhzFKTA" supplier="_RBQ84JKJEeW9h7ibhzFKTA" contract="_RBQ84JKJEeW9h7ibhzFKTA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Lbg1UJKJEeW9h7ibhzFKTA" name="Booking"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_RBQ84JKJEeW9h7ibhzFKTA" name="Room"/>
 </uml:Model>
