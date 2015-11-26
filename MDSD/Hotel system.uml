@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cZLC8It7EeWuJKZGLyKm7w" name="RootElement">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cZLC8It7EeWuJKZGLyKm7w" name="RootElement">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_r0FGII66EeWxlOh2fo_7kA">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -61,10 +61,48 @@
     <node xmi:type="uml:MergeNode" xmi:id="_X14YgI6dEeW8f6BALQlNMg" name="" incoming="_RYfeUI6dEeW8f6BALQlNMg _dUhLcI6dEeW8f6BALQlNMg" outgoing="_gsjeQI6dEeW8f6BALQlNMg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_j1QZoJKEEeW9h7ibhzFKTA" name="Interaction1"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_z1e_MJKIEeW9h7ibhzFKTA" name="Guest"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_z1e_MJKIEeW9h7ibhzFKTA" name="Guest">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4h7G4JKNEeWP5cy1qBGqJw" name="Name" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DO2joJKOEeWP5cy1qBGqJw" name="Adress" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Ga9TQJKOEeWP5cy1qBGqJw" name="setAdress"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OnTCkJKOEeWP5cy1qBGqJw" name="setAdress"/>
+    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_K5O1YJKOEeWP5cy1qBGqJw" name="name"/>
+    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_MZjYoJKOEeWP5cy1qBGqJw" name="adress"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_2tlNsJKIEeW9h7ibhzFKTA" name="SingleRoom">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_345U0JKJEeW9h7ibhzFKTA" client="_2tlNsJKIEeW9h7ibhzFKTA" supplier="_RBQ84JKJEeW9h7ibhzFKTA" contract="_RBQ84JKJEeW9h7ibhzFKTA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_--kS0JKQEeWP5cy1qBGqJw" name="Operation1"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ApF68JKREeWP5cy1qBGqJw" name="setCleaningStatus"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Lbg1UJKJEeW9h7ibhzFKTA" name="Booking"/>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_RBQ84JKJEeW9h7ibhzFKTA" name="Room"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_RBQ84JKJEeW9h7ibhzFKTA" name="Room">
+    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_AdocYJKSEeWP5cy1qBGqJw" name="price"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_--c-EJKQEeWP5cy1qBGqJw" name="setCleaningStatus"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_LV_NYJKPEeWP5cy1qBGqJw" visibility="public" memberEnd="_LWFUAJKPEeWP5cy1qBGqJw _LWF7EJKPEeWP5cy1qBGqJw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LWCQsJKPEeWP5cy1qBGqJw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LWDe0JKPEeWP5cy1qBGqJw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_LWF7EJKPEeWP5cy1qBGqJw" name="responsible" type="_z1e_MJKIEeW9h7ibhzFKTA" association="_LV_NYJKPEeWP5cy1qBGqJw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_LWFUAJKPEeWP5cy1qBGqJw" type="_Lbg1UJKJEeW9h7ibhzFKTA" association="_LV_NYJKPEeWP5cy1qBGqJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XgYtsJKPEeWP5cy1qBGqJw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XggCcJKPEeWP5cy1qBGqJw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fK6JYJKPEeWP5cy1qBGqJw" memberEnd="_fK6wcpKPEeWP5cy1qBGqJw _fK7-kJKPEeWP5cy1qBGqJw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fK6wcJKPEeWP5cy1qBGqJw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fK6wcZKPEeWP5cy1qBGqJw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fK7-kJKPEeWP5cy1qBGqJw" type="_RBQ84JKJEeW9h7ibhzFKTA" association="_fK6JYJKPEeWP5cy1qBGqJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iBfU8JKPEeWP5cy1qBGqJw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iBhxMJKPEeWP5cy1qBGqJw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fK6wcpKPEeWP5cy1qBGqJw" type="_Lbg1UJKJEeW9h7ibhzFKTA" association="_fK6JYJKPEeWP5cy1qBGqJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lDV8YJKPEeWP5cy1qBGqJw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lDaN0JKPEeWP5cy1qBGqJw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LMY6kJKREeWP5cy1qBGqJw" name="DoubleRoom">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UY1cAJKREeWP5cy1qBGqJw" client="_LMY6kJKREeWP5cy1qBGqJw" supplier="_RBQ84JKJEeW9h7ibhzFKTA" contract="_RBQ84JKJEeW9h7ibhzFKTA"/>
+  </packagedElement>
 </uml:Model>
