@@ -82,7 +82,6 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ7ZkJQYEeW5-sogSMH7bA" name="getInformation"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_yiGyAJQYEeW5-sogSMH7bA" name="setPhoneNumber"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_85k8IJQYEeW5-sogSMH7bA" name="setName"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_gIAG0JQbEeW5-sogSMH7bA" name="createBooking"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_2tlNsJKIEeW9h7ibhzFKTA" name="SingleRoom">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_345U0JKJEeW9h7ibhzFKTA" client="_2tlNsJKIEeW9h7ibhzFKTA" supplier="_RBQ84JKJEeW9h7ibhzFKTA" contract="_RBQ84JKJEeW9h7ibhzFKTA"/>
@@ -114,7 +113,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_LrIZAJQmEeW5-sogSMH7bA" name="bookingID">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BGlcMJQmEeW5-sogSMH7bA" name="setStartDate"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xP9sQJTqEeW5-sogSMH7bA" name="updateBill"/>
     <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_SICogJQaEeW5-sogSMH7bA" name="extraGuests" visibility="private"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_RBQ84JKJEeW9h7ibhzFKTA" name="Room">
