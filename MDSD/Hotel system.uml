@@ -112,25 +112,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qwgH0JQhEeW5-sogSMH7bA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qwikEJQhEeW5-sogSMH7bA" value="*"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_xP9sQJTqEeW5-sogSMH7bA" name="updateBill" visibility="public">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dyjnUJZpEeWWZpdeo7QpdA" name="name">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_j5eiQJZpEeWWZpdeo7QpdA" name="price">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_RGYaMJZqEeWWZpdeo7QpdA" name="addContact" visibility="public">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YVLjMJZqEeWWZpdeo7QpdA" name="guest" type="_z1e_MJKIEeW9h7ibhzFKTA"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_79pbAJZrEeWWZpdeo7QpdA" name="pay" visibility="public">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AdNWkJZsEeWWZpdeo7QpdA" name="amount">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_FtchIJZsEeWWZpdeo7QpdA" name="checkBillAmount" visibility="public"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_K0XXoJZsEeWWZpdeo7QpdA" name="setCheckedIn" visibility="public"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_OKpW8JZsEeWWZpdeo7QpdA" name="setCheckedOut"/>
     <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_SICogJQaEeW5-sogSMH7bA" name="extraGuests" visibility="private"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_LV_NYJKPEeWP5cy1qBGqJw" visibility="public" memberEnd="_LWFUAJKPEeWP5cy1qBGqJw _LWF7EJKPEeWP5cy1qBGqJw" navigableOwnedEnd="_LWF7EJKPEeWP5cy1qBGqJw">
