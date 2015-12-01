@@ -257,7 +257,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_3qTbAJdyEeWjlOsjTCQaQw" name="roomNumber" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_8v9GMJdyEeWjlOsjTCQaQw" name="roomAppliances" visibility="private">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8v9GMJdyEeWjlOsjTCQaQw" name="roomAppliances" visibility="private" type="_xte7YJgvEeWjlOsjTCQaQw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CslcsJdzEeWjlOsjTCQaQw"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DLmT8JdzEeWjlOsjTCQaQw" value="*"/>
     </ownedAttribute>
@@ -266,6 +266,14 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_1vRV0ZgvEeWjlOsjTCQaQw" name="hasAppliance" type="_xte7YJgvEeWjlOsjTCQaQw" association="_1vQuwJgvEeWjlOsjTCQaQw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8al-UJgvEeWjlOsjTCQaQw"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8aoakJgvEeWjlOsjTCQaQw" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XEz6MJhcEeWjlOsjTCQaQw" name="roomKeys" visibility="private" type="_QI87UJhcEeWjlOsjTCQaQw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dJ0woJhcEeWjlOsjTCQaQw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ds1-IJhcEeWjlOsjTCQaQw" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iIvhsJhcEeWjlOsjTCQaQw" name="hasKey" type="_QI87UJhcEeWjlOsjTCQaQw" association="_iIuTkJhcEeWjlOsjTCQaQw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pL5bYJhcEeWjlOsjTCQaQw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pL7QkJhcEeWjlOsjTCQaQw" value="*"/>
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_ur9xkJdzEeWjlOsjTCQaQw" memberEnd="_usAN0JdzEeWjlOsjTCQaQw _usA04JdzEeWjlOsjTCQaQw" navigableOwnedEnd="_usA04JdzEeWjlOsjTCQaQw">
@@ -303,6 +311,13 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_o0gy8JhYEeWjlOsjTCQaQw" name="getRoomsToMaintain"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_7bntcJhXEeWjlOsjTCQaQw" name="cleaningStatus">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_-IbR8JhXEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__K1X4JhcEeWjlOsjTCQaQw" name="assignKey">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CL4uEJhdEeWjlOsjTCQaQw" name="key" type="_QI87UJhcEeWjlOsjTCQaQw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_O4-EsJhdEeWjlOsjTCQaQw" name="guest" type="_z1e_MJKIEeW9h7ibhzFKTA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_VdzDoJhdEeWjlOsjTCQaQw" name="expirationDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_laBq4JgdEeWjlOsjTCQaQw" name="BookingManager">
@@ -635,5 +650,15 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_FMnV8JgiEeWjlOsjTCQaQw" name="removeRoomType">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_H_wL8JgiEeWjlOsjTCQaQw" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg"/>
     </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QI87UJhcEeWjlOsjTCQaQw" name="RoomKey"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iIuTkJhcEeWjlOsjTCQaQw" memberEnd="_iIvhsJhcEeWjlOsjTCQaQw _iIvhsZhcEeWjlOsjTCQaQw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iIu6oJhcEeWjlOsjTCQaQw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iIu6oZhcEeWjlOsjTCQaQw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iIvhsZhcEeWjlOsjTCQaQw" name="accessTo" type="_olbGkJdyEeWjlOsjTCQaQw" association="_iIuTkJhcEeWjlOsjTCQaQw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nnXtkJhcEeWjlOsjTCQaQw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nnZiwJhcEeWjlOsjTCQaQw" value="1"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
