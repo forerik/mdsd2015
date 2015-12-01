@@ -291,29 +291,18 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_uEwRQJgbEeWjlOsjTCQaQw" name="RoomManager">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_hTK_sJgcEeWjlOsjTCQaQw" name="addRoom">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lnqTsJgcEeWjlOsjTCQaQw" name="roomNumber">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pGqxMJgcEeWjlOsjTCQaQw" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_qag-sJgcEeWjlOsjTCQaQw" name="removeRoom">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vFv-wJgcEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_vznKUJgcEeWjlOsjTCQaQw" name="editRoom">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_VjpBAJgdEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ae-5oJgdEeWjlOsjTCQaQw" name="findRoom" visibility="public">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_dgUjsJgdEeWjlOsjTCQaQw" name="roomNumber">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_0PqsoJghEeWjlOsjTCQaQw" name="createRoomType"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_D58NIJgiEeWjlOsjTCQaQw" name="editRoomType">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KIL4EJgiEeWjlOsjTCQaQw" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__LqQkJhXEeWjlOsjTCQaQw" name="maintenanceStatus">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CQU7cJhYEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_FMnV8JgiEeWjlOsjTCQaQw" name="removeRoomType">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H_wL8JgiEeWjlOsjTCQaQw" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_mY5FEJhYEeWjlOsjTCQaQw" name="getRoomsToClean"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_o0gy8JhYEeWjlOsjTCQaQw" name="getRoomsToMaintain"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7bntcJhXEeWjlOsjTCQaQw" name="cleaningStatus">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-IbR8JhXEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_laBq4JgdEeWjlOsjTCQaQw" name="BookingManager">
@@ -362,6 +351,12 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_IEd0MJgfEeWjlOsjTCQaQw" name="cancelBooking">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kjtd0JgfEeWjlOsjTCQaQw" name="booking" type="_Lbg1UJKJEeW9h7ibhzFKTA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IZSdwJhYEeWjlOsjTCQaQw" name="checkIn">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Na4vYJhYEeWjlOsjTCQaQw" name="booking" type="_Lbg1UJKJEeW9h7ibhzFKTA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_On7KQJhYEeWjlOsjTCQaQw" name="checkOut">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_QqmMoJhYEeWjlOsjTCQaQw" name="booking" type="_Lbg1UJKJEeW9h7ibhzFKTA"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_coLv4JgfEeWjlOsjTCQaQw" name="GuestManager">
@@ -607,5 +602,38 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_088EgJgwEeWjlOsjTCQaQw" value="*"/>
     </ownedEnd>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ny4eAZgwEeWjlOsjTCQaQw" name="forAppliance" type="_liXCUJgvEeWjlOsjTCQaQw" association="_ny3P4JgwEeWjlOsjTCQaQw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="__iw-cJhWEeWjlOsjTCQaQw" name="ApplianceManager">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IdvVYJhXEeWjlOsjTCQaQw" name="addAppliance">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_RFOIkJhXEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_SArrQJhXEeWjlOsjTCQaQw" name="removeAppliance">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z_et0JhXEeWjlOsjTCQaQw" name="appliance" type="_xte7YJgvEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ba-bcJhXEeWjlOsjTCQaQw" name="addApplianceType"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_dHN60JhXEeWjlOsjTCQaQw" name="editApplianceType"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_evmN4JhXEeWjlOsjTCQaQw" name="removeApplianceType"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_i_kOQJhXEeWjlOsjTCQaQw" name="editAppliance"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_fnq-AJhaEeWjlOsjTCQaQw" name="RoomManagement">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hTK_sJgcEeWjlOsjTCQaQw" name="addRoom">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lnqTsJgcEeWjlOsjTCQaQw" name="roomNumber">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pGqxMJgcEeWjlOsjTCQaQw" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qag-sJgcEeWjlOsjTCQaQw" name="removeRoom">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vFv-wJgcEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vznKUJgcEeWjlOsjTCQaQw" name="editRoom">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_VjpBAJgdEeWjlOsjTCQaQw" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0PqsoJghEeWjlOsjTCQaQw" name="createRoomType"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_D58NIJgiEeWjlOsjTCQaQw" name="editRoomType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KIL4EJgiEeWjlOsjTCQaQw" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FMnV8JgiEeWjlOsjTCQaQw" name="removeRoomType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H_wL8JgiEeWjlOsjTCQaQw" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg"/>
+    </ownedOperation>
   </packagedElement>
 </uml:Model>
