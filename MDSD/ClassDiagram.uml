@@ -184,10 +184,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_kSeroJgrEeWjlOsjTCQaQw" name="name" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_od140JgrEeWjlOsjTCQaQw" name="services" visibility="private" type="_GllIcJgsEeWjlOsjTCQaQw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_azbFUJgtEeWjlOsjTCQaQw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bc78YJgtEeWjlOsjTCQaQw" value="*"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_zf87YJgrEeWjlOsjTCQaQw" name="facilityType" visibility="private" type="_V80_QJgsEeWjlOsjTCQaQw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_aHoLwpgsEeWjlOsjTCQaQw" name="hasType" type="_V80_QJgsEeWjlOsjTCQaQw" association="_aHnksJgsEeWjlOsjTCQaQw"/>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_GllIcJgsEeWjlOsjTCQaQw" name="FacilityService">
@@ -211,6 +207,10 @@
         <nestedClassifier xmi:type="uml:Class" xmi:id="_V80_QJgsEeWjlOsjTCQaQw" name="FacilityType">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_RXhigJplEeWudYIMZ7ExHw" name="kind">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_od140JgrEeWjlOsjTCQaQw" name="services" visibility="private" type="_GllIcJgsEeWjlOsjTCQaQw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_azbFUJgtEeWjlOsjTCQaQw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bc78YJgtEeWjlOsjTCQaQw" value="*"/>
           </ownedAttribute>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_NPoloJgsEeWjlOsjTCQaQw" memberEnd="_NPpMsZgsEeWjlOsjTCQaQw _NPpzwJgsEeWjlOsjTCQaQw" navigableOwnedEnd="_NPpzwJgsEeWjlOsjTCQaQw">
@@ -575,13 +575,34 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_SArrQJhXEeWjlOsjTCQaQw" name="removeAppliance">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z_et0JhXEeWjlOsjTCQaQw" name="appliance" type="_xte7YJgvEeWjlOsjTCQaQw"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ba-bcJhXEeWjlOsjTCQaQw" name="addApplianceType"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_dHN60JhXEeWjlOsjTCQaQw" name="editApplianceType"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_evmN4JhXEeWjlOsjTCQaQw" name="removeApplianceType"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_i_kOQJhXEeWjlOsjTCQaQw" name="editAppliance"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_zRdnkJmYEeWLBfFgrifcZg" name="addApplianceService"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_0v7wsJmYEeWLBfFgrifcZg" name="editApplianceService"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_2Lg94JmYEeWLBfFgrifcZg" name="removeApplianceService"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ba-bcJhXEeWjlOsjTCQaQw" name="addApplianceType" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4ap3MJ2DEeW7Lb2oTegRZg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_dHN60JhXEeWjlOsjTCQaQw" name="editApplianceType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8zxzkJ2DEeW7Lb2oTegRZg" name="applianceType" type="_liXCUJgvEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_evmN4JhXEeWjlOsjTCQaQw" name="removeApplianceType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="__W8T4J2DEeW7Lb2oTegRZg" name="applianceType" type="_liXCUJgvEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_i_kOQJhXEeWjlOsjTCQaQw" name="editAppliance">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Dt0NgJ2EEeW7Lb2oTegRZg" name="appliance" type="_xte7YJgvEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zRdnkJmYEeWLBfFgrifcZg" name="addApplianceService">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GK3ewJ2EEeW7Lb2oTegRZg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OdGasJ2EEeW7Lb2oTegRZg" name="price">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0v7wsJmYEeWLBfFgrifcZg" name="editApplianceService">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_R1xmsJ2EEeW7Lb2oTegRZg" name="service" type="_jtJ-wJgwEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2Lg94JmYEeWLBfFgrifcZg" name="removeApplianceService">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TlyLwJ2EEeW7Lb2oTegRZg" name="service" type="_jtJ-wJgwEeWjlOsjTCQaQw"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_fnq-AJhaEeWjlOsjTCQaQw" name="IRoomAdministration">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hTK_sJgcEeWjlOsjTCQaQw" name="addRoom">
@@ -614,17 +635,44 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_QOTgUJinEeWjlOsjTCQaQw" name="IFacilityAdministration">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_UHi80JglEeWjlOsjTCQaQw" name="addFacility"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_VVc6YJglEeWjlOsjTCQaQw" name="editFacility"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_WpcR0JglEeWjlOsjTCQaQw" name="removeFacility"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Xqb0wJglEeWjlOsjTCQaQw" name="addFacilityType"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZEIyoJglEeWjlOsjTCQaQw" name="editFacilityType"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_aDSigJglEeWjlOsjTCQaQw" name="removeFacilityType"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UHi80JglEeWjlOsjTCQaQw" name="addFacility">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OaPJYJ2DEeW7Lb2oTegRZg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_THrI4J2DEeW7Lb2oTegRZg" name="facilityType" type="_V80_QJgsEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VVc6YJglEeWjlOsjTCQaQw" name="editFacility">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_X2N7oJ2DEeW7Lb2oTegRZg" name="facility" type="_aJdmgJgmEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WpcR0JglEeWjlOsjTCQaQw" name="removeFacility">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZqNBwJ2DEeW7Lb2oTegRZg" name="facility" type="_aJdmgJgmEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Xqb0wJglEeWjlOsjTCQaQw" name="addFacilityType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_b0B1AJ2DEeW7Lb2oTegRZg" name="kind">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZEIyoJglEeWjlOsjTCQaQw" name="editFacilityType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eqE1EJ2DEeW7Lb2oTegRZg" name="facilityType" type="_V80_QJgsEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aDSigJglEeWjlOsjTCQaQw" name="removeFacilityType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gaoMsJ2DEeW7Lb2oTegRZg" name="facilityType" type="_V80_QJgsEeWjlOsjTCQaQw"/>
+    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_nLJwoJglEeWjlOsjTCQaQw" name="addService">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_rvL8gJglEeWjlOsjTCQaQw" name="facility" type="_V80_QJgsEeWjlOsjTCQaQw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_joq2AJ2DEeW7Lb2oTegRZg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mJZtYJ2DEeW7Lb2oTegRZg" name="price">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_vfMKkJpuEeWudYIMZ7ExHw" name="editService"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_-m4icJpuEeWudYIMZ7ExHw" name="removeService"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vfMKkJpuEeWudYIMZ7ExHw" name="editService">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pMm_sJ2DEeW7Lb2oTegRZg" name="service" type="_GllIcJgsEeWjlOsjTCQaQw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-m4icJpuEeWudYIMZ7ExHw" name="removeService">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rHoh8J2DEeW7Lb2oTegRZg" name="service" type="_GllIcJgsEeWjlOsjTCQaQw"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_DnAMIJioEeWjlOsjTCQaQw" name="IStaffAdministration">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_KL1yIJioEeWjlOsjTCQaQw" name="addStaff"/>
@@ -753,6 +801,24 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_RwzCUJpeEeWudYIMZ7ExHw" name="FacilityAdministration">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_VFSR4JpeEeWudYIMZ7ExHw" client="_RwzCUJpeEeWudYIMZ7ExHw" supplier="_QOTgUJinEeWjlOsjTCQaQw" contract="_QOTgUJinEeWjlOsjTCQaQw"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_vfQcAJpuEeWudYIMZ7ExHw" name="addFacility"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OaV3EJ2DEeW7Lb2oTegRZg" name="addFacility">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OadL0J2DEeW7Lb2oTegRZg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OaeZ8J2DEeW7Lb2oTegRZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OafBAJ2DEeW7Lb2oTegRZg" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X2N7oZ2DEeW7Lb2oTegRZg" name="addFacility">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_X2PJwJ2DEeW7Lb2oTegRZg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X2Pw0J2DEeW7Lb2oTegRZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X2QX4J2DEeW7Lb2oTegRZg" value="1"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_X2QX4Z2DEeW7Lb2oTegRZg" name="facilityType" type="_V80_QJgsEeWjlOsjTCQaQw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X2Q-8J2DEeW7Lb2oTegRZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X2Q-8Z2DEeW7Lb2oTegRZg" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_XTDxAJpeEeWudYIMZ7ExHw" name="ServiceBooking">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cQIH8JpeEeWudYIMZ7ExHw" client="_XTDxAJpeEeWudYIMZ7ExHw" supplier="_4YCKsJmWEeWLBfFgrifcZg" contract="_4YCKsJmWEeWLBfFgrifcZg"/>
@@ -820,5 +886,11 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_VUqVMJpfEeWudYIMZ7ExHw" name="ApplianceAdministration">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_XnIHEJpfEeWudYIMZ7ExHw" client="_VUqVMJpfEeWudYIMZ7ExHw" supplier="__iw-cJhWEeWjlOsjTCQaQw" contract="__iw-cJhWEeWjlOsjTCQaQw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_4aqeQJ2DEeW7Lb2oTegRZg" name="addAppliance">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4arsYJ2DEeW7Lb2oTegRZg" name="room" type="_olbGkJdyEeWjlOsjTCQaQw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4arsYZ2DEeW7Lb2oTegRZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4asTcJ2DEeW7Lb2oTegRZg" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
 </uml:Package>
