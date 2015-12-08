@@ -4,7 +4,6 @@ package ClassDiagram.impl;
 
 import ClassDiagram.Booking_BookedService;
 import ClassDiagram.ClassDiagramPackage;
-import ClassDiagram.Company_GuestRecord;
 import ClassDiagram.Hotel_Booking;
 
 import java.util.Collection;
@@ -34,8 +33,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#isCheckedIn <em>Checked In</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getBookingID <em>Booking ID</em>}</li>
- *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getBookedServices <em>Booked Services</em>}</li>
- *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getContact <em>Contact</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getBookedservice <em>Bookedservice</em>}</li>
  * </ul>
  *
@@ -141,26 +138,6 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 	 * @ordered
 	 */
 	protected int bookingID = BOOKING_ID_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getBookedServices() <em>Booked Services</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBookedServices()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Booking_BookedService> bookedServices;
-
-	/**
-	 * The cached value of the '{@link #getContact() <em>Contact</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContact()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Company_GuestRecord> contact;
 
 	/**
 	 * The cached value of the '{@link #getBookedservice() <em>Bookedservice</em>}' reference list.
@@ -301,30 +278,6 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Booking_BookedService> getBookedServices() {
-		if (bookedServices == null) {
-			bookedServices = new EObjectResolvingEList<Booking_BookedService>(Booking_BookedService.class, this, ClassDiagramPackage.HOTEL_BOOKING__BOOKED_SERVICES);
-		}
-		return bookedServices;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Company_GuestRecord> getContact() {
-		if (contact == null) {
-			contact = new EObjectResolvingEList<Company_GuestRecord>(Company_GuestRecord.class, this, ClassDiagramPackage.HOTEL_BOOKING__CONTACT);
-		}
-		return contact;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Booking_BookedService> getBookedservice() {
 		if (bookedservice == null) {
 			bookedservice = new EObjectResolvingEList<Booking_BookedService>(Booking_BookedService.class, this, ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE);
@@ -350,10 +303,6 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 				return isCheckedIn();
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				return getBookingID();
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKED_SERVICES:
-				return getBookedServices();
-			case ClassDiagramPackage.HOTEL_BOOKING__CONTACT:
-				return getContact();
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
 				return getBookedservice();
 		}
@@ -383,14 +332,6 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 				return;
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				setBookingID((Integer)newValue);
-				return;
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKED_SERVICES:
-				getBookedServices().clear();
-				getBookedServices().addAll((Collection<? extends Booking_BookedService>)newValue);
-				return;
-			case ClassDiagramPackage.HOTEL_BOOKING__CONTACT:
-				getContact().clear();
-				getContact().addAll((Collection<? extends Company_GuestRecord>)newValue);
 				return;
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
 				getBookedservice().clear();
@@ -423,12 +364,6 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				setBookingID(BOOKING_ID_EDEFAULT);
 				return;
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKED_SERVICES:
-				getBookedServices().clear();
-				return;
-			case ClassDiagramPackage.HOTEL_BOOKING__CONTACT:
-				getContact().clear();
-				return;
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
 				getBookedservice().clear();
 				return;
@@ -454,10 +389,6 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 				return checkedIn != CHECKED_IN_EDEFAULT;
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				return bookingID != BOOKING_ID_EDEFAULT;
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKED_SERVICES:
-				return bookedServices != null && !bookedServices.isEmpty();
-			case ClassDiagramPackage.HOTEL_BOOKING__CONTACT:
-				return contact != null && !contact.isEmpty();
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
 				return bookedservice != null && !bookedservice.isEmpty();
 		}

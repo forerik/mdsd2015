@@ -57,13 +57,10 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ClassDiagramPackage.BOOKING: return createBooking();
-			case ClassDiagramPackage.BOOKING_AVAILABLEROOMS: return createBooking_Availablerooms();
 			case ClassDiagramPackage.COMPANY: return createCompany();
 			case ClassDiagramPackage.COMPANY_HOTEL: return createCompany_Hotel();
 			case ClassDiagramPackage.HOTEL_BOOKING: return createHotel_Booking();
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE: return createBooking_BookedService();
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD: return createCompany_GuestRecord();
 			case ClassDiagramPackage.BOOKING_BILL: return createBooking_Bill();
 			case ClassDiagramPackage.BOOKING_PURCHASED_SERVICE: return createBooking_PurchasedService();
 			case ClassDiagramPackage.HOTEL_ROOM: return createHotel_Room();
@@ -76,6 +73,7 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 			case ClassDiagramPackage.FACILITY_FACILITY_TYPE: return createFacility_FacilityType();
 			case ClassDiagramPackage.FACILITY_FACILITY_SERVICE: return createFacility_FacilityService();
 			case ClassDiagramPackage.HOTEL_STAFF: return createHotel_Staff();
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD: return createCompany_GuestRecord();
 			case ClassDiagramPackage.GUEST_BOOKING: return createGuestBooking();
 			case ClassDiagramPackage.STAFF_BOOKING: return createStaffBooking();
 			case ClassDiagramPackage.FACILITY_ADMINISTRATION: return createFacilityAdministration();
@@ -103,8 +101,6 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 		switch (eDataType.getClassifierID()) {
 			case ClassDiagramPackage.STAFF_TYPE:
 				return createStaffTypeFromString(eDataType, initialValue);
-			case ClassDiagramPackage.BOOKING_EXTRA_GUESTS:
-				return createBooking_extraGuestsFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -120,31 +116,9 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 		switch (eDataType.getClassifierID()) {
 			case ClassDiagramPackage.STAFF_TYPE:
 				return convertStaffTypeToString(eDataType, instanceValue);
-			case ClassDiagramPackage.BOOKING_EXTRA_GUESTS:
-				return convertBooking_extraGuestsToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Booking createBooking() {
-		BookingImpl booking = new BookingImpl();
-		return booking;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Booking_Availablerooms createBooking_Availablerooms() {
-		Booking_AvailableroomsImpl booking_Availablerooms = new Booking_AvailableroomsImpl();
-		return booking_Availablerooms;
 	}
 
 	/**
@@ -455,24 +429,6 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 	 */
 	public String convertStaffTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Object createBooking_extraGuestsFromString(EDataType eDataType, String initialValue) {
-		return (Object)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertBooking_extraGuestsToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

@@ -93,6 +93,17 @@ public class StaffBookingImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void findBooking(Date date, int roomNr) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
@@ -107,6 +118,9 @@ public class StaffBookingImpl extends MinimalEObjectImpl.Container implements St
 				return null;
 			case ClassDiagramPackage.STAFF_BOOKING___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE:
 				assignKey((Hotel_Room)arguments.get(0), (Hotel_Booking)arguments.get(1), (Date)arguments.get(2));
+				return null;
+			case ClassDiagramPackage.STAFF_BOOKING___FIND_BOOKING__DATE_INT:
+				findBooking((Date)arguments.get(0), (Integer)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

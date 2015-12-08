@@ -22,8 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ClassDiagram.Hotel_Booking#getPrice <em>Price</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Booking#isCheckedIn <em>Checked In</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Booking#getBookingID <em>Booking ID</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Booking#getBookedServices <em>Booked Services</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Booking#getContact <em>Contact</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Booking#getBookedservice <em>Bookedservice</em>}</li>
  * </ul>
  *
@@ -161,38 +159,6 @@ public interface Hotel_Booking extends EObject {
 	 * @generated
 	 */
 	void setBookingID(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Booked Services</b></em>' reference list.
-	 * The list contents are of type {@link ClassDiagram.Booking_BookedService}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Booked Services</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booked Services</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking_BookedServices()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Booking_BookedService> getBookedServices();
-
-	/**
-	 * Returns the value of the '<em><b>Contact</b></em>' reference list.
-	 * The list contents are of type {@link ClassDiagram.Company_GuestRecord}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Contact</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contact</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking_Contact()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Company_GuestRecord> getContact();
 
 	/**
 	 * Returns the value of the '<em><b>Bookedservice</b></em>' reference list.

@@ -22,24 +22,6 @@ public interface ClassDiagramFactory extends EFactory {
 	ClassDiagramFactory eINSTANCE = ClassDiagram.impl.ClassDiagramFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Booking</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking</em>'.
-	 * @generated
-	 */
-	Booking createBooking();
-
-	/**
-	 * Returns a new object of class '<em>Booking Availablerooms</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking Availablerooms</em>'.
-	 * @generated
-	 */
-	Booking_Availablerooms createBooking_Availablerooms();
-
-	/**
 	 * Returns a new object of class '<em>Company</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -49,4 +49,12 @@ public interface BookingManager extends EObject {
 	 */
 	void assignKey(Hotel_Room rooms, Hotel_Booking booking, Date expirationDate);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dateRequired="true" dateOrdered="false" roomNrRequired="true" roomNrOrdered="false"
+	 * @generated
+	 */
+	void findBooking(Date date, int roomNr);
+
 } // BookingManager

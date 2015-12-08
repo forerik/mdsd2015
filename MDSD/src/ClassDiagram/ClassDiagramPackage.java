@@ -4,7 +4,6 @@ package ClassDiagram;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -60,62 +59,6 @@ public interface ClassDiagramPackage extends EPackage {
 	ClassDiagramPackage eINSTANCE = ClassDiagram.impl.ClassDiagramPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.BookingImpl <em>Booking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.BookingImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking()
-	 * @generated
-	 */
-	int BOOKING = 0;
-
-	/**
-	 * The number of structural features of the '<em>Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Booking_AvailableroomsImpl <em>Booking Availablerooms</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Booking_AvailableroomsImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_Availablerooms()
-	 * @generated
-	 */
-	int BOOKING_AVAILABLEROOMS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Booking Availablerooms</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_AVAILABLEROOMS_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Booking Availablerooms</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_AVAILABLEROOMS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.CompanyImpl <em>Company</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -123,7 +66,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getCompany()
 	 * @generated
 	 */
-	int COMPANY = 2;
+	int COMPANY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Has Hotel</b></em>' reference list.
@@ -178,7 +121,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getCompany_Hotel()
 	 * @generated
 	 */
-	int COMPANY_HOTEL = 3;
+	int COMPANY_HOTEL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Has Booking</b></em>' reference list.
@@ -251,7 +194,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Booking()
 	 * @generated
 	 */
-	int HOTEL_BOOKING = 4;
+	int HOTEL_BOOKING = 2;
 
 	/**
 	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
@@ -299,31 +242,13 @@ public interface ClassDiagramPackage extends EPackage {
 	int HOTEL_BOOKING__BOOKING_ID = 4;
 
 	/**
-	 * The feature id for the '<em><b>Booked Services</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_BOOKING__BOOKED_SERVICES = 5;
-
-	/**
-	 * The feature id for the '<em><b>Contact</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_BOOKING__CONTACT = 6;
-
-	/**
 	 * The feature id for the '<em><b>Bookedservice</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_BOOKING__BOOKEDSERVICE = 7;
+	int HOTEL_BOOKING__BOOKEDSERVICE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Hotel Booking</em>' class.
@@ -332,7 +257,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_BOOKING_FEATURE_COUNT = 8;
+	int HOTEL_BOOKING_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Hotel Booking</em>' class.
@@ -351,7 +276,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_BookedService()
 	 * @generated
 	 */
-	int BOOKING_BOOKED_SERVICE = 5;
+	int BOOKING_BOOKED_SERVICE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -397,70 +322,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getCompany_GuestRecord()
 	 * @generated
 	 */
-	int COMPANY_GUEST_RECORD = 6;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPANY_GUEST_RECORD__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Adress</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPANY_GUEST_RECORD__ADRESS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Phone Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPANY_GUEST_RECORD__PHONE_NUMBER = 2;
-
-	/**
-	 * The feature id for the '<em><b>Ssn</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPANY_GUEST_RECORD__SSN = 3;
-
-	/**
-	 * The feature id for the '<em><b>Payment</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPANY_GUEST_RECORD__PAYMENT = 4;
-
-	/**
-	 * The number of structural features of the '<em>Company Guest Record</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPANY_GUEST_RECORD_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>Company Guest Record</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPANY_GUEST_RECORD_OPERATION_COUNT = 0;
+	int COMPANY_GUEST_RECORD = 16;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.Booking_BillImpl <em>Booking Bill</em>}' class.
@@ -470,7 +332,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_Bill()
 	 * @generated
 	 */
-	int BOOKING_BILL = 7;
+	int BOOKING_BILL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Paid Amount</b></em>' attribute.
@@ -516,7 +378,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_PurchasedService()
 	 * @generated
 	 */
-	int BOOKING_PURCHASED_SERVICE = 8;
+	int BOOKING_PURCHASED_SERVICE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -562,7 +424,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Room()
 	 * @generated
 	 */
-	int HOTEL_ROOM = 9;
+	int HOTEL_ROOM = 6;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -644,7 +506,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomAppliance()
 	 * @generated
 	 */
-	int ROOM_ROOM_APPLIANCE = 10;
+	int ROOM_ROOM_APPLIANCE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -690,7 +552,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomAppliance_ApplianceType()
 	 * @generated
 	 */
-	int ROOM_APPLIANCE_APPLIANCE_TYPE = 11;
+	int ROOM_APPLIANCE_APPLIANCE_TYPE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -727,7 +589,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getApplianceType_ApplianceService()
 	 * @generated
 	 */
-	int APPLIANCE_TYPE_APPLIANCE_SERVICE = 12;
+	int APPLIANCE_TYPE_APPLIANCE_SERVICE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -773,7 +635,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomType()
 	 * @generated
 	 */
-	int ROOM_ROOM_TYPE = 13;
+	int ROOM_ROOM_TYPE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -837,7 +699,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomKey()
 	 * @generated
 	 */
-	int ROOM_ROOM_KEY = 14;
+	int ROOM_ROOM_KEY = 11;
 
 	/**
 	 * The feature id for the '<em><b>Expiration Date</b></em>' attribute.
@@ -874,7 +736,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Facility()
 	 * @generated
 	 */
-	int HOTEL_FACILITY = 15;
+	int HOTEL_FACILITY = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -920,7 +782,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacility_FacilityType()
 	 * @generated
 	 */
-	int FACILITY_FACILITY_TYPE = 16;
+	int FACILITY_FACILITY_TYPE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Kind</b></em>' attribute.
@@ -957,7 +819,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacility_FacilityService()
 	 * @generated
 	 */
-	int FACILITY_FACILITY_SERVICE = 17;
+	int FACILITY_FACILITY_SERVICE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1003,7 +865,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Staff()
 	 * @generated
 	 */
-	int HOTEL_STAFF = 18;
+	int HOTEL_STAFF = 15;
 
 	/**
 	 * The feature id for the '<em><b>Ssn</b></em>' attribute.
@@ -1060,6 +922,69 @@ public interface ClassDiagramPackage extends EPackage {
 	int HOTEL_STAFF_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_GUEST_RECORD__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Adress</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_GUEST_RECORD__ADRESS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Phone Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_GUEST_RECORD__PHONE_NUMBER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Ssn</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_GUEST_RECORD__SSN = 3;
+
+	/**
+	 * The feature id for the '<em><b>Payment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_GUEST_RECORD__PAYMENT = 4;
+
+	/**
+	 * The number of structural features of the '<em>Company Guest Record</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_GUEST_RECORD_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Company Guest Record</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_GUEST_RECORD_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link ClassDiagram.IRoomManager <em>IRoom Manager</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1067,7 +992,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIRoomManager()
 	 * @generated
 	 */
-	int IROOM_MANAGER = 19;
+	int IROOM_MANAGER = 17;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Manager</em>' class.
@@ -1140,7 +1065,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBookingManager()
 	 * @generated
 	 */
-	int BOOKING_MANAGER = 20;
+	int BOOKING_MANAGER = 18;
 
 	/**
 	 * The number of structural features of the '<em>Booking Manager</em>' class.
@@ -1188,13 +1113,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = 3;
 
 	/**
+	 * The operation id for the '<em>Find Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___FIND_BOOKING__DATE_INT = 4;
+
+	/**
 	 * The number of operations of the '<em>Booking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER_OPERATION_COUNT = 4;
+	int BOOKING_MANAGER_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.IGuestManager <em>IGuest Manager</em>}' class.
@@ -1204,7 +1138,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIGuestManager()
 	 * @generated
 	 */
-	int IGUEST_MANAGER = 21;
+	int IGUEST_MANAGER = 19;
 
 	/**
 	 * The number of structural features of the '<em>IGuest Manager</em>' class.
@@ -1277,7 +1211,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIBillManager()
 	 * @generated
 	 */
-	int IBILL_MANAGER = 22;
+	int IBILL_MANAGER = 20;
 
 	/**
 	 * The number of structural features of the '<em>IBill Manager</em>' class.
@@ -1350,7 +1284,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIFacilityManager()
 	 * @generated
 	 */
-	int IFACILITY_MANAGER = 23;
+	int IFACILITY_MANAGER = 21;
 
 	/**
 	 * The number of structural features of the '<em>IFacility Manager</em>' class.
@@ -1396,7 +1330,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIApplianceAdministration()
 	 * @generated
 	 */
-	int IAPPLIANCE_ADMINISTRATION = 24;
+	int IAPPLIANCE_ADMINISTRATION = 22;
 
 	/**
 	 * The number of structural features of the '<em>IAppliance Administration</em>' class.
@@ -1505,7 +1439,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIRoomAdministration()
 	 * @generated
 	 */
-	int IROOM_ADMINISTRATION = 25;
+	int IROOM_ADMINISTRATION = 23;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Administration</em>' class.
@@ -1587,7 +1521,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIFacilityAdministration()
 	 * @generated
 	 */
-	int IFACILITY_ADMINISTRATION = 26;
+	int IFACILITY_ADMINISTRATION = 24;
 
 	/**
 	 * The number of structural features of the '<em>IFacility Administration</em>' class.
@@ -1696,7 +1630,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIStaffAdministration()
 	 * @generated
 	 */
-	int ISTAFF_ADMINISTRATION = 27;
+	int ISTAFF_ADMINISTRATION = 25;
 
 	/**
 	 * The number of structural features of the '<em>IStaff Administration</em>' class.
@@ -1751,7 +1685,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIHotelAdministration()
 	 * @generated
 	 */
-	int IHOTEL_ADMINISTRATION = 28;
+	int IHOTEL_ADMINISTRATION = 26;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Administration</em>' class.
@@ -1806,7 +1740,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIBooking()
 	 * @generated
 	 */
-	int IBOOKING = 29;
+	int IBOOKING = 27;
 
 	/**
 	 * The number of structural features of the '<em>IBooking</em>' class.
@@ -1888,7 +1822,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIServiceBooking()
 	 * @generated
 	 */
-	int ISERVICE_BOOKING = 30;
+	int ISERVICE_BOOKING = 28;
 
 	/**
 	 * The number of structural features of the '<em>IService Booking</em>' class.
@@ -1961,7 +1895,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getGuestBooking()
 	 * @generated
 	 */
-	int GUEST_BOOKING = 31;
+	int GUEST_BOOKING = 29;
 
 	/**
 	 * The number of structural features of the '<em>Guest Booking</em>' class.
@@ -2043,7 +1977,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffBooking()
 	 * @generated
 	 */
-	int STAFF_BOOKING = 32;
+	int STAFF_BOOKING = 30;
 
 	/**
 	 * The number of structural features of the '<em>Staff Booking</em>' class.
@@ -2091,6 +2025,15 @@ public interface ClassDiagramPackage extends EPackage {
 	int STAFF_BOOKING___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE;
 
 	/**
+	 * The operation id for the '<em>Find Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_BOOKING___FIND_BOOKING__DATE_INT = BOOKING_MANAGER___FIND_BOOKING__DATE_INT;
+
+	/**
 	 * The number of operations of the '<em>Staff Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2107,7 +2050,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacilityAdministration()
 	 * @generated
 	 */
-	int FACILITY_ADMINISTRATION = 33;
+	int FACILITY_ADMINISTRATION = 31;
 
 	/**
 	 * The number of structural features of the '<em>Facility Administration</em>' class.
@@ -2216,7 +2159,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getServiceBooking()
 	 * @generated
 	 */
-	int SERVICE_BOOKING = 34;
+	int SERVICE_BOOKING = 32;
 
 	/**
 	 * The number of structural features of the '<em>Service Booking</em>' class.
@@ -2289,7 +2232,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacilityManager()
 	 * @generated
 	 */
-	int FACILITY_MANAGER = 35;
+	int FACILITY_MANAGER = 33;
 
 	/**
 	 * The number of structural features of the '<em>Facility Manager</em>' class.
@@ -2335,7 +2278,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getGuestManager()
 	 * @generated
 	 */
-	int GUEST_MANAGER = 36;
+	int GUEST_MANAGER = 34;
 
 	/**
 	 * The number of structural features of the '<em>Guest Manager</em>' class.
@@ -2408,7 +2351,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBillManager()
 	 * @generated
 	 */
-	int BILL_MANAGER = 37;
+	int BILL_MANAGER = 35;
 
 	/**
 	 * The number of structural features of the '<em>Bill Manager</em>' class.
@@ -2481,7 +2424,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotelAdministration()
 	 * @generated
 	 */
-	int HOTEL_ADMINISTRATION = 38;
+	int HOTEL_ADMINISTRATION = 36;
 
 	/**
 	 * The number of structural features of the '<em>Hotel Administration</em>' class.
@@ -2536,7 +2479,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffAdministration()
 	 * @generated
 	 */
-	int STAFF_ADMINISTRATION = 39;
+	int STAFF_ADMINISTRATION = 37;
 
 	/**
 	 * The number of structural features of the '<em>Staff Administration</em>' class.
@@ -2591,7 +2534,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomManager()
 	 * @generated
 	 */
-	int ROOM_MANAGER = 40;
+	int ROOM_MANAGER = 38;
 
 	/**
 	 * The number of structural features of the '<em>Room Manager</em>' class.
@@ -2664,7 +2607,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomAdministration()
 	 * @generated
 	 */
-	int ROOM_ADMINISTRATION = 41;
+	int ROOM_ADMINISTRATION = 39;
 
 	/**
 	 * The number of structural features of the '<em>Room Administration</em>' class.
@@ -2746,7 +2689,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getApplianceAdministration()
 	 * @generated
 	 */
-	int APPLIANCE_ADMINISTRATION = 42;
+	int APPLIANCE_ADMINISTRATION = 40;
 
 	/**
 	 * The number of structural features of the '<em>Appliance Administration</em>' class.
@@ -2855,38 +2798,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffType()
 	 * @generated
 	 */
-	int STAFF_TYPE = 43;
-
-	/**
-	 * The meta object id for the '<em>Booking extra Guests</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Booking_extraGuests
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_extraGuests()
-	 * @generated
-	 */
-	int BOOKING_EXTRA_GUESTS = 44;
-
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.Booking <em>Booking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Booking</em>'.
-	 * @see ClassDiagram.Booking
-	 * @generated
-	 */
-	EClass getBooking();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.Booking_Availablerooms <em>Booking Availablerooms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Booking Availablerooms</em>'.
-	 * @see ClassDiagram.Booking_Availablerooms
-	 * @generated
-	 */
-	EClass getBooking_Availablerooms();
+	int STAFF_TYPE = 41;
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Company <em>Company</em>}'.
@@ -3060,28 +2972,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHotel_Booking_BookingID();
-
-	/**
-	 * Returns the meta object for the reference list '{@link ClassDiagram.Hotel_Booking#getBookedServices <em>Booked Services</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Booked Services</em>'.
-	 * @see ClassDiagram.Hotel_Booking#getBookedServices()
-	 * @see #getHotel_Booking()
-	 * @generated
-	 */
-	EReference getHotel_Booking_BookedServices();
-
-	/**
-	 * Returns the meta object for the reference list '{@link ClassDiagram.Hotel_Booking#getContact <em>Contact</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Contact</em>'.
-	 * @see ClassDiagram.Hotel_Booking#getContact()
-	 * @see #getHotel_Booking()
-	 * @generated
-	 */
-	EReference getHotel_Booking_Contact();
 
 	/**
 	 * Returns the meta object for the reference list '{@link ClassDiagram.Hotel_Booking#getBookedservice <em>Bookedservice</em>}'.
@@ -3739,6 +3629,16 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findBooking(java.util.Date, int) <em>Find Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Booking</em>' operation.
+	 * @see ClassDiagram.BookingManager#findBooking(java.util.Date, int)
+	 * @generated
+	 */
+	EOperation getBookingManager__FindBooking__Date_int();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.IGuestManager <em>IGuest Manager</em>}'.
@@ -4501,17 +4401,6 @@ public interface ClassDiagramPackage extends EPackage {
 	EEnum getStaffType();
 
 	/**
-	 * Returns the meta object for data type '{@link Booking_extraGuests <em>Booking extra Guests</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Booking extra Guests</em>'.
-	 * @see Booking_extraGuests
-	 * @model instanceClass="java.lang.Object"
-	 * @generated
-	 */
-	EDataType getBooking_extraGuests();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4534,26 +4423,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.BookingImpl <em>Booking</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.BookingImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking()
-		 * @generated
-		 */
-		EClass BOOKING = eINSTANCE.getBooking();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.Booking_AvailableroomsImpl <em>Booking Availablerooms</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.Booking_AvailableroomsImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_Availablerooms()
-		 * @generated
-		 */
-		EClass BOOKING_AVAILABLEROOMS = eINSTANCE.getBooking_Availablerooms();
-
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.CompanyImpl <em>Company</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -4687,22 +4556,6 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HOTEL_BOOKING__BOOKING_ID = eINSTANCE.getHotel_Booking_BookingID();
-
-		/**
-		 * The meta object literal for the '<em><b>Booked Services</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HOTEL_BOOKING__BOOKED_SERVICES = eINSTANCE.getHotel_Booking_BookedServices();
-
-		/**
-		 * The meta object literal for the '<em><b>Contact</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HOTEL_BOOKING__CONTACT = eINSTANCE.getHotel_Booking_Contact();
 
 		/**
 		 * The meta object literal for the '<em><b>Bookedservice</b></em>' reference list feature.
@@ -5231,6 +5084,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = eINSTANCE.getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___FIND_BOOKING__DATE_INT = eINSTANCE.getBookingManager__FindBooking__Date_int();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.IGuestManager <em>IGuest Manager</em>}' class.
@@ -5885,16 +5746,6 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum STAFF_TYPE = eINSTANCE.getStaffType();
-
-		/**
-		 * The meta object literal for the '<em>Booking extra Guests</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Booking_extraGuests
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_extraGuests()
-		 * @generated
-		 */
-		EDataType BOOKING_EXTRA_GUESTS = eINSTANCE.getBooking_extraGuests();
 
 	}
 

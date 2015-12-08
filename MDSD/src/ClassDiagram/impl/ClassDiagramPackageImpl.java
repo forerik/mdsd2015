@@ -5,9 +5,7 @@ package ClassDiagram.impl;
 import ClassDiagram.ApplianceAdministration;
 import ClassDiagram.ApplianceType_ApplianceService;
 import ClassDiagram.BillManager;
-import ClassDiagram.Booking;
 import ClassDiagram.BookingManager;
-import ClassDiagram.Booking_Availablerooms;
 import ClassDiagram.Booking_Bill;
 import ClassDiagram.Booking_BookedService;
 import ClassDiagram.Booking_PurchasedService;
@@ -51,7 +49,6 @@ import ClassDiagram.StaffType;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -66,20 +63,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagramPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass bookingEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass booking_AvailableroomsEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -375,13 +358,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	private EEnum staffTypeEEnum = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType booking_extraGuestsEDataType = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -440,24 +416,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ClassDiagramPackage.eNS_URI, theClassDiagramPackage);
 		return theClassDiagramPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBooking() {
-		return bookingEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBooking_Availablerooms() {
-		return booking_AvailableroomsEClass;
 	}
 
 	/**
@@ -609,26 +567,8 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHotel_Booking_BookedServices() {
-		return (EReference)hotel_BookingEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getHotel_Booking_Contact() {
-		return (EReference)hotel_BookingEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getHotel_Booking_Bookedservice() {
-		return (EReference)hotel_BookingEClass.getEStructuralFeatures().get(7);
+		return (EReference)hotel_BookingEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1178,6 +1118,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 */
 	public EOperation getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date() {
 		return bookingManagerEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingManager__FindBooking__Date_int() {
+		return bookingManagerEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1869,15 +1818,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getBooking_extraGuests() {
-		return booking_extraGuestsEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ClassDiagramFactory getClassDiagramFactory() {
 		return (ClassDiagramFactory)getEFactoryInstance();
 	}
@@ -1901,10 +1841,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		isCreated = true;
 
 		// Create classes and their features
-		bookingEClass = createEClass(BOOKING);
-
-		booking_AvailableroomsEClass = createEClass(BOOKING_AVAILABLEROOMS);
-
 		companyEClass = createEClass(COMPANY);
 		createEReference(companyEClass, COMPANY__HAS_HOTEL);
 		createEReference(companyEClass, COMPANY__HAS_GUEST);
@@ -1923,20 +1859,11 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEAttribute(hotel_BookingEClass, HOTEL_BOOKING__PRICE);
 		createEAttribute(hotel_BookingEClass, HOTEL_BOOKING__CHECKED_IN);
 		createEAttribute(hotel_BookingEClass, HOTEL_BOOKING__BOOKING_ID);
-		createEReference(hotel_BookingEClass, HOTEL_BOOKING__BOOKED_SERVICES);
-		createEReference(hotel_BookingEClass, HOTEL_BOOKING__CONTACT);
 		createEReference(hotel_BookingEClass, HOTEL_BOOKING__BOOKEDSERVICE);
 
 		booking_BookedServiceEClass = createEClass(BOOKING_BOOKED_SERVICE);
 		createEAttribute(booking_BookedServiceEClass, BOOKING_BOOKED_SERVICE__DATE);
 		createEAttribute(booking_BookedServiceEClass, BOOKING_BOOKED_SERVICE__PRICE);
-
-		company_GuestRecordEClass = createEClass(COMPANY_GUEST_RECORD);
-		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__NAME);
-		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__ADRESS);
-		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__PHONE_NUMBER);
-		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__SSN);
-		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__PAYMENT);
 
 		booking_BillEClass = createEClass(BOOKING_BILL);
 		createEAttribute(booking_BillEClass, BOOKING_BILL__PAID_AMOUNT);
@@ -1991,6 +1918,13 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEAttribute(hotel_StaffEClass, HOTEL_STAFF__LAST_NAME);
 		createEAttribute(hotel_StaffEClass, HOTEL_STAFF__STAFFTYPE);
 
+		company_GuestRecordEClass = createEClass(COMPANY_GUEST_RECORD);
+		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__NAME);
+		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__ADRESS);
+		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__PHONE_NUMBER);
+		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__SSN);
+		createEAttribute(company_GuestRecordEClass, COMPANY_GUEST_RECORD__PAYMENT);
+
 		iRoomManagerEClass = createEClass(IROOM_MANAGER);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___FIND_ROOM__INT);
 		createEOperation(iRoomManagerEClass, IROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM);
@@ -2003,6 +1937,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE);
+		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_BOOKING__DATE_INT);
 
 		iGuestManagerEClass = createEClass(IGUEST_MANAGER);
 		createEOperation(iGuestManagerEClass, IGUEST_MANAGER___CREATE_GUEST_RECORD__STRING_STRING_STRING_STRING_STRING);
@@ -2103,9 +2038,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		// Create enums
 		staffTypeEEnum = createEEnum(STAFF_TYPE);
-
-		// Create data types
-		booking_extraGuestsEDataType = createEDataType(BOOKING_EXTRA_GUESTS);
 	}
 
 	/**
@@ -2150,10 +2082,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		applianceAdministrationEClass.getESuperTypes().add(this.getIApplianceAdministration());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(bookingEClass, Booking.class, "Booking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(booking_AvailableroomsEClass, Booking_Availablerooms.class, "Booking_Availablerooms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(companyEClass, Company.class, "Company", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompany_HasHotel(), this.getCompany_Hotel(), null, "hasHotel", null, 1, -1, Company.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCompany_HasGuest(), this.getCompany_GuestRecord(), null, "hasGuest", null, 0, -1, Company.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2172,20 +2100,11 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		initEAttribute(getHotel_Booking_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHotel_Booking_CheckedIn(), ecorePackage.getEBoolean(), "checkedIn", null, 1, 1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHotel_Booking_BookingID(), ecorePackage.getEInt(), "bookingID", null, 1, 1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getHotel_Booking_BookedServices(), this.getBooking_BookedService(), null, "bookedServices", null, 0, -1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getHotel_Booking_Contact(), this.getCompany_GuestRecord(), null, "contact", null, 0, -1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getHotel_Booking_Bookedservice(), this.getBooking_BookedService(), null, "bookedservice", null, 0, -1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(booking_BookedServiceEClass, Booking_BookedService.class, "Booking_BookedService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBooking_BookedService_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Booking_BookedService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_BookedService_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, Booking_BookedService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(company_GuestRecordEClass, Company_GuestRecord.class, "Company_GuestRecord", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCompany_GuestRecord_Name(), ecorePackage.getEString(), "name", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCompany_GuestRecord_Adress(), ecorePackage.getEString(), "adress", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCompany_GuestRecord_PhoneNumber(), ecorePackage.getEString(), "phoneNumber", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCompany_GuestRecord_Ssn(), ecorePackage.getEString(), "ssn", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCompany_GuestRecord_Payment(), ecorePackage.getEString(), "payment", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(booking_BillEClass, Booking_Bill.class, "Booking_Bill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBooking_Bill_PaidAmount(), ecorePackage.getEDouble(), "paidAmount", null, 1, 1, Booking_Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2240,6 +2159,13 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		initEAttribute(getHotel_Staff_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, Hotel_Staff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHotel_Staff_Stafftype(), this.getStaffType(), "stafftype", null, 1, 1, Hotel_Staff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		initEClass(company_GuestRecordEClass, Company_GuestRecord.class, "Company_GuestRecord", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCompany_GuestRecord_Name(), ecorePackage.getEString(), "name", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCompany_GuestRecord_Adress(), ecorePackage.getEString(), "adress", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCompany_GuestRecord_PhoneNumber(), ecorePackage.getEString(), "phoneNumber", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCompany_GuestRecord_Ssn(), ecorePackage.getEString(), "ssn", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCompany_GuestRecord_Payment(), ecorePackage.getEString(), "payment", null, 1, 1, Company_GuestRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(iRoomManagerEClass, IRoomManager.class, "IRoomManager", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getIRoomManager__FindRoom__int(), null, "findRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2271,6 +2197,10 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		addEParameter(op, this.getHotel_Room(), "rooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getHotel_Booking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "expirationDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBookingManager__FindBooking__Date_int(), null, "findBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iGuestManagerEClass, IGuestManager.class, "IGuestManager", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2499,30 +2429,8 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		addEEnumLiteral(staffTypeEEnum, StaffType.JANITOR);
 		addEEnumLiteral(staffTypeEEnum, StaffType.HOUSE_KEEPER);
 
-		// Initialize data types
-
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// http://www.eclipse.org/uml2/2.0.0/UML
-		createUMLAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createUMLAnnotations() {
-		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
-		addAnnotation
-		  (booking_AvailableroomsEClass, 
-		   source, 
-		   new String[] {
-			 "originalName", "Available rooms"
-		   });
 	}
 
 } //ClassDiagramPackageImpl

@@ -68,14 +68,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 	protected ClassDiagramSwitch<Adapter> modelSwitch =
 		new ClassDiagramSwitch<Adapter>() {
 			@Override
-			public Adapter caseBooking(Booking object) {
-				return createBookingAdapter();
-			}
-			@Override
-			public Adapter caseBooking_Availablerooms(Booking_Availablerooms object) {
-				return createBooking_AvailableroomsAdapter();
-			}
-			@Override
 			public Adapter caseCompany(Company object) {
 				return createCompanyAdapter();
 			}
@@ -90,10 +82,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBooking_BookedService(Booking_BookedService object) {
 				return createBooking_BookedServiceAdapter();
-			}
-			@Override
-			public Adapter caseCompany_GuestRecord(Company_GuestRecord object) {
-				return createCompany_GuestRecordAdapter();
 			}
 			@Override
 			public Adapter caseBooking_Bill(Booking_Bill object) {
@@ -142,6 +130,10 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseHotel_Staff(Hotel_Staff object) {
 				return createHotel_StaffAdapter();
+			}
+			@Override
+			public Adapter caseCompany_GuestRecord(Company_GuestRecord object) {
+				return createCompany_GuestRecordAdapter();
 			}
 			@Override
 			public Adapter caseIRoomManager(IRoomManager object) {
@@ -258,34 +250,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.Booking <em>Booking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.Booking
-	 * @generated
-	 */
-	public Adapter createBookingAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.Booking_Availablerooms <em>Booking Availablerooms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.Booking_Availablerooms
-	 * @generated
-	 */
-	public Adapter createBooking_AvailableroomsAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link ClassDiagram.Company <em>Company</em>}'.

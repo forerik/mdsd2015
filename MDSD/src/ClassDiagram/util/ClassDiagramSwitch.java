@@ -66,18 +66,6 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ClassDiagramPackage.BOOKING: {
-				Booking booking = (Booking)theEObject;
-				T result = caseBooking(booking);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.BOOKING_AVAILABLEROOMS: {
-				Booking_Availablerooms booking_Availablerooms = (Booking_Availablerooms)theEObject;
-				T result = caseBooking_Availablerooms(booking_Availablerooms);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ClassDiagramPackage.COMPANY: {
 				Company company = (Company)theEObject;
 				T result = caseCompany(company);
@@ -99,12 +87,6 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE: {
 				Booking_BookedService booking_BookedService = (Booking_BookedService)theEObject;
 				T result = caseBooking_BookedService(booking_BookedService);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD: {
-				Company_GuestRecord company_GuestRecord = (Company_GuestRecord)theEObject;
-				T result = caseCompany_GuestRecord(company_GuestRecord);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -177,6 +159,12 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 			case ClassDiagramPackage.HOTEL_STAFF: {
 				Hotel_Staff hotel_Staff = (Hotel_Staff)theEObject;
 				T result = caseHotel_Staff(hotel_Staff);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD: {
+				Company_GuestRecord company_GuestRecord = (Company_GuestRecord)theEObject;
+				T result = caseCompany_GuestRecord(company_GuestRecord);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -338,36 +326,6 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Booking</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Booking</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBooking(Booking object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Booking Availablerooms</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Booking Availablerooms</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBooking_Availablerooms(Booking_Availablerooms object) {
-		return null;
 	}
 
 	/**
