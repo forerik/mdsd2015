@@ -4,4 +4,61 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" href="ClassDiagram.uml#_6fFKkJn1EeWdPOruT4HIiw"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_cc5FUIt7EeWuJKZGLyKm7w" name="Booking" node="_7NDxUI0EEeWp3bWgDtnSXw __Ql5sI4sEeWpV8VnqXxBKg _TZwnYI4tEeWpV8VnqXxBKg _OeNd8I4uEeWpV8VnqXxBKg _7MxNAI4uEeWpV8VnqXxBKg _SiReYI4wEeWpV8VnqXxBKg _jK7SsI4wEeWpV8VnqXxBKg _wPWLQI4wEeWpV8VnqXxBKg _8lxVYI4wEeWpV8VnqXxBKg _-_GkQI4wEeWpV8VnqXxBKg _GM7c4I4xEeWpV8VnqXxBKg _cSAdoI4xEeWpV8VnqXxBKg _lTRCwI4xEeWpV8VnqXxBKg _H98PcI6dEeW8f6BALQlNMg _MKQe4I6dEeW8f6BALQlNMg _X14YgI6dEeW8f6BALQlNMg" group="_3PRKwI4wEeWpV8VnqXxBKg _MffAEI4xEeWpV8VnqXxBKg">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_mGqycI4tEeWpV8VnqXxBKg" name="Available rooms" node="_xhvuoI4tEeWpV8VnqXxBKg _c5FzII4uEeWpV8VnqXxBKg _kx6wkI4uEeWpV8VnqXxBKg _OFYcUI4wEeWpV8VnqXxBKg _9Sq3oI4wEeWpV8VnqXxBKg _-G04cI4wEeWpV8VnqXxBKg" group="_sswDsI4vEeWpV8VnqXxBKg">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_gr7LkI4uEeWpV8VnqXxBKg" target="_c5FzII4uEeWpV8VnqXxBKg" source="_xhvuoI4tEeWpV8VnqXxBKg"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_rxbgYI4uEeWpV8VnqXxBKg" target="_kx6wkI4uEeWpV8VnqXxBKg" source="_c5FzII4uEeWpV8VnqXxBKg"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_MiMnwI4vEeWpV8VnqXxBKg" target="_7MxNAI4uEeWpV8VnqXxBKg" source="_kx6wkI4uEeWpV8VnqXxBKg"/>
+      <group xmi:type="uml:InterruptibleActivityRegion" xmi:id="_sswDsI4vEeWpV8VnqXxBKg" name="InterruptibleActivityRegion1" node="_xhvuoI4tEeWpV8VnqXxBKg _c5FzII4uEeWpV8VnqXxBKg _OFYcUI4wEeWpV8VnqXxBKg _9Sq3oI4wEeWpV8VnqXxBKg _-G04cI4wEeWpV8VnqXxBKg"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_xhvuoI4tEeWpV8VnqXxBKg" name="Input start- and end date" inInterruptibleRegion="_sswDsI4vEeWpV8VnqXxBKg" incoming="_ZqTi8I4uEeWpV8VnqXxBKg _3QERcI4vEeWpV8VnqXxBKg" outgoing="_gr7LkI4uEeWpV8VnqXxBKg"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_c5FzII4uEeWpV8VnqXxBKg" name="Input room types" inInterruptibleRegion="_sswDsI4vEeWpV8VnqXxBKg" incoming="_gr7LkI4uEeWpV8VnqXxBKg" outgoing="_rxbgYI4uEeWpV8VnqXxBKg"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_kx6wkI4uEeWpV8VnqXxBKg" name="System returns a list of available rooms" incoming="_rxbgYI4uEeWpV8VnqXxBKg" outgoing="_MiMnwI4vEeWpV8VnqXxBKg"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_OFYcUI4wEeWpV8VnqXxBKg" name="Cancel" inInterruptibleRegion="_sswDsI4vEeWpV8VnqXxBKg">
+        <handler xmi:type="uml:ExceptionHandler" xmi:id="_VhaJAI4wEeWpV8VnqXxBKg"/>
+      </node>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_9Sq3oI4wEeWpV8VnqXxBKg" name="Cancel" inInterruptibleRegion="_sswDsI4vEeWpV8VnqXxBKg">
+        <handler xmi:type="uml:ExceptionHandler" xmi:id="_9Sq3oY4wEeWpV8VnqXxBKg"/>
+      </node>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_-G04cI4wEeWpV8VnqXxBKg" name="Cancel" inInterruptibleRegion="_sswDsI4vEeWpV8VnqXxBKg">
+        <handler xmi:type="uml:ExceptionHandler" xmi:id="_-G04cY4wEeWpV8VnqXxBKg"/>
+      </node>
+    </ownedBehavior>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_C8pUsI4tEeWpV8VnqXxBKg" target="__Ql5sI4sEeWpV8VnqXxBKg" source="_7NDxUI0EEeWp3bWgDtnSXw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Xr5yAI4tEeWpV8VnqXxBKg" name="No guest record" target="_TZwnYI4tEeWpV8VnqXxBKg" source="__Ql5sI4sEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_AB4-UI4uEeWpV8VnqXxBKg" target="_OeNd8I4uEeWpV8VnqXxBKg" source="_TZwnYI4tEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BbywgI4uEeWpV8VnqXxBKg" name="Existing guest record" target="_OeNd8I4uEeWpV8VnqXxBKg" source="__Ql5sI4sEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ZqTi8I4uEeWpV8VnqXxBKg" target="_xhvuoI4tEeWpV8VnqXxBKg" source="_OeNd8I4uEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3QERcI4vEeWpV8VnqXxBKg" name="No available rooms" target="_xhvuoI4tEeWpV8VnqXxBKg" source="_7MxNAI4uEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_owt2gI4wEeWpV8VnqXxBKg" name="Available rooms" target="_jK7SsI4wEeWpV8VnqXxBKg" source="_7MxNAI4uEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fIgJoI4xEeWpV8VnqXxBKg" target="_wPWLQI4wEeWpV8VnqXxBKg" source="_jK7SsI4wEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_n_QH4I4xEeWpV8VnqXxBKg" target="_H98PcI6dEeW8f6BALQlNMg" source="_wPWLQI4wEeWpV8VnqXxBKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_OstNgI6dEeW8f6BALQlNMg" name="Pay in advance" target="_MKQe4I6dEeW8f6BALQlNMg" source="_H98PcI6dEeW8f6BALQlNMg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_RYfeUI6dEeW8f6BALQlNMg" target="_X14YgI6dEeW8f6BALQlNMg" source="_MKQe4I6dEeW8f6BALQlNMg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_dUhLcI6dEeW8f6BALQlNMg" name="Pay later" target="_X14YgI6dEeW8f6BALQlNMg" source="_H98PcI6dEeW8f6BALQlNMg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gsjeQI6dEeW8f6BALQlNMg" target="_lTRCwI4xEeWpV8VnqXxBKg" source="_X14YgI6dEeW8f6BALQlNMg"/>
+    <group xmi:type="uml:InterruptibleActivityRegion" xmi:id="_3PRKwI4wEeWpV8VnqXxBKg" name="InterruptibleActivityRegion1" node="_TZwnYI4tEeWpV8VnqXxBKg _8lxVYI4wEeWpV8VnqXxBKg _-_GkQI4wEeWpV8VnqXxBKg"/>
+    <group xmi:type="uml:InterruptibleActivityRegion" xmi:id="_MffAEI4xEeWpV8VnqXxBKg" name="InterruptibleActivityRegion2" node="_jK7SsI4wEeWpV8VnqXxBKg _wPWLQI4wEeWpV8VnqXxBKg _cSAdoI4xEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_7NDxUI0EEeWp3bWgDtnSXw" outgoing="_C8pUsI4tEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="__Ql5sI4sEeWpV8VnqXxBKg" incoming="_C8pUsI4tEeWpV8VnqXxBKg" outgoing="_Xr5yAI4tEeWpV8VnqXxBKg _BbywgI4uEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TZwnYI4tEeWpV8VnqXxBKg" name="create guest record" inInterruptibleRegion="_3PRKwI4wEeWpV8VnqXxBKg" incoming="_Xr5yAI4tEeWpV8VnqXxBKg" outgoing="_AB4-UI4uEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_OeNd8I4uEeWpV8VnqXxBKg" incoming="_BbywgI4uEeWpV8VnqXxBKg _AB4-UI4uEeWpV8VnqXxBKg" outgoing="_ZqTi8I4uEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_7MxNAI4uEeWpV8VnqXxBKg" incoming="_MiMnwI4vEeWpV8VnqXxBKg" outgoing="_3QERcI4vEeWpV8VnqXxBKg _owt2gI4wEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_SiReYI4wEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jK7SsI4wEeWpV8VnqXxBKg" name="Select rooms" inInterruptibleRegion="_MffAEI4xEeWpV8VnqXxBKg" incoming="_owt2gI4wEeWpV8VnqXxBKg" outgoing="_fIgJoI4xEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_wPWLQI4wEeWpV8VnqXxBKg" name="Finalize booking" inInterruptibleRegion="_MffAEI4xEeWpV8VnqXxBKg" incoming="_fIgJoI4xEeWpV8VnqXxBKg" outgoing="_n_QH4I4xEeWpV8VnqXxBKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_8lxVYI4wEeWpV8VnqXxBKg" name="Cancel" inInterruptibleRegion="_3PRKwI4wEeWpV8VnqXxBKg">
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_8lxVYY4wEeWpV8VnqXxBKg"/>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_-_GkQI4wEeWpV8VnqXxBKg" name="Cancel" inInterruptibleRegion="_3PRKwI4wEeWpV8VnqXxBKg">
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_IQB9EI4xEeWpV8VnqXxBKg"/>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_GM7c4I4xEeWpV8VnqXxBKg" name=""/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_cSAdoI4xEeWpV8VnqXxBKg" name="Cancel" inInterruptibleRegion="_MffAEI4xEeWpV8VnqXxBKg">
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_iHPLoI4xEeWpV8VnqXxBKg"/>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_lTRCwI4xEeWpV8VnqXxBKg" name="Booking complete" incoming="_gsjeQI6dEeW8f6BALQlNMg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_H98PcI6dEeW8f6BALQlNMg" name="" incoming="_n_QH4I4xEeWpV8VnqXxBKg" outgoing="_OstNgI6dEeW8f6BALQlNMg _dUhLcI6dEeW8f6BALQlNMg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_MKQe4I6dEeW8f6BALQlNMg" name="Payment" incoming="_OstNgI6dEeW8f6BALQlNMg" outgoing="_RYfeUI6dEeW8f6BALQlNMg"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_X14YgI6dEeW8f6BALQlNMg" name="" incoming="_RYfeUI6dEeW8f6BALQlNMg _dUhLcI6dEeW8f6BALQlNMg" outgoing="_gsjeQI6dEeW8f6BALQlNMg"/>
+  </packagedElement>
 </uml:Model>
