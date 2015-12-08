@@ -297,10 +297,6 @@
         <element xmi:type="uml:Property" href="ClassDiagram.uml#_gPgIAJdzEeWjlOsjTCQaQw"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_gP6XsZdzEeWjlOsjTCQaQw"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_iaNsEJdzEeWjlOsjTCQaQw" type="3012">
-        <element xmi:type="uml:Property" href="ClassDiagram.uml#_iZrgkJdzEeWjlOsjTCQaQw"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_iaNsEZdzEeWjlOsjTCQaQw"/>
-      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_rYwJ05dyEeWjlOsjTCQaQw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_rYwJ1JdyEeWjlOsjTCQaQw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_rYwJ1ZdyEeWjlOsjTCQaQw"/>
