@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cZLC8It7EeWuJKZGLyKm7w" name="RootElement" visibility="public">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cZLC8It7EeWuJKZGLyKm7w" name="RootElement" visibility="public">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_r0FGII66EeWxlOh2fo_7kA">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -60,5 +60,62 @@
     <node xmi:type="uml:DecisionNode" xmi:id="_H98PcI6dEeW8f6BALQlNMg" name="" incoming="_n_QH4I4xEeWpV8VnqXxBKg" outgoing="_OstNgI6dEeW8f6BALQlNMg _dUhLcI6dEeW8f6BALQlNMg"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_MKQe4I6dEeW8f6BALQlNMg" name="Payment" incoming="_OstNgI6dEeW8f6BALQlNMg" outgoing="_RYfeUI6dEeW8f6BALQlNMg"/>
     <node xmi:type="uml:MergeNode" xmi:id="_X14YgI6dEeW8f6BALQlNMg" name="" incoming="_RYfeUI6dEeW8f6BALQlNMg _dUhLcI6dEeW8f6BALQlNMg" outgoing="_gsjeQI6dEeW8f6BALQlNMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uozukJ3DEeWhM73UBYahqA" name="Janitor"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_uo0VoJ3DEeWhM73UBYahqA" name="Rooms">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_vcWEUJ3DEeWhM73UBYahqA" name="find a room"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ySkDgJ3DEeWhM73UBYahqA" name="edit cleaning status"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_1URhAJ3DEeWhM73UBYahqA" name="edit maintenance status"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3sIJMJ3DEeWhM73UBYahqA" name="get rooms to clean"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_7Jox4J3DEeWhM73UBYahqA" name="get rooms to maintain"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_DYJrcJ3EEeWhM73UBYahqA" name="create a room"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_E2TrgJ3EEeWhM73UBYahqA" name="remove a room"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_GSO28J3EEeWhM73UBYahqA" name="edit a room"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_OWF_sJ3EEeWhM73UBYahqA" name="create room type"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_QbFWQJ3EEeWhM73UBYahqA" name="edit a room type"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_SZTWcJ3EEeWhM73UBYahqA" name="remove a room type"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_kOpnYJ3EEeWhM73UBYahqA" name="find available rooms"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uo0VoZ3DEeWhM73UBYahqA" name="Guest"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uo0Vop3DEeWhM73UBYahqA" name="Receptionist"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uo0Vo53DEeWhM73UBYahqA" name="Housekeeper"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uo0VpJ3DEeWhM73UBYahqA" name="Manager"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_arICsJ3EEeWhM73UBYahqA" name="Booking">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_c1Pw4J3EEeWhM73UBYahqA" name="create a booking"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_pihUwJ3EEeWhM73UBYahqA" name="edit a booking"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_rJ_B0J3EEeWhM73UBYahqA" name="cancel a booking"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_tsXfAJ3EEeWhM73UBYahqA" name="find a booking"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_vnERIJ3EEeWhM73UBYahqA" name="get a guest's bookings"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_zcbZIJ3EEeWhM73UBYahqA" name="check in"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_0fGXEJ3EEeWhM73UBYahqA" name="check out"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_2GKbgJ3EEeWhM73UBYahqA" name="assign a key"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-gVWAJ3FEeWhM73UBYahqA" memberEnd="_-gcDsJ3FEeWhM73UBYahqA _-gcqwJ3FEeWhM73UBYahqA" navigableOwnedEnd="_-gcDsJ3FEeWhM73UBYahqA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-gZncJ3FEeWhM73UBYahqA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-gZncZ3FEeWhM73UBYahqA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_-gcDsJ3FEeWhM73UBYahqA" name="edit cleaning status" type="_ySkDgJ3DEeWhM73UBYahqA" association="_-gVWAJ3FEeWhM73UBYahqA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_-gcqwJ3FEeWhM73UBYahqA" name="housekeeper" type="_uo0Vo53DEeWhM73UBYahqA" association="_-gVWAJ3FEeWhM73UBYahqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__1DGMJ3FEeWhM73UBYahqA" memberEnd="__1DtQZ3FEeWhM73UBYahqA __1DtQp3FEeWhM73UBYahqA" navigableOwnedEnd="__1DtQZ3FEeWhM73UBYahqA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__1DGMZ3FEeWhM73UBYahqA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__1DtQJ3FEeWhM73UBYahqA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__1DtQZ3FEeWhM73UBYahqA" name="get rooms to clean" type="_3sIJMJ3DEeWhM73UBYahqA" association="__1DGMJ3FEeWhM73UBYahqA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__1DtQp3FEeWhM73UBYahqA" name="housekeeper" type="_uo0Vo53DEeWhM73UBYahqA" association="__1DGMJ3FEeWhM73UBYahqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AsC_oJ3GEeWhM73UBYahqA" memberEnd="_AsDmsp3GEeWhM73UBYahqA _AsENwJ3GEeWhM73UBYahqA" navigableOwnedEnd="_AsDmsp3GEeWhM73UBYahqA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AsDmsJ3GEeWhM73UBYahqA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AsDmsZ3GEeWhM73UBYahqA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AsDmsp3GEeWhM73UBYahqA" name="edit maintenance status" type="_1URhAJ3DEeWhM73UBYahqA" association="_AsC_oJ3GEeWhM73UBYahqA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AsENwJ3GEeWhM73UBYahqA" name="janitor" type="_uozukJ3DEeWhM73UBYahqA" association="_AsC_oJ3GEeWhM73UBYahqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_B2jD4J3GEeWhM73UBYahqA" memberEnd="_B2jq8p3GEeWhM73UBYahqA _B2kSAJ3GEeWhM73UBYahqA" navigableOwnedEnd="_B2jq8p3GEeWhM73UBYahqA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_B2jq8J3GEeWhM73UBYahqA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_B2jq8Z3GEeWhM73UBYahqA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_B2jq8p3GEeWhM73UBYahqA" name="get rooms to maintain" type="_7Jox4J3DEeWhM73UBYahqA" association="_B2jD4J3GEeWhM73UBYahqA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_B2kSAJ3GEeWhM73UBYahqA" name="janitor" type="_uozukJ3DEeWhM73UBYahqA" association="_B2jD4J3GEeWhM73UBYahqA"/>
   </packagedElement>
 </uml:Model>
