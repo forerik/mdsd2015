@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <notation:Diagram xmi:id="_cf2SsIt7EeWuJKZGLyKm7w" type="PapyrusUMLActivityDiagram" name="Activity Diagram - Booking" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_cf2SsYt7EeWuJKZGLyKm7w" type="2001">
       <children xmi:type="notation:DecorationNode" xmi:id="_cf2Ssot7EeWuJKZGLyKm7w" type="5001"/>
@@ -678,7 +678,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uo08uJ3DEeWhM73UBYahqA" y="5"/>
       </children>
       <element xmi:type="uml:Actor" href="Hotel%20system.uml#_uo0VoZ3DEeWhM73UBYahqA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo08vJ3DEeWhM73UBYahqA" x="976" y="361"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo08vJ3DEeWhM73UBYahqA" x="940" y="-230"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_uo1jwJ3DEeWhM73UBYahqA" type="2011">
       <children xmi:type="notation:DecorationNode" xmi:id="_uo1jwZ3DEeWhM73UBYahqA" type="5014">
@@ -694,7 +694,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uo1jyJ3DEeWhM73UBYahqA" y="5"/>
       </children>
       <element xmi:type="uml:Actor" href="Hotel%20system.uml#_uo0Vo53DEeWhM73UBYahqA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo1jzJ3DEeWhM73UBYahqA" x="718" y="446"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo1jzJ3DEeWhM73UBYahqA" x="690" y="644"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_uo1jzZ3DEeWhM73UBYahqA" type="2011">
       <children xmi:type="notation:DecorationNode" xmi:id="_uo1jzp3DEeWhM73UBYahqA" type="5014">
@@ -710,11 +710,11 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uo1j1Z3DEeWhM73UBYahqA" y="5"/>
       </children>
       <element xmi:type="uml:Actor" href="Hotel%20system.uml#_uozukJ3DEeWhM73UBYahqA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo1j2Z3DEeWhM73UBYahqA" x="721" y="580"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo1j2Z3DEeWhM73UBYahqA" x="689" y="786"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_uo1j2p3DEeWhM73UBYahqA" type="2011">
       <children xmi:type="notation:DecorationNode" xmi:id="_uo1j253DEeWhM73UBYahqA" type="5014">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_uo1j3J3DEeWhM73UBYahqA" x="20" y="60"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uo1j3J3DEeWhM73UBYahqA" x="-70" y="-32"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_uo1j3Z3DEeWhM73UBYahqA" type="6029">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uo1j3p3DEeWhM73UBYahqA" x="20" y="100"/>
@@ -726,7 +726,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uo1j4p3DEeWhM73UBYahqA" y="5"/>
       </children>
       <element xmi:type="uml:Actor" href="Hotel%20system.uml#_uo0VpJ3DEeWhM73UBYahqA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo1j5p3DEeWhM73UBYahqA" x="961" y="153"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo1j5p3DEeWhM73UBYahqA" x="1199" y="133"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_uo2K0J3DEeWhM73UBYahqA" type="2016">
       <children xmi:type="notation:DecorationNode" xmi:id="_uo2K0Z3DEeWhM73UBYahqA" type="5025"/>
@@ -833,7 +833,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GSbrSJ3EEeWhM73UBYahqA"/>
           </children>
           <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_GSO28J3EEeWhM73UBYahqA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GSbrQZ3EEeWhM73UBYahqA" x="51" y="93"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GSbrQZ3EEeWhM73UBYahqA" x="31" y="89"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_OWS0AJ3EEeWhM73UBYahqA" type="3012">
           <children xmi:type="notation:DecorationNode" xmi:id="_OWS0Ap3EEeWhM73UBYahqA" type="5022"/>
@@ -846,7 +846,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OWTbFJ3EEeWhM73UBYahqA"/>
           </children>
           <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_OWF_sJ3EEeWhM73UBYahqA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OWS0AZ3EEeWhM73UBYahqA" x="44" y="227"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OWS0AZ3EEeWhM73UBYahqA" x="37" y="229"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_QbUm0J3EEeWhM73UBYahqA" type="3012">
           <children xmi:type="notation:DecorationNode" xmi:id="_QbVN4J3EEeWhM73UBYahqA" type="5022"/>
@@ -891,7 +891,7 @@
       </children>
       <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_uo2K1J3DEeWhM73UBYahqA"/>
       <element xmi:type="uml:Package" href="Hotel%20system.uml#_uo0VoJ3DEeWhM73UBYahqA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo2K2J3DEeWhM73UBYahqA" x="328" y="-211" width="256" height="904"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo2K2J3DEeWhM73UBYahqA" x="334" y="4" width="256" height="904"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_uo2K2Z3DEeWhM73UBYahqA" type="2011">
       <children xmi:type="notation:DecorationNode" xmi:id="_uo2K2p3DEeWhM73UBYahqA" type="5014">
@@ -907,7 +907,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uo2K4Z3DEeWhM73UBYahqA" y="5"/>
       </children>
       <element xmi:type="uml:Actor" href="Hotel%20system.uml#_uo0Vop3DEeWhM73UBYahqA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo2K5Z3DEeWhM73UBYahqA" x="967" y="257"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uo2K5Z3DEeWhM73UBYahqA" x="815" y="-48"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_arJQ0J3EEeWhM73UBYahqA" type="2016">
       <children xmi:type="notation:DecorationNode" xmi:id="_arJQ053EEeWhM73UBYahqA" type="5025"/>
@@ -1022,6 +1022,447 @@
       <element xmi:type="uml:Package" href="Hotel%20system.uml#_arICsJ3EEeWhM73UBYahqA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_arJQ0p3EEeWhM73UBYahqA" x="340" y="-836" width="236" height="602"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_QerYQJ_yEeWZLewJAsVhpw" type="2016">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Qer_UJ_yEeWZLewJAsVhpw" type="5025"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_QesmYJ_yEeWZLewJAsVhpw" type="7013">
+        <children xmi:type="notation:Shape" xmi:id="_l4ywcJ_yEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_l4ywcp_yEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_l4ywc5_yEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_l4ywdJ_yEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_l4ywdZ_yEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_l4ywdp_yEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_l4ywd5_yEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l4yweJ_yEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_l4Qk8J_yEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l4ywcZ_yEeWZLewJAsVhpw" x="10" y="32"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_pPEvwJ_yEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_pPEvwp_yEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_pPEvw5_yEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_pPEvxJ_yEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_pPEvxZ_yEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_pPEvxp_yEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_pPEvx5_yEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pPEvyJ_yEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_pOsVQJ_yEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pPEvwZ_yEeWZLewJAsVhpw" x="192" y="32"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_rprxAJ_yEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_rpsYEJ_yEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_rpsYEZ_yEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_rpsYEp_yEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_rpsYE5_yEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_rpsYFJ_yEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_rpsYFZ_yEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rpsYFp_yEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_rpSvcJ_yEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rprxAZ_yEeWZLewJAsVhpw" x="362" y="27"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_xBKMAJ_yEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_xBKzEJ_yEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_xBKzEZ_yEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_xBKzEp_yEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_xBKzE5_yEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_xBKzFJ_yEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_xBKzFZ_yEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xBKzFp_yEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_xAsR8J_yEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xBKMAZ_yEeWZLewJAsVhpw" x="569" y="29"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_0Ji5QJ_yEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_0Ji5Qp_yEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_0Ji5Q5_yEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_0Ji5RJ_yEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_0Ji5RZ_yEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_0Ji5Rp_yEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_0Ji5R5_yEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0Ji5SJ_yEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_0JICgJ_yEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0Ji5QZ_yEeWZLewJAsVhpw" x="744" y="26"/>
+        </children>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QesmYZ_yEeWZLewJAsVhpw"/>
+      </children>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_QerYQZ_yEeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Package" href="Hotel%20system.uml#_QelRoJ_yEeWZLewJAsVhpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QerYQp_yEeWZLewJAsVhpw" x="604" y="-927" width="928" height="156"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_VgwLAJ_yEeWZLewJAsVhpw" type="2016">
+      <children xmi:type="notation:DecorationNode" xmi:id="_VgwyEJ_yEeWZLewJAsVhpw" type="5025"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_VgwyEZ_yEeWZLewJAsVhpw" type="7013">
+        <children xmi:type="notation:Shape" xmi:id="_JmYOQJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JmYOQp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_JmYOQ5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_JmYORJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_JmY1UJ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_JmY1UZ_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_JmY1Up_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmY1U5_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_Jl9XgJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmYOQZ_zEeWZLewJAsVhpw" x="47" y="24"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_MJ23oJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_MJ3esJ_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_MJ3esZ_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_MJ3esp_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_MJ3es5_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_MJ3etJ_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_MJ3etZ_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MJ3etp_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_MJcA4J_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MJ23oZ_zEeWZLewJAsVhpw" x="64" y="100"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_N8n1wJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_N8n1wp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_N8n1w5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_N8n1xJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_N8n1xZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_N8n1xp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_N8n1x5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8n1yJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_N8MX8J_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8n1wZ_zEeWZLewJAsVhpw" x="51" y="173"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_QlYnwJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_QlYnwp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_QlYnw5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_QlYnxJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_QlYnxZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_QlYnxp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_QlYnx5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QlYnyJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_Qk770J_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QlYnwZ_zEeWZLewJAsVhpw" x="54" y="242"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_T7zJ8J_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_T7zJ8p_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_T7zJ85_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_T7zxAJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_T7zxAZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_T7zxAp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_T7zxA5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T7zxBJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_T7V28J_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T7zJ8Z_zEeWZLewJAsVhpw" x="60" y="313"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_W6WlwJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_W6Wlwp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_W6Wlw5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_W6WlxJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_W6XM0J_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_W6XM0Z_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_W6XM0p_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W6XM05_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_W55SwJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W6WlwZ_zEeWZLewJAsVhpw" x="55" y="382"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_ZtT1kJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_ZtT1kp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_ZtT1k5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ZtT1lJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_ZtT1lZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ZtT1lp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ZtT1l5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZtT1mJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_Zs17gJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZtT1kZ_zEeWZLewJAsVhpw" x="46" y="451"/>
+        </children>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VgwyEp_yEeWZLewJAsVhpw"/>
+      </children>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_VgwLAZ_yEeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Package" href="Hotel%20system.uml#_Vgu84J_yEeWZLewJAsVhpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VgwLAp_yEeWZLewJAsVhpw" x="1543" y="-790" height="568"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_W_rnIJ_yEeWZLewJAsVhpw" type="2016">
+      <children xmi:type="notation:DecorationNode" xmi:id="_W_rnI5_yEeWZLewJAsVhpw" type="5025"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_W_rnJJ_yEeWZLewJAsVhpw" type="7013">
+        <children xmi:type="notation:Shape" xmi:id="_eahLkJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_eahLkp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_eahLk5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_eahLlJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_eahLlZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_eahLlp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_eahLl5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eahLmJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_eaCqcJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eahLkZ_zEeWZLewJAsVhpw" x="39" y="12"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_f1dfkJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_f1dfkp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_f1dfk5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_f1dflJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_f1dflZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_f1dflp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_f1dfl5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f1dfmJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_f0-XYJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f1dfkZ_zEeWZLewJAsVhpw" x="35" y="87"/>
+        </children>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W_rnJZ_yEeWZLewJAsVhpw"/>
+      </children>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_W_rnIZ_yEeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Package" href="Hotel%20system.uml#_W_px8J_yEeWZLewJAsVhpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W_rnIp_yEeWZLewJAsVhpw" x="338" y="-224" width="244" height="207"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_Yi0N0J_yEeWZLewJAsVhpw" type="2016">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Yi004J_yEeWZLewJAsVhpw" type="5025"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Yi004Z_yEeWZLewJAsVhpw" type="7013">
+        <children xmi:type="notation:Shape" xmi:id="_jutpEJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_juuQIJ_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_juuQIZ_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_juuQIp_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_juuQI5_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_juuQJJ_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_juuQJZ_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_juuQJp_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_juN50J_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jutpEZ_zEeWZLewJAsVhpw" x="21" y="17"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_mQr2kJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_mQsdoJ_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_mQsdoZ_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_mQsdop_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_mQsdo5_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_mQsdpJ_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_mQsdpZ_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mQsdpp_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_mQMHUJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mQr2kZ_zEeWZLewJAsVhpw" x="43" y="87"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_oGBnkJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_oGBnkp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_oGBnk5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_oGBnlJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_oGBnlZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_oGBnlp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_oGBnl5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oGBnmJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_oFfcEJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oGBnkZ_zEeWZLewJAsVhpw" x="39" y="154"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_psE_YJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_psFmcJ_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_psFmcZ_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_psFmcp_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_psFmc5_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_psFmdJ_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_psFmdZ_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_psFmdp_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_prja8J_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_psE_YZ_zEeWZLewJAsVhpw" x="39" y="221"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_rkf5kJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_rkf5kp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_rkf5k5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_rkf5lJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_rkf5lZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_rkf5lp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_rkf5l5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rkf5mJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_rj6qwJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rkf5kZ_zEeWZLewJAsVhpw" x="44" y="288"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_tQgvcJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_tQgvcp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_tQgvc5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tQgvdJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_tQgvdZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_tQgvdp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_tQgvd5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQgveJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_tP4dUJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tQgvcZ_zEeWZLewJAsVhpw" x="35" y="356"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_vf1twJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_vf2U0J_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_vf2U0Z_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_vf2U0p_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_vf2U05_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_vf2U1J_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_vf2U1Z_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vf2U1p_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_vfRGAJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vf1twZ_zEeWZLewJAsVhpw" x="59" y="428"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_xydQoJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_xyd3sJ_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_xyd3sZ_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_xyd3sp_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_xyd3s5_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_xyd3tJ_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_xyd3tZ_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xyd3tp_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_xx3awJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xydQoZ_zEeWZLewJAsVhpw" x="58" y="495"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_y-Br4J_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_y-Br4p_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_y-Br45_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_y-Br5J_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_y-Br5Z_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_y-Br5p_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_y-Br55_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y-Br6J_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_y9Rd8J_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y-Br4Z_zEeWZLewJAsVhpw" x="57" y="568"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7BhoQJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_7BhoQp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_7BhoQ5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_7BhoRJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_7BhoRZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_7BhoRp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_7BhoR5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7BhoSJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_7A6kQJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7BhoQZ_zEeWZLewJAsVhpw" x="38" y="637" height="65"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_9LMqgJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_9LMqgp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_9LMqg5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9LMqhJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_9LMqhZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9LMqhp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9LMqh5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9LMqiJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_9KjKQJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9LMqgZ_zEeWZLewJAsVhpw" x="49" y="705"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_-oOpMJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_-oOpMp_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_-oOpM5_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-oOpNJ_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_-oOpNZ_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_-oOpNp_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_-oOpN5_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-oOpOJ_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_-noMQJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-oOpMZ_zEeWZLewJAsVhpw" x="36" y="777"/>
+        </children>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yi004p_yEeWZLewJAsVhpw"/>
+      </children>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_Yi0N0Z_yEeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Package" href="Hotel%20system.uml#_Yiy_sJ_yEeWZLewJAsVhpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yi0N0p_yEeWZLewJAsVhpw" x="1541" y="-207" width="303" height="902"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_aG8TAJ_yEeWZLewJAsVhpw" type="2016">
+      <children xmi:type="notation:DecorationNode" xmi:id="_aG86EJ_yEeWZLewJAsVhpw" type="5025"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_aG86EZ_yEeWZLewJAsVhpw" type="7013">
+        <children xmi:type="notation:Shape" xmi:id="_2YaIEJ_zEeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_2YavIJ_zEeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_2YavIZ_zEeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_2YavIp_zEeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_2YavI5_zEeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_2YavJJ_zEeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_2YavJZ_zEeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2YavJp_zEeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_2X05QJ_zEeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2YaIEZ_zEeWZLewJAsVhpw" x="39" y="30"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JYZAIJ_0EeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JYZAIp_0EeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_JYZAI5_0EeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_JYZAJJ_0EeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_JYZnMJ_0EeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_JYZnMZ_0EeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_JYZnMp_0EeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JYZnM5_0EeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_JXpZQJ_0EeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JYZAIZ_0EeWZLewJAsVhpw" x="192" y="30"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_KgPZAJ_0EeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_KgPZAp_0EeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_KgPZA5_0EeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_KgPZBJ_0EeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_KgPZBZ_0EeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_KgPZBp_0EeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_KgPZB5_0EeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgPZCJ_0EeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_Kfmf0J_0EeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgPZAZ_0EeWZLewJAsVhpw" x="343" y="30"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_MVPy0J_0EeWZLewJAsVhpw" type="3012">
+          <children xmi:type="notation:DecorationNode" xmi:id="_MVQZ4J_0EeWZLewJAsVhpw" type="5022"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_MVQZ4Z_0EeWZLewJAsVhpw" type="6046">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_MVQZ4p_0EeWZLewJAsVhpw" y="5"/>
+          </children>
+          <children xmi:type="notation:DecorationNode" xmi:id="_MVQZ45_0EeWZLewJAsVhpw" type="7014">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_MVQZ5J_0EeWZLewJAsVhpw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_MVQZ5Z_0EeWZLewJAsVhpw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MVQZ5p_0EeWZLewJAsVhpw"/>
+          </children>
+          <element xmi:type="uml:UseCase" href="Hotel%20system.uml#_MUngsJ_0EeWZLewJAsVhpw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MVPy0Z_0EeWZLewJAsVhpw" x="492" y="31"/>
+        </children>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aG86Ep_yEeWZLewJAsVhpw"/>
+      </children>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_aG8TAZ_yEeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Package" href="Hotel%20system.uml#_aG7r8J_yEeWZLewJAsVhpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aG8TAp_yEeWZLewJAsVhpw" x="862" y="723" width="674"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_6rYRwJ_2EeWZLewJAsVhpw" type="2018">
+      <children xmi:type="notation:DecorationNode" xmi:id="_6rY40J_2EeWZLewJAsVhpw" type="5027"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_6rYRwZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Comment" href="Hotel%20system.uml#_6rV1gJ_2EeWZLewJAsVhpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6rYRwp_2EeWZLewJAsVhpw" x="844" y="320" width="307"/>
+    </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_uIOKAZ3DEeWhM73UBYahqA" name="diagram_compatibility_version" stringValue="1.1.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_uIOKAp3DEeWhM73UBYahqA"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_uIOKA53DEeWhM73UBYahqA">
@@ -1038,8 +1479,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_-gef8Z3FEeWhM73UBYahqA"/>
       <element xmi:type="uml:Association" href="Hotel%20system.uml#_-gVWAJ3FEeWhM73UBYahqA"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-gef8p3FEeWhM73UBYahqA" points="[-11, -1, 180, 19]$[-190, -5, 1, 15]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-hl6QJ3FEeWhM73UBYahqA" id="(0.0,0.4666666666666667)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-hl6QZ3FEeWhM73UBYahqA" id="(1.0,0.625)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-hl6QJ3FEeWhM73UBYahqA" id="(0.0,0.4266666666666667)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-hl6QZ3FEeWhM73UBYahqA" id="(1.0,0.5989583333333334)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="__1GJgJ3FEeWhM73UBYahqA" type="4011" source="_uo1jwJ3DEeWhM73UBYahqA" target="_3sShQJ3DEeWhM73UBYahqA">
       <children xmi:type="notation:DecorationNode" xmi:id="__1GwkJ3FEeWhM73UBYahqA" type="6008">
@@ -1051,8 +1492,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="__1GJgZ3FEeWhM73UBYahqA"/>
       <element xmi:type="uml:Association" href="Hotel%20system.uml#__1DGMJ3FEeWhM73UBYahqA"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__1GJgp3FEeWhM73UBYahqA" points="[-11, 2, 174, -19]$[-165, 19, 20, -2]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__2posJ3FEeWhM73UBYahqA" id="(0.0,0.7866666666666666)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__2posZ3FEeWhM73UBYahqA" id="(1.0,0.3177083333333333)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__2posJ3FEeWhM73UBYahqA" id="(0.0,0.7466666666666667)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__2posZ3FEeWhM73UBYahqA" id="(1.0,0.3125)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_AsGC8J3GEeWhM73UBYahqA" type="4011" source="_uo1jzZ3DEeWhM73UBYahqA" target="_1UaD4J3DEeWhM73UBYahqA">
       <children xmi:type="notation:DecorationNode" xmi:id="_AsGqAJ3GEeWhM73UBYahqA" type="6008">
@@ -1064,8 +1505,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_AsGC8Z3GEeWhM73UBYahqA"/>
       <element xmi:type="uml:Association" href="Hotel%20system.uml#_AsC_oJ3GEeWhM73UBYahqA"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AsGC8p3GEeWhM73UBYahqA" points="[-11, -2, 168, 29]$[-152, -34, 27, -3]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtP5gJ3GEeWhM73UBYahqA" id="(0.0,0.32)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtP5gZ3GEeWhM73UBYahqA" id="(1.0,0.421875)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtP5gJ3GEeWhM73UBYahqA" id="(0.0,0.28)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtP5gZ3GEeWhM73UBYahqA" id="(1.0,0.3958333333333333)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_B2mHMJ3GEeWhM73UBYahqA" type="4011" source="_uo1jzZ3DEeWhM73UBYahqA" target="_7Jyi4J3DEeWhM73UBYahqA">
       <children xmi:type="notation:DecorationNode" xmi:id="_B2muQJ3GEeWhM73UBYahqA" type="6008">
@@ -1077,8 +1518,834 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_B2mHMZ3GEeWhM73UBYahqA"/>
       <element xmi:type="uml:Association" href="Hotel%20system.uml#_B2jD4J3GEeWhM73UBYahqA"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_B2mHMp3GEeWhM73UBYahqA" points="[-11, 2, 162, -21]$[-157, 22, 16, -1]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B3qeMJ3GEeWhM73UBYahqA" id="(0.0,0.48)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B3qeMZ3GEeWhM73UBYahqA" id="(1.0,0.3125)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B3qeMJ3GEeWhM73UBYahqA" id="(0.0,0.44)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_B3qeMZ3GEeWhM73UBYahqA" id="(1.0,0.2864583333333333)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_XUNawJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_f1dfkJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_XUNaw5_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_XUNaxJ_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_XUNaxZ_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_XUNaxp_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_XUNawZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_XUGGAJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XUNawp_0EeWZLewJAsVhpw" points="[-11, 3, 369, -100]$[-433, 108, -53, 5]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XVw58J_0EeWZLewJAsVhpw" id="(0.0,0.30666666666666687)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XVw58Z_0EeWZLewJAsVhpw" id="(1.0047619047619045,0.1875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_Z8aMEJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_ZtT1kJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Z8azIJ_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Z8azIZ_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Z8azIp_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Z8azI5_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Z8aMEZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_Z8VTkJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Z8aMEp_0EeWZLewJAsVhpw" points="[11, 1, -547, -42]$[552, 67, -6, 24]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6O74QJ_0EeWZLewJAsVhpw" id="(1.0,0.44)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z-FAAZ_0EeWZLewJAsVhpw" id="(0.0,0.40625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_cB548J_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_l4ywcJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_cB5485_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cB549J_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_cB549Z_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cB6gAJ_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_cB548Z_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_cB1ngJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cB548p_0EeWZLewJAsVhpw" points="[-9, -19, 170, 358]$[-171, -369, 8, 8]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cD-8kJ_0EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cD-8kZ_0EeWZLewJAsVhpw" id="(0.630057803468208,1.005208333333334)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_d7B9wJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_xBKMAJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_d7Ck0J_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_d7Ck0Z_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_d7Ck0p_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_d7Ck05_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_d7B9wZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_d6-TYJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_d7B9wp_0EeWZLewJAsVhpw" points="[10, -17, -217, 357]$[227, -368, 0, 6]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_d9KrwJ_0EeWZLewJAsVhpw" id="(0.6666666666666666,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_d9LS0J_0EeWZLewJAsVhpw" id="(0.41616161616161523,1.0104166666666679)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_gm2DwJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_c1g2oJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_gm2q0J_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gm2q0Z_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_gm2q0p_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gm2q05_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_gm2DwZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_gm01oJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gm2Dwp_0EeWZLewJAsVhpw" points="[-11, -14, 338, 399]$[-324, -413, 25, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gpOCUJ_0EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gpOCUZ_0EeWZLewJAsVhpw" id="(0.9913419913419911,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_m0PaIJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_piyagJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_m0PaI5_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_m0QBMJ_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_m0QBMZ_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_m0QBMp_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_m0PaIZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_m0LIsJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m0PaIp_0EeWZLewJAsVhpw" points="[-3, -4, 329, 351]$[-318, -355, 14, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m2RacJ_0EeWZLewJAsVhpw" id="(0.0,0.2)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m2RacZ_0EeWZLewJAsVhpw" id="(1.002380952380952,0.84375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_nsM84J_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_rKUZAJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_nsM845_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nsNj8J_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_nsNj8Z_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nsNj8p_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_nsM84Z_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_nsIrcJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nsM84p_0EeWZLewJAsVhpw" points="[-7, -8, 338, 319]$[-320, -330, 25, -3]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nuT1sJ_0EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nuT1sZ_0EeWZLewJAsVhpw" id="(1.0021505376344082,0.9791666666666679)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_valk4J_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_pPEvwJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_vamL8J_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vamL8Z_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_vamL8p_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vamL85_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_valk4Z_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_vah6gJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_valk4p_0EeWZLewJAsVhpw" points="[-2, -19, 63, 447]$[-7, -474, 58, -8]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vcEyoJ_0EeWZLewJAsVhpw" id="(0.3111111111111111,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vcEyoZ_0EeWZLewJAsVhpw" id="(0.5534188034188035,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_xZKxcJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_rprxAJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_xZKxc5_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xZKxdJ_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_xZKxdZ_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xZKxdp_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_xZKxcZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_xZIVMJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xZKxcp_0EeWZLewJAsVhpw" points="[2, -9, -64, 438]$[66, -436, 0, 11]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xbNY0J_0EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xbNY0Z_0EeWZLewJAsVhpw" id="(0.46774193548387094,1.005208333333334)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_zNB7wJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_jutpEJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_zNB7w5_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zNB7xJ_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_zNB7xZ_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zNB7xp_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_zNB7wZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_zM9DQJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zNB7wp_0EeWZLewJAsVhpw" points="[11, 1, -476, -60]$[488, 42, 1, -19]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zPNGAJ_0EeWZLewJAsVhpw" id="(1.022222222222221,0.46666666666666684)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zPNGAZ_0EeWZLewJAsVhpw" id="(0.0,0.390625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_0TDvsJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_mQr2kJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_0TDvs5_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0TEWwJ_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_0TEWwZ_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0TEWwp_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_0TDvsZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_0S-3MJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0TDvsp_0EeWZLewJAsVhpw" points="[11, 2, -494, -120]$[506, 137, 1, 15]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0VOS4J_0EeWZLewJAsVhpw" id="(1.022222222222221,0.44)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0VOS4Z_0EeWZLewJAsVhpw" id="(0.0,0.484375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_1RoQwJ_0EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_oGBnkJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_1RoQw5_0EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1Ro30J_0EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_1Ro30Z_0EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1Ro30p_0EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_1RoQwZ_0EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_1RkmYJ_0EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1RoQwp_0EeWZLewJAsVhpw" points="[11, 3, -489, -167]$[501, 187, 1, 17]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1T3FYJ_0EeWZLewJAsVhpw" id="(1.022222222222221,0.52)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1T3FYZ_0EeWZLewJAsVhpw" id="(0.0,0.375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_E1C7UJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_f1dfkJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_E1DiYp_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_E1DiY5_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_E1DiZJ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_E1DiZZ_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_E1DiYJ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_E0_4AJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E1DiYZ_1EeWZLewJAsVhpw" points="[-11, -2, 457, 63]$[-467, -45, 1, 20]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E3P6wJ_1EeWZLewJAsVhpw" id="(0.0,0.4)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E3P6wZ_1EeWZLewJAsVhpw" id="(1.0,0.53125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_F62FwJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_eahLkJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_F62s0J_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_F62s0Z_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_F62s0p_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_F62s05_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_F62FwZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_F6ybYJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_F62Fwp_1EeWZLewJAsVhpw" points="[-11, -3, 488, 119]$[-496, -146, 3, -24]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F8aMAJ_1EeWZLewJAsVhpw" id="(0.0,0.24)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F8aMAZ_1EeWZLewJAsVhpw" id="(1.0,0.578125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_HbCtMJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_vnXzIJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_HbDUQJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HbDUQZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_HbDUQp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HbDUQ5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_HbCtMZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_Ha_C0J_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HbCtMp_1EeWZLewJAsVhpw" points="[-2, -1, 431, 224]$[-433, -208, 0, 17]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HdQTsJ_1EeWZLewJAsVhpw" id="(0.0,0.16)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HdQTsZ_1EeWZLewJAsVhpw" id="(1.0,0.578125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_I-om4J_1EeWZLewJAsVhpw" type="4011" source="_uo08sJ3DEeWhM73UBYahqA" target="_vnXzIJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_I-pN8J_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_I-pN8Z_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_I-pN8p_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_I-pN85_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_I-om4Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_I-k8gJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_I-om4p_1EeWZLewJAsVhpw" points="[-11, -3, 315, 64]$[-326, -85, 0, -18]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JA7F4J_1EeWZLewJAsVhpw" id="(0.0,0.22666666666666685)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JA7F4Z_1EeWZLewJAsVhpw" id="(1.0,0.526041666666667)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_KEusQJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_2GfLoJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_KEusQ5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_KEusRJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_KEusRZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_KEusRp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_KEusQZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_KErB4J_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KEusQp_1EeWZLewJAsVhpw" points="[-4, -3, 455, 276]$[-446, -279, 13, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KHCZYJ_1EeWZLewJAsVhpw" id="(0.0,0.36)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KHDAcJ_1EeWZLewJAsVhpw" id="(1.0,0.671875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_LHoTsJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_0fcVUJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_LHoTs5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LHoTtJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_LHo6wJ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LHo6wZ_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_LHoTsZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_LHkpUJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LHoTsp_1EeWZLewJAsVhpw" points="[-11, -8, 460, 324]$[-470, -311, 1, 21]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LJ3IUJ_1EeWZLewJAsVhpw" id="(0.0,0.16)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LJ3IUZ_1EeWZLewJAsVhpw" id="(1.0,0.625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_Ma1oAJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_zczzoJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Ma2PEJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ma2PEZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Ma2PEp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ma2PE5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Ma1oAZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_Ma0Z4J_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Ma1oAp_1EeWZLewJAsVhpw" points="[-11, -8, 463, 369]$[-473, -393, 1, -16]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MdD1kJ_1EeWZLewJAsVhpw" id="(0.0,0.08)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MdD1kZ_1EeWZLewJAsVhpw" id="(1.0,0.546875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_OU9yYJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_tstdQJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OU9yY5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OU9yZJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_OU-ZcJ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OU-ZcZ_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OU9yYZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_OU6IAJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OU9yYp_1EeWZLewJAsVhpw" points="[-8, -8, 301, 283]$[-300, -292, 9, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OXTUsJ_1EeWZLewJAsVhpw" id="(0.0,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OXTUsZ_1EeWZLewJAsVhpw" id="(1.0,0.6875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_P3hxUJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_rKUZAJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_P3hxU5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_P3hxVJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_P3iYYJ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_P3iYYZ_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_P3hxUZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_P3eG8J_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_P3hxUp_1EeWZLewJAsVhpw" points="[-8, -9, 295, 318]$[-298, -329, 5, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P5zCMJ_1EeWZLewJAsVhpw" id="(0.0,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P5zCMZ_1EeWZLewJAsVhpw" id="(1.0,0.4375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_RUW7sJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_piyagJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_RUXiwJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RUXiwZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_RUXiwp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RUXiw5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_RUW7sZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_RUTRUJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RUW7sp_1EeWZLewJAsVhpw" points="[-8, -9, 298, 349]$[-299, -360, 7, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RWu6QJ_1EeWZLewJAsVhpw" id="(0.0,0.04)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RWu6QZ_1EeWZLewJAsVhpw" id="(1.0,0.5625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_U-560J_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_c1g2oJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_U-5605_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_U-561J_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_U-6h4J_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_U-6h4Z_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_U-560Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_U-1pYJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_U-560p_1EeWZLewJAsVhpw" points="[-5, -6, 298, 379]$[-297, -386, 6, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VBZ1MJ_1EeWZLewJAsVhpw" id="(0.1,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VBZ1MZ_1EeWZLewJAsVhpw" id="(1.0,0.5625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_ZGI18J_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_l4ywcJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ZGI185_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZGI19J_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_ZGI19Z_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZGI19p_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ZGI18Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_ZGDWYJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZGI18p_1EeWZLewJAsVhpw" points="[-3, -12, 65, 389]$[-64, -385, 4, 16]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZH5JcJ_1EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZH5JcZ_1EeWZLewJAsVhpw" id="(0.5491329479768786,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_a0PWgJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_pPEvwJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_a0PWg5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_a0PWhJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_a0PWhZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_a0PWhp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_a0PWgZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_a0NhUJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_a0PWgp_1EeWZLewJAsVhpw" points="[-4, -15, -19, 389]$[9, -388, -6, 16]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a2q_cJ_1EeWZLewJAsVhpw" id="(0.7666666666666667,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a2q_cZ_1EeWZLewJAsVhpw" id="(0.40384615384615385,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_cFOdQJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_rprxAJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_cFOdQ5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cFOdRJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_cFOdRZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cFOdRp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_cFOdQZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_cFMoEJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cFOdQp_1EeWZLewJAsVhpw" points="[2, -12, -87, 382]$[76, -389, -13, 5]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cHjYgJ_1EeWZLewJAsVhpw" id="(0.5666666666666667,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cHjYgZ_1EeWZLewJAsVhpw" id="(0.23118279569892472,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_dF8TYJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_xBKMAJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_dF8TY5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_dF86cJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_dF86cZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_dF86cp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_dF8TYZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_dF5QEJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dF8TYp_1EeWZLewJAsVhpw" points="[5, -12, -182, 385]$[169, -393, -18, 4]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dIYjYJ_1EeWZLewJAsVhpw" id="(0.9,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dIYjYZ_1EeWZLewJAsVhpw" id="(0.14545454545454545,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_efXkcJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_0Ji5QJ_yEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_efXkc5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_efXkdJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_efXkdZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_efYLgJ_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_efXkcZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_efTTAJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_efXkcp_1EeWZLewJAsVhpw" points="[7, -9, -298, 383]$[305, -388, 0, 4]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ehsfsJ_1EeWZLewJAsVhpw" id="(0.9,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ehsfsZ_1EeWZLewJAsVhpw" id="(0.483695652173913,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_g8uXsJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_ZtT1kJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_g8u-wJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_g8u-wZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_g8u-wp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_g8u-w5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_g8uXsZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_g8qGQJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g8uXsp_1EeWZLewJAsVhpw" points="[7, -2, -387, 124]$[382, -127, -12, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g_FIIJ_1EeWZLewJAsVhpw" id="(1.0,0.52)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g_FvMJ_1EeWZLewJAsVhpw" id="(0.0,0.5)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_j4OfgJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_jutpEJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_j4PGkJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_j4PGkZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_j4PGkp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_j4PGk5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_j4OfgZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_j4K1IJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_j4Ofgp_1EeWZLewJAsVhpw" points="[2, -1, -389, 45]$[363, -45, -28, 1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_j6tLwJ_1EeWZLewJAsVhpw" id="(1.0,0.4)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_j6tLwZ_1EeWZLewJAsVhpw" id="(0.0,0.640625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_k0kL8J_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_mQr2kJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_k0kzAJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_k0kzAZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_k0kzAp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_k0kzA5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_k0kL8Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_k0ghkJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_k0kL8p_1EeWZLewJAsVhpw" points="[3, -1, -420, 12]$[418, -29, -5, -16]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_k268YJ_1EeWZLewJAsVhpw" id="(1.0,0.4)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_k268YZ_1EeWZLewJAsVhpw" id="(0.0,0.390625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_pLqvEJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_oGBnkJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_pLqvE5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pLqvFJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_pLrWIJ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pLrWIZ_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_pLqvEZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_pLmdoJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pLqvEp_1EeWZLewJAsVhpw" points="[3, 0, -419, -18]$[373, 25, -49, 7]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pOYE0J_1EeWZLewJAsVhpw" id="(1.0,0.56)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pOYE0Z_1EeWZLewJAsVhpw" id="(0.0,0.625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_r0RwEJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_ySr_UJ3DEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_r0RwE5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_r0RwFJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_r0RwFZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_r0RwFp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_r0RwEZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_r0NeoJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_r0RwEp_1EeWZLewJAsVhpw" points="[-6, 13, 144, -323]$[-144, 336, 6, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r2uAEJ_1EeWZLewJAsVhpw" id="(0.1,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r2uAEZ_1EeWZLewJAsVhpw" id="(1.0,0.078125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_tPjbQJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_vceAIJ3DEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_tPkCUJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tPkCUZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_tPkCUp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tPkCU5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_tPjbQZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_tPd7sJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tPjbQp_1EeWZLewJAsVhpw" points="[-2, 4, 149, -298]$[-147, 302, 4, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tR8n8J_1EeWZLewJAsVhpw" id="(0.0,0.68)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tR8n8Z_1EeWZLewJAsVhpw" id="(1.0,0.3125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_u3aw8J_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_kO77QJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_u3bYAJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_u3bYAZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_u3bYAp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_u3bYA5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_u3aw8Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_u3VRYJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_u3aw8p_1EeWZLewJAsVhpw" points="[-9, 16, 144, -268]$[-152, 284, 1, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u6JU0J_1EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u6JU0Z_1EeWZLewJAsVhpw" id="(1.0,0.3125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_whLkEJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_3sShQJ3DEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_whLkE5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_whMLIJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_whMLIZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_whMLIp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_whLkEZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_whH5sJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_whLkEp_1EeWZLewJAsVhpw" points="[-6, 13, 143, -355]$[-145, 368, 4, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wjsskJ_1EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wjsskZ_1EeWZLewJAsVhpw" id="(1.0,0.1875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_yISr0J_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_1UaD4J3DEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_yITS4J_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yITS4Z_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_yITS4p_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yITS45_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_yISr0Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_yIOaYJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yISr0p_1EeWZLewJAsVhpw" points="[-5, 13, 139, -387]$[-139, 399, 5, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yKvi4J_1EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yKvi4Z_1EeWZLewJAsVhpw" id="(1.0,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_zvViIJ_1EeWZLewJAsVhpw" type="4011" source="_uo2K2Z3DEeWhM73UBYahqA" target="_7Jyi4J3DEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_zvWJMJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zvWJMZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_zvWJMp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zvWJM5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_zvViIZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_zvQCkJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zvViIp_1EeWZLewJAsVhpw" points="[-4, 12, 133, -431]$[-135, 442, 2, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zyinIJ_1EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zyinIZ_1EeWZLewJAsVhpw" id="(1.0,0.296875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_2ZMgUJ_1EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_DYVRoJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_2ZNHYJ_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ZNHYZ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_2ZNHYp_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ZNHY5_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_2ZMgUZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_2ZIO4J_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2ZMgUp_1EeWZLewJAsVhpw" points="[-8, -2, 249, 41]$[-248, -59, 9, -16]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2bVOUJ_1EeWZLewJAsVhpw" id="(0.0,0.54)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2bVOUZ_1EeWZLewJAsVhpw" id="(1.0,0.609375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_4FUD4J_1EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_GSbrQJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_4FUD45_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4FUD5J_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_4FUD5Z_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4FUD5p_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_4FUD4Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_4FPLYJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4FUD4p_1EeWZLewJAsVhpw" points="[-8, -9, 216, 0]$[-213, -10, 11, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4H76EJ_1EeWZLewJAsVhpw" id="(0.0,0.54)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4H76EZ_1EeWZLewJAsVhpw" id="(1.0,0.46875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_5H134J_1EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_E2n0kJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_5H1345_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5H135J_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_5H2e8J_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5H2e8Z_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_5H134Z_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_5Hw_YJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5H134p_1EeWZLewJAsVhpw" points="[-8, 1, 220, -31]$[-221, 33, 7, 1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5KfjQJ_1EeWZLewJAsVhpw" id="(0.0,0.54)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5KfjQZ_1EeWZLewJAsVhpw" id="(1.0,0.578125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_7F8jUJ_1EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_OWS0AJ3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_7F8jU5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7F8jVJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_7F8jVZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7F8jVp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_7F8jUZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_7F6uIJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7F8jUp_1EeWZLewJAsVhpw" points="[-8, 2, 218, -60]$[-214, 62, 12, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7IbPkJ_1EeWZLewJAsVhpw" id="(0.0,0.62)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7IbPkZ_1EeWZLewJAsVhpw" id="(1.0,0.375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_8KS8QJ_1EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_QbUm0J3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_8KS8Q5_1EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8KS8RJ_1EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_8KS8RZ_1EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8KS8Rp_1EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_8KS8QZ_1EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_8KNcsJ_1EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8KS8Qp_1EeWZLewJAsVhpw" points="[-9, 3, 219, -83]$[-222, 86, 6, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8M6LYJ_1EeWZLewJAsVhpw" id="(0.0,0.98)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8M6LYZ_1EeWZLewJAsVhpw" id="(1.0,0.40625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_cwOsoJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_psE_YJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_cwOso5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cwOspJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_cwPTsJ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cwPTsZ_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_cwOsoZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_cwJNEJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cwOsop_2EeWZLewJAsVhpw" points="[7, -2, -195, 38]$[185, -42, -17, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cyvOEJ_2EeWZLewJAsVhpw" id="(1.0,0.38)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cyvOEZ_2EeWZLewJAsVhpw" id="(0.0,0.515625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_ecZ6kJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_JmYOQJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ecZ6k5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ecZ6lJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_ecZ6lZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ecZ6lp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ecZ6kZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_ecVpIJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ecZ6kp_2EeWZLewJAsVhpw" points="[5, -13, -189, 413]$[190, -426, -4, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ee7qIJ_2EeWZLewJAsVhpw" id=""/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ee7qIZ_2EeWZLewJAsVhpw" id="(0.0,0.734375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_fn9uwJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_MJ23oJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fn9uw5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fn9uxJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_fn9uxZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fn9uxp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fn9uwZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_fn42QJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fn9uwp_2EeWZLewJAsVhpw" points="[6, -13, -193, 372]$[199, -385, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fqfeUJ_2EeWZLewJAsVhpw" id="(0.8333333333333334,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fqfeUZ_2EeWZLewJAsVhpw" id="(0.0,0.640625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_gnOzYJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_N8n1wJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_gnOzY5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gnOzZJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_gnOzZZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gnOzZp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_gnOzYZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_gnJ64J_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gnOzYp_2EeWZLewJAsVhpw" points="[7, -13, -200, 343]$[192, -358, -15, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gp67AJ_2EeWZLewJAsVhpw" id="(1.0,0.14)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gp67AZ_2EeWZLewJAsVhpw" id="(0.03286384976525822,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_hk1rIJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_QlYnwJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_hk2SMJ_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_hk2SMZ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_hk2SMp_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_hk2SM5_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_hk1rIZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_hkwyoJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hk1rIp_2EeWZLewJAsVhpw" points="[2, -4, -197, 317]$[189, -321, -10, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hnogcJ_2EeWZLewJAsVhpw" id="(1.0,0.46)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hnogcZ_2EeWZLewJAsVhpw" id="(0.0,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_iqKUcJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_T7zJ8J_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_iqK7gJ_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iqK7gZ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_iqK7gp_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iqK7g5_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_iqKUcZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_iqE04J_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iqKUcp_2EeWZLewJAsVhpw" points="[8, -12, -201, 272]$[201, -285, -8, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_is5fYJ_2EeWZLewJAsVhpw" id="(0.7666666666666667,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_is5fYZ_2EeWZLewJAsVhpw" id="(0.0,0.75)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_jp3d8J_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_W6WlwJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_jp4FAJ_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_jp4FAZ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_jp4FAp_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_jp4FA5_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_jp3d8Z_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_jp1owJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jp3d8p_2EeWZLewJAsVhpw" points="[8, -10, -196, 235]$[198, -245, -6, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jtQwMJ_2EeWZLewJAsVhpw" id="(0.7666666666666667,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jtRXQJ_2EeWZLewJAsVhpw" id="(0.0,0.734375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_lZkhAJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_rkf5kJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_lZkhA5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lZkhBJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_lZkhBZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lZkhBp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_lZkhAZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_lZir0J_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lZkhAp_2EeWZLewJAsVhpw" points="[7, -1, -190, 11]$[188, -12, -9, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lcLJEJ_2EeWZLewJAsVhpw" id="(1.0,0.78)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lcLJEZ_2EeWZLewJAsVhpw" id="(0.0,0.5)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_mbc0wJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_tQgvcJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_mbc0w5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mbc0xJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_mbc0xZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mbc0xp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_mbc0wZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_mbX8QJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mbc0wp_2EeWZLewJAsVhpw" points="[7, 1, -225, -29]$[231, 46, -1, 16]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mdNIQJ_2EeWZLewJAsVhpw" id="(1.0,0.46)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mdNIQZ_2EeWZLewJAsVhpw" id="(0.0,0.40625)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_nTQmgJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_vf1twJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_nTRNkJ_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nTRNkZ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_nTRNkp_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nTRNk5_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_nTQmgZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_nTOxUJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nTQmgp_2EeWZLewJAsVhpw" points="[11, 3, -204, -59]$[199, 59, -16, -3]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nV5DwJ_2EeWZLewJAsVhpw" id="(1.0,0.66)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nV5DwZ_2EeWZLewJAsVhpw" id="(0.0,0.25)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_oNINwJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_xydQoJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_oNINw5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oNINxJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_oNINxZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oNINxp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_oNINwZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_oNDVQJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oNINwp_2EeWZLewJAsVhpw" points="[3, 1, -203, -102]$[194, 107, -12, 4]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oP5N4J_2EeWZLewJAsVhpw" id="(1.0,0.74)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oP5N4Z_2EeWZLewJAsVhpw" id="(0.0,0.484375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_pLMYgJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_y-Br4J_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_pLMYg5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pLM_kJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_pLM_kZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pLM_kp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_pLMYgZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_pLHgAJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pLMYgp_2EeWZLewJAsVhpw" points="[-2, -1, -379, -234]$[376, 231, -1, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pOPsgJ_2EeWZLewJAsVhpw" id="(0.9,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pOQTkJ_2EeWZLewJAsVhpw" id="(0.0,0.28125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_ucPbYJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_7BhoQJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ucQCcJ_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ucQCcZ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_ucQCcp_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ucQCc5_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ucPbYZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_ucLJ8J_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ucPbYp_2EeWZLewJAsVhpw" points="[7, 6, -184, -158]$[185, 162, -6, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ufBCkJ_2EeWZLewJAsVhpw" id="(1.0,0.86)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ufBCkZ_2EeWZLewJAsVhpw" id="(0.0,0.1076923076923077)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_vpClsJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_9LMqgJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_vpDMwp_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vpDMw5_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_vpDMxJ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vpDMxZ_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_vpDMwJ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_vo9tMJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vpDMwZ_2EeWZLewJAsVhpw" points="[7, 7, -192, -197]$[190, 203, -9, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vryXsJ_2EeWZLewJAsVhpw" id="(1.0,0.82)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vryXsZ_2EeWZLewJAsVhpw" id="(0.0,0.171875)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_wf5VMJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_-oOpMJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_wf5VM5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wf5VNJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_wf5VNZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wf5VNp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_wf5VMZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_wfzOkJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wf5VMp_2EeWZLewJAsVhpw" points="[7, 8, -187, -225]$[184, 231, -10, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wipuQJ_2EeWZLewJAsVhpw" id="(0.8333333333333334,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wipuQZ_2EeWZLewJAsVhpw" id="(0.020942408376963352,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_yECogJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_MVPy0J_0EeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_yECog5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yECohJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_yEDPkJ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yEDPkZ_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_yECogZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_yD760J_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yECogp_2EeWZLewJAsVhpw" points="[3, 12, -93, -305]$[95, 316, -1, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yG36EJ_2EeWZLewJAsVhpw" id="(0.7666666666666667,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yG36EZ_2EeWZLewJAsVhpw" id="(0.32142857142857145,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_y7lUgJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_KgPZAJ_0EeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_y7lUg5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_y7lUhJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_y7lUhZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_y7lUhp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_y7lUgZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_y7gcAJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_y7lUgp_2EeWZLewJAsVhpw" points="[1, 12, -32, -309]$[33, 316, 0, -5]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y-oogJ_2EeWZLewJAsVhpw" id="(0.6333333333333333,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y-pPkJ_2EeWZLewJAsVhpw" id="(0.4857142857142857,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_zzsoQJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_JYZAIJ_0EeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_zzsoQ5_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zzsoRJ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_zzsoRZ_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zzsoRp_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_zzsoQZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_zznvwJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zzsoQp_2EeWZLewJAsVhpw" points="[-2, 12, 41, -320]$[-78, 332, -35, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_z1jpcJ_2EeWZLewJAsVhpw" id="(0.5,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_z1jpcZ_2EeWZLewJAsVhpw" id="(0.35,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_0tDSIJ_2EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_2YaIEJ_zEeWZLewJAsVhpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_0tD5MJ_2EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0tD5MZ_2EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_0tD5Mp_2EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0tD5M5_2EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_0tDSIZ_2EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_0s-ZoJ_2EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0tDSIp_2EeWZLewJAsVhpw" points="[-4, 11, 111, -320]$[-110, 315, 5, -16]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0v9cMJ_2EeWZLewJAsVhpw" id="(0.0,0.98)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0v9cMZ_2EeWZLewJAsVhpw" id="(0.6142857142857143,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_BOW2kJ_3EeWZLewJAsVhpw" type="4014" source="_6rYRwJ_2EeWZLewJAsVhpw" target="_uo1j2p3DEeWhM73UBYahqA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_BOW2kZ_3EeWZLewJAsVhpw"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BOW2kp_3EeWZLewJAsVhpw" points="[14, -12, -66, 59]$[81, -59, 1, 12]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BRJE0J_3EeWZLewJAsVhpw" id="(0.9055374592833876,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BRJE0Z_3EeWZLewJAsVhpw" id="(0.0,0.9)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_P58hQJ_3EeWZLewJAsVhpw" type="4011" source="_uo1j2p3DEeWhM73UBYahqA" target="_SZhY4J3EEeWhM73UBYahqA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_P58hQ5_3EeWZLewJAsVhpw" type="6008">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_P58hRJ_3EeWZLewJAsVhpw" y="40"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_P58hRZ_3EeWZLewJAsVhpw" type="6033">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_P58hRp_3EeWZLewJAsVhpw" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_P58hQZ_3EeWZLewJAsVhpw"/>
+      <element xmi:type="uml:Association" href="Hotel%20system.uml#_P53owJ_3EeWZLewJAsVhpw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_P58hQp_3EeWZLewJAsVhpw" points="[-8, 3, 329, -137]$[-332, 140, 5, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P84ggJ_3EeWZLewJAsVhpw" id="(0.0,0.46)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P84ggZ_3EeWZLewJAsVhpw" id="(1.0,0.4375)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
