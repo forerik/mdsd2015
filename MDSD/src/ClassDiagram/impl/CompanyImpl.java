@@ -28,8 +28,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.impl.CompanyImpl#getHasHotel <em>Has Hotel</em>}</li>
- *   <li>{@link ClassDiagram.impl.CompanyImpl#getHasGuest <em>Has Guest</em>}</li>
+ *   <li>{@link ClassDiagram.impl.CompanyImpl#getOwns <em>Owns</em>}</li>
+ *   <li>{@link ClassDiagram.impl.CompanyImpl#getRecordsOf <em>Records Of</em>}</li>
  *   <li>{@link ClassDiagram.impl.CompanyImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -37,24 +37,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class CompanyImpl extends MinimalEObjectImpl.Container implements Company {
 	/**
-	 * The cached value of the '{@link #getHasHotel() <em>Has Hotel</em>}' reference list.
+	 * The cached value of the '{@link #getOwns() <em>Owns</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasHotel()
+	 * @see #getOwns()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Company_Hotel> hasHotel;
+	protected EList<Company_Hotel> owns;
 
 	/**
-	 * The cached value of the '{@link #getHasGuest() <em>Has Guest</em>}' reference list.
+	 * The cached value of the '{@link #getRecordsOf() <em>Records Of</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasGuest()
+	 * @see #getRecordsOf()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Company_GuestRecord> hasGuest;
+	protected EList<Company_GuestRecord> recordsOf;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -100,11 +100,11 @@ public class CompanyImpl extends MinimalEObjectImpl.Container implements Company
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Company_Hotel> getHasHotel() {
-		if (hasHotel == null) {
-			hasHotel = new EObjectResolvingEList<Company_Hotel>(Company_Hotel.class, this, ClassDiagramPackage.COMPANY__HAS_HOTEL);
+	public EList<Company_Hotel> getOwns() {
+		if (owns == null) {
+			owns = new EObjectResolvingEList<Company_Hotel>(Company_Hotel.class, this, ClassDiagramPackage.COMPANY__OWNS);
 		}
-		return hasHotel;
+		return owns;
 	}
 
 	/**
@@ -112,11 +112,11 @@ public class CompanyImpl extends MinimalEObjectImpl.Container implements Company
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Company_GuestRecord> getHasGuest() {
-		if (hasGuest == null) {
-			hasGuest = new EObjectResolvingEList<Company_GuestRecord>(Company_GuestRecord.class, this, ClassDiagramPackage.COMPANY__HAS_GUEST);
+	public EList<Company_GuestRecord> getRecordsOf() {
+		if (recordsOf == null) {
+			recordsOf = new EObjectResolvingEList<Company_GuestRecord>(Company_GuestRecord.class, this, ClassDiagramPackage.COMPANY__RECORDS_OF);
 		}
-		return hasGuest;
+		return recordsOf;
 	}
 
 	/**
@@ -148,10 +148,10 @@ public class CompanyImpl extends MinimalEObjectImpl.Container implements Company
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY__HAS_HOTEL:
-				return getHasHotel();
-			case ClassDiagramPackage.COMPANY__HAS_GUEST:
-				return getHasGuest();
+			case ClassDiagramPackage.COMPANY__OWNS:
+				return getOwns();
+			case ClassDiagramPackage.COMPANY__RECORDS_OF:
+				return getRecordsOf();
 			case ClassDiagramPackage.COMPANY__NAME:
 				return getName();
 		}
@@ -167,13 +167,13 @@ public class CompanyImpl extends MinimalEObjectImpl.Container implements Company
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY__HAS_HOTEL:
-				getHasHotel().clear();
-				getHasHotel().addAll((Collection<? extends Company_Hotel>)newValue);
+			case ClassDiagramPackage.COMPANY__OWNS:
+				getOwns().clear();
+				getOwns().addAll((Collection<? extends Company_Hotel>)newValue);
 				return;
-			case ClassDiagramPackage.COMPANY__HAS_GUEST:
-				getHasGuest().clear();
-				getHasGuest().addAll((Collection<? extends Company_GuestRecord>)newValue);
+			case ClassDiagramPackage.COMPANY__RECORDS_OF:
+				getRecordsOf().clear();
+				getRecordsOf().addAll((Collection<? extends Company_GuestRecord>)newValue);
 				return;
 			case ClassDiagramPackage.COMPANY__NAME:
 				setName((String)newValue);
@@ -190,11 +190,11 @@ public class CompanyImpl extends MinimalEObjectImpl.Container implements Company
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY__HAS_HOTEL:
-				getHasHotel().clear();
+			case ClassDiagramPackage.COMPANY__OWNS:
+				getOwns().clear();
 				return;
-			case ClassDiagramPackage.COMPANY__HAS_GUEST:
-				getHasGuest().clear();
+			case ClassDiagramPackage.COMPANY__RECORDS_OF:
+				getRecordsOf().clear();
 				return;
 			case ClassDiagramPackage.COMPANY__NAME:
 				setName(NAME_EDEFAULT);
@@ -211,10 +211,10 @@ public class CompanyImpl extends MinimalEObjectImpl.Container implements Company
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY__HAS_HOTEL:
-				return hasHotel != null && !hasHotel.isEmpty();
-			case ClassDiagramPackage.COMPANY__HAS_GUEST:
-				return hasGuest != null && !hasGuest.isEmpty();
+			case ClassDiagramPackage.COMPANY__OWNS:
+				return owns != null && !owns.isEmpty();
+			case ClassDiagramPackage.COMPANY__RECORDS_OF:
+				return recordsOf != null && !recordsOf.isEmpty();
 			case ClassDiagramPackage.COMPANY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

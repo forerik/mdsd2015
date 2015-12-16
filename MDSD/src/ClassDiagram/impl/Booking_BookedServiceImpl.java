@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.impl.Booking_BookedServiceImpl#getDate <em>Date</em>}</li>
- *   <li>{@link ClassDiagram.impl.Booking_BookedServiceImpl#getPrice <em>Price</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,26 +47,6 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected Date date = DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double PRICE_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected double price = PRICE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,34 +93,11 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getPrice() {
-		return price;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrice(double newPrice) {
-		double oldPrice = price;
-		price = newPrice;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_BOOKED_SERVICE__PRICE, oldPrice, price));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				return getDate();
-			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__PRICE:
-				return getPrice();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,9 +112,6 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				setDate((Date)newValue);
-				return;
-			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__PRICE:
-				setPrice((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,9 +128,6 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
-			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__PRICE:
-				setPrice(PRICE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -192,8 +142,6 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
-			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__PRICE:
-				return price != PRICE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -210,8 +158,6 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (date: ");
 		result.append(date);
-		result.append(", price: ");
-		result.append(price);
 		result.append(')');
 		return result.toString();
 	}

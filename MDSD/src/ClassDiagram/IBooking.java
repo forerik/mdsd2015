@@ -4,6 +4,7 @@ package ClassDiagram;
 
 import java.util.Date;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -28,10 +29,10 @@ public interface IBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomTypesRequired="true" roomTypesMany="true" roomTypesOrdered="false"
 	 * @generated
 	 */
-	void findAvailableRooms(Date start, Date end, Room_RoomType roomType);
+	void findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -60,9 +61,9 @@ public interface IBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model guestRequired="true" guestOrdered="false"
+	 * @model ssnRequired="true" ssnOrdered="false"
 	 * @generated
 	 */
-	void getBookings(Company_GuestRecord guest);
+	void getBookings(String ssn);
 
 } // IBooking

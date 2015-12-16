@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link ClassDiagram.impl.Company_GuestRecordImpl#getAdress <em>Adress</em>}</li>
  *   <li>{@link ClassDiagram.impl.Company_GuestRecordImpl#getPhoneNumber <em>Phone Number</em>}</li>
  *   <li>{@link ClassDiagram.impl.Company_GuestRecordImpl#getSsn <em>Ssn</em>}</li>
- *   <li>{@link ClassDiagram.impl.Company_GuestRecordImpl#getPayment <em>Payment</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Company_GuestRecordImpl#getPaymentInformation <em>Payment Information</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,24 +111,24 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 	protected String ssn = SSN_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPayment() <em>Payment</em>}' attribute.
+	 * The default value of the '{@link #getPaymentInformation() <em>Payment Information</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPayment()
+	 * @see #getPaymentInformation()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PAYMENT_EDEFAULT = null;
+	protected static final String PAYMENT_INFORMATION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPayment() <em>Payment</em>}' attribute.
+	 * The cached value of the '{@link #getPaymentInformation() <em>Payment Information</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPayment()
+	 * @see #getPaymentInformation()
 	 * @generated
 	 * @ordered
 	 */
-	protected String payment = PAYMENT_EDEFAULT;
+	protected String paymentInformation = PAYMENT_INFORMATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -238,8 +238,8 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPayment() {
-		return payment;
+	public String getPaymentInformation() {
+		return paymentInformation;
 	}
 
 	/**
@@ -247,11 +247,11 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPayment(String newPayment) {
-		String oldPayment = payment;
-		payment = newPayment;
+	public void setPaymentInformation(String newPaymentInformation) {
+		String oldPaymentInformation = paymentInformation;
+		paymentInformation = newPaymentInformation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT, oldPayment, payment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT_INFORMATION, oldPaymentInformation, paymentInformation));
 	}
 
 	/**
@@ -270,8 +270,8 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 				return getPhoneNumber();
 			case ClassDiagramPackage.COMPANY_GUEST_RECORD__SSN:
 				return getSsn();
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT:
-				return getPayment();
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT_INFORMATION:
+				return getPaymentInformation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -296,8 +296,8 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 			case ClassDiagramPackage.COMPANY_GUEST_RECORD__SSN:
 				setSsn((String)newValue);
 				return;
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT:
-				setPayment((String)newValue);
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT_INFORMATION:
+				setPaymentInformation((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -323,8 +323,8 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 			case ClassDiagramPackage.COMPANY_GUEST_RECORD__SSN:
 				setSsn(SSN_EDEFAULT);
 				return;
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT:
-				setPayment(PAYMENT_EDEFAULT);
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT_INFORMATION:
+				setPaymentInformation(PAYMENT_INFORMATION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -346,8 +346,8 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 				return PHONE_NUMBER_EDEFAULT == null ? phoneNumber != null : !PHONE_NUMBER_EDEFAULT.equals(phoneNumber);
 			case ClassDiagramPackage.COMPANY_GUEST_RECORD__SSN:
 				return SSN_EDEFAULT == null ? ssn != null : !SSN_EDEFAULT.equals(ssn);
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT:
-				return PAYMENT_EDEFAULT == null ? payment != null : !PAYMENT_EDEFAULT.equals(payment);
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD__PAYMENT_INFORMATION:
+				return PAYMENT_INFORMATION_EDEFAULT == null ? paymentInformation != null : !PAYMENT_INFORMATION_EDEFAULT.equals(paymentInformation);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -370,8 +370,8 @@ public class Company_GuestRecordImpl extends MinimalEObjectImpl.Container implem
 		result.append(phoneNumber);
 		result.append(", ssn: ");
 		result.append(ssn);
-		result.append(", payment: ");
-		result.append(payment);
+		result.append(", paymentInformation: ");
+		result.append(paymentInformation);
 		result.append(')');
 		return result.toString();
 	}

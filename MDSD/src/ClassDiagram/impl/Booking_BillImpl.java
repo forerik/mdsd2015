@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.impl.Booking_BillImpl#getPaidAmount <em>Paid Amount</em>}</li>
- *   <li>{@link ClassDiagram.impl.Booking_BillImpl#getHasPurchaseditem <em>Has Purchaseditem</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Booking_BillImpl#getContains <em>Contains</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,14 +55,14 @@ public class Booking_BillImpl extends MinimalEObjectImpl.Container implements Bo
 	protected double paidAmount = PAID_AMOUNT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getHasPurchaseditem() <em>Has Purchaseditem</em>}' reference list.
+	 * The cached value of the '{@link #getContains() <em>Contains</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasPurchaseditem()
+	 * @see #getContains()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Booking_PurchasedService> hasPurchaseditem;
+	protected EList<Booking_PurchasedService> contains;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,11 +109,11 @@ public class Booking_BillImpl extends MinimalEObjectImpl.Container implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Booking_PurchasedService> getHasPurchaseditem() {
-		if (hasPurchaseditem == null) {
-			hasPurchaseditem = new EObjectResolvingEList<Booking_PurchasedService>(Booking_PurchasedService.class, this, ClassDiagramPackage.BOOKING_BILL__HAS_PURCHASEDITEM);
+	public EList<Booking_PurchasedService> getContains() {
+		if (contains == null) {
+			contains = new EObjectResolvingEList<Booking_PurchasedService>(Booking_PurchasedService.class, this, ClassDiagramPackage.BOOKING_BILL__CONTAINS);
 		}
-		return hasPurchaseditem;
+		return contains;
 	}
 
 	/**
@@ -126,8 +126,8 @@ public class Booking_BillImpl extends MinimalEObjectImpl.Container implements Bo
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BILL__PAID_AMOUNT:
 				return getPaidAmount();
-			case ClassDiagramPackage.BOOKING_BILL__HAS_PURCHASEDITEM:
-				return getHasPurchaseditem();
+			case ClassDiagramPackage.BOOKING_BILL__CONTAINS:
+				return getContains();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,9 +144,9 @@ public class Booking_BillImpl extends MinimalEObjectImpl.Container implements Bo
 			case ClassDiagramPackage.BOOKING_BILL__PAID_AMOUNT:
 				setPaidAmount((Double)newValue);
 				return;
-			case ClassDiagramPackage.BOOKING_BILL__HAS_PURCHASEDITEM:
-				getHasPurchaseditem().clear();
-				getHasPurchaseditem().addAll((Collection<? extends Booking_PurchasedService>)newValue);
+			case ClassDiagramPackage.BOOKING_BILL__CONTAINS:
+				getContains().clear();
+				getContains().addAll((Collection<? extends Booking_PurchasedService>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -163,8 +163,8 @@ public class Booking_BillImpl extends MinimalEObjectImpl.Container implements Bo
 			case ClassDiagramPackage.BOOKING_BILL__PAID_AMOUNT:
 				setPaidAmount(PAID_AMOUNT_EDEFAULT);
 				return;
-			case ClassDiagramPackage.BOOKING_BILL__HAS_PURCHASEDITEM:
-				getHasPurchaseditem().clear();
+			case ClassDiagramPackage.BOOKING_BILL__CONTAINS:
+				getContains().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -180,8 +180,8 @@ public class Booking_BillImpl extends MinimalEObjectImpl.Container implements Bo
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BILL__PAID_AMOUNT:
 				return paidAmount != PAID_AMOUNT_EDEFAULT;
-			case ClassDiagramPackage.BOOKING_BILL__HAS_PURCHASEDITEM:
-				return hasPurchaseditem != null && !hasPurchaseditem.isEmpty();
+			case ClassDiagramPackage.BOOKING_BILL__CONTAINS:
+				return contains != null && !contains.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

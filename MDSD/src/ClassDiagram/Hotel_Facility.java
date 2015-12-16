@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.Hotel_Facility#getName <em>Name</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Facility#getHasType <em>Has Type</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Facility#getBelongsTo <em>Belongs To</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getHotel_Facility()
@@ -49,29 +49,29 @@ public interface Hotel_Facility extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Has Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Type</em>' reference isn't clear,
+	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Type</em>' reference.
-	 * @see #setHasType(Facility_FacilityType)
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Facility_HasType()
+	 * @return the value of the '<em>Belongs To</em>' reference.
+	 * @see #setBelongsTo(Facility_FacilityType)
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Facility_BelongsTo()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Facility_FacilityType getHasType();
+	Facility_FacilityType getBelongsTo();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.Hotel_Facility#getHasType <em>Has Type</em>}' reference.
+	 * Sets the value of the '{@link ClassDiagram.Hotel_Facility#getBelongsTo <em>Belongs To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Has Type</em>' reference.
-	 * @see #getHasType()
+	 * @param value the new value of the '<em>Belongs To</em>' reference.
+	 * @see #getBelongsTo()
 	 * @generated
 	 */
-	void setHasType(Facility_FacilityType value);
+	void setBelongsTo(Facility_FacilityType value);
 
 } // Hotel_Facility

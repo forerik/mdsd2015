@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.Booking_Bill#getPaidAmount <em>Paid Amount</em>}</li>
- *   <li>{@link ClassDiagram.Booking_Bill#getHasPurchaseditem <em>Has Purchaseditem</em>}</li>
+ *   <li>{@link ClassDiagram.Booking_Bill#getContains <em>Contains</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getBooking_Bill()
@@ -51,19 +51,19 @@ public interface Booking_Bill extends EObject {
 	void setPaidAmount(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Has Purchaseditem</b></em>' reference list.
+	 * Returns the value of the '<em><b>Contains</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Booking_PurchasedService}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Purchaseditem</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Contains</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Purchaseditem</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getBooking_Bill_HasPurchaseditem()
+	 * @return the value of the '<em>Contains</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getBooking_Bill_Contains()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Booking_PurchasedService> getHasPurchaseditem();
+	EList<Booking_PurchasedService> getContains();
 
 } // Booking_Bill

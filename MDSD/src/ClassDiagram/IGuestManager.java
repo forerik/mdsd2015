@@ -45,7 +45,7 @@ public interface IGuestManager extends EObject {
 	 * @model ssnRequired="true" ssnOrdered="false"
 	 * @generated
 	 */
-	void findGuest(String ssn);
+	void findGuestRecord(String ssn);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -53,6 +53,6 @@ public interface IGuestManager extends EObject {
 	 * @model firstNameRequired="true" firstNameOrdered="false" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated
 	 */
-	void findGuests(String firstName, String lastName);
+	void findGuestRecords(String firstName, String lastName);
 
 } // IGuestManager

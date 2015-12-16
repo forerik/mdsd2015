@@ -3,6 +3,7 @@
 package ClassDiagram.impl;
 
 import ClassDiagram.ClassDiagramPackage;
+import ClassDiagram.Company_Hotel;
 import ClassDiagram.HotelAdministration;
 
 import java.lang.reflect.InvocationTargetException;
@@ -45,7 +46,7 @@ public class HotelAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addHotel() {
+	public void addHotel(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -56,7 +57,7 @@ public class HotelAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editHotel() {
+	public void editHotel(Company_Hotel hotel) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -67,7 +68,7 @@ public class HotelAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeHotel() {
+	public void removeHotel(Company_Hotel hotel) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -81,14 +82,14 @@ public class HotelAdministrationImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ClassDiagramPackage.HOTEL_ADMINISTRATION___ADD_HOTEL:
-				addHotel();
+			case ClassDiagramPackage.HOTEL_ADMINISTRATION___ADD_HOTEL__STRING:
+				addHotel((String)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.HOTEL_ADMINISTRATION___EDIT_HOTEL:
-				editHotel();
+			case ClassDiagramPackage.HOTEL_ADMINISTRATION___EDIT_HOTEL__COMPANY_HOTEL:
+				editHotel((Company_Hotel)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.HOTEL_ADMINISTRATION___REMOVE_HOTEL:
-				removeHotel();
+			case ClassDiagramPackage.HOTEL_ADMINISTRATION___REMOVE_HOTEL__COMPANY_HOTEL:
+				removeHotel((Company_Hotel)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

@@ -90,18 +90,6 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ClassDiagramPackage.BOOKING_BILL: {
-				Booking_Bill booking_Bill = (Booking_Bill)theEObject;
-				T result = caseBooking_Bill(booking_Bill);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.BOOKING_PURCHASED_SERVICE: {
-				Booking_PurchasedService booking_PurchasedService = (Booking_PurchasedService)theEObject;
-				T result = caseBooking_PurchasedService(booking_PurchasedService);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ClassDiagramPackage.HOTEL_ROOM: {
 				Hotel_Room hotel_Room = (Hotel_Room)theEObject;
 				T result = caseHotel_Room(hotel_Room);
@@ -138,6 +126,24 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD: {
+				Company_GuestRecord company_GuestRecord = (Company_GuestRecord)theEObject;
+				T result = caseCompany_GuestRecord(company_GuestRecord);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.BOOKING_BILL: {
+				Booking_Bill booking_Bill = (Booking_Bill)theEObject;
+				T result = caseBooking_Bill(booking_Bill);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.BOOKING_PURCHASED_SERVICE: {
+				Booking_PurchasedService booking_PurchasedService = (Booking_PurchasedService)theEObject;
+				T result = caseBooking_PurchasedService(booking_PurchasedService);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ClassDiagramPackage.HOTEL_FACILITY: {
 				Hotel_Facility hotel_Facility = (Hotel_Facility)theEObject;
 				T result = caseHotel_Facility(hotel_Facility);
@@ -159,12 +165,6 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 			case ClassDiagramPackage.HOTEL_STAFF: {
 				Hotel_Staff hotel_Staff = (Hotel_Staff)theEObject;
 				T result = caseHotel_Staff(hotel_Staff);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD: {
-				Company_GuestRecord company_GuestRecord = (Company_GuestRecord)theEObject;
-				T result = caseCompany_GuestRecord(company_GuestRecord);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

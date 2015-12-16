@@ -79,7 +79,7 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void findGuest(String ssn) {
+	public void findGuestRecord(String ssn) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -90,7 +90,7 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void findGuests(String firstName, String lastName) {
+	public void findGuestRecords(String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -113,11 +113,11 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 			case ClassDiagramPackage.GUEST_MANAGER___REMOVE_GUEST_RECORD__COMPANY_GUESTRECORD:
 				removeGuestRecord((Company_GuestRecord)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.GUEST_MANAGER___FIND_GUEST__STRING:
-				findGuest((String)arguments.get(0));
+			case ClassDiagramPackage.GUEST_MANAGER___FIND_GUEST_RECORD__STRING:
+				findGuestRecord((String)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.GUEST_MANAGER___FIND_GUESTS__STRING_STRING:
-				findGuests((String)arguments.get(0), (String)arguments.get(1));
+			case ClassDiagramPackage.GUEST_MANAGER___FIND_GUEST_RECORDS__STRING_STRING:
+				findGuestRecords((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

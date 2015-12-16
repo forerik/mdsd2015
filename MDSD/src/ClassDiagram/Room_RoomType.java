@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ClassDiagram.Room_RoomType#getPrice <em>Price</em>}</li>
  *   <li>{@link ClassDiagram.Room_RoomType#getMaxNumberOfGuests <em>Max Number Of Guests</em>}</li>
  *   <li>{@link ClassDiagram.Room_RoomType#getArea <em>Area</em>}</li>
- *   <li>{@link ClassDiagram.Room_RoomType#getHasAppliance <em>Has Appliance</em>}</li>
+ *   <li>{@link ClassDiagram.Room_RoomType#getContains <em>Contains</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomType()
@@ -105,19 +105,19 @@ public interface Room_RoomType extends EObject {
 	void setArea(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Has Appliance</b></em>' reference list.
+	 * Returns the value of the '<em><b>Contains</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Room_RoomAppliance}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Appliance</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Contains</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Appliance</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomType_HasAppliance()
+	 * @return the value of the '<em>Contains</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomType_Contains()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Room_RoomAppliance> getHasAppliance();
+	EList<Room_RoomAppliance> getContains();
 
 } // Room_RoomType

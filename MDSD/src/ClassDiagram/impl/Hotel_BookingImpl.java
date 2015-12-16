@@ -4,8 +4,10 @@ package ClassDiagram.impl;
 
 import ClassDiagram.Booking_BookedService;
 import ClassDiagram.ClassDiagramPackage;
+import ClassDiagram.Company_GuestRecord;
 import ClassDiagram.Hotel_Booking;
 
+import ClassDiagram.Hotel_Room;
 import java.util.Collection;
 import java.util.Date;
 
@@ -15,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -33,7 +36,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#isCheckedIn <em>Checked In</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getBookingID <em>Booking ID</em>}</li>
- *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getBookedservice <em>Bookedservice</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getIncludes <em>Includes</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getResponsibleGuest <em>Responsible Guest</em>}</li>
  * </ul>
  *
  * @generated
@@ -140,14 +145,34 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 	protected int bookingID = BOOKING_ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBookedservice() <em>Bookedservice</em>}' reference list.
+	 * The cached value of the '{@link #getIncludes() <em>Includes</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBookedservice()
+	 * @see #getIncludes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Booking_BookedService> bookedservice;
+	protected EList<Booking_BookedService> includes;
+
+	/**
+	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRooms()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Hotel_Room> rooms;
+
+	/**
+	 * The cached value of the '{@link #getResponsibleGuest() <em>Responsible Guest</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResponsibleGuest()
+	 * @generated
+	 * @ordered
+	 */
+	protected Company_GuestRecord responsibleGuest;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -278,11 +303,61 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Booking_BookedService> getBookedservice() {
-		if (bookedservice == null) {
-			bookedservice = new EObjectResolvingEList<Booking_BookedService>(Booking_BookedService.class, this, ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE);
+	public EList<Booking_BookedService> getIncludes() {
+		if (includes == null) {
+			includes = new EObjectResolvingEList<Booking_BookedService>(Booking_BookedService.class, this, ClassDiagramPackage.HOTEL_BOOKING__INCLUDES);
 		}
-		return bookedservice;
+		return includes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Hotel_Room> getRooms() {
+		if (rooms == null) {
+			rooms = new EObjectResolvingEList<Hotel_Room>(Hotel_Room.class, this, ClassDiagramPackage.HOTEL_BOOKING__ROOMS);
+		}
+		return rooms;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Company_GuestRecord getResponsibleGuest() {
+		if (responsibleGuest != null && responsibleGuest.eIsProxy()) {
+			InternalEObject oldResponsibleGuest = (InternalEObject)responsibleGuest;
+			responsibleGuest = (Company_GuestRecord)eResolveProxy(oldResponsibleGuest);
+			if (responsibleGuest != oldResponsibleGuest) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST, oldResponsibleGuest, responsibleGuest));
+			}
+		}
+		return responsibleGuest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Company_GuestRecord basicGetResponsibleGuest() {
+		return responsibleGuest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResponsibleGuest(Company_GuestRecord newResponsibleGuest) {
+		Company_GuestRecord oldResponsibleGuest = responsibleGuest;
+		responsibleGuest = newResponsibleGuest;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST, oldResponsibleGuest, responsibleGuest));
 	}
 
 	/**
@@ -303,8 +378,13 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 				return isCheckedIn();
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				return getBookingID();
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
-				return getBookedservice();
+			case ClassDiagramPackage.HOTEL_BOOKING__INCLUDES:
+				return getIncludes();
+			case ClassDiagramPackage.HOTEL_BOOKING__ROOMS:
+				return getRooms();
+			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
+				if (resolve) return getResponsibleGuest();
+				return basicGetResponsibleGuest();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -333,9 +413,16 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				setBookingID((Integer)newValue);
 				return;
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
-				getBookedservice().clear();
-				getBookedservice().addAll((Collection<? extends Booking_BookedService>)newValue);
+			case ClassDiagramPackage.HOTEL_BOOKING__INCLUDES:
+				getIncludes().clear();
+				getIncludes().addAll((Collection<? extends Booking_BookedService>)newValue);
+				return;
+			case ClassDiagramPackage.HOTEL_BOOKING__ROOMS:
+				getRooms().clear();
+				getRooms().addAll((Collection<? extends Hotel_Room>)newValue);
+				return;
+			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
+				setResponsibleGuest((Company_GuestRecord)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -364,8 +451,14 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				setBookingID(BOOKING_ID_EDEFAULT);
 				return;
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
-				getBookedservice().clear();
+			case ClassDiagramPackage.HOTEL_BOOKING__INCLUDES:
+				getIncludes().clear();
+				return;
+			case ClassDiagramPackage.HOTEL_BOOKING__ROOMS:
+				getRooms().clear();
+				return;
+			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
+				setResponsibleGuest((Company_GuestRecord)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -389,8 +482,12 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 				return checkedIn != CHECKED_IN_EDEFAULT;
 			case ClassDiagramPackage.HOTEL_BOOKING__BOOKING_ID:
 				return bookingID != BOOKING_ID_EDEFAULT;
-			case ClassDiagramPackage.HOTEL_BOOKING__BOOKEDSERVICE:
-				return bookedservice != null && !bookedservice.isEmpty();
+			case ClassDiagramPackage.HOTEL_BOOKING__INCLUDES:
+				return includes != null && !includes.isEmpty();
+			case ClassDiagramPackage.HOTEL_BOOKING__ROOMS:
+				return rooms != null && !rooms.isEmpty();
+			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
+				return responsibleGuest != null;
 		}
 		return super.eIsSet(featureID);
 	}

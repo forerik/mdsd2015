@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.Facility_FacilityType#getKind <em>Kind</em>}</li>
+ *   <li>{@link ClassDiagram.Facility_FacilityType#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getFacility_FacilityType()
@@ -22,29 +22,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Facility_FacilityType extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Kind</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Kind</em>' attribute.
-	 * @see #setKind(String)
-	 * @see ClassDiagram.ClassDiagramPackage#getFacility_FacilityType_Kind()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see ClassDiagram.ClassDiagramPackage#getFacility_FacilityType_Name()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	String getKind();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.Facility_FacilityType#getKind <em>Kind</em>}' attribute.
+	 * Sets the value of the '{@link ClassDiagram.Facility_FacilityType#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Kind</em>' attribute.
-	 * @see #getKind()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setKind(String value);
+	void setName(String value);
 
 } // Facility_FacilityType

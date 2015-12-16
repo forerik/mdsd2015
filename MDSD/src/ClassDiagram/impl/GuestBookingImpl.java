@@ -2,8 +2,10 @@
  */
 package ClassDiagram.impl;
 
+import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
+import ClassDiagram.Company_Hotel;
 import ClassDiagram.GuestBooking;
 import ClassDiagram.Hotel_Booking;
 import ClassDiagram.Hotel_Room;
@@ -27,11 +29,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class GuestBookingImpl extends MinimalEObjectImpl.Container implements GuestBooking {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	
+	Company_Hotel hotel;
+	
 	protected GuestBookingImpl() {
 		super();
 	}
@@ -49,23 +49,28 @@ public class GuestBookingImpl extends MinimalEObjectImpl.Container implements Gu
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void createBooking(Date start, Date end, Hotel_Room rooms, Company_GuestRecord guest) {
+	public void createBooking(Date start, Date end, EList<Hotel_RoomImpl> rooms, Company_GuestRecord guest) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		Hotel_BookingImpl booking = new Hotel_BookingImpl();
+		booking.setStartDate(start);
+		booking.setEndDate(end);
+		booking.setStartDate(start);
+		booking.getRooms().addAll(rooms);
+		booking.setResponsibleGuest(guest);
+		
+		hotel.getHasBookings().add(booking);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void findAvailableRooms(Date start, Date end, Room_RoomType roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Company_Hotel getHotel() {
+		return hotel;
+	}
+
+	public void setHotel(Company_Hotel hotel) {
+		this.hotel = hotel;
 	}
 
 	/**
@@ -106,7 +111,7 @@ public class GuestBookingImpl extends MinimalEObjectImpl.Container implements Gu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookings(Company_GuestRecord guest) {
+	public void getBookings(String ssn) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -118,13 +123,14 @@ public class GuestBookingImpl extends MinimalEObjectImpl.Container implements Gu
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ClassDiagramPackage.GUEST_BOOKING___CREATE_BOOKING__DATE_DATE_HOTEL_ROOM_COMPANY_GUESTRECORD:
 				createBooking((Date)arguments.get(0), (Date)arguments.get(1), (Hotel_Room)arguments.get(2), (Company_GuestRecord)arguments.get(3));
 				return null;
-			case ClassDiagramPackage.GUEST_BOOKING___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE:
-				findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (Room_RoomType)arguments.get(2));
+			case ClassDiagramPackage.GUEST_BOOKING___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST:
+				findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList<Room_RoomType>)arguments.get(2));
 				return null;
 			case ClassDiagramPackage.GUEST_BOOKING___EDIT_BOOKING__HOTEL_BOOKING:
 				editBooking((Hotel_Booking)arguments.get(0));
@@ -135,11 +141,28 @@ public class GuestBookingImpl extends MinimalEObjectImpl.Container implements Gu
 			case ClassDiagramPackage.GUEST_BOOKING___FIND_BOOKING__INT:
 				findBooking((Integer)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.GUEST_BOOKING___GET_BOOKINGS__COMPANY_GUESTRECORD:
-				getBookings((Company_GuestRecord)arguments.get(0));
+			case ClassDiagramPackage.GUEST_BOOKING___GET_BOOKINGS__STRING:
+				getBookings((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	@Override
+	public void createBooking(Date start, Date end, Hotel_Room rooms, Company_GuestRecord guest) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 } //GuestBookingImpl

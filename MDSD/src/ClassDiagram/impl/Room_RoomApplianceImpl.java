@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.impl.Room_RoomApplianceImpl#getName <em>Name</em>}</li>
- *   <li>{@link ClassDiagram.impl.Room_RoomApplianceImpl#getHasApplianceType <em>Has Appliance Type</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Room_RoomApplianceImpl#getBelongsTo <em>Belongs To</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,14 +50,14 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getHasApplianceType() <em>Has Appliance Type</em>}' reference.
+	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasApplianceType()
+	 * @see #getBelongsTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomAppliance_ApplianceType hasApplianceType;
+	protected RoomAppliance_ApplianceType belongsTo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,16 +104,16 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomAppliance_ApplianceType getHasApplianceType() {
-		if (hasApplianceType != null && hasApplianceType.eIsProxy()) {
-			InternalEObject oldHasApplianceType = (InternalEObject)hasApplianceType;
-			hasApplianceType = (RoomAppliance_ApplianceType)eResolveProxy(oldHasApplianceType);
-			if (hasApplianceType != oldHasApplianceType) {
+	public RoomAppliance_ApplianceType getBelongsTo() {
+		if (belongsTo != null && belongsTo.eIsProxy()) {
+			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
+			belongsTo = (RoomAppliance_ApplianceType)eResolveProxy(oldBelongsTo);
+			if (belongsTo != oldBelongsTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.ROOM_ROOM_APPLIANCE__HAS_APPLIANCE_TYPE, oldHasApplianceType, hasApplianceType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.ROOM_ROOM_APPLIANCE__BELONGS_TO, oldBelongsTo, belongsTo));
 			}
 		}
-		return hasApplianceType;
+		return belongsTo;
 	}
 
 	/**
@@ -121,8 +121,8 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomAppliance_ApplianceType basicGetHasApplianceType() {
-		return hasApplianceType;
+	public RoomAppliance_ApplianceType basicGetBelongsTo() {
+		return belongsTo;
 	}
 
 	/**
@@ -130,11 +130,11 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHasApplianceType(RoomAppliance_ApplianceType newHasApplianceType) {
-		RoomAppliance_ApplianceType oldHasApplianceType = hasApplianceType;
-		hasApplianceType = newHasApplianceType;
+	public void setBelongsTo(RoomAppliance_ApplianceType newBelongsTo) {
+		RoomAppliance_ApplianceType oldBelongsTo = belongsTo;
+		belongsTo = newBelongsTo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.ROOM_ROOM_APPLIANCE__HAS_APPLIANCE_TYPE, oldHasApplianceType, hasApplianceType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.ROOM_ROOM_APPLIANCE__BELONGS_TO, oldBelongsTo, belongsTo));
 	}
 
 	/**
@@ -147,9 +147,9 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__NAME:
 				return getName();
-			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__HAS_APPLIANCE_TYPE:
-				if (resolve) return getHasApplianceType();
-				return basicGetHasApplianceType();
+			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__BELONGS_TO:
+				if (resolve) return getBelongsTo();
+				return basicGetBelongsTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,8 +165,8 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__NAME:
 				setName((String)newValue);
 				return;
-			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__HAS_APPLIANCE_TYPE:
-				setHasApplianceType((RoomAppliance_ApplianceType)newValue);
+			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__BELONGS_TO:
+				setBelongsTo((RoomAppliance_ApplianceType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,8 +183,8 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__HAS_APPLIANCE_TYPE:
-				setHasApplianceType((RoomAppliance_ApplianceType)null);
+			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__BELONGS_TO:
+				setBelongsTo((RoomAppliance_ApplianceType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -200,8 +200,8 @@ public class Room_RoomApplianceImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__HAS_APPLIANCE_TYPE:
-				return hasApplianceType != null;
+			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE__BELONGS_TO:
+				return belongsTo != null;
 		}
 		return super.eIsSet(featureID);
 	}

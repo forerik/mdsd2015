@@ -18,25 +18,25 @@ public interface IHotelAdministration extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void addHotel();
+	void addHotel(String name);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model hotelRequired="true" hotelOrdered="false"
 	 * @generated
 	 */
-	void editHotel();
+	void editHotel(Company_Hotel hotel);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model hotelRequired="true" hotelOrdered="false"
 	 * @generated
 	 */
-	void removeHotel();
+	void removeHotel(Company_Hotel hotel);
 
 } // IHotelAdministration

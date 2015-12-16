@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.Company#getHasHotel <em>Has Hotel</em>}</li>
- *   <li>{@link ClassDiagram.Company#getHasGuest <em>Has Guest</em>}</li>
+ *   <li>{@link ClassDiagram.Company#getOwns <em>Owns</em>}</li>
+ *   <li>{@link ClassDiagram.Company#getRecordsOf <em>Records Of</em>}</li>
  *   <li>{@link ClassDiagram.Company#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -26,36 +26,36 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Company extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Has Hotel</b></em>' reference list.
+	 * Returns the value of the '<em><b>Owns</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Company_Hotel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Hotel</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Owns</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Hotel</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_HasHotel()
+	 * @return the value of the '<em>Owns</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Owns()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<Company_Hotel> getHasHotel();
+	EList<Company_Hotel> getOwns();
 
 	/**
-	 * Returns the value of the '<em><b>Has Guest</b></em>' reference list.
+	 * Returns the value of the '<em><b>Records Of</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Company_GuestRecord}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Guest</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Records Of</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Guest</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_HasGuest()
+	 * @return the value of the '<em>Records Of</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_RecordsOf()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Company_GuestRecord> getHasGuest();
+	EList<Company_GuestRecord> getRecordsOf();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

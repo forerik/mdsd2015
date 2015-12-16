@@ -15,10 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.Company_Hotel#getHasBooking <em>Has Booking</em>}</li>
- *   <li>{@link ClassDiagram.Company_Hotel#getHasRoom <em>Has Room</em>}</li>
- *   <li>{@link ClassDiagram.Company_Hotel#getHasFacility <em>Has Facility</em>}</li>
- *   <li>{@link ClassDiagram.Company_Hotel#getEmployee <em>Employee</em>}</li>
+ *   <li>{@link ClassDiagram.Company_Hotel#getHasBookings <em>Has Bookings</em>}</li>
+ *   <li>{@link ClassDiagram.Company_Hotel#getConsistsOf <em>Consists Of</em>}</li>
+ *   <li>{@link ClassDiagram.Company_Hotel#getEmployees <em>Employees</em>}</li>
  *   <li>{@link ClassDiagram.Company_Hotel#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -28,68 +27,52 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Company_Hotel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Has Booking</b></em>' reference list.
+	 * Returns the value of the '<em><b>Has Bookings</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Hotel_Booking}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Booking</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Has Bookings</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Booking</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_HasBooking()
+	 * @return the value of the '<em>Has Bookings</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_HasBookings()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Hotel_Booking> getHasBooking();
+	EList<Hotel_Booking> getHasBookings();
 
 	/**
-	 * Returns the value of the '<em><b>Has Room</b></em>' reference list.
+	 * Returns the value of the '<em><b>Consists Of</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Hotel_Room}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Room</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Consists Of</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Room</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_HasRoom()
+	 * @return the value of the '<em>Consists Of</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_ConsistsOf()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Hotel_Room> getHasRoom();
+	EList<Hotel_Room> getConsistsOf();
 
 	/**
-	 * Returns the value of the '<em><b>Has Facility</b></em>' reference list.
-	 * The list contents are of type {@link ClassDiagram.Hotel_Facility}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Has Facility</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Facility</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_HasFacility()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Hotel_Facility> getHasFacility();
-
-	/**
-	 * Returns the value of the '<em><b>Employee</b></em>' reference list.
+	 * Returns the value of the '<em><b>Employees</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Hotel_Staff}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Employee</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Employees</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Employee</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_Employee()
+	 * @return the value of the '<em>Employees</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_Employees()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Hotel_Staff> getEmployee();
+	EList<Hotel_Staff> getEmployees();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

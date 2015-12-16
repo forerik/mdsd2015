@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getMaxNumberOfGuests <em>Max Number Of Guests</em>}</li>
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getArea <em>Area</em>}</li>
- *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getHasAppliance <em>Has Appliance</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getContains <em>Contains</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,14 +97,14 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 	protected double area = AREA_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getHasAppliance() <em>Has Appliance</em>}' reference list.
+	 * The cached value of the '{@link #getContains() <em>Contains</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasAppliance()
+	 * @see #getContains()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Room_RoomAppliance> hasAppliance;
+	protected EList<Room_RoomAppliance> contains;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,11 +193,11 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Room_RoomAppliance> getHasAppliance() {
-		if (hasAppliance == null) {
-			hasAppliance = new EObjectResolvingEList<Room_RoomAppliance>(Room_RoomAppliance.class, this, ClassDiagramPackage.ROOM_ROOM_TYPE__HAS_APPLIANCE);
+	public EList<Room_RoomAppliance> getContains() {
+		if (contains == null) {
+			contains = new EObjectResolvingEList<Room_RoomAppliance>(Room_RoomAppliance.class, this, ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS);
 		}
-		return hasAppliance;
+		return contains;
 	}
 
 	/**
@@ -214,8 +214,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 				return getMaxNumberOfGuests();
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				return getArea();
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__HAS_APPLIANCE:
-				return getHasAppliance();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
+				return getContains();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -238,9 +238,9 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				setArea((Double)newValue);
 				return;
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__HAS_APPLIANCE:
-				getHasAppliance().clear();
-				getHasAppliance().addAll((Collection<? extends Room_RoomAppliance>)newValue);
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
+				getContains().clear();
+				getContains().addAll((Collection<? extends Room_RoomAppliance>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -263,8 +263,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				setArea(AREA_EDEFAULT);
 				return;
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__HAS_APPLIANCE:
-				getHasAppliance().clear();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
+				getContains().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -284,8 +284,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 				return maxNumberOfGuests != MAX_NUMBER_OF_GUESTS_EDEFAULT;
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				return area != AREA_EDEFAULT;
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__HAS_APPLIANCE:
-				return hasAppliance != null && !hasAppliance.isEmpty();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
+				return contains != null && !contains.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

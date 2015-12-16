@@ -843,7 +843,7 @@
               </children>
               <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_T_WH0Z_gEeWZLewJAsVhpw"/>
               <element xmi:type="uml:DecisionNode" href="Hotel%20system.uml#_T_JTgJ_gEeWZLewJAsVhpw"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T_WH0p_gEeWZLewJAsVhpw" x="329" y="22"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T_WH0p_gEeWZLewJAsVhpw" x="327" y="-12"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_5amoYJ_gEeWZLewJAsVhpw" type="3007">
               <children xmi:type="notation:DecorationNode" xmi:id="_5amoY5_gEeWZLewJAsVhpw" type="5003"/>
@@ -852,7 +852,7 @@
               </children>
               <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_5amoYZ_gEeWZLewJAsVhpw"/>
               <element xmi:type="uml:OpaqueAction" href="Hotel%20system.uml#_5aQDEJ_gEeWZLewJAsVhpw"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5amoYp_gEeWZLewJAsVhpw" x="181" y="102"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5amoYp_gEeWZLewJAsVhpw" x="190" y="56"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_9xqvQJ_gEeWZLewJAsVhpw" type="3007">
               <children xmi:type="notation:DecorationNode" xmi:id="_9xqvQ5_gEeWZLewJAsVhpw" type="5003"/>
@@ -861,7 +861,7 @@
               </children>
               <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_9xqvQZ_gEeWZLewJAsVhpw"/>
               <element xmi:type="uml:OpaqueAction" href="Hotel%20system.uml#_9xZpgJ_gEeWZLewJAsVhpw"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9xqvQp_gEeWZLewJAsVhpw" x="167" y="173"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9xqvQp_gEeWZLewJAsVhpw" x="161" y="126"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_crNPQJ_hEeWZLewJAsVhpw" type="3007">
               <children xmi:type="notation:DecorationNode" xmi:id="_crNPQ5_hEeWZLewJAsVhpw" type="5003"/>

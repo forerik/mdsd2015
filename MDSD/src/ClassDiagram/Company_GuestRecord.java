@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ClassDiagram.Company_GuestRecord#getAdress <em>Adress</em>}</li>
  *   <li>{@link ClassDiagram.Company_GuestRecord#getPhoneNumber <em>Phone Number</em>}</li>
  *   <li>{@link ClassDiagram.Company_GuestRecord#getSsn <em>Ssn</em>}</li>
- *   <li>{@link ClassDiagram.Company_GuestRecord#getPayment <em>Payment</em>}</li>
+ *   <li>{@link ClassDiagram.Company_GuestRecord#getPaymentInformation <em>Payment Information</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getCompany_GuestRecord()
@@ -130,29 +130,29 @@ public interface Company_GuestRecord extends EObject {
 	void setSsn(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Payment</b></em>' attribute.
+	 * Returns the value of the '<em><b>Payment Information</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Payment</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Payment Information</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Payment</em>' attribute.
-	 * @see #setPayment(String)
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_GuestRecord_Payment()
+	 * @return the value of the '<em>Payment Information</em>' attribute.
+	 * @see #setPaymentInformation(String)
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_GuestRecord_PaymentInformation()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	String getPayment();
+	String getPaymentInformation();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.Company_GuestRecord#getPayment <em>Payment</em>}' attribute.
+	 * Sets the value of the '{@link ClassDiagram.Company_GuestRecord#getPaymentInformation <em>Payment Information</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Payment</em>' attribute.
-	 * @see #getPayment()
+	 * @param value the new value of the '<em>Payment Information</em>' attribute.
+	 * @see #getPaymentInformation()
 	 * @generated
 	 */
-	void setPayment(String value);
+	void setPaymentInformation(String value);
 
 } // Company_GuestRecord

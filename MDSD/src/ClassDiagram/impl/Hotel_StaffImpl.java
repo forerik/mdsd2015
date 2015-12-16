@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link ClassDiagram.impl.Hotel_StaffImpl#getSsn <em>Ssn</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_StaffImpl#getFirstName <em>First Name</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_StaffImpl#getLastName <em>Last Name</em>}</li>
- *   <li>{@link ClassDiagram.impl.Hotel_StaffImpl#getStafftype <em>Stafftype</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Hotel_StaffImpl#getHasWorkTitel <em>Has Work Titel</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,24 +91,24 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 	protected String lastName = LAST_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getStafftype() <em>Stafftype</em>}' attribute.
+	 * The default value of the '{@link #getHasWorkTitel() <em>Has Work Titel</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStafftype()
+	 * @see #getHasWorkTitel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final StaffType STAFFTYPE_EDEFAULT = StaffType.MANAGER;
+	protected static final StaffType HAS_WORK_TITEL_EDEFAULT = StaffType.MANAGER;
 
 	/**
-	 * The cached value of the '{@link #getStafftype() <em>Stafftype</em>}' attribute.
+	 * The cached value of the '{@link #getHasWorkTitel() <em>Has Work Titel</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStafftype()
+	 * @see #getHasWorkTitel()
 	 * @generated
 	 * @ordered
 	 */
-	protected StaffType stafftype = STAFFTYPE_EDEFAULT;
+	protected StaffType hasWorkTitel = HAS_WORK_TITEL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,8 +197,8 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StaffType getStafftype() {
-		return stafftype;
+	public StaffType getHasWorkTitel() {
+		return hasWorkTitel;
 	}
 
 	/**
@@ -206,11 +206,11 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStafftype(StaffType newStafftype) {
-		StaffType oldStafftype = stafftype;
-		stafftype = newStafftype == null ? STAFFTYPE_EDEFAULT : newStafftype;
+	public void setHasWorkTitel(StaffType newHasWorkTitel) {
+		StaffType oldHasWorkTitel = hasWorkTitel;
+		hasWorkTitel = newHasWorkTitel == null ? HAS_WORK_TITEL_EDEFAULT : newHasWorkTitel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_STAFF__STAFFTYPE, oldStafftype, stafftype));
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_STAFF__HAS_WORK_TITEL, oldHasWorkTitel, hasWorkTitel));
 	}
 
 	/**
@@ -227,8 +227,8 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 				return getFirstName();
 			case ClassDiagramPackage.HOTEL_STAFF__LAST_NAME:
 				return getLastName();
-			case ClassDiagramPackage.HOTEL_STAFF__STAFFTYPE:
-				return getStafftype();
+			case ClassDiagramPackage.HOTEL_STAFF__HAS_WORK_TITEL:
+				return getHasWorkTitel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,8 +250,8 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 			case ClassDiagramPackage.HOTEL_STAFF__LAST_NAME:
 				setLastName((String)newValue);
 				return;
-			case ClassDiagramPackage.HOTEL_STAFF__STAFFTYPE:
-				setStafftype((StaffType)newValue);
+			case ClassDiagramPackage.HOTEL_STAFF__HAS_WORK_TITEL:
+				setHasWorkTitel((StaffType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -274,8 +274,8 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 			case ClassDiagramPackage.HOTEL_STAFF__LAST_NAME:
 				setLastName(LAST_NAME_EDEFAULT);
 				return;
-			case ClassDiagramPackage.HOTEL_STAFF__STAFFTYPE:
-				setStafftype(STAFFTYPE_EDEFAULT);
+			case ClassDiagramPackage.HOTEL_STAFF__HAS_WORK_TITEL:
+				setHasWorkTitel(HAS_WORK_TITEL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -295,8 +295,8 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 				return FIRST_NAME_EDEFAULT == null ? firstName != null : !FIRST_NAME_EDEFAULT.equals(firstName);
 			case ClassDiagramPackage.HOTEL_STAFF__LAST_NAME:
 				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
-			case ClassDiagramPackage.HOTEL_STAFF__STAFFTYPE:
-				return stafftype != STAFFTYPE_EDEFAULT;
+			case ClassDiagramPackage.HOTEL_STAFF__HAS_WORK_TITEL:
+				return hasWorkTitel != HAS_WORK_TITEL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -317,8 +317,8 @@ public class Hotel_StaffImpl extends MinimalEObjectImpl.Container implements Hot
 		result.append(firstName);
 		result.append(", lastName: ");
 		result.append(lastName);
-		result.append(", stafftype: ");
-		result.append(stafftype);
+		result.append(", hasWorkTitel: ");
+		result.append(hasWorkTitel);
 		result.append(')');
 		return result.toString();
 	}

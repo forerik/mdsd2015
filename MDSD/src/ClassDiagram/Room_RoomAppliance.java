@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.Room_RoomAppliance#getName <em>Name</em>}</li>
- *   <li>{@link ClassDiagram.Room_RoomAppliance#getHasApplianceType <em>Has Appliance Type</em>}</li>
+ *   <li>{@link ClassDiagram.Room_RoomAppliance#getBelongsTo <em>Belongs To</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomAppliance()
@@ -49,29 +49,29 @@ public interface Room_RoomAppliance extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Has Appliance Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Appliance Type</em>' reference isn't clear,
+	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Appliance Type</em>' reference.
-	 * @see #setHasApplianceType(RoomAppliance_ApplianceType)
-	 * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomAppliance_HasApplianceType()
+	 * @return the value of the '<em>Belongs To</em>' reference.
+	 * @see #setBelongsTo(RoomAppliance_ApplianceType)
+	 * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomAppliance_BelongsTo()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	RoomAppliance_ApplianceType getHasApplianceType();
+	RoomAppliance_ApplianceType getBelongsTo();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.Room_RoomAppliance#getHasApplianceType <em>Has Appliance Type</em>}' reference.
+	 * Sets the value of the '{@link ClassDiagram.Room_RoomAppliance#getBelongsTo <em>Belongs To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Has Appliance Type</em>' reference.
-	 * @see #getHasApplianceType()
+	 * @param value the new value of the '<em>Belongs To</em>' reference.
+	 * @see #getBelongsTo()
 	 * @generated
 	 */
-	void setHasApplianceType(RoomAppliance_ApplianceType value);
+	void setBelongsTo(RoomAppliance_ApplianceType value);
 
 } // Room_RoomAppliance

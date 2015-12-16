@@ -84,14 +84,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createBooking_BookedServiceAdapter();
 			}
 			@Override
-			public Adapter caseBooking_Bill(Booking_Bill object) {
-				return createBooking_BillAdapter();
-			}
-			@Override
-			public Adapter caseBooking_PurchasedService(Booking_PurchasedService object) {
-				return createBooking_PurchasedServiceAdapter();
-			}
-			@Override
 			public Adapter caseHotel_Room(Hotel_Room object) {
 				return createHotel_RoomAdapter();
 			}
@@ -116,6 +108,18 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createRoom_RoomKeyAdapter();
 			}
 			@Override
+			public Adapter caseCompany_GuestRecord(Company_GuestRecord object) {
+				return createCompany_GuestRecordAdapter();
+			}
+			@Override
+			public Adapter caseBooking_Bill(Booking_Bill object) {
+				return createBooking_BillAdapter();
+			}
+			@Override
+			public Adapter caseBooking_PurchasedService(Booking_PurchasedService object) {
+				return createBooking_PurchasedServiceAdapter();
+			}
+			@Override
 			public Adapter caseHotel_Facility(Hotel_Facility object) {
 				return createHotel_FacilityAdapter();
 			}
@@ -130,10 +134,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseHotel_Staff(Hotel_Staff object) {
 				return createHotel_StaffAdapter();
-			}
-			@Override
-			public Adapter caseCompany_GuestRecord(Company_GuestRecord object) {
-				return createCompany_GuestRecordAdapter();
 			}
 			@Override
 			public Adapter caseIRoomManager(IRoomManager object) {

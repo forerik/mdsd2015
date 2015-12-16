@@ -18,25 +18,25 @@ public interface IStaffAdministration extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model firstnameRequired="true" firstnameOrdered="false" lastnameRequired="true" lastnameOrdered="false" ssnRequired="true" ssnOrdered="false"
 	 * @generated
 	 */
-	void addStaff();
+	void addStaff(String firstname, String lastname, String ssn);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model staffRequired="true" staffOrdered="false"
 	 * @generated
 	 */
-	void editStaff();
+	void editStaff(Hotel_Staff staff);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model staffRequired="true" staffOrdered="false"
 	 * @generated
 	 */
-	void removeStaff();
+	void removeStaff(Hotel_Staff staff);
 
 } // IStaffAdministration

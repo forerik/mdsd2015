@@ -22,7 +22,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ClassDiagram.Hotel_Booking#getPrice <em>Price</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Booking#isCheckedIn <em>Checked In</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Booking#getBookingID <em>Booking ID</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Booking#getBookedservice <em>Bookedservice</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Booking#getIncludes <em>Includes</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Booking#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Booking#getResponsibleGuest <em>Responsible Guest</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking()
@@ -161,19 +163,61 @@ public interface Hotel_Booking extends EObject {
 	void setBookingID(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Bookedservice</b></em>' reference list.
+	 * Returns the value of the '<em><b>Includes</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Booking_BookedService}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bookedservice</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Includes</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bookedservice</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking_Bookedservice()
+	 * @return the value of the '<em>Includes</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking_Includes()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Booking_BookedService> getBookedservice();
+	EList<Booking_BookedService> getIncludes();
+
+	/**
+	 * Returns the value of the '<em><b>Rooms</b></em>' reference list.
+	 * The list contents are of type {@link ClassDiagram.Hotel_Room}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Rooms</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Rooms</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking_Rooms()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	EList<Hotel_Room> getRooms();
+
+	/**
+	 * Returns the value of the '<em><b>Responsible Guest</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Responsible Guest</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Responsible Guest</em>' reference.
+	 * @see #setResponsibleGuest(Company_GuestRecord)
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking_ResponsibleGuest()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Company_GuestRecord getResponsibleGuest();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.Hotel_Booking#getResponsibleGuest <em>Responsible Guest</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Responsible Guest</em>' reference.
+	 * @see #getResponsibleGuest()
+	 * @generated
+	 */
+	void setResponsibleGuest(Company_GuestRecord value);
 
 } // Hotel_Booking

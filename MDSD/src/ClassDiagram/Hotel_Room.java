@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link ClassDiagram.Hotel_Room#getRoomNumber <em>Room Number</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Room#getRoomAppliances <em>Room Appliances</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Room#getHasType <em>Has Type</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Room#getHasKey <em>Has Key</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Room#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Room#getAccessedBy <em>Accessed By</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Room#isCleaningStatus <em>Cleaning Status</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Room#isMaintenceStatus <em>Maintence Status</em>}</li>
  * </ul>
@@ -71,46 +71,46 @@ public interface Hotel_Room extends EObject {
 	EList<Room_RoomAppliance> getRoomAppliances();
 
 	/**
-	 * Returns the value of the '<em><b>Has Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Type</em>' reference isn't clear,
+	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Type</em>' reference.
-	 * @see #setHasType(Room_RoomType)
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Room_HasType()
+	 * @return the value of the '<em>Belongs To</em>' reference.
+	 * @see #setBelongsTo(Room_RoomType)
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Room_BelongsTo()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Room_RoomType getHasType();
+	Room_RoomType getBelongsTo();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.Hotel_Room#getHasType <em>Has Type</em>}' reference.
+	 * Sets the value of the '{@link ClassDiagram.Hotel_Room#getBelongsTo <em>Belongs To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Has Type</em>' reference.
-	 * @see #getHasType()
+	 * @param value the new value of the '<em>Belongs To</em>' reference.
+	 * @see #getBelongsTo()
 	 * @generated
 	 */
-	void setHasType(Room_RoomType value);
+	void setBelongsTo(Room_RoomType value);
 
 	/**
-	 * Returns the value of the '<em><b>Has Key</b></em>' reference list.
+	 * Returns the value of the '<em><b>Accessed By</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Room_RoomKey}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Key</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Accessed By</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Key</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Room_HasKey()
+	 * @return the value of the '<em>Accessed By</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Room_AccessedBy()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Room_RoomKey> getHasKey();
+	EList<Room_RoomKey> getAccessedBy();
 
 	/**
 	 * Returns the value of the '<em><b>Cleaning Status</b></em>' attribute.
