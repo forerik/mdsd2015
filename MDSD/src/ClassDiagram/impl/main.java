@@ -22,7 +22,7 @@ public class main {
 		
 		// Creating the Hotels
 		Company_Hotel theHotel  = factory.createCompany_Hotel();
-		theHotel.setName("Vårt hotel");
+		theHotel.setName("Our hotel");
 		
 		// Adding the hotels to the company
 		company.getOwns().add(theHotel);
@@ -33,7 +33,7 @@ public class main {
 		// Creating the rooms
 		Hotel_Room room1 = factory.createHotel_Room();
 		room1.setRoomNumber(1);
-		room1.setBelongsTo(single);;
+		room1.setBelongsTo(single);
 		
 		// Adding the rooms to the hotel
 		theHotel.getConsistsOfRooms().add(room1);
