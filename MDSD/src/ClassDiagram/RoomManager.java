@@ -2,6 +2,7 @@
  */
 package ClassDiagram;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,5 +14,45 @@ package ClassDiagram;
  * @model
  * @generated
  */
-public interface RoomManager extends IRoomManager {
+public interface RoomManager extends EObject {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomNumberRequired="true" roomNumberOrdered="false"
+	 * @generated
+	 */
+	void findRoom(int roomNumber);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomRequired="true" roomOrdered="false"
+	 * @generated
+	 */
+	void cleaningStatus(Hotel_Room room);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomRequired="true" roomOrdered="false"
+	 * @generated
+	 */
+	void maintenanceStatus(Hotel_Room room);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	void getRoomsToClean();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	void getRoomsToMaintain();
+
 } // RoomManager

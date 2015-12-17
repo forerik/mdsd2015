@@ -76,14 +76,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createCompany_HotelAdapter();
 			}
 			@Override
-			public Adapter caseHotel_Booking(Hotel_Booking object) {
-				return createHotel_BookingAdapter();
-			}
-			@Override
-			public Adapter caseBooking_BookedService(Booking_BookedService object) {
-				return createBooking_BookedServiceAdapter();
-			}
-			@Override
 			public Adapter caseHotel_Room(Hotel_Room object) {
 				return createHotel_RoomAdapter();
 			}
@@ -108,18 +100,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createRoom_RoomKeyAdapter();
 			}
 			@Override
-			public Adapter caseCompany_GuestRecord(Company_GuestRecord object) {
-				return createCompany_GuestRecordAdapter();
-			}
-			@Override
-			public Adapter caseBooking_Bill(Booking_Bill object) {
-				return createBooking_BillAdapter();
-			}
-			@Override
-			public Adapter caseBooking_PurchasedService(Booking_PurchasedService object) {
-				return createBooking_PurchasedServiceAdapter();
-			}
-			@Override
 			public Adapter caseHotel_Facility(Hotel_Facility object) {
 				return createHotel_FacilityAdapter();
 			}
@@ -136,12 +116,28 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createHotel_StaffAdapter();
 			}
 			@Override
-			public Adapter caseIRoomManager(IRoomManager object) {
-				return createIRoomManagerAdapter();
-			}
-			@Override
 			public Adapter caseBookingManager(BookingManager object) {
 				return createBookingManagerAdapter();
+			}
+			@Override
+			public Adapter caseHotel_Booking(Hotel_Booking object) {
+				return createHotel_BookingAdapter();
+			}
+			@Override
+			public Adapter caseBooking_BookedService(Booking_BookedService object) {
+				return createBooking_BookedServiceAdapter();
+			}
+			@Override
+			public Adapter caseCompany_GuestRecord(Company_GuestRecord object) {
+				return createCompany_GuestRecordAdapter();
+			}
+			@Override
+			public Adapter caseBooking_Bill(Booking_Bill object) {
+				return createBooking_BillAdapter();
+			}
+			@Override
+			public Adapter caseBooking_PurchasedService(Booking_PurchasedService object) {
+				return createBooking_PurchasedServiceAdapter();
 			}
 			@Override
 			public Adapter caseIGuestManager(IGuestManager object) {
@@ -176,40 +172,12 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createIHotelAdministrationAdapter();
 			}
 			@Override
-			public Adapter caseIBooking(IBooking object) {
-				return createIBookingAdapter();
-			}
-			@Override
 			public Adapter caseIServiceBooking(IServiceBooking object) {
 				return createIServiceBookingAdapter();
 			}
 			@Override
-			public Adapter caseGuestBooking(GuestBooking object) {
-				return createGuestBookingAdapter();
-			}
-			@Override
-			public Adapter caseStaffBooking(StaffBooking object) {
-				return createStaffBookingAdapter();
-			}
-			@Override
-			public Adapter caseFacilityAdministration(FacilityAdministration object) {
-				return createFacilityAdministrationAdapter();
-			}
-			@Override
-			public Adapter caseServiceBooking(ServiceBooking object) {
-				return createServiceBookingAdapter();
-			}
-			@Override
 			public Adapter caseFacilityManager(FacilityManager object) {
 				return createFacilityManagerAdapter();
-			}
-			@Override
-			public Adapter caseGuestManager(GuestManager object) {
-				return createGuestManagerAdapter();
-			}
-			@Override
-			public Adapter caseBillManager(BillManager object) {
-				return createBillManagerAdapter();
 			}
 			@Override
 			public Adapter caseHotelAdministration(HotelAdministration object) {
@@ -490,20 +458,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.IRoomManager <em>IRoom Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.IRoomManager
-	 * @generated
-	 */
-	public Adapter createIRoomManagerAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ClassDiagram.BookingManager <em>Booking Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -630,20 +584,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.IBooking <em>IBooking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.IBooking
-	 * @generated
-	 */
-	public Adapter createIBookingAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ClassDiagram.IServiceBooking <em>IService Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -658,62 +598,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.GuestBooking <em>Guest Booking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.GuestBooking
-	 * @generated
-	 */
-	public Adapter createGuestBookingAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.StaffBooking <em>Staff Booking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.StaffBooking
-	 * @generated
-	 */
-	public Adapter createStaffBookingAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.FacilityAdministration <em>Facility Administration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.FacilityAdministration
-	 * @generated
-	 */
-	public Adapter createFacilityAdministrationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.ServiceBooking <em>Service Booking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.ServiceBooking
-	 * @generated
-	 */
-	public Adapter createServiceBookingAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ClassDiagram.FacilityManager <em>Facility Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -724,34 +608,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFacilityManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.GuestManager <em>Guest Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.GuestManager
-	 * @generated
-	 */
-	public Adapter createGuestManagerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ClassDiagram.BillManager <em>Bill Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ClassDiagram.BillManager
-	 * @generated
-	 */
-	public Adapter createBillManagerAdapter() {
 		return null;
 	}
 

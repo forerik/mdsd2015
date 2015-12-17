@@ -59,28 +59,23 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 		switch (eClass.getClassifierID()) {
 			case ClassDiagramPackage.COMPANY: return createCompany();
 			case ClassDiagramPackage.COMPANY_HOTEL: return createCompany_Hotel();
-			case ClassDiagramPackage.HOTEL_BOOKING: return createHotel_Booking();
-			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE: return createBooking_BookedService();
 			case ClassDiagramPackage.HOTEL_ROOM: return createHotel_Room();
 			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE: return createRoom_RoomAppliance();
 			case ClassDiagramPackage.ROOM_APPLIANCE_APPLIANCE_TYPE: return createRoomAppliance_ApplianceType();
 			case ClassDiagramPackage.APPLIANCE_TYPE_APPLIANCE_SERVICE: return createApplianceType_ApplianceService();
 			case ClassDiagramPackage.ROOM_ROOM_TYPE: return createRoom_RoomType();
 			case ClassDiagramPackage.ROOM_ROOM_KEY: return createRoom_RoomKey();
-			case ClassDiagramPackage.COMPANY_GUEST_RECORD: return createCompany_GuestRecord();
-			case ClassDiagramPackage.BOOKING_BILL: return createBooking_Bill();
-			case ClassDiagramPackage.BOOKING_PURCHASED_SERVICE: return createBooking_PurchasedService();
 			case ClassDiagramPackage.HOTEL_FACILITY: return createHotel_Facility();
 			case ClassDiagramPackage.FACILITY_FACILITY_TYPE: return createFacility_FacilityType();
 			case ClassDiagramPackage.FACILITY_FACILITY_SERVICE: return createFacility_FacilityService();
 			case ClassDiagramPackage.HOTEL_STAFF: return createHotel_Staff();
-			case ClassDiagramPackage.GUEST_BOOKING: return createGuestBooking();
-			case ClassDiagramPackage.STAFF_BOOKING: return createStaffBooking();
-			case ClassDiagramPackage.FACILITY_ADMINISTRATION: return createFacilityAdministration();
-			case ClassDiagramPackage.SERVICE_BOOKING: return createServiceBooking();
+			case ClassDiagramPackage.BOOKING_MANAGER: return createBookingManager();
+			case ClassDiagramPackage.HOTEL_BOOKING: return createHotel_Booking();
+			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE: return createBooking_BookedService();
+			case ClassDiagramPackage.COMPANY_GUEST_RECORD: return createCompany_GuestRecord();
+			case ClassDiagramPackage.BOOKING_BILL: return createBooking_Bill();
+			case ClassDiagramPackage.BOOKING_PURCHASED_SERVICE: return createBooking_PurchasedService();
 			case ClassDiagramPackage.FACILITY_MANAGER: return createFacilityManager();
-			case ClassDiagramPackage.GUEST_MANAGER: return createGuestManager();
-			case ClassDiagramPackage.BILL_MANAGER: return createBillManager();
 			case ClassDiagramPackage.HOTEL_ADMINISTRATION: return createHotelAdministration();
 			case ClassDiagramPackage.STAFF_ADMINISTRATION: return createStaffAdministration();
 			case ClassDiagramPackage.ROOM_MANAGER: return createRoomManager();
@@ -166,36 +161,6 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Company_GuestRecord createCompany_GuestRecord() {
-		Company_GuestRecordImpl company_GuestRecord = new Company_GuestRecordImpl();
-		return company_GuestRecord;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Booking_Bill createBooking_Bill() {
-		Booking_BillImpl booking_Bill = new Booking_BillImpl();
-		return booking_Bill;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Booking_PurchasedService createBooking_PurchasedService() {
-		Booking_PurchasedServiceImpl booking_PurchasedService = new Booking_PurchasedServiceImpl();
-		return booking_PurchasedService;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Hotel_Room createHotel_Room() {
 		Hotel_RoomImpl hotel_Room = new Hotel_RoomImpl();
 		return hotel_Room;
@@ -256,6 +221,36 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Company_GuestRecord createCompany_GuestRecord() {
+		Company_GuestRecordImpl company_GuestRecord = new Company_GuestRecordImpl();
+		return company_GuestRecord;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Booking_Bill createBooking_Bill() {
+		Booking_BillImpl booking_Bill = new Booking_BillImpl();
+		return booking_Bill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Booking_PurchasedService createBooking_PurchasedService() {
+		Booking_PurchasedServiceImpl booking_PurchasedService = new Booking_PurchasedServiceImpl();
+		return booking_PurchasedService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Hotel_Facility createHotel_Facility() {
 		Hotel_FacilityImpl hotel_Facility = new Hotel_FacilityImpl();
 		return hotel_Facility;
@@ -296,39 +291,9 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GuestBooking createGuestBooking() {
-		GuestBookingImpl guestBooking = new GuestBookingImpl();
-		return guestBooking;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StaffBooking createStaffBooking() {
-		StaffBookingImpl staffBooking = new StaffBookingImpl();
-		return staffBooking;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FacilityAdministration createFacilityAdministration() {
-		FacilityAdministrationImpl facilityAdministration = new FacilityAdministrationImpl();
-		return facilityAdministration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServiceBooking createServiceBooking() {
-		ServiceBookingImpl serviceBooking = new ServiceBookingImpl();
-		return serviceBooking;
+	public BookingManager createBookingManager() {
+		BookingManagerImpl bookingManager = new BookingManagerImpl();
+		return bookingManager;
 	}
 
 	/**
@@ -339,26 +304,6 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 	public FacilityManager createFacilityManager() {
 		FacilityManagerImpl facilityManager = new FacilityManagerImpl();
 		return facilityManager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GuestManager createGuestManager() {
-		GuestManagerImpl guestManager = new GuestManagerImpl();
-		return guestManager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BillManager createBillManager() {
-		BillManagerImpl billManager = new BillManagerImpl();
-		return billManager;
 	}
 
 	/**

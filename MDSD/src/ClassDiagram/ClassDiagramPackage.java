@@ -124,22 +124,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int COMPANY_HOTEL = 1;
 
 	/**
-	 * The feature id for the '<em><b>Has Bookings</b></em>' reference list.
+	 * The feature id for the '<em><b>Consists Of Rooms</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPANY_HOTEL__HAS_BOOKINGS = 0;
+	int COMPANY_HOTEL__CONSISTS_OF_ROOMS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Consists Of</b></em>' reference list.
+	 * The feature id for the '<em><b>Consists Of Facilities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPANY_HOTEL__CONSISTS_OF = 1;
+	int COMPANY_HOTEL__CONSISTS_OF_FACILITIES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Employees</b></em>' reference list.
@@ -160,13 +160,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int COMPANY_HOTEL__NAME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Bookingmanager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_HOTEL__BOOKINGMANAGER = 4;
+
+	/**
 	 * The number of structural features of the '<em>Company Hotel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPANY_HOTEL_FEATURE_COUNT = 4;
+	int COMPANY_HOTEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Company Hotel</em>' class.
@@ -185,7 +194,769 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Booking()
 	 * @generated
 	 */
-	int HOTEL_BOOKING = 2;
+	int HOTEL_BOOKING = 13;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Booking_BookedServiceImpl <em>Booking Booked Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Booking_BookedServiceImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_BookedService()
+	 * @generated
+	 */
+	int BOOKING_BOOKED_SERVICE = 14;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Hotel_RoomImpl <em>Hotel Room</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Hotel_RoomImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Room()
+	 * @generated
+	 */
+	int HOTEL_ROOM = 2;
+
+	/**
+	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM__ROOM_NUMBER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Room Appliances</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM__ROOM_APPLIANCES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM__BELONGS_TO = 2;
+
+	/**
+	 * The feature id for the '<em><b>Accessed By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM__ACCESSED_BY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Cleaning Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM__CLEANING_STATUS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Maintence Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM__MAINTENCE_STATUS = 5;
+
+	/**
+	 * The number of structural features of the '<em>Hotel Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Hotel Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_ROOM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Room_RoomApplianceImpl <em>Room Room Appliance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Room_RoomApplianceImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomAppliance()
+	 * @generated
+	 */
+	int ROOM_ROOM_APPLIANCE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_APPLIANCE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_APPLIANCE__BELONGS_TO = 1;
+
+	/**
+	 * The number of structural features of the '<em>Room Room Appliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_APPLIANCE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Room Room Appliance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_APPLIANCE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.RoomAppliance_ApplianceTypeImpl <em>Room Appliance Appliance Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.RoomAppliance_ApplianceTypeImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomAppliance_ApplianceType()
+	 * @generated
+	 */
+	int ROOM_APPLIANCE_APPLIANCE_TYPE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_APPLIANCE_APPLIANCE_TYPE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Room Appliance Appliance Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_APPLIANCE_APPLIANCE_TYPE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Room Appliance Appliance Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_APPLIANCE_APPLIANCE_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.ApplianceType_ApplianceServiceImpl <em>Appliance Type Appliance Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.ApplianceType_ApplianceServiceImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getApplianceType_ApplianceService()
+	 * @generated
+	 */
+	int APPLIANCE_TYPE_APPLIANCE_SERVICE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLIANCE_TYPE_APPLIANCE_SERVICE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLIANCE_TYPE_APPLIANCE_SERVICE__PRICE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Appliance Type Appliance Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLIANCE_TYPE_APPLIANCE_SERVICE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Appliance Type Appliance Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLIANCE_TYPE_APPLIANCE_SERVICE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Room_RoomTypeImpl <em>Room Room Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Room_RoomTypeImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomType()
+	 * @generated
+	 */
+	int ROOM_ROOM_TYPE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_TYPE__PRICE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Max Number Of Guests</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_TYPE__MAX_NUMBER_OF_GUESTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Area</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_TYPE__AREA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Contains</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_TYPE__CONTAINS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Room Room Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_TYPE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Room Room Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Room_RoomKeyImpl <em>Room Room Key</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Room_RoomKeyImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomKey()
+	 * @generated
+	 */
+	int ROOM_ROOM_KEY = 7;
+
+	/**
+	 * The feature id for the '<em><b>Expiration Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_KEY__EXPIRATION_DATE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Room Room Key</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_KEY_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Room Room Key</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_KEY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Company_GuestRecordImpl <em>Company Guest Record</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Company_GuestRecordImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getCompany_GuestRecord()
+	 * @generated
+	 */
+	int COMPANY_GUEST_RECORD = 15;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Booking_BillImpl <em>Booking Bill</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Booking_BillImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_Bill()
+	 * @generated
+	 */
+	int BOOKING_BILL = 16;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Booking_PurchasedServiceImpl <em>Booking Purchased Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Booking_PurchasedServiceImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_PurchasedService()
+	 * @generated
+	 */
+	int BOOKING_PURCHASED_SERVICE = 17;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Hotel_FacilityImpl <em>Hotel Facility</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Hotel_FacilityImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Facility()
+	 * @generated
+	 */
+	int HOTEL_FACILITY = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_FACILITY__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_FACILITY__BELONGS_TO = 1;
+
+	/**
+	 * The number of structural features of the '<em>Hotel Facility</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_FACILITY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Hotel Facility</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_FACILITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Facility_FacilityTypeImpl <em>Facility Facility Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Facility_FacilityTypeImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacility_FacilityType()
+	 * @generated
+	 */
+	int FACILITY_FACILITY_TYPE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACILITY_FACILITY_TYPE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Facility Facility Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACILITY_FACILITY_TYPE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Facility Facility Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACILITY_FACILITY_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Facility_FacilityServiceImpl <em>Facility Facility Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Facility_FacilityServiceImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacility_FacilityService()
+	 * @generated
+	 */
+	int FACILITY_FACILITY_SERVICE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACILITY_FACILITY_SERVICE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACILITY_FACILITY_SERVICE__PRICE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Facility Facility Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACILITY_FACILITY_SERVICE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Facility Facility Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACILITY_FACILITY_SERVICE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.Hotel_StaffImpl <em>Hotel Staff</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.Hotel_StaffImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Staff()
+	 * @generated
+	 */
+	int HOTEL_STAFF = 11;
+
+	/**
+	 * The feature id for the '<em><b>Ssn</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF__SSN = 0;
+
+	/**
+	 * The feature id for the '<em><b>First Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF__FIRST_NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Last Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF__LAST_NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Has Work Titel</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF__HAS_WORK_TITEL = 3;
+
+	/**
+	 * The number of structural features of the '<em>Hotel Staff</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Hotel Staff</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IGuestManager <em>IGuest Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IGuestManager
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIGuestManager()
+	 * @generated
+	 */
+	int IGUEST_MANAGER = 18;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IBillManager <em>IBill Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IBillManager
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIBillManager()
+	 * @generated
+	 */
+	int IBILL_MANAGER = 19;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IFacilityManager <em>IFacility Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IFacilityManager
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIFacilityManager()
+	 * @generated
+	 */
+	int IFACILITY_MANAGER = 20;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IApplianceAdministration <em>IAppliance Administration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IApplianceAdministration
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIApplianceAdministration()
+	 * @generated
+	 */
+	int IAPPLIANCE_ADMINISTRATION = 21;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IRoomAdministration <em>IRoom Administration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IRoomAdministration
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIRoomAdministration()
+	 * @generated
+	 */
+	int IROOM_ADMINISTRATION = 22;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IFacilityAdministration <em>IFacility Administration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IFacilityAdministration
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIFacilityAdministration()
+	 * @generated
+	 */
+	int IFACILITY_ADMINISTRATION = 23;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IStaffAdministration <em>IStaff Administration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IStaffAdministration
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIStaffAdministration()
+	 * @generated
+	 */
+	int ISTAFF_ADMINISTRATION = 24;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IHotelAdministration <em>IHotel Administration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IHotelAdministration
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIHotelAdministration()
+	 * @generated
+	 */
+	int IHOTEL_ADMINISTRATION = 25;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.IServiceBooking <em>IService Booking</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.IServiceBooking
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIServiceBooking()
+	 * @generated
+	 */
+	int ISERVICE_BOOKING = 26;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.BookingManagerImpl <em>Booking Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.BookingManagerImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBookingManager()
+	 * @generated
+	 */
+	int BOOKING_MANAGER = 12;
+
+	/**
+	 * The feature id for the '<em><b>Booking List</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER__BOOKING_LIST = 0;
+
+	/**
+	 * The number of structural features of the '<em>Booking Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Create Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD = 0;
+
+	/**
+	 * The operation id for the '<em>Find Available Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST = 1;
+
+	/**
+	 * The operation id for the '<em>Check In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING = 2;
+
+	/**
+	 * The operation id for the '<em>Check Out</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING = 3;
+
+	/**
+	 * The operation id for the '<em>Assign Key</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = 4;
+
+	/**
+	 * The operation id for the '<em>Find Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___FIND_BOOKING__DATE_INT = 5;
+
+	/**
+	 * The operation id for the '<em>Edit Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___EDIT_BOOKING__INT = 6;
+
+	/**
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___CANCEL_BOOKING__INT = 7;
+
+	/**
+	 * The operation id for the '<em>Find Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___FIND_BOOKING__INT = 8;
+
+	/**
+	 * The operation id for the '<em>Get Bookings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___GET_BOOKINGS__STRING = 9;
+
+	/**
+	 * The number of operations of the '<em>Booking Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER_OPERATION_COUNT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
@@ -278,16 +1049,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int HOTEL_BOOKING_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Booking_BookedServiceImpl <em>Booking Booked Service</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Booking_BookedServiceImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_BookedService()
-	 * @generated
-	 */
-	int BOOKING_BOOKED_SERVICE = 3;
-
-	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,388 +1074,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_BOOKED_SERVICE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Company_GuestRecordImpl <em>Company Guest Record</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Company_GuestRecordImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getCompany_GuestRecord()
-	 * @generated
-	 */
-	int COMPANY_GUEST_RECORD = 10;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Booking_BillImpl <em>Booking Bill</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Booking_BillImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_Bill()
-	 * @generated
-	 */
-	int BOOKING_BILL = 11;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Booking_PurchasedServiceImpl <em>Booking Purchased Service</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Booking_PurchasedServiceImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_PurchasedService()
-	 * @generated
-	 */
-	int BOOKING_PURCHASED_SERVICE = 12;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Hotel_RoomImpl <em>Hotel Room</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Hotel_RoomImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Room()
-	 * @generated
-	 */
-	int HOTEL_ROOM = 4;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Room_RoomApplianceImpl <em>Room Room Appliance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Room_RoomApplianceImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomAppliance()
-	 * @generated
-	 */
-	int ROOM_ROOM_APPLIANCE = 5;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.RoomAppliance_ApplianceTypeImpl <em>Room Appliance Appliance Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.RoomAppliance_ApplianceTypeImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomAppliance_ApplianceType()
-	 * @generated
-	 */
-	int ROOM_APPLIANCE_APPLIANCE_TYPE = 6;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.ApplianceType_ApplianceServiceImpl <em>Appliance Type Appliance Service</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.ApplianceType_ApplianceServiceImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getApplianceType_ApplianceService()
-	 * @generated
-	 */
-	int APPLIANCE_TYPE_APPLIANCE_SERVICE = 7;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Room_RoomTypeImpl <em>Room Room Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Room_RoomTypeImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomType()
-	 * @generated
-	 */
-	int ROOM_ROOM_TYPE = 8;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Room_RoomKeyImpl <em>Room Room Key</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Room_RoomKeyImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoom_RoomKey()
-	 * @generated
-	 */
-	int ROOM_ROOM_KEY = 9;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Hotel_FacilityImpl <em>Hotel Facility</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Hotel_FacilityImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Facility()
-	 * @generated
-	 */
-	int HOTEL_FACILITY = 13;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Facility_FacilityTypeImpl <em>Facility Facility Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Facility_FacilityTypeImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacility_FacilityType()
-	 * @generated
-	 */
-	int FACILITY_FACILITY_TYPE = 14;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Facility_FacilityServiceImpl <em>Facility Facility Service</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Facility_FacilityServiceImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacility_FacilityService()
-	 * @generated
-	 */
-	int FACILITY_FACILITY_SERVICE = 15;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.Hotel_StaffImpl <em>Hotel Staff</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.Hotel_StaffImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotel_Staff()
-	 * @generated
-	 */
-	int HOTEL_STAFF = 16;
-
-	/**
-	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM__ROOM_NUMBER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Room Appliances</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM__ROOM_APPLIANCES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM__BELONGS_TO = 2;
-
-	/**
-	 * The feature id for the '<em><b>Accessed By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM__ACCESSED_BY = 3;
-
-	/**
-	 * The feature id for the '<em><b>Cleaning Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM__CLEANING_STATUS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Maintence Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM__MAINTENCE_STATUS = 5;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM_FEATURE_COUNT = 6;
-
-	/**
-	 * The number of operations of the '<em>Hotel Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_APPLIANCE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_APPLIANCE__BELONGS_TO = 1;
-
-	/**
-	 * The number of structural features of the '<em>Room Room Appliance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_APPLIANCE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Room Room Appliance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_APPLIANCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_APPLIANCE_APPLIANCE_TYPE__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Room Appliance Appliance Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_APPLIANCE_APPLIANCE_TYPE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Room Appliance Appliance Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_APPLIANCE_APPLIANCE_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLIANCE_TYPE_APPLIANCE_SERVICE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLIANCE_TYPE_APPLIANCE_SERVICE__PRICE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Appliance Type Appliance Service</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLIANCE_TYPE_APPLIANCE_SERVICE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Appliance Type Appliance Service</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLIANCE_TYPE_APPLIANCE_SERVICE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_TYPE__PRICE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Max Number Of Guests</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_TYPE__MAX_NUMBER_OF_GUESTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Area</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_TYPE__AREA = 2;
-
-	/**
-	 * The feature id for the '<em><b>Contains</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_TYPE__CONTAINS = 3;
-
-	/**
-	 * The number of structural features of the '<em>Room Room Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_TYPE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Room Room Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Expiration Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_KEY__EXPIRATION_DATE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Room Room Key</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_KEY_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Room Room Key</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_ROOM_KEY_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -832,315 +1211,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int BOOKING_PURCHASED_SERVICE_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_FACILITY__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_FACILITY__BELONGS_TO = 1;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Facility</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_FACILITY_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Hotel Facility</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_FACILITY_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_FACILITY_TYPE__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Facility Facility Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_FACILITY_TYPE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Facility Facility Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_FACILITY_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_FACILITY_SERVICE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_FACILITY_SERVICE__PRICE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Facility Facility Service</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_FACILITY_SERVICE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Facility Facility Service</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_FACILITY_SERVICE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Ssn</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF__SSN = 0;
-
-	/**
-	 * The feature id for the '<em><b>First Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF__FIRST_NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Last Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF__LAST_NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Has Work Titel</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF__HAS_WORK_TITEL = 3;
-
-	/**
-	 * The number of structural features of the '<em>Hotel Staff</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Hotel Staff</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_STAFF_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.IRoomManager <em>IRoom Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IRoomManager
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIRoomManager()
-	 * @generated
-	 */
-	int IROOM_MANAGER = 17;
-
-	/**
-	 * The number of structural features of the '<em>IRoom Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_MANAGER_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Find Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_MANAGER___FIND_ROOM__INT = 0;
-
-	/**
-	 * The operation id for the '<em>Cleaning Status</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM = 1;
-
-	/**
-	 * The operation id for the '<em>Maintenance Status</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM = 2;
-
-	/**
-	 * The operation id for the '<em>Get Rooms To Clean</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_MANAGER___GET_ROOMS_TO_CLEAN = 3;
-
-	/**
-	 * The operation id for the '<em>Get Rooms To Maintain</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_MANAGER___GET_ROOMS_TO_MAINTAIN = 4;
-
-	/**
-	 * The number of operations of the '<em>IRoom Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_MANAGER_OPERATION_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.BookingManager <em>Booking Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.BookingManager
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBookingManager()
-	 * @generated
-	 */
-	int BOOKING_MANAGER = 18;
-
-	/**
-	 * The number of structural features of the '<em>Booking Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Find Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER___FIND_BOOKING__DATE_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Check In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING = 1;
-
-	/**
-	 * The operation id for the '<em>Check Out</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING = 2;
-
-	/**
-	 * The operation id for the '<em>Assign Key</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = 3;
-
-	/**
-	 * The operation id for the '<em>Find Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER___FIND_BOOKING__DATE_INT = 4;
-
-	/**
-	 * The number of operations of the '<em>Booking Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_MANAGER_OPERATION_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.IGuestManager <em>IGuest Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IGuestManager
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIGuestManager()
-	 * @generated
-	 */
-	int IGUEST_MANAGER = 19;
-
-	/**
 	 * The number of structural features of the '<em>IGuest Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1202,16 +1272,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int IGUEST_MANAGER_OPERATION_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.IBillManager <em>IBill Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IBillManager
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIBillManager()
-	 * @generated
-	 */
-	int IBILL_MANAGER = 20;
 
 	/**
 	 * The number of structural features of the '<em>IBill Manager</em>' class.
@@ -1277,16 +1337,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int IBILL_MANAGER_OPERATION_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.IFacilityManager <em>IFacility Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IFacilityManager
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIFacilityManager()
-	 * @generated
-	 */
-	int IFACILITY_MANAGER = 21;
-
-	/**
 	 * The number of structural features of the '<em>IFacility Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1321,16 +1371,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int IFACILITY_MANAGER_OPERATION_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.IApplianceAdministration <em>IAppliance Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IApplianceAdministration
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIApplianceAdministration()
-	 * @generated
-	 */
-	int IAPPLIANCE_ADMINISTRATION = 22;
 
 	/**
 	 * The number of structural features of the '<em>IAppliance Administration</em>' class.
@@ -1432,16 +1472,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int IAPPLIANCE_ADMINISTRATION_OPERATION_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.IRoomAdministration <em>IRoom Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IRoomAdministration
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIRoomAdministration()
-	 * @generated
-	 */
-	int IROOM_ADMINISTRATION = 23;
-
-	/**
 	 * The number of structural features of the '<em>IRoom Administration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1512,16 +1542,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int IROOM_ADMINISTRATION_OPERATION_COUNT = 6;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.IFacilityAdministration <em>IFacility Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IFacilityAdministration
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIFacilityAdministration()
-	 * @generated
-	 */
-	int IFACILITY_ADMINISTRATION = 24;
 
 	/**
 	 * The number of structural features of the '<em>IFacility Administration</em>' class.
@@ -1623,16 +1643,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int IFACILITY_ADMINISTRATION_OPERATION_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.IStaffAdministration <em>IStaff Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IStaffAdministration
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIStaffAdministration()
-	 * @generated
-	 */
-	int ISTAFF_ADMINISTRATION = 25;
-
-	/**
 	 * The number of structural features of the '<em>IStaff Administration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1678,16 +1688,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int ISTAFF_ADMINISTRATION_OPERATION_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.IHotelAdministration <em>IHotel Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IHotelAdministration
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIHotelAdministration()
-	 * @generated
-	 */
-	int IHOTEL_ADMINISTRATION = 26;
-
-	/**
 	 * The number of structural features of the '<em>IHotel Administration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1731,98 +1731,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int IHOTEL_ADMINISTRATION_OPERATION_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.IBooking <em>IBooking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IBooking
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIBooking()
-	 * @generated
-	 */
-	int IBOOKING = 27;
-
-	/**
-	 * The number of structural features of the '<em>IBooking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING___CREATE_BOOKING__DATE_DATE_HOTEL_ROOM_COMPANY_GUESTRECORD = 0;
-
-	/**
-	 * The operation id for the '<em>Find Available Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST = 1;
-
-	/**
-	 * The operation id for the '<em>Edit Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING___EDIT_BOOKING__HOTEL_BOOKING = 2;
-
-	/**
-	 * The operation id for the '<em>Cancel Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING___CANCEL_BOOKING__HOTEL_BOOKING = 3;
-
-	/**
-	 * The operation id for the '<em>Find Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING___FIND_BOOKING__INT = 4;
-
-	/**
-	 * The operation id for the '<em>Get Bookings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING___GET_BOOKINGS__STRING = 5;
-
-	/**
-	 * The number of operations of the '<em>IBooking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_OPERATION_COUNT = 6;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.IServiceBooking <em>IService Booking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.IServiceBooking
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIServiceBooking()
-	 * @generated
-	 */
-	int ISERVICE_BOOKING = 28;
 
 	/**
 	 * The number of structural features of the '<em>IService Booking</em>' class.
@@ -1888,343 +1796,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int ISERVICE_BOOKING_OPERATION_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.GuestBookingImpl <em>Guest Booking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.GuestBookingImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getGuestBooking()
-	 * @generated
-	 */
-	int GUEST_BOOKING = 29;
-
-	/**
-	 * The number of structural features of the '<em>Guest Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING_FEATURE_COUNT = IBOOKING_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING___CREATE_BOOKING__DATE_DATE_HOTEL_ROOM_COMPANY_GUESTRECORD = IBOOKING___CREATE_BOOKING__DATE_DATE_HOTEL_ROOM_COMPANY_GUESTRECORD;
-
-	/**
-	 * The operation id for the '<em>Find Available Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST = IBOOKING___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST;
-
-	/**
-	 * The operation id for the '<em>Edit Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING___EDIT_BOOKING__HOTEL_BOOKING = IBOOKING___EDIT_BOOKING__HOTEL_BOOKING;
-
-	/**
-	 * The operation id for the '<em>Cancel Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING___CANCEL_BOOKING__HOTEL_BOOKING = IBOOKING___CANCEL_BOOKING__HOTEL_BOOKING;
-
-	/**
-	 * The operation id for the '<em>Find Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING___FIND_BOOKING__INT = IBOOKING___FIND_BOOKING__INT;
-
-	/**
-	 * The operation id for the '<em>Get Bookings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING___GET_BOOKINGS__STRING = IBOOKING___GET_BOOKINGS__STRING;
-
-	/**
-	 * The number of operations of the '<em>Guest Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_BOOKING_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.StaffBookingImpl <em>Staff Booking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.StaffBookingImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffBooking()
-	 * @generated
-	 */
-	int STAFF_BOOKING = 30;
-
-	/**
-	 * The number of structural features of the '<em>Staff Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING_FEATURE_COUNT = BOOKING_MANAGER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Find Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING___FIND_BOOKING__DATE_STRING = BOOKING_MANAGER___FIND_BOOKING__DATE_STRING;
-
-	/**
-	 * The operation id for the '<em>Check In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING___CHECK_IN__HOTEL_BOOKING = BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING;
-
-	/**
-	 * The operation id for the '<em>Check Out</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING___CHECK_OUT__HOTEL_BOOKING = BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING;
-
-	/**
-	 * The operation id for the '<em>Assign Key</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE;
-
-	/**
-	 * The operation id for the '<em>Find Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING___FIND_BOOKING__DATE_INT = BOOKING_MANAGER___FIND_BOOKING__DATE_INT;
-
-	/**
-	 * The number of operations of the '<em>Staff Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING_OPERATION_COUNT = BOOKING_MANAGER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.FacilityAdministrationImpl <em>Facility Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.FacilityAdministrationImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacilityAdministration()
-	 * @generated
-	 */
-	int FACILITY_ADMINISTRATION = 31;
-
-	/**
-	 * The number of structural features of the '<em>Facility Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION_FEATURE_COUNT = IFACILITY_ADMINISTRATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Add Facility</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___ADD_FACILITY__STRING_FACILITY_FACILITYTYPE = IFACILITY_ADMINISTRATION___ADD_FACILITY__STRING_FACILITY_FACILITYTYPE;
-
-	/**
-	 * The operation id for the '<em>Edit Facility</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___EDIT_FACILITY__HOTEL_FACILITY = IFACILITY_ADMINISTRATION___EDIT_FACILITY__HOTEL_FACILITY;
-
-	/**
-	 * The operation id for the '<em>Remove Facility</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___REMOVE_FACILITY__HOTEL_FACILITY = IFACILITY_ADMINISTRATION___REMOVE_FACILITY__HOTEL_FACILITY;
-
-	/**
-	 * The operation id for the '<em>Add Facility Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___ADD_FACILITY_TYPE__STRING = IFACILITY_ADMINISTRATION___ADD_FACILITY_TYPE__STRING;
-
-	/**
-	 * The operation id for the '<em>Edit Facility Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___EDIT_FACILITY_TYPE__FACILITY_FACILITYTYPE = IFACILITY_ADMINISTRATION___EDIT_FACILITY_TYPE__FACILITY_FACILITYTYPE;
-
-	/**
-	 * The operation id for the '<em>Remove Facility Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___REMOVE_FACILITY_TYPE__FACILITY_FACILITYTYPE = IFACILITY_ADMINISTRATION___REMOVE_FACILITY_TYPE__FACILITY_FACILITYTYPE;
-
-	/**
-	 * The operation id for the '<em>Add Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___ADD_SERVICE__FACILITY_FACILITYTYPE_STRING_DOUBLE = IFACILITY_ADMINISTRATION___ADD_SERVICE__FACILITY_FACILITYTYPE_STRING_DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Edit Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___EDIT_SERVICE__FACILITY_FACILITYSERVICE = IFACILITY_ADMINISTRATION___EDIT_SERVICE__FACILITY_FACILITYSERVICE;
-
-	/**
-	 * The operation id for the '<em>Remove Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION___REMOVE_SERVICE__FACILITY_FACILITYSERVICE = IFACILITY_ADMINISTRATION___REMOVE_SERVICE__FACILITY_FACILITYSERVICE;
-
-	/**
-	 * The number of operations of the '<em>Facility Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FACILITY_ADMINISTRATION_OPERATION_COUNT = IFACILITY_ADMINISTRATION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.ServiceBookingImpl <em>Service Booking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.ServiceBookingImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getServiceBooking()
-	 * @generated
-	 */
-	int SERVICE_BOOKING = 32;
-
-	/**
-	 * The number of structural features of the '<em>Service Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_BOOKING_FEATURE_COUNT = ISERVICE_BOOKING_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Book Facility Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_BOOKING___BOOK_FACILITY_SERVICE__HOTEL_BOOKING_HOTEL_FACILITY_FACILITY_FACILITYSERVICE_DATE_STRING = ISERVICE_BOOKING___BOOK_FACILITY_SERVICE__HOTEL_BOOKING_HOTEL_FACILITY_FACILITY_FACILITYSERVICE_DATE_STRING;
-
-	/**
-	 * The operation id for the '<em>Find Available Services</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_BOOKING___FIND_AVAILABLE_SERVICES__HOTEL_FACILITY_DATE = ISERVICE_BOOKING___FIND_AVAILABLE_SERVICES__HOTEL_FACILITY_DATE;
-
-	/**
-	 * The operation id for the '<em>Get Booked Services</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_BOOKING___GET_BOOKED_SERVICES__HOTEL_BOOKING = ISERVICE_BOOKING___GET_BOOKED_SERVICES__HOTEL_BOOKING;
-
-	/**
-	 * The operation id for the '<em>Find Booked Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_BOOKING___FIND_BOOKED_SERVICE__INT = ISERVICE_BOOKING___FIND_BOOKED_SERVICE__INT;
-
-	/**
-	 * The operation id for the '<em>Cancel Booked Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_BOOKING___CANCEL_BOOKED_SERVICE__BOOKING_BOOKEDSERVICE = ISERVICE_BOOKING___CANCEL_BOOKED_SERVICE__BOOKING_BOOKEDSERVICE;
-
-	/**
-	 * The number of operations of the '<em>Service Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_BOOKING_OPERATION_COUNT = ISERVICE_BOOKING_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.FacilityManagerImpl <em>Facility Manager</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2232,7 +1803,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacilityManager()
 	 * @generated
 	 */
-	int FACILITY_MANAGER = 33;
+	int FACILITY_MANAGER = 27;
 
 	/**
 	 * The number of structural features of the '<em>Facility Manager</em>' class.
@@ -2271,152 +1842,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int FACILITY_MANAGER_OPERATION_COUNT = IFACILITY_MANAGER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.GuestManagerImpl <em>Guest Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.GuestManagerImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getGuestManager()
-	 * @generated
-	 */
-	int GUEST_MANAGER = 34;
-
-	/**
-	 * The number of structural features of the '<em>Guest Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_MANAGER_FEATURE_COUNT = IGUEST_MANAGER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create Guest Record</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_MANAGER___CREATE_GUEST_RECORD__STRING_STRING_STRING_STRING_STRING = IGUEST_MANAGER___CREATE_GUEST_RECORD__STRING_STRING_STRING_STRING_STRING;
-
-	/**
-	 * The operation id for the '<em>Edit Guest Record</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_MANAGER___EDIT_GUEST_RECORD__COMPANY_GUESTRECORD = IGUEST_MANAGER___EDIT_GUEST_RECORD__COMPANY_GUESTRECORD;
-
-	/**
-	 * The operation id for the '<em>Remove Guest Record</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_MANAGER___REMOVE_GUEST_RECORD__COMPANY_GUESTRECORD = IGUEST_MANAGER___REMOVE_GUEST_RECORD__COMPANY_GUESTRECORD;
-
-	/**
-	 * The operation id for the '<em>Find Guest Record</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_MANAGER___FIND_GUEST_RECORD__STRING = IGUEST_MANAGER___FIND_GUEST_RECORD__STRING;
-
-	/**
-	 * The operation id for the '<em>Find Guest Records</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_MANAGER___FIND_GUEST_RECORDS__STRING_STRING = IGUEST_MANAGER___FIND_GUEST_RECORDS__STRING_STRING;
-
-	/**
-	 * The number of operations of the '<em>Guest Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_MANAGER_OPERATION_COUNT = IGUEST_MANAGER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.BillManagerImpl <em>Bill Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.BillManagerImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBillManager()
-	 * @generated
-	 */
-	int BILL_MANAGER = 35;
-
-	/**
-	 * The number of structural features of the '<em>Bill Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER_FEATURE_COUNT = IBILL_MANAGER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Add Purchesed Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___ADD_PURCHESED_SERVICE__BOOKING_BILL_STRING_DOUBLE = IBILL_MANAGER___ADD_PURCHESED_SERVICE__BOOKING_BILL_STRING_DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Find Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___FIND_BILL__HOTEL_BOOKING = IBILL_MANAGER___FIND_BILL__HOTEL_BOOKING;
-
-	/**
-	 * The operation id for the '<em>Create Receipt</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___CREATE_RECEIPT__BOOKING_BILL = IBILL_MANAGER___CREATE_RECEIPT__BOOKING_BILL;
-
-	/**
-	 * The operation id for the '<em>Get Amount</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___GET_AMOUNT__BOOKING_BILL = IBILL_MANAGER___GET_AMOUNT__BOOKING_BILL;
-
-	/**
-	 * The operation id for the '<em>Pay</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___PAY__BOOKING_BILL_DOUBLE = IBILL_MANAGER___PAY__BOOKING_BILL_DOUBLE;
-
-	/**
-	 * The number of operations of the '<em>Bill Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER_OPERATION_COUNT = IBILL_MANAGER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.HotelAdministrationImpl <em>Hotel Administration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2424,7 +1849,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotelAdministration()
 	 * @generated
 	 */
-	int HOTEL_ADMINISTRATION = 36;
+	int HOTEL_ADMINISTRATION = 28;
 
 	/**
 	 * The number of structural features of the '<em>Hotel Administration</em>' class.
@@ -2479,7 +1904,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffAdministration()
 	 * @generated
 	 */
-	int STAFF_ADMINISTRATION = 37;
+	int STAFF_ADMINISTRATION = 29;
 
 	/**
 	 * The number of structural features of the '<em>Staff Administration</em>' class.
@@ -2534,7 +1959,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomManager()
 	 * @generated
 	 */
-	int ROOM_MANAGER = 38;
+	int ROOM_MANAGER = 30;
 
 	/**
 	 * The number of structural features of the '<em>Room Manager</em>' class.
@@ -2543,7 +1968,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER_FEATURE_COUNT = IROOM_MANAGER_FEATURE_COUNT + 0;
+	int ROOM_MANAGER_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Find Room</em>' operation.
@@ -2552,7 +1977,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER___FIND_ROOM__INT = IROOM_MANAGER___FIND_ROOM__INT;
+	int ROOM_MANAGER___FIND_ROOM__INT = 0;
 
 	/**
 	 * The operation id for the '<em>Cleaning Status</em>' operation.
@@ -2561,7 +1986,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM = IROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM;
+	int ROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM = 1;
 
 	/**
 	 * The operation id for the '<em>Maintenance Status</em>' operation.
@@ -2570,7 +1995,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM = IROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM;
+	int ROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM = 2;
 
 	/**
 	 * The operation id for the '<em>Get Rooms To Clean</em>' operation.
@@ -2579,7 +2004,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER___GET_ROOMS_TO_CLEAN = IROOM_MANAGER___GET_ROOMS_TO_CLEAN;
+	int ROOM_MANAGER___GET_ROOMS_TO_CLEAN = 3;
 
 	/**
 	 * The operation id for the '<em>Get Rooms To Maintain</em>' operation.
@@ -2588,7 +2013,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER___GET_ROOMS_TO_MAINTAIN = IROOM_MANAGER___GET_ROOMS_TO_MAINTAIN;
+	int ROOM_MANAGER___GET_ROOMS_TO_MAINTAIN = 4;
 
 	/**
 	 * The number of operations of the '<em>Room Manager</em>' class.
@@ -2597,7 +2022,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER_OPERATION_COUNT = IROOM_MANAGER_OPERATION_COUNT + 0;
+	int ROOM_MANAGER_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.RoomAdministrationImpl <em>Room Administration</em>}' class.
@@ -2607,7 +2032,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomAdministration()
 	 * @generated
 	 */
-	int ROOM_ADMINISTRATION = 39;
+	int ROOM_ADMINISTRATION = 31;
 
 	/**
 	 * The number of structural features of the '<em>Room Administration</em>' class.
@@ -2689,7 +2114,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getApplianceAdministration()
 	 * @generated
 	 */
-	int APPLIANCE_ADMINISTRATION = 40;
+	int APPLIANCE_ADMINISTRATION = 32;
 
 	/**
 	 * The number of structural features of the '<em>Appliance Administration</em>' class.
@@ -2798,7 +2223,8 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffType()
 	 * @generated
 	 */
-	int STAFF_TYPE = 41;
+	int STAFF_TYPE = 33;
+
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Company <em>Company</em>}'.
@@ -2854,26 +2280,26 @@ public interface ClassDiagramPackage extends EPackage {
 	EClass getCompany_Hotel();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ClassDiagram.Company_Hotel#getHasBookings <em>Has Bookings</em>}'.
+	 * Returns the meta object for the reference list '{@link ClassDiagram.Company_Hotel#getConsistsOfRooms <em>Consists Of Rooms</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Has Bookings</em>'.
-	 * @see ClassDiagram.Company_Hotel#getHasBookings()
+	 * @return the meta object for the reference list '<em>Consists Of Rooms</em>'.
+	 * @see ClassDiagram.Company_Hotel#getConsistsOfRooms()
 	 * @see #getCompany_Hotel()
 	 * @generated
 	 */
-	EReference getCompany_Hotel_HasBookings();
+	EReference getCompany_Hotel_ConsistsOfRooms();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ClassDiagram.Company_Hotel#getConsistsOf <em>Consists Of</em>}'.
+	 * Returns the meta object for the reference list '{@link ClassDiagram.Company_Hotel#getConsistsOfFacilities <em>Consists Of Facilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Consists Of</em>'.
-	 * @see ClassDiagram.Company_Hotel#getConsistsOf()
+	 * @return the meta object for the reference list '<em>Consists Of Facilities</em>'.
+	 * @see ClassDiagram.Company_Hotel#getConsistsOfFacilities()
 	 * @see #getCompany_Hotel()
 	 * @generated
 	 */
-	EReference getCompany_Hotel_ConsistsOf();
+	EReference getCompany_Hotel_ConsistsOfFacilities();
 
 	/**
 	 * Returns the meta object for the reference list '{@link ClassDiagram.Company_Hotel#getEmployees <em>Employees</em>}'.
@@ -2896,6 +2322,17 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCompany_Hotel_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagram.Company_Hotel#getBookingmanager <em>Bookingmanager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bookingmanager</em>'.
+	 * @see ClassDiagram.Company_Hotel#getBookingmanager()
+	 * @see #getCompany_Hotel()
+	 * @generated
+	 */
+	EReference getCompany_Hotel_Bookingmanager();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Hotel_Booking <em>Hotel Booking</em>}'.
@@ -3015,135 +2452,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBooking_BookedService_Date();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.Company_GuestRecord <em>Company Guest Record</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Company Guest Record</em>'.
-	 * @see ClassDiagram.Company_GuestRecord
-	 * @generated
-	 */
-	EClass getCompany_GuestRecord();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see ClassDiagram.Company_GuestRecord#getName()
-	 * @see #getCompany_GuestRecord()
-	 * @generated
-	 */
-	EAttribute getCompany_GuestRecord_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getAdress <em>Adress</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Adress</em>'.
-	 * @see ClassDiagram.Company_GuestRecord#getAdress()
-	 * @see #getCompany_GuestRecord()
-	 * @generated
-	 */
-	EAttribute getCompany_GuestRecord_Adress();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getPhoneNumber <em>Phone Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Phone Number</em>'.
-	 * @see ClassDiagram.Company_GuestRecord#getPhoneNumber()
-	 * @see #getCompany_GuestRecord()
-	 * @generated
-	 */
-	EAttribute getCompany_GuestRecord_PhoneNumber();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getSsn <em>Ssn</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ssn</em>'.
-	 * @see ClassDiagram.Company_GuestRecord#getSsn()
-	 * @see #getCompany_GuestRecord()
-	 * @generated
-	 */
-	EAttribute getCompany_GuestRecord_Ssn();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getPaymentInformation <em>Payment Information</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Payment Information</em>'.
-	 * @see ClassDiagram.Company_GuestRecord#getPaymentInformation()
-	 * @see #getCompany_GuestRecord()
-	 * @generated
-	 */
-	EAttribute getCompany_GuestRecord_PaymentInformation();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.Booking_Bill <em>Booking Bill</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Booking Bill</em>'.
-	 * @see ClassDiagram.Booking_Bill
-	 * @generated
-	 */
-	EClass getBooking_Bill();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Booking_Bill#getPaidAmount <em>Paid Amount</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Paid Amount</em>'.
-	 * @see ClassDiagram.Booking_Bill#getPaidAmount()
-	 * @see #getBooking_Bill()
-	 * @generated
-	 */
-	EAttribute getBooking_Bill_PaidAmount();
-
-	/**
-	 * Returns the meta object for the reference list '{@link ClassDiagram.Booking_Bill#getContains <em>Contains</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Contains</em>'.
-	 * @see ClassDiagram.Booking_Bill#getContains()
-	 * @see #getBooking_Bill()
-	 * @generated
-	 */
-	EReference getBooking_Bill_Contains();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.Booking_PurchasedService <em>Booking Purchased Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Booking Purchased Service</em>'.
-	 * @see ClassDiagram.Booking_PurchasedService
-	 * @generated
-	 */
-	EClass getBooking_PurchasedService();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Booking_PurchasedService#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see ClassDiagram.Booking_PurchasedService#getName()
-	 * @see #getBooking_PurchasedService()
-	 * @generated
-	 */
-	EAttribute getBooking_PurchasedService_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ClassDiagram.Booking_PurchasedService#getPrice <em>Price</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Price</em>'.
-	 * @see ClassDiagram.Booking_PurchasedService#getPrice()
-	 * @see #getBooking_PurchasedService()
-	 * @generated
-	 */
-	EAttribute getBooking_PurchasedService_Price();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Hotel_Room <em>Hotel Room</em>}'.
@@ -3382,6 +2690,135 @@ public interface ClassDiagramPackage extends EPackage {
 	EAttribute getRoom_RoomKey_ExpirationDate();
 
 	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Company_GuestRecord <em>Company Guest Record</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Company Guest Record</em>'.
+	 * @see ClassDiagram.Company_GuestRecord
+	 * @generated
+	 */
+	EClass getCompany_GuestRecord();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ClassDiagram.Company_GuestRecord#getName()
+	 * @see #getCompany_GuestRecord()
+	 * @generated
+	 */
+	EAttribute getCompany_GuestRecord_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getAdress <em>Adress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Adress</em>'.
+	 * @see ClassDiagram.Company_GuestRecord#getAdress()
+	 * @see #getCompany_GuestRecord()
+	 * @generated
+	 */
+	EAttribute getCompany_GuestRecord_Adress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getPhoneNumber <em>Phone Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Phone Number</em>'.
+	 * @see ClassDiagram.Company_GuestRecord#getPhoneNumber()
+	 * @see #getCompany_GuestRecord()
+	 * @generated
+	 */
+	EAttribute getCompany_GuestRecord_PhoneNumber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getSsn <em>Ssn</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ssn</em>'.
+	 * @see ClassDiagram.Company_GuestRecord#getSsn()
+	 * @see #getCompany_GuestRecord()
+	 * @generated
+	 */
+	EAttribute getCompany_GuestRecord_Ssn();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Company_GuestRecord#getPaymentInformation <em>Payment Information</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Payment Information</em>'.
+	 * @see ClassDiagram.Company_GuestRecord#getPaymentInformation()
+	 * @see #getCompany_GuestRecord()
+	 * @generated
+	 */
+	EAttribute getCompany_GuestRecord_PaymentInformation();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Booking_Bill <em>Booking Bill</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Booking Bill</em>'.
+	 * @see ClassDiagram.Booking_Bill
+	 * @generated
+	 */
+	EClass getBooking_Bill();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Booking_Bill#getPaidAmount <em>Paid Amount</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Paid Amount</em>'.
+	 * @see ClassDiagram.Booking_Bill#getPaidAmount()
+	 * @see #getBooking_Bill()
+	 * @generated
+	 */
+	EAttribute getBooking_Bill_PaidAmount();
+
+	/**
+	 * Returns the meta object for the reference list '{@link ClassDiagram.Booking_Bill#getContains <em>Contains</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Contains</em>'.
+	 * @see ClassDiagram.Booking_Bill#getContains()
+	 * @see #getBooking_Bill()
+	 * @generated
+	 */
+	EReference getBooking_Bill_Contains();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Booking_PurchasedService <em>Booking Purchased Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Booking Purchased Service</em>'.
+	 * @see ClassDiagram.Booking_PurchasedService
+	 * @generated
+	 */
+	EClass getBooking_PurchasedService();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Booking_PurchasedService#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ClassDiagram.Booking_PurchasedService#getName()
+	 * @see #getBooking_PurchasedService()
+	 * @generated
+	 */
+	EAttribute getBooking_PurchasedService_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Booking_PurchasedService#getPrice <em>Price</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price</em>'.
+	 * @see ClassDiagram.Booking_PurchasedService#getPrice()
+	 * @see #getBooking_PurchasedService()
+	 * @generated
+	 */
+	EAttribute getBooking_PurchasedService_Price();
+
+	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Hotel_Facility <em>Hotel Facility</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3519,126 +2956,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHotel_Staff_HasWorkTitel();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.IRoomManager <em>IRoom Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IRoom Manager</em>'.
-	 * @see ClassDiagram.IRoomManager
-	 * @generated
-	 */
-	EClass getIRoomManager();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IRoomManager#findRoom(int) <em>Find Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Room</em>' operation.
-	 * @see ClassDiagram.IRoomManager#findRoom(int)
-	 * @generated
-	 */
-	EOperation getIRoomManager__FindRoom__int();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IRoomManager#cleaningStatus(ClassDiagram.Hotel_Room) <em>Cleaning Status</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cleaning Status</em>' operation.
-	 * @see ClassDiagram.IRoomManager#cleaningStatus(ClassDiagram.Hotel_Room)
-	 * @generated
-	 */
-	EOperation getIRoomManager__CleaningStatus__Hotel_Room();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IRoomManager#maintenanceStatus(ClassDiagram.Hotel_Room) <em>Maintenance Status</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Maintenance Status</em>' operation.
-	 * @see ClassDiagram.IRoomManager#maintenanceStatus(ClassDiagram.Hotel_Room)
-	 * @generated
-	 */
-	EOperation getIRoomManager__MaintenanceStatus__Hotel_Room();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IRoomManager#getRoomsToClean() <em>Get Rooms To Clean</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Rooms To Clean</em>' operation.
-	 * @see ClassDiagram.IRoomManager#getRoomsToClean()
-	 * @generated
-	 */
-	EOperation getIRoomManager__GetRoomsToClean();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IRoomManager#getRoomsToMaintain() <em>Get Rooms To Maintain</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Rooms To Maintain</em>' operation.
-	 * @see ClassDiagram.IRoomManager#getRoomsToMaintain()
-	 * @generated
-	 */
-	EOperation getIRoomManager__GetRoomsToMaintain();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.BookingManager <em>Booking Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Booking Manager</em>'.
-	 * @see ClassDiagram.BookingManager
-	 * @generated
-	 */
-	EClass getBookingManager();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findBooking(java.util.Date, java.lang.String) <em>Find Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Booking</em>' operation.
-	 * @see ClassDiagram.BookingManager#findBooking(java.util.Date, java.lang.String)
-	 * @generated
-	 */
-	EOperation getBookingManager__FindBooking__Date_String();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkIn(ClassDiagram.Hotel_Booking) <em>Check In</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see ClassDiagram.BookingManager#checkIn(ClassDiagram.Hotel_Booking)
-	 * @generated
-	 */
-	EOperation getBookingManager__CheckIn__Hotel_Booking();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkOut(ClassDiagram.Hotel_Booking) <em>Check Out</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see ClassDiagram.BookingManager#checkOut(ClassDiagram.Hotel_Booking)
-	 * @generated
-	 */
-	EOperation getBookingManager__CheckOut__Hotel_Booking();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#assignKey(ClassDiagram.Hotel_Room, ClassDiagram.Hotel_Booking, java.util.Date) <em>Assign Key</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Assign Key</em>' operation.
-	 * @see ClassDiagram.BookingManager#assignKey(ClassDiagram.Hotel_Room, ClassDiagram.Hotel_Booking, java.util.Date)
-	 * @generated
-	 */
-	EOperation getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findBooking(java.util.Date, int) <em>Find Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Booking</em>' operation.
-	 * @see ClassDiagram.BookingManager#findBooking(java.util.Date, int)
-	 * @generated
-	 */
-	EOperation getBookingManager__FindBooking__Date_int();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.IGuestManager <em>IGuest Manager</em>}'.
@@ -4141,76 +3458,6 @@ public interface ClassDiagramPackage extends EPackage {
 	EOperation getIHotelAdministration__RemoveHotel__Company_Hotel();
 
 	/**
-	 * Returns the meta object for class '{@link ClassDiagram.IBooking <em>IBooking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IBooking</em>'.
-	 * @see ClassDiagram.IBooking
-	 * @generated
-	 */
-	EClass getIBooking();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IBooking#createBooking(java.util.Date, java.util.Date, ClassDiagram.Hotel_Room, ClassDiagram.Company_GuestRecord) <em>Create Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Booking</em>' operation.
-	 * @see ClassDiagram.IBooking#createBooking(java.util.Date, java.util.Date, ClassDiagram.Hotel_Room, ClassDiagram.Company_GuestRecord)
-	 * @generated
-	 */
-	EOperation getIBooking__CreateBooking__Date_Date_Hotel_Room_Company_GuestRecord();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IBooking#findAvailableRooms(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList) <em>Find Available Rooms</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Available Rooms</em>' operation.
-	 * @see ClassDiagram.IBooking#findAvailableRooms(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList)
-	 * @generated
-	 */
-	EOperation getIBooking__FindAvailableRooms__Date_Date_EList();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IBooking#editBooking(ClassDiagram.Hotel_Booking) <em>Edit Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Edit Booking</em>' operation.
-	 * @see ClassDiagram.IBooking#editBooking(ClassDiagram.Hotel_Booking)
-	 * @generated
-	 */
-	EOperation getIBooking__EditBooking__Hotel_Booking();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IBooking#cancelBooking(ClassDiagram.Hotel_Booking) <em>Cancel Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
-	 * @see ClassDiagram.IBooking#cancelBooking(ClassDiagram.Hotel_Booking)
-	 * @generated
-	 */
-	EOperation getIBooking__CancelBooking__Hotel_Booking();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IBooking#findBooking(int) <em>Find Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Booking</em>' operation.
-	 * @see ClassDiagram.IBooking#findBooking(int)
-	 * @generated
-	 */
-	EOperation getIBooking__FindBooking__int();
-
-	/**
-	 * Returns the meta object for the '{@link ClassDiagram.IBooking#getBookings(java.lang.String) <em>Get Bookings</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bookings</em>' operation.
-	 * @see ClassDiagram.IBooking#getBookings(java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBooking__GetBookings__String();
-
-	/**
 	 * Returns the meta object for class '{@link ClassDiagram.IServiceBooking <em>IService Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4271,44 +3518,125 @@ public interface ClassDiagramPackage extends EPackage {
 	EOperation getIServiceBooking__CancelBookedService__Booking_BookedService();
 
 	/**
-	 * Returns the meta object for class '{@link ClassDiagram.GuestBooking <em>Guest Booking</em>}'.
+	 * Returns the meta object for class '{@link ClassDiagram.BookingManager <em>Booking Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Guest Booking</em>'.
-	 * @see ClassDiagram.GuestBooking
+	 * @return the meta object for class '<em>Booking Manager</em>'.
+	 * @see ClassDiagram.BookingManager
 	 * @generated
 	 */
-	EClass getGuestBooking();
+	EClass getBookingManager();
 
 	/**
-	 * Returns the meta object for class '{@link ClassDiagram.StaffBooking <em>Staff Booking</em>}'.
+	 * Returns the meta object for the reference list '{@link ClassDiagram.BookingManager#getBookingList <em>Booking List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Staff Booking</em>'.
-	 * @see ClassDiagram.StaffBooking
+	 * @return the meta object for the reference list '<em>Booking List</em>'.
+	 * @see ClassDiagram.BookingManager#getBookingList()
+	 * @see #getBookingManager()
 	 * @generated
 	 */
-	EClass getStaffBooking();
+	EReference getBookingManager_BookingList();
 
 	/**
-	 * Returns the meta object for class '{@link ClassDiagram.FacilityAdministration <em>Facility Administration</em>}'.
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord) <em>Create Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Facility Administration</em>'.
-	 * @see ClassDiagram.FacilityAdministration
+	 * @return the meta object for the '<em>Create Booking</em>' operation.
+	 * @see ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord)
 	 * @generated
 	 */
-	EClass getFacilityAdministration();
+	EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord();
 
 	/**
-	 * Returns the meta object for class '{@link ClassDiagram.ServiceBooking <em>Service Booking</em>}'.
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findAvailableRooms(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList) <em>Find Available Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Service Booking</em>'.
-	 * @see ClassDiagram.ServiceBooking
+	 * @return the meta object for the '<em>Find Available Rooms</em>' operation.
+	 * @see ClassDiagram.BookingManager#findAvailableRooms(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EClass getServiceBooking();
+	EOperation getBookingManager__FindAvailableRooms__Date_Date_EList();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkIn(ClassDiagram.Hotel_Booking) <em>Check In</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check In</em>' operation.
+	 * @see ClassDiagram.BookingManager#checkIn(ClassDiagram.Hotel_Booking)
+	 * @generated
+	 */
+	EOperation getBookingManager__CheckIn__Hotel_Booking();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkOut(ClassDiagram.Hotel_Booking) <em>Check Out</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Out</em>' operation.
+	 * @see ClassDiagram.BookingManager#checkOut(ClassDiagram.Hotel_Booking)
+	 * @generated
+	 */
+	EOperation getBookingManager__CheckOut__Hotel_Booking();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#assignKey(ClassDiagram.Hotel_Room, ClassDiagram.Hotel_Booking, java.util.Date) <em>Assign Key</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Assign Key</em>' operation.
+	 * @see ClassDiagram.BookingManager#assignKey(ClassDiagram.Hotel_Room, ClassDiagram.Hotel_Booking, java.util.Date)
+	 * @generated
+	 */
+	EOperation getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findBooking(java.util.Date, int) <em>Find Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Booking</em>' operation.
+	 * @see ClassDiagram.BookingManager#findBooking(java.util.Date, int)
+	 * @generated
+	 */
+	EOperation getBookingManager__FindBooking__Date_int();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#editBooking(int) <em>Edit Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Edit Booking</em>' operation.
+	 * @see ClassDiagram.BookingManager#editBooking(int)
+	 * @generated
+	 */
+	EOperation getBookingManager__EditBooking__int();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#cancelBooking(int) <em>Cancel Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
+	 * @see ClassDiagram.BookingManager#cancelBooking(int)
+	 * @generated
+	 */
+	EOperation getBookingManager__CancelBooking__int();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findBooking(int) <em>Find Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Booking</em>' operation.
+	 * @see ClassDiagram.BookingManager#findBooking(int)
+	 * @generated
+	 */
+	EOperation getBookingManager__FindBooking__int();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#getBookings(java.lang.String) <em>Get Bookings</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Bookings</em>' operation.
+	 * @see ClassDiagram.BookingManager#getBookings(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingManager__GetBookings__String();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.FacilityManager <em>Facility Manager</em>}'.
@@ -4319,26 +3647,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFacilityManager();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.GuestManager <em>Guest Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Guest Manager</em>'.
-	 * @see ClassDiagram.GuestManager
-	 * @generated
-	 */
-	EClass getGuestManager();
-
-	/**
-	 * Returns the meta object for class '{@link ClassDiagram.BillManager <em>Bill Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Bill Manager</em>'.
-	 * @see ClassDiagram.BillManager
-	 * @generated
-	 */
-	EClass getBillManager();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.HotelAdministration <em>Hotel Administration</em>}'.
@@ -4369,6 +3677,56 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRoomManager();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.RoomManager#findRoom(int) <em>Find Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Room</em>' operation.
+	 * @see ClassDiagram.RoomManager#findRoom(int)
+	 * @generated
+	 */
+	EOperation getRoomManager__FindRoom__int();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.RoomManager#cleaningStatus(ClassDiagram.Hotel_Room) <em>Cleaning Status</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Cleaning Status</em>' operation.
+	 * @see ClassDiagram.RoomManager#cleaningStatus(ClassDiagram.Hotel_Room)
+	 * @generated
+	 */
+	EOperation getRoomManager__CleaningStatus__Hotel_Room();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.RoomManager#maintenanceStatus(ClassDiagram.Hotel_Room) <em>Maintenance Status</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Maintenance Status</em>' operation.
+	 * @see ClassDiagram.RoomManager#maintenanceStatus(ClassDiagram.Hotel_Room)
+	 * @generated
+	 */
+	EOperation getRoomManager__MaintenanceStatus__Hotel_Room();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.RoomManager#getRoomsToClean() <em>Get Rooms To Clean</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Rooms To Clean</em>' operation.
+	 * @see ClassDiagram.RoomManager#getRoomsToClean()
+	 * @generated
+	 */
+	EOperation getRoomManager__GetRoomsToClean();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.RoomManager#getRoomsToMaintain() <em>Get Rooms To Maintain</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Rooms To Maintain</em>' operation.
+	 * @see ClassDiagram.RoomManager#getRoomsToMaintain()
+	 * @generated
+	 */
+	EOperation getRoomManager__GetRoomsToMaintain();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.RoomAdministration <em>Room Administration</em>}'.
@@ -4468,20 +3826,20 @@ public interface ClassDiagramPackage extends EPackage {
 		EClass COMPANY_HOTEL = eINSTANCE.getCompany_Hotel();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Bookings</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Consists Of Rooms</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPANY_HOTEL__HAS_BOOKINGS = eINSTANCE.getCompany_Hotel_HasBookings();
+		EReference COMPANY_HOTEL__CONSISTS_OF_ROOMS = eINSTANCE.getCompany_Hotel_ConsistsOfRooms();
 
 		/**
-		 * The meta object literal for the '<em><b>Consists Of</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Consists Of Facilities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPANY_HOTEL__CONSISTS_OF = eINSTANCE.getCompany_Hotel_ConsistsOf();
+		EReference COMPANY_HOTEL__CONSISTS_OF_FACILITIES = eINSTANCE.getCompany_Hotel_ConsistsOfFacilities();
 
 		/**
 		 * The meta object literal for the '<em><b>Employees</b></em>' reference list feature.
@@ -4498,6 +3856,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPANY_HOTEL__NAME = eINSTANCE.getCompany_Hotel_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Bookingmanager</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPANY_HOTEL__BOOKINGMANAGER = eINSTANCE.getCompany_Hotel_Bookingmanager();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.Hotel_BookingImpl <em>Hotel Booking</em>}' class.
@@ -4590,108 +3956,6 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOKING_BOOKED_SERVICE__DATE = eINSTANCE.getBooking_BookedService_Date();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.Company_GuestRecordImpl <em>Company Guest Record</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.Company_GuestRecordImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getCompany_GuestRecord()
-		 * @generated
-		 */
-		EClass COMPANY_GUEST_RECORD = eINSTANCE.getCompany_GuestRecord();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPANY_GUEST_RECORD__NAME = eINSTANCE.getCompany_GuestRecord_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Adress</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPANY_GUEST_RECORD__ADRESS = eINSTANCE.getCompany_GuestRecord_Adress();
-
-		/**
-		 * The meta object literal for the '<em><b>Phone Number</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPANY_GUEST_RECORD__PHONE_NUMBER = eINSTANCE.getCompany_GuestRecord_PhoneNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Ssn</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPANY_GUEST_RECORD__SSN = eINSTANCE.getCompany_GuestRecord_Ssn();
-
-		/**
-		 * The meta object literal for the '<em><b>Payment Information</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPANY_GUEST_RECORD__PAYMENT_INFORMATION = eINSTANCE.getCompany_GuestRecord_PaymentInformation();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.Booking_BillImpl <em>Booking Bill</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.Booking_BillImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_Bill()
-		 * @generated
-		 */
-		EClass BOOKING_BILL = eINSTANCE.getBooking_Bill();
-
-		/**
-		 * The meta object literal for the '<em><b>Paid Amount</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOKING_BILL__PAID_AMOUNT = eINSTANCE.getBooking_Bill_PaidAmount();
-
-		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BOOKING_BILL__CONTAINS = eINSTANCE.getBooking_Bill_Contains();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.Booking_PurchasedServiceImpl <em>Booking Purchased Service</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.Booking_PurchasedServiceImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_PurchasedService()
-		 * @generated
-		 */
-		EClass BOOKING_PURCHASED_SERVICE = eINSTANCE.getBooking_PurchasedService();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOKING_PURCHASED_SERVICE__NAME = eINSTANCE.getBooking_PurchasedService_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOKING_PURCHASED_SERVICE__PRICE = eINSTANCE.getBooking_PurchasedService_Price();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.Hotel_RoomImpl <em>Hotel Room</em>}' class.
@@ -4882,6 +4146,108 @@ public interface ClassDiagramPackage extends EPackage {
 		EAttribute ROOM_ROOM_KEY__EXPIRATION_DATE = eINSTANCE.getRoom_RoomKey_ExpirationDate();
 
 		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.Company_GuestRecordImpl <em>Company Guest Record</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.Company_GuestRecordImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getCompany_GuestRecord()
+		 * @generated
+		 */
+		EClass COMPANY_GUEST_RECORD = eINSTANCE.getCompany_GuestRecord();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPANY_GUEST_RECORD__NAME = eINSTANCE.getCompany_GuestRecord_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Adress</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPANY_GUEST_RECORD__ADRESS = eINSTANCE.getCompany_GuestRecord_Adress();
+
+		/**
+		 * The meta object literal for the '<em><b>Phone Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPANY_GUEST_RECORD__PHONE_NUMBER = eINSTANCE.getCompany_GuestRecord_PhoneNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Ssn</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPANY_GUEST_RECORD__SSN = eINSTANCE.getCompany_GuestRecord_Ssn();
+
+		/**
+		 * The meta object literal for the '<em><b>Payment Information</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPANY_GUEST_RECORD__PAYMENT_INFORMATION = eINSTANCE.getCompany_GuestRecord_PaymentInformation();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.Booking_BillImpl <em>Booking Bill</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.Booking_BillImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_Bill()
+		 * @generated
+		 */
+		EClass BOOKING_BILL = eINSTANCE.getBooking_Bill();
+
+		/**
+		 * The meta object literal for the '<em><b>Paid Amount</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_BILL__PAID_AMOUNT = eINSTANCE.getBooking_Bill_PaidAmount();
+
+		/**
+		 * The meta object literal for the '<em><b>Contains</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOKING_BILL__CONTAINS = eINSTANCE.getBooking_Bill_Contains();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.Booking_PurchasedServiceImpl <em>Booking Purchased Service</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.Booking_PurchasedServiceImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooking_PurchasedService()
+		 * @generated
+		 */
+		EClass BOOKING_PURCHASED_SERVICE = eINSTANCE.getBooking_PurchasedService();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_PURCHASED_SERVICE__NAME = eINSTANCE.getBooking_PurchasedService_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_PURCHASED_SERVICE__PRICE = eINSTANCE.getBooking_PurchasedService_Price();
+
+		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.Hotel_FacilityImpl <em>Hotel Facility</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4992,106 +4358,6 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HOTEL_STAFF__HAS_WORK_TITEL = eINSTANCE.getHotel_Staff_HasWorkTitel();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.IRoomManager <em>IRoom Manager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.IRoomManager
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIRoomManager()
-		 * @generated
-		 */
-		EClass IROOM_MANAGER = eINSTANCE.getIRoomManager();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_MANAGER___FIND_ROOM__INT = eINSTANCE.getIRoomManager__FindRoom__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Cleaning Status</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM = eINSTANCE.getIRoomManager__CleaningStatus__Hotel_Room();
-
-		/**
-		 * The meta object literal for the '<em><b>Maintenance Status</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM = eINSTANCE.getIRoomManager__MaintenanceStatus__Hotel_Room();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Rooms To Clean</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_MANAGER___GET_ROOMS_TO_CLEAN = eINSTANCE.getIRoomManager__GetRoomsToClean();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Rooms To Maintain</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_MANAGER___GET_ROOMS_TO_MAINTAIN = eINSTANCE.getIRoomManager__GetRoomsToMaintain();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.BookingManager <em>Booking Manager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.BookingManager
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBookingManager()
-		 * @generated
-		 */
-		EClass BOOKING_MANAGER = eINSTANCE.getBookingManager();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_MANAGER___FIND_BOOKING__DATE_STRING = eINSTANCE.getBookingManager__FindBooking__Date_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Check In</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING = eINSTANCE.getBookingManager__CheckIn__Hotel_Booking();
-
-		/**
-		 * The meta object literal for the '<em><b>Check Out</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING = eINSTANCE.getBookingManager__CheckOut__Hotel_Booking();
-
-		/**
-		 * The meta object literal for the '<em><b>Assign Key</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = eINSTANCE.getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_MANAGER___FIND_BOOKING__DATE_INT = eINSTANCE.getBookingManager__FindBooking__Date_int();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.IGuestManager <em>IGuest Manager</em>}' class.
@@ -5510,64 +4776,6 @@ public interface ClassDiagramPackage extends EPackage {
 		EOperation IHOTEL_ADMINISTRATION___REMOVE_HOTEL__COMPANY_HOTEL = eINSTANCE.getIHotelAdministration__RemoveHotel__Company_Hotel();
 
 		/**
-		 * The meta object literal for the '{@link ClassDiagram.IBooking <em>IBooking</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.IBooking
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIBooking()
-		 * @generated
-		 */
-		EClass IBOOKING = eINSTANCE.getIBooking();
-
-		/**
-		 * The meta object literal for the '<em><b>Create Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING___CREATE_BOOKING__DATE_DATE_HOTEL_ROOM_COMPANY_GUESTRECORD = eINSTANCE.getIBooking__CreateBooking__Date_Date_Hotel_Room_Company_GuestRecord();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Available Rooms</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST = eINSTANCE.getIBooking__FindAvailableRooms__Date_Date_EList();
-
-		/**
-		 * The meta object literal for the '<em><b>Edit Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING___EDIT_BOOKING__HOTEL_BOOKING = eINSTANCE.getIBooking__EditBooking__Hotel_Booking();
-
-		/**
-		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING___CANCEL_BOOKING__HOTEL_BOOKING = eINSTANCE.getIBooking__CancelBooking__Hotel_Booking();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING___FIND_BOOKING__INT = eINSTANCE.getIBooking__FindBooking__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Bookings</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING___GET_BOOKINGS__STRING = eINSTANCE.getIBooking__GetBookings__String();
-
-		/**
 		 * The meta object literal for the '{@link ClassDiagram.IServiceBooking <em>IService Booking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5618,44 +4826,102 @@ public interface ClassDiagramPackage extends EPackage {
 		EOperation ISERVICE_BOOKING___CANCEL_BOOKED_SERVICE__BOOKING_BOOKEDSERVICE = eINSTANCE.getIServiceBooking__CancelBookedService__Booking_BookedService();
 
 		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.GuestBookingImpl <em>Guest Booking</em>}' class.
+		 * The meta object literal for the '{@link ClassDiagram.impl.BookingManagerImpl <em>Booking Manager</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.GuestBookingImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getGuestBooking()
+		 * @see ClassDiagram.impl.BookingManagerImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBookingManager()
 		 * @generated
 		 */
-		EClass GUEST_BOOKING = eINSTANCE.getGuestBooking();
+		EClass BOOKING_MANAGER = eINSTANCE.getBookingManager();
 
 		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.StaffBookingImpl <em>Staff Booking</em>}' class.
+		 * The meta object literal for the '<em><b>Booking List</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.StaffBookingImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffBooking()
 		 * @generated
 		 */
-		EClass STAFF_BOOKING = eINSTANCE.getStaffBooking();
+		EReference BOOKING_MANAGER__BOOKING_LIST = eINSTANCE.getBookingManager_BookingList();
 
 		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.FacilityAdministrationImpl <em>Facility Administration</em>}' class.
+		 * The meta object literal for the '<em><b>Create Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.FacilityAdministrationImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacilityAdministration()
 		 * @generated
 		 */
-		EClass FACILITY_ADMINISTRATION = eINSTANCE.getFacilityAdministration();
+		EOperation BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD = eINSTANCE.getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord();
 
 		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.ServiceBookingImpl <em>Service Booking</em>}' class.
+		 * The meta object literal for the '<em><b>Find Available Rooms</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.ServiceBookingImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getServiceBooking()
 		 * @generated
 		 */
-		EClass SERVICE_BOOKING = eINSTANCE.getServiceBooking();
+		EOperation BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST = eINSTANCE.getBookingManager__FindAvailableRooms__Date_Date_EList();
+
+		/**
+		 * The meta object literal for the '<em><b>Check In</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING = eINSTANCE.getBookingManager__CheckIn__Hotel_Booking();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Out</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING = eINSTANCE.getBookingManager__CheckOut__Hotel_Booking();
+
+		/**
+		 * The meta object literal for the '<em><b>Assign Key</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE = eINSTANCE.getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___FIND_BOOKING__DATE_INT = eINSTANCE.getBookingManager__FindBooking__Date_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Edit Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___EDIT_BOOKING__INT = eINSTANCE.getBookingManager__EditBooking__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___CANCEL_BOOKING__INT = eINSTANCE.getBookingManager__CancelBooking__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___FIND_BOOKING__INT = eINSTANCE.getBookingManager__FindBooking__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Bookings</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___GET_BOOKINGS__STRING = eINSTANCE.getBookingManager__GetBookings__String();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.FacilityManagerImpl <em>Facility Manager</em>}' class.
@@ -5666,26 +4932,6 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FACILITY_MANAGER = eINSTANCE.getFacilityManager();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.GuestManagerImpl <em>Guest Manager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.GuestManagerImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getGuestManager()
-		 * @generated
-		 */
-		EClass GUEST_MANAGER = eINSTANCE.getGuestManager();
-
-		/**
-		 * The meta object literal for the '{@link ClassDiagram.impl.BillManagerImpl <em>Bill Manager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ClassDiagram.impl.BillManagerImpl
-		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBillManager()
-		 * @generated
-		 */
-		EClass BILL_MANAGER = eINSTANCE.getBillManager();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.HotelAdministrationImpl <em>Hotel Administration</em>}' class.
@@ -5716,6 +4962,46 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ROOM_MANAGER = eINSTANCE.getRoomManager();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_MANAGER___FIND_ROOM__INT = eINSTANCE.getRoomManager__FindRoom__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Cleaning Status</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM = eINSTANCE.getRoomManager__CleaningStatus__Hotel_Room();
+
+		/**
+		 * The meta object literal for the '<em><b>Maintenance Status</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM = eINSTANCE.getRoomManager__MaintenanceStatus__Hotel_Room();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Rooms To Clean</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_MANAGER___GET_ROOMS_TO_CLEAN = eINSTANCE.getRoomManager__GetRoomsToClean();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Rooms To Maintain</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_MANAGER___GET_ROOMS_TO_MAINTAIN = eINSTANCE.getRoomManager__GetRoomsToMaintain();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.RoomAdministrationImpl <em>Room Administration</em>}' class.

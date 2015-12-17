@@ -46,28 +46,14 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Company_Hotel">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Company_Hotel/hasBookings"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Company_Hotel/consistsOfRooms"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Company_Hotel/consistsOf"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Company_Hotel/consistsOfFacilities"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Company_Hotel/employees"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_Hotel/name"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Hotel_Booking">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/startDate"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/endDate"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/price"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/checkedIn"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/bookingID"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Hotel_Booking/includes"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Hotel_Booking/rooms"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Hotel_Booking/responsibleGuest"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Booking_BookedService">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_BookedService/date"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Company_Hotel/bookingmanager"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Hotel_Room">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Room/roomNumber"/>
@@ -102,22 +88,6 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Room_RoomKey">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Room_RoomKey/expirationDate"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Company_GuestRecord">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/name"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/adress"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/phoneNumber"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/ssn"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/paymentInformation"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Booking_Bill">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_Bill/paidAmount"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Booking_Bill/contains"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Booking_PurchasedService">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_PurchasedService/name"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_PurchasedService/price"/>
-    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Hotel_Facility">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Facility/name"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -136,23 +106,19 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Staff/lastName"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Staff/hasWorkTitel"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagram.ecore#//IRoomManager">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IRoomManager/findRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IRoomManager/findRoom/roomNumber"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IRoomManager/cleaningStatus">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IRoomManager/cleaningStatus/room"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IRoomManager/maintenanceStatus">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IRoomManager/maintenanceStatus/room"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IRoomManager/getRoomsToClean"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IRoomManager/getRoomsToMaintain"/>
-    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagram.ecore#//BookingManager">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findBooking/date"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findBooking/guestSSN"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//BookingManager/bookingList"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/createBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/end"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/rooms"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/guest"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findAvailableRooms">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/end"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/roomTypes"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/checkIn">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/checkIn/booking"/>
@@ -161,14 +127,58 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/checkOut/booking"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/assignKey">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/assignKey/rooms"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/assignKey/room"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/assignKey/booking"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/assignKey/expirationDate"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findBooking.1">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findBooking.1/date"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findBooking.1/roomNr"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findBooking/date"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findBooking/roomNr"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/editBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/editBooking/bookingId"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/cancelBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/cancelBooking/bookingId"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findBooking.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findBooking.1/bookingId"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/getBookings">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/getBookings/ssn"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Hotel_Booking">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/startDate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/endDate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/price"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/checkedIn"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Hotel_Booking/bookingID"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Hotel_Booking/includes"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Hotel_Booking/rooms"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Hotel_Booking/responsibleGuest"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Booking_BookedService">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_BookedService/date"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Company_GuestRecord">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/adress"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/phoneNumber"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/ssn"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Company_GuestRecord/paymentInformation"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Booking_Bill">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_Bill/paidAmount"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Booking_Bill/contains"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//Booking_PurchasedService">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_PurchasedService/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Booking_PurchasedService/price"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagram.ecore#//IGuestManager">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IGuestManager/createGuestRecord">
@@ -326,31 +336,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IHotelAdministration/removeHotel/hotel"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagram.ecore#//IBooking">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IBooking/createBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/createBooking/start"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/createBooking/end"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/createBooking/rooms"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/createBooking/guest"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IBooking/findAvailableRooms">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/findAvailableRooms/start"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/findAvailableRooms/end"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/findAvailableRooms/roomTypes"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IBooking/editBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/editBooking/booking"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IBooking/cancelBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/cancelBooking/booking"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IBooking/findBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/findBooking/bookingNumber"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IBooking/getBookings">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IBooking/getBookings/ssn"/>
-      </genOperations>
-    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagram.ecore#//IServiceBooking">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//IServiceBooking/bookFacilityService">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IServiceBooking/bookFacilityService/booking"/>
@@ -373,16 +358,22 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//IServiceBooking/cancelBookedService/service"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//GuestBooking"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//StaffBooking"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//FacilityAdministration"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//ServiceBooking"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//FacilityManager"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//GuestManager"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//BillManager"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//HotelAdministration"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//StaffAdministration"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//RoomManager"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//RoomManager">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//RoomManager/findRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//RoomManager/findRoom/roomNumber"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//RoomManager/cleaningStatus">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//RoomManager/cleaningStatus/room"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//RoomManager/maintenanceStatus">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//RoomManager/maintenanceStatus/room"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//RoomManager/getRoomsToClean"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//RoomManager/getRoomsToMaintain"/>
+    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//RoomAdministration"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//ApplianceAdministration"/>
   </genPackages>

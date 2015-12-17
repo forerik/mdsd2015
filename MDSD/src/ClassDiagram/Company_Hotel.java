@@ -15,10 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.Company_Hotel#getHasBookings <em>Has Bookings</em>}</li>
- *   <li>{@link ClassDiagram.Company_Hotel#getConsistsOf <em>Consists Of</em>}</li>
+ *   <li>{@link ClassDiagram.Company_Hotel#getConsistsOfRooms <em>Consists Of Rooms</em>}</li>
+ *   <li>{@link ClassDiagram.Company_Hotel#getConsistsOfFacilities <em>Consists Of Facilities</em>}</li>
  *   <li>{@link ClassDiagram.Company_Hotel#getEmployees <em>Employees</em>}</li>
  *   <li>{@link ClassDiagram.Company_Hotel#getName <em>Name</em>}</li>
+ *   <li>{@link ClassDiagram.Company_Hotel#getBookingmanager <em>Bookingmanager</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel()
@@ -27,36 +28,36 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Company_Hotel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Has Bookings</b></em>' reference list.
-	 * The list contents are of type {@link ClassDiagram.Hotel_Booking}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Has Bookings</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Bookings</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_HasBookings()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Hotel_Booking> getHasBookings();
-
-	/**
-	 * Returns the value of the '<em><b>Consists Of</b></em>' reference list.
+	 * Returns the value of the '<em><b>Consists Of Rooms</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagram.Hotel_Room}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Consists Of</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Consists Of Rooms</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Consists Of</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_ConsistsOf()
+	 * @return the value of the '<em>Consists Of Rooms</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_ConsistsOfRooms()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Hotel_Room> getConsistsOf();
+	EList<Hotel_Room> getConsistsOfRooms();
+
+	/**
+	 * Returns the value of the '<em><b>Consists Of Facilities</b></em>' reference list.
+	 * The list contents are of type {@link ClassDiagram.Hotel_Facility}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Consists Of Facilities</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Consists Of Facilities</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_ConsistsOfFacilities()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<Hotel_Facility> getConsistsOfFacilities();
 
 	/**
 	 * Returns the value of the '<em><b>Employees</b></em>' reference list.
@@ -99,5 +100,31 @@ public interface Company_Hotel extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Bookingmanager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bookingmanager</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bookingmanager</em>' reference.
+	 * @see #setBookingmanager(BookingManager)
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_Bookingmanager()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	BookingManager getBookingmanager();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.Company_Hotel#getBookingmanager <em>Bookingmanager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bookingmanager</em>' reference.
+	 * @see #getBookingmanager()
+	 * @generated
+	 */
+	void setBookingmanager(BookingManager value);
 
 } // Company_Hotel

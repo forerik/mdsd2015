@@ -11,42 +11,54 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		// Creating the factory
 		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
-		
+//		ClassDiagramPackage classes = ClassDiagramPackage.init();
+		// Creating the company
+//		Company company2 = factory.create(classes.getCompany());		
+
 		Company company = factory.createCompany();		
 		company.setName("The company");
 		
+		// Creating the Hotels
 		Company_Hotel theHotel  = factory.createCompany_Hotel();
-
 		theHotel.setName("Vårt hotel");
 		
+		// Adding the hotels to the company
 		company.getOwns().add(theHotel);
 		
-		Room_RoomType single = new Room_RoomTypeImpl();
+		// Creating the room types
+		Room_RoomType single = factory.createRoom_RoomType();
 		
-		Hotel_RoomImpl room1 = new Hotel_RoomImpl();
+		// Creating the rooms
+		Hotel_Room room1 = factory.createHotel_Room();
 		room1.setRoomNumber(1);
 		room1.setBelongsTo(single);;
 		
-		theHotel.getConsistsOf().add(room1);
+		// Adding the rooms to the hotel
+		theHotel.getConsistsOfRooms().add(room1);
 		
+		// Creating the guest records
 		Company_GuestRecord guest1 = factory.createCompany_GuestRecord();
 		guest1.setSsn("1");
 		guest1.setName("Johan");
 
 		company.getRecordsOf().add(guest1);
+
 		
-		System.out.println(theHotel.getConsistsOf());
-		System.out.println(company.getOwns());
-		System.out.println(company.getRecordsOf());
-		
-		GuestBookingImpl guestBooking = new GuestBookingImpl();
-		guestBooking.setHotel(theHotel);
 		
 		Date start = new Date();
 		Date end = new Date();
 
-		guestBooking.createBooking(start, end, theHotel.getConsistsOf(), guest1);
+		BookingManager bookingManager = factory.createBookingManager();
+		theHotel.setBookingmanager(bookingManager);
+		bookingManager.getBookingList();
+		bookingManager.createBooking(start, end, theHotel.getConsistsOfRooms(), guest1);
+		
+		System.out.println(theHotel.getBookingmanager().getBookingList());
+		System.out.println(theHotel.getConsistsOfRooms());
+		System.out.println(company.getOwns());
+		System.out.println(company.getRecordsOf());
 		
 		
 	}

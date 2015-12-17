@@ -6,8 +6,8 @@ import ClassDiagram.Booking_BookedService;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
 import ClassDiagram.Hotel_Booking;
-
 import ClassDiagram.Hotel_Room;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -16,8 +16,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 

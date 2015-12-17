@@ -58,33 +58,6 @@ public interface ClassDiagramFactory extends EFactory {
 	Booking_BookedService createBooking_BookedService();
 
 	/**
-	 * Returns a new object of class '<em>Company Guest Record</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Company Guest Record</em>'.
-	 * @generated
-	 */
-	Company_GuestRecord createCompany_GuestRecord();
-
-	/**
-	 * Returns a new object of class '<em>Booking Bill</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking Bill</em>'.
-	 * @generated
-	 */
-	Booking_Bill createBooking_Bill();
-
-	/**
-	 * Returns a new object of class '<em>Booking Purchased Service</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking Purchased Service</em>'.
-	 * @generated
-	 */
-	Booking_PurchasedService createBooking_PurchasedService();
-
-	/**
 	 * Returns a new object of class '<em>Hotel Room</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,6 +112,33 @@ public interface ClassDiagramFactory extends EFactory {
 	Room_RoomKey createRoom_RoomKey();
 
 	/**
+	 * Returns a new object of class '<em>Company Guest Record</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Company Guest Record</em>'.
+	 * @generated
+	 */
+	Company_GuestRecord createCompany_GuestRecord();
+
+	/**
+	 * Returns a new object of class '<em>Booking Bill</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Booking Bill</em>'.
+	 * @generated
+	 */
+	Booking_Bill createBooking_Bill();
+
+	/**
+	 * Returns a new object of class '<em>Booking Purchased Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Booking Purchased Service</em>'.
+	 * @generated
+	 */
+	Booking_PurchasedService createBooking_PurchasedService();
+
+	/**
 	 * Returns a new object of class '<em>Hotel Facility</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,40 +175,13 @@ public interface ClassDiagramFactory extends EFactory {
 	Hotel_Staff createHotel_Staff();
 
 	/**
-	 * Returns a new object of class '<em>Guest Booking</em>'.
+	 * Returns a new object of class '<em>Booking Manager</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Guest Booking</em>'.
+	 * @return a new object of class '<em>Booking Manager</em>'.
 	 * @generated
 	 */
-	GuestBooking createGuestBooking();
-
-	/**
-	 * Returns a new object of class '<em>Staff Booking</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Staff Booking</em>'.
-	 * @generated
-	 */
-	StaffBooking createStaffBooking();
-
-	/**
-	 * Returns a new object of class '<em>Facility Administration</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Facility Administration</em>'.
-	 * @generated
-	 */
-	FacilityAdministration createFacilityAdministration();
-
-	/**
-	 * Returns a new object of class '<em>Service Booking</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service Booking</em>'.
-	 * @generated
-	 */
-	ServiceBooking createServiceBooking();
+	BookingManager createBookingManager();
 
 	/**
 	 * Returns a new object of class '<em>Facility Manager</em>'.
@@ -218,24 +191,6 @@ public interface ClassDiagramFactory extends EFactory {
 	 * @generated
 	 */
 	FacilityManager createFacilityManager();
-
-	/**
-	 * Returns a new object of class '<em>Guest Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Guest Manager</em>'.
-	 * @generated
-	 */
-	GuestManager createGuestManager();
-
-	/**
-	 * Returns a new object of class '<em>Bill Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bill Manager</em>'.
-	 * @generated
-	 */
-	BillManager createBillManager();
 
 	/**
 	 * Returns a new object of class '<em>Hotel Administration</em>'.
