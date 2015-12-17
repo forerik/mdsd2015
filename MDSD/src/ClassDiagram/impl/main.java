@@ -18,7 +18,7 @@ public class main {
 		
 		Company_Hotel theHotel  = factory.createCompany_Hotel();
 
-		theHotel.setName("Vårt hotel");
+		theHotel.setName("Vï¿½rt hotel");
 		
 		company.getOwns().add(theHotel);
 		
@@ -26,7 +26,7 @@ public class main {
 		
 		Hotel_RoomImpl room1 = new Hotel_RoomImpl();
 		room1.setRoomNumber(1);
-		room1.setBelongsTo(single);;
+		room1.setBelongsTo(single);
 		
 		theHotel.getConsistsOf().add(room1);
 		

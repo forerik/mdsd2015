@@ -51,7 +51,7 @@ public class GuestBookingImpl extends MinimalEObjectImpl.Container implements Gu
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void createBooking(Date start, Date end, EList<Hotel_RoomImpl> rooms, Company_GuestRecord guest) {
+	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		
