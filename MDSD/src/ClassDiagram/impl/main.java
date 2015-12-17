@@ -18,7 +18,7 @@ public class main {
 		
 		Company_Hotel theHotel  = factory.createCompany_Hotel();
 
-		theHotel.setName("V�rt hotel");
+		theHotel.setName("Our hotel");
 		
 		company.getOwns().add(theHotel);
 		
