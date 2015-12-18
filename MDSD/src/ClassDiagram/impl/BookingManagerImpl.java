@@ -14,6 +14,8 @@ import ClassDiagram.Room_RoomType;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Date;
+import java.util.Scanner;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
@@ -246,9 +248,15 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void initBooking() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Scanner s = new Scanner(System.in);
+		String input = s.nextLine();
+		String[] parts = input.split("-");
+		int year = Integer.parseInt(parts[0]);
+		int month = Integer.parseInt(parts[1]);
+		int day = Integer.parseInt(parts[2]);
+		
+		
+		
 	}
 
 	/**
