@@ -393,13 +393,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int ROOM_ROOM_TYPE__APPLIANCE_TYPE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_ROOM_TYPE__NAME = 4;
+
+	/**
 	 * The number of structural features of the '<em>Room Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_ROOM_TYPE_FEATURE_COUNT = 4;
+	int ROOM_ROOM_TYPE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Room Room Type</em>' class.
@@ -1110,7 +1119,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST = 1;
+	int BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT = 1;
 
 	/**
 	 * The operation id for the '<em>Check In</em>' operation.
@@ -1185,13 +1194,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int BOOKING_MANAGER___INIT_BOOKING = 9;
 
 	/**
+	 * The operation id for the '<em>Find Available Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE = 10;
+
+	/**
 	 * The number of operations of the '<em>Booking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER_OPERATION_COUNT = 10;
+	int BOOKING_MANAGER_OPERATION_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.FacilityManagerImpl <em>Facility Manager</em>}' class.
@@ -1298,13 +1316,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int ROOM_MANAGER = 20;
 
 	/**
+	 * The feature id for the '<em><b>Hotel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER__HOTEL = 0;
+
+	/**
 	 * The number of structural features of the '<em>Room Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER_FEATURE_COUNT = 0;
+	int ROOM_MANAGER_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>Find Room</em>' operation.
@@ -2403,6 +2430,17 @@ public interface ClassDiagramPackage extends EPackage {
 	EReference getRoom_RoomType_ApplianceType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Room_RoomType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ClassDiagram.Room_RoomType#getName()
+	 * @see #getRoom_RoomType()
+	 * @generated
+	 */
+	EAttribute getRoom_RoomType_Name();
+
+	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Room_RoomKey <em>Room Room Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2783,14 +2821,14 @@ public interface ClassDiagramPackage extends EPackage {
 	EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int();
 
 	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findAvailableRooms(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList) <em>Find Available Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findAvailableRooms(java.util.Date, java.util.Date, ClassDiagram.Room_RoomType, int) <em>Find Available Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Available Rooms</em>' operation.
-	 * @see ClassDiagram.BookingManager#findAvailableRooms(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList)
+	 * @see ClassDiagram.BookingManager#findAvailableRooms(java.util.Date, java.util.Date, ClassDiagram.Room_RoomType, int)
 	 * @generated
 	 */
-	EOperation getBookingManager__FindAvailableRooms__Date_Date_EList();
+	EOperation getBookingManager__FindAvailableRooms__Date_Date_Room_RoomType_int();
 
 	/**
 	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkIn(ClassDiagram.Hotel_Booking) <em>Check In</em>}' operation.
@@ -2871,6 +2909,16 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingManager__InitBooking();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findAvailableRoomTypes(java.util.Date, java.util.Date) <em>Find Available Room Types</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Available Room Types</em>' operation.
+	 * @see ClassDiagram.BookingManager#findAvailableRoomTypes(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getBookingManager__FindAvailableRoomTypes__Date_Date();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.FacilityManager <em>Facility Manager</em>}'.
@@ -3105,6 +3153,17 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRoomManager();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagram.RoomManager#getHotel <em>Hotel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Hotel</em>'.
+	 * @see ClassDiagram.RoomManager#getHotel()
+	 * @see #getRoomManager()
+	 * @generated
+	 */
+	EReference getRoomManager_Hotel();
 
 	/**
 	 * Returns the meta object for the '{@link ClassDiagram.RoomManager#findRoom(int) <em>Find Room</em>}' operation.
@@ -3910,6 +3969,14 @@ public interface ClassDiagramPackage extends EPackage {
 		EReference ROOM_ROOM_TYPE__APPLIANCE_TYPE = eINSTANCE.getRoom_RoomType_ApplianceType();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_ROOM_TYPE__NAME = eINSTANCE.getRoom_RoomType_Name();
+
+		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.Room_RoomKeyImpl <em>Room Room Key</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4223,7 +4290,7 @@ public interface ClassDiagramPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST = eINSTANCE.getBookingManager__FindAvailableRooms__Date_Date_EList();
+		EOperation BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT = eINSTANCE.getBookingManager__FindAvailableRooms__Date_Date_Room_RoomType_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Check In</b></em>' operation.
@@ -4288,6 +4355,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_MANAGER___INIT_BOOKING = eINSTANCE.getBookingManager__InitBooking();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Available Room Types</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE = eINSTANCE.getBookingManager__FindAvailableRoomTypes__Date_Date();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.FacilityManagerImpl <em>Facility Manager</em>}' class.
@@ -4482,6 +4557,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ROOM_MANAGER = eINSTANCE.getRoomManager();
+
+		/**
+		 * The meta object literal for the '<em><b>Hotel</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_MANAGER__HOTEL = eINSTANCE.getRoomManager_Hotel();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Room</b></em>' operation.

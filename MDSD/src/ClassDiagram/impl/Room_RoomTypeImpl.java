@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getMaxNumberOfGuests <em>Max Number Of Guests</em>}</li>
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getArea <em>Area</em>}</li>
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getApplianceType <em>Appliance Type</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,6 +106,26 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 	 * @ordered
 	 */
 	protected EList<RoomAppliance_ApplianceType> applianceType;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,6 +226,27 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.ROOM_ROOM_TYPE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -216,6 +258,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 				return getArea();
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE:
 				return getApplianceType();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -242,6 +286,9 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 				getApplianceType().clear();
 				getApplianceType().addAll((Collection<? extends RoomAppliance_ApplianceType>)newValue);
 				return;
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -266,6 +313,9 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE:
 				getApplianceType().clear();
 				return;
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -286,6 +336,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 				return area != AREA_EDEFAULT;
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE:
 				return applianceType != null && !applianceType.isEmpty();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -306,6 +358,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 		result.append(maxNumberOfGuests);
 		result.append(", area: ");
 		result.append(area);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

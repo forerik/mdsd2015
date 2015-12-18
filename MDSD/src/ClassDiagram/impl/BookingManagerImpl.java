@@ -138,12 +138,18 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<Hotel_Room> findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes) {
+	public EList<Hotel_Room> findAvailableRooms(Date start, Date end, Room_RoomType roomType, int _people) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		
 		EList<Hotel_Room> rooms = new BasicEList<Hotel_Room>(hotel.getListOfRooms());
-				
+		EList<Hotel_Room> tempRooms = new BasicEList<Hotel_Room>(hotel.getListOfRooms());
+		
+		for (Hotel_Room room : tempRooms) {
+			if (!(room.getRoomType().getName().equals(roomType.getName()))) {
+				rooms.remove(room);				
+			}
+		}
+		
 		EList<Hotel_Booking> bookings = hotel.getListOfBookings();
 		
 		for(Hotel_Booking booking : bookings) {
@@ -157,8 +163,20 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				}
 			}
 		}
-		return rooms;
+		int numberOfRooms = _people/roomType.getMaxNumberOfGuests();
+		if (_people % roomType.getMaxNumberOfGuests() != 0)
+			numberOfRooms++;
+		numberOfRooms = Math.min(rooms.size(), numberOfRooms);
+		
+		EList<Hotel_Room> selectedRooms = new BasicEList<Hotel_Room>();
+		
+		for (int i = 0; i < numberOfRooms; i++) {
+			selectedRooms.add(rooms.get(i));
+		}
+		
+		return selectedRooms;	
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,18 +290,107 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		end.setDate(day);
 		end.setHours(checkOutHour);
 		//System.out.println(end);
+				
+		System.out.println("Input number of people:");
+		input = s.nextLine();
+		int people = Integer.parseInt(input);
+		
+		EList<Room_RoomType> roomtypes = hotel.getListOfRoomTypes();
+		
+		System.out.println("Select roomtypes that you want.");
+		for (int i = 0; i < roomtypes.size(); i++) {
+			Room_RoomType rt = (Room_RoomType) roomtypes.get(i);
+			System.out.println(i+1 + ": " + rt.getName()); 
+		}
+		input = s.nextLine();
+		parts = input.split("-");
+		EList<Room_RoomType> selectedRoomTypes = new BasicEList<Room_RoomType>();
+		for (int i = 0; i < parts.length; i++) {
+			if (parts[i].equals("all")) 
+				selectedRoomTypes = hotel.getListOfRoomTypes();
+			else {
+				int index = Integer.parseInt(parts[i]);
+				index--;
+				if (index < roomtypes.size()) {
+					Room_RoomType rt = (Room_RoomType) roomtypes.get(index);
+					selectedRoomTypes.add(rt);
+				}
+			}
+		}
+		System.out.println("Select the rooms that you want by typing in the room numbers separated by '-'.");
+		
+		EList<Hotel_Room> availableRooms = new BasicEList<>();
+		
+		for (Room_RoomType roomType: selectedRoomTypes) {
+			System.out.println(roomType.getName());
+			EList<Hotel_Room> rooms = findAvailableRooms(start, end, roomType, people);
+			availableRooms.addAll(rooms);
+			for (Hotel_Room room : rooms) {
+				System.out.println(" Room: " + room.getRoomNumber());
+			}
+		}
+		
+		input = s.nextLine();
+		parts = input.split("-");
+		EList<Hotel_Room> selectedRooms = new BasicEList<Hotel_Room>();
+		for (int i = 0; i < parts.length; i++) {
+			int roomNumber = Integer.parseInt(parts[i]);
+			if (roomExists(availableRooms, roomNumber)) {
+				//selectedRooms.add(hotel);
+			}
+		}
+
+		//System.out.println(selectedRoomTypes);
+		
+		
+		//EList<Hotel_Room> availableRooms = findAvailableRooms(start, end, selectedRoomTypes);
+		
+		//System.out.println(availableRooms);
+		
 		s.close();
 		
-		System.out.println("Select room types that you want.");
-		EList roomTypes = hotel.getListOfRoomTypes();
-		for (Room_RoomType roomType : hotel.getListOfRoomTypes()) {
-			
+	}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean roomExists(EList<Hotel_Room> rooms, int roomNumber) {
+		
+		for (Hotel_Room room : rooms) {
+			if (room.getRoomNumber() == roomNumber) {
+				return true;
+			}
 		}
-		System.out.println();
 		
+		return false;
 		
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EList<Room_RoomType> findAvailableRoomTypes(Date start, Date end) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		EList<Room_RoomType> roomTypes = new BasicEList<Room_RoomType>(hotel.getListOfRoomTypes());
 		
+		EList<Hotel_Booking> bookings = hotel.getListOfBookings();
 		
+		for(Hotel_Booking booking : bookings) {
+			
+			Date bStart = booking.getStartDate();
+			Date bEnd = booking.getEndDate();
+			
+			if (!(bEnd.before(start) || bStart.after(end))) {
+				for(Hotel_Room room : booking.getRooms()) {
+					roomTypes.remove(room.getRoomType());
+				}
+			}
+		}
+		return roomTypes;
 		
 	}
 
@@ -358,8 +465,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT:
 				createBooking((Date)arguments.get(0), (Date)arguments.get(1), (EList<Hotel_Room>)arguments.get(2), (Company_GuestRecord)arguments.get(3), (Integer)arguments.get(4));
 				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST:
-				findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList<Room_RoomType>)arguments.get(2));
+			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT:
+				findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (Room_RoomType)arguments.get(2), (Integer)arguments.get(3));
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING:
 				checkIn((Hotel_Booking)arguments.get(0));
@@ -384,6 +491,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___INIT_BOOKING:
 				initBooking();
+				return null;
+			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE:
+				findAvailableRoomTypes((Date)arguments.get(0), (Date)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

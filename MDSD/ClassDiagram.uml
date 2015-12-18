@@ -59,9 +59,12 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_gPgIAJdzEeWjlOsjTCQaQw" name="area" visibility="private">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_i9CHgKVkEeWV9sVHbAAelg" name="applianceType" type="_liXCUJgvEeWjlOsjTCQaQw">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_i9CHgKVkEeWV9sVHbAAelg" name="applianceType" visibility="private" type="_liXCUJgvEeWjlOsjTCQaQw">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HLJNkKVnEeWV9sVHbAAelg"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HLMQ4KVnEeWV9sVHbAAelg" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_J6mCIKWCEeWcLO0ArBstyQ" name="name" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
           </ownedAttribute>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_xte7YJgvEeWjlOsjTCQaQw" name="RoomAppliance">
@@ -390,9 +393,12 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_9ooxEKSsEeW6u575sJ_x5Q" name="end">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BILaEKStEeW6u575sJ_x5Q" name="roomTypes" type="_qsswcJaTEeWbbuT46W9Kzg">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BILaEKStEeW6u575sJ_x5Q" name="roomType" type="_qsswcJaTEeWbbuT46W9Kzg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CcRfMKStEeW6u575sJ_x5Q" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CcTUYKStEeW6u575sJ_x5Q" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CcTUYKStEeW6u575sJ_x5Q" value="1"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YnV7sKWIEeWcLO0ArBstyQ" name="#people">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ECsDYKStEeW6u575sJ_x5Q" name="checkIn">
@@ -432,6 +438,14 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_7jF8oKV3EeW2xdz50EydVQ" name="initBooking"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-dPRMKWFEeWcLO0ArBstyQ" name="findAvailableRoomTypes">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ChAooKWGEeWcLO0ArBstyQ" name="start">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_DqPhkKWGEeWcLO0ArBstyQ" name="end">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_D6WacJpfEeWudYIMZ7ExHw" name="StaffAdministration">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Ksw2AaVuEeWrk5ny20Yhxg" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA">
@@ -457,6 +471,9 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_LzHtgJpfEeWudYIMZ7ExHw" name="RoomManager">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Y7HkkaWOEeWcLO0ArBstyQ" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA">
+      <association xmi:type="uml:Association" href="Hotel%20system.uml#_Y7FvYKWOEeWcLO0ArBstyQ"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_lj5GAKSpEeW6u575sJ_x5Q" name="findRoom">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_vb9-YKSpEeW6u575sJ_x5Q" name="roomNumber">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>

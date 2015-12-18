@@ -526,6 +526,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoom_RoomType_Name() {
+		return (EAttribute)room_RoomTypeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoomAppliance_ApplianceType() {
 		return roomAppliance_ApplianceTypeEClass;
 	}
@@ -670,7 +679,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingManager__FindAvailableRooms__Date_Date_EList() {
+	public EOperation getBookingManager__FindAvailableRooms__Date_Date_Room_RoomType_int() {
 		return bookingManagerEClass.getEOperations().get(1);
 	}
 
@@ -744,6 +753,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 */
 	public EOperation getBookingManager__InitBooking() {
 		return bookingManagerEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingManager__FindAvailableRoomTypes__Date_Date() {
+		return bookingManagerEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -1140,6 +1158,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 */
 	public EClass getRoomManager() {
 		return roomManagerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRoomManager_Hotel() {
+		return (EReference)roomManagerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1737,6 +1764,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEAttribute(room_RoomTypeEClass, ROOM_ROOM_TYPE__MAX_NUMBER_OF_GUESTS);
 		createEAttribute(room_RoomTypeEClass, ROOM_ROOM_TYPE__AREA);
 		createEReference(room_RoomTypeEClass, ROOM_ROOM_TYPE__APPLIANCE_TYPE);
+		createEAttribute(room_RoomTypeEClass, ROOM_ROOM_TYPE__NAME);
 
 		roomAppliance_ApplianceTypeEClass = createEClass(ROOM_APPLIANCE_APPLIANCE_TYPE);
 		createEAttribute(roomAppliance_ApplianceTypeEClass, ROOM_APPLIANCE_APPLIANCE_TYPE__NAME);
@@ -1805,7 +1833,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		bookingManagerEClass = createEClass(BOOKING_MANAGER);
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__HOTEL);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT);
-		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST);
+		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE);
@@ -1814,6 +1842,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CANCEL_BOOKING__INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___GET_BOOKINGS__STRING);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___INIT_BOOKING);
+		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE);
 
 		staffAdministrationEClass = createEClass(STAFF_ADMINISTRATION);
 		createEReference(staffAdministrationEClass, STAFF_ADMINISTRATION__HOTEL);
@@ -1822,6 +1851,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(staffAdministrationEClass, STAFF_ADMINISTRATION___REMOVE_STAFF__HOTEL_STAFF);
 
 		roomManagerEClass = createEClass(ROOM_MANAGER);
+		createEReference(roomManagerEClass, ROOM_MANAGER__HOTEL);
 		createEOperation(roomManagerEClass, ROOM_MANAGER___FIND_ROOM__INT);
 		createEOperation(roomManagerEClass, ROOM_MANAGER___CLEANING_STATUS__HOTEL_ROOM);
 		createEOperation(roomManagerEClass, ROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM);
@@ -1950,6 +1980,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		initEAttribute(getRoom_RoomType_MaxNumberOfGuests(), ecorePackage.getEInt(), "maxNumberOfGuests", null, 1, 1, Room_RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoom_RoomType_Area(), ecorePackage.getEDouble(), "area", null, 1, 1, Room_RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoom_RoomType_ApplianceType(), this.getRoomAppliance_ApplianceType(), null, "applianceType", null, 0, -1, Room_RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoom_RoomType_Name(), ecorePackage.getEString(), "name", null, 1, 1, Room_RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(roomAppliance_ApplianceTypeEClass, RoomAppliance_ApplianceType.class, "RoomAppliance_ApplianceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomAppliance_ApplianceType_Name(), ecorePackage.getEString(), "name", null, 1, 1, RoomAppliance_ApplianceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2040,10 +2071,11 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		addEParameter(op, this.getCompany_GuestRecord(), "guest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "numberOfPeople", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingManager__FindAvailableRooms__Date_Date_EList(), null, "findAvailableRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingManager__FindAvailableRooms__Date_Date_Room_RoomType_int(), null, "findAvailableRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getRoom_RoomType(), "roomTypes", 1, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoom_RoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "_people", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingManager__CheckIn__Hotel_Booking(), null, "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getHotel_Booking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2071,6 +2103,10 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		initEOperation(getBookingManager__InitBooking(), null, "initBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getBookingManager__FindAvailableRoomTypes__Date_Date(), null, "findAvailableRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(staffAdministrationEClass, StaffAdministration.class, "StaffAdministration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStaffAdministration_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, StaffAdministration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -2087,6 +2123,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		addEParameter(op, this.getHotel_Staff(), "staff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomManagerEClass, RoomManager.class, "RoomManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRoomManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, RoomManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getRoomManager__FindRoom__int(), null, "findRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2270,6 +2307,26 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/uml2/2.0.0/UML
+		createUMLAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUMLAnnotations() {
+		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
+		addAnnotation
+		  ((getBookingManager__FindAvailableRooms__Date_Date_Room_RoomType_int()).getEParameters().get(3), 
+		   source, 
+		   new String[] {
+			 "originalName", "#people"
+		   });
 	}
 
 } //ClassDiagramPackageImpl

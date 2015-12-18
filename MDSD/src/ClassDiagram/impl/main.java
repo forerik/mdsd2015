@@ -31,8 +31,10 @@ public class main {
 		// Creating the room types
 		Room_RoomType singleRoom = factory.createRoom_RoomType();
 		Room_RoomType doubleRoom = factory.createRoom_RoomType();
-		singleRoom.setMaxNumberOfGuests(2);
+		singleRoom.setMaxNumberOfGuests(1);
 		doubleRoom.setMaxNumberOfGuests(2);
+		singleRoom.setName("Single");
+		doubleRoom.setName("Double");
 		theHotel.getListOfRoomTypes().add(singleRoom);
 		theHotel.getListOfRoomTypes().add(doubleRoom);
 
@@ -41,6 +43,10 @@ public class main {
 		room1.setRoomNumber(1);
 		room1.setRoomType(singleRoom);
 
+		Hotel_Room room3 = factory.createHotel_Room();
+		room3.setRoomNumber(3);
+		room3.setRoomType(doubleRoom);
+		
 		Hotel_Room room2 = factory.createHotel_Room();
 		room2.setRoomNumber(2);
 		room2.setRoomType(singleRoom);
@@ -48,6 +54,7 @@ public class main {
 		// Adding the rooms to the hotel
 		theHotel.getListOfRooms().add(room1);
 		theHotel.getListOfRooms().add(room2);
+		theHotel.getListOfRooms().add(room3);
 		
 		// Creating the guest records
 		Company_GuestRecord guest1 = factory.createCompany_GuestRecord();
@@ -72,9 +79,9 @@ public class main {
 		EList<Room_RoomType> roomTypes = new BasicEList<Room_RoomType>();
 		roomTypes.add(singleRoom);
 		
-		EList<Hotel_Room> availableRooms = bookingManager.findAvailableRooms(start, end, roomTypes);
+		//EList<Hotel_Room> availableRooms = bookingManager.findAvailableRooms(start, end, roomTypes);
 		
-		System.out.println(availableRooms);
+		//System.out.println(availableRooms);
 		
 		System.out.println("Bookings \n" + theHotel.getListOfBookings());
 		System.out.println("Rooms \n" + theHotel.getListOfRooms());

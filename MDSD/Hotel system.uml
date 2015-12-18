@@ -110,17 +110,6 @@
       <type xmi:type="uml:Class" href="ClassDiagram.uml#_zJvf8JZsEeWWZpdeo7QpdA"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_KC_yMKVsEeWrk5ny20Yhxg" memberEnd="_KDAZQKVsEeWrk5ny20Yhxg _KDAZQaVsEeWrk5ny20Yhxg" navigableOwnedEnd="_KDAZQaVsEeWrk5ny20Yhxg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KC_yMaVsEeWrk5ny20Yhxg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KC_yMqVsEeWrk5ny20Yhxg" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_KDAZQaVsEeWrk5ny20Yhxg" name="hotel" association="_KC_yMKVsEeWrk5ny20Yhxg">
-      <type xmi:type="uml:Class" href="ClassDiagram.uml#_zJvf8JZsEeWWZpdeo7QpdA"/>
-    </ownedEnd>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_KDAZQKVsEeWrk5ny20Yhxg" name="roommanager" association="_KC_yMKVsEeWrk5ny20Yhxg">
-      <type xmi:type="uml:Class" href="ClassDiagram.uml#_LzHtgJpfEeWudYIMZ7ExHw"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_Bg1ucKVtEeWrk5ny20Yhxg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Bg2VgKVtEeWrk5ny20Yhxg" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Bg2VgaVtEeWrk5ny20Yhxg" key="nature" value="UML_Nature"/>
@@ -131,7 +120,7 @@
       <type xmi:type="uml:Class" href="ClassDiagram.uml#_PGHvUJpfEeWudYIMZ7ExHw"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_pXdeMKVtEeWrk5ny20Yhxg">
+  <packagedElement xmi:type="uml:Association" xmi:id="_pXdeMKVtEeWrk5ny20Yhxg" navigableOwnedEnd="_pXesUKVtEeWrk5ny20Yhxg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pXeFQKVtEeWrk5ny20Yhxg" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pXeFQaVtEeWrk5ny20Yhxg" key="nature" value="UML_Nature"/>
     </eAnnotations>
@@ -219,6 +208,16 @@
     <memberEnd xmi:type="uml:Property" href="#_RlDeUKWAEeWcLO0ArBstyQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_RlDeUKWAEeWcLO0ArBstyQ" name="hotel" association="_RlBpIKWAEeWcLO0ArBstyQ">
       <type xmi:type="uml:Class" href="ClassDiagram.uml#_zJvf8JZsEeWWZpdeo7QpdA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Y7FvYKWOEeWcLO0ArBstyQ" navigableOwnedEnd="_Y7ILoKWOEeWcLO0ArBstyQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y7G9gKWOEeWcLO0ArBstyQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y7HkkKWOEeWcLO0ArBstyQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="ClassDiagram.uml#_Y7HkkaWOEeWcLO0ArBstyQ"/>
+    <memberEnd xmi:type="uml:Property" href="#_Y7ILoKWOEeWcLO0ArBstyQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Y7ILoKWOEeWcLO0ArBstyQ" name="roommanager" association="_Y7FvYKWOEeWcLO0ArBstyQ">
+      <type xmi:type="uml:Class" href="ClassDiagram.uml#_LzHtgJpfEeWudYIMZ7ExHw"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>

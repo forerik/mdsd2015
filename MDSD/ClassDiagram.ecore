@@ -46,6 +46,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="applianceType" ordered="false"
         upperBound="-1" eType="#//RoomAppliance_ApplianceType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomAppliance_ApplianceType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
@@ -176,8 +178,12 @@
     <eOperations name="findAvailableRooms" ordered="false" lowerBound="1">
       <eParameters name="start" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eParameters name="end" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="roomTypes" ordered="false" lowerBound="1" upperBound="-1"
-          eType="#//Room_RoomType"/>
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Room_RoomType"/>
+      <eParameters name="_people" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details key="originalName" value="#people"/>
+        </eAnnotations>
+      </eParameters>
     </eOperations>
     <eOperations name="checkIn" ordered="false" lowerBound="1">
       <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
@@ -204,6 +210,10 @@
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="initBooking" ordered="false" lowerBound="1"/>
+    <eOperations name="findAvailableRoomTypes" ordered="false" lowerBound="1">
+      <eParameters name="start" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="end" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
         lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
@@ -235,6 +245,8 @@
     </eOperations>
     <eOperations name="getRoomsToClean" ordered="false" lowerBound="1"/>
     <eOperations name="getRoomsToMaintain" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomAdministration">
     <eOperations name="addRoom" ordered="false" lowerBound="1">

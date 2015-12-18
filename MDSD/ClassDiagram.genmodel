@@ -73,6 +73,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Room_RoomType/area"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//Room_RoomType/applianceType"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//Room_RoomType/name"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//RoomAppliance_ApplianceType">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagram.ecore#//RoomAppliance_ApplianceType/name"/>
@@ -173,7 +174,8 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findAvailableRooms">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/start"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/end"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/roomTypes"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/_people"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/checkIn">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/checkIn/booking"/>
@@ -200,6 +202,10 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/getBookings/ssn"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/initBooking"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findAvailableRoomTypes">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRoomTypes/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRoomTypes/end"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//StaffAdministration">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -218,6 +224,8 @@
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//RoomManager">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//RoomManager/hotel"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//RoomManager/findRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//RoomManager/findRoom/roomNumber"/>
       </genOperations>

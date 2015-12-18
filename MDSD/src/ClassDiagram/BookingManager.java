@@ -62,10 +62,12 @@ public interface BookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomTypesRequired="true" roomTypesMany="true" roomTypesOrdered="false"
+	 * @return 
+	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" _peopleRequired="true" _peopleOrdered="false"
+	 *        _peopleAnnotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='#people'"
 	 * @generated NOT
 	 */
-	EList<Hotel_Room> findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes);
+	EList<Hotel_Room> findAvailableRooms(Date start, Date end, Room_RoomType roomType, int _people);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,5 +132,14 @@ public interface BookingManager extends EObject {
 	 * @generated
 	 */
 	void initBooking();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return 
+	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false"
+	 * @generated NOT
+	 */
+	EList<Room_RoomType> findAvailableRoomTypes(Date start, Date end);
 
 } // BookingManager

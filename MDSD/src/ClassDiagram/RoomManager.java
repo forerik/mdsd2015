@@ -9,6 +9,12 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Room Manager</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link ClassDiagram.RoomManager#getHotel <em>Hotel</em>}</li>
+ * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getRoomManager()
  * @model
@@ -16,12 +22,39 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface RoomManager extends EObject {
 	/**
+	 * Returns the value of the '<em><b>Hotel</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hotel</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model roomNumberRequired="true" roomNumberOrdered="false"
+	 * @return the value of the '<em>Hotel</em>' reference.
+	 * @see #setHotel(Company_Hotel)
+	 * @see ClassDiagram.ClassDiagramPackage#getRoomManager_Hotel()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	void findRoom(int roomNumber);
+	Company_Hotel getHotel();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.RoomManager#getHotel <em>Hotel</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hotel</em>' reference.
+	 * @see #getHotel()
+	 * @generated
+	 */
+	void setHotel(Company_Hotel value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return 
+	 * @model roomNumberRequired="true" roomNumberOrdered="false"
+	 * @generated NOT
+	 */
+	Hotel_Room findRoom(int roomNumber);
 
 	/**
 	 * <!-- begin-user-doc -->
