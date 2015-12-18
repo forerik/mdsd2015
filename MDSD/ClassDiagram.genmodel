@@ -166,6 +166,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/end"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/rooms"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/guest"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/createBooking/numberOfPeople"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/findAvailableRooms">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/findAvailableRooms/start"/>
@@ -196,6 +197,7 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/getBookings">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//BookingManager/getBookings/ssn"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//BookingManager/initBooking"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//StaffAdministration">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

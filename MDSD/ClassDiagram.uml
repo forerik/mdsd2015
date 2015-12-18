@@ -372,7 +372,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_pXeFQqVtEeWrk5ny20Yhxg" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA">
       <association xmi:type="uml:Association" href="Hotel%20system.uml#_pXdeMKVtEeWrk5ny20Yhxg"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_avckoKSsEeW6u575sJ_x5Q" name="createBooking">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_avckoKSsEeW6u575sJ_x5Q" name="createBooking" visibility="public">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_ftRJgKSsEeW6u575sJ_x5Q" name="start">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedParameter>
@@ -384,6 +384,9 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_saN9QKSsEeW6u575sJ_x5Q" value="*"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_wOGekKSsEeW6u575sJ_x5Q" name="guest" type="_z1e_MJKIEeW9h7ibhzFKTA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_2jbksKV3EeW2xdz50EydVQ" name="numberOfPeople">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_5qReEKSsEeW6u575sJ_x5Q" name="findAvailableRooms">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_8WAEgKSsEeW6u575sJ_x5Q" name="start">
@@ -433,6 +436,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7jF8oKV3EeW2xdz50EydVQ" name="initBooking"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_D6WacJpfEeWudYIMZ7ExHw" name="StaffAdministration">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Ksw2AaVuEeWrk5ny20Yhxg" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA">

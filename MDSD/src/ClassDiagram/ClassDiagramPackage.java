@@ -1092,7 +1092,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD = 0;
+	int BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Find Available Rooms</em>' operation.
@@ -1167,13 +1167,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int BOOKING_MANAGER___GET_BOOKINGS__STRING = 8;
 
 	/**
+	 * The operation id for the '<em>Init Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER___INIT_BOOKING = 9;
+
+	/**
 	 * The number of operations of the '<em>Booking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER_OPERATION_COUNT = 9;
+	int BOOKING_MANAGER_OPERATION_COUNT = 10;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.FacilityManagerImpl <em>Facility Manager</em>}' class.
@@ -2744,14 +2753,14 @@ public interface ClassDiagramPackage extends EPackage {
 	EReference getBookingManager_Hotel();
 
 	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord) <em>Create Booking</em>}' operation.
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord, int) <em>Create Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Booking</em>' operation.
-	 * @see ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord)
+	 * @see ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord, int)
 	 * @generated
 	 */
-	EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord();
+	EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int();
 
 	/**
 	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#findAvailableRooms(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList) <em>Find Available Rooms</em>}' operation.
@@ -2832,6 +2841,16 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingManager__GetBookings__String();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#initBooking() <em>Init Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init Booking</em>' operation.
+	 * @see ClassDiagram.BookingManager#initBooking()
+	 * @generated
+	 */
+	EOperation getBookingManager__InitBooking();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.FacilityManager <em>Facility Manager</em>}'.
@@ -4168,7 +4187,7 @@ public interface ClassDiagramPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD = eINSTANCE.getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord();
+		EOperation BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT = eINSTANCE.getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Available Rooms</b></em>' operation.
@@ -4233,6 +4252,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_MANAGER___GET_BOOKINGS__STRING = eINSTANCE.getBookingManager__GetBookings__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Init Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_MANAGER___INIT_BOOKING = eINSTANCE.getBookingManager__InitBooking();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.FacilityManagerImpl <em>Facility Manager</em>}' class.

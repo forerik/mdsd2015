@@ -652,7 +652,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord() {
+	public EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int() {
 		return bookingManagerEClass.getEOperations().get(0);
 	}
 
@@ -726,6 +726,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 */
 	public EOperation getBookingManager__GetBookings__String() {
 		return bookingManagerEClass.getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingManager__InitBooking() {
+		return bookingManagerEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -1785,7 +1794,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		bookingManagerEClass = createEClass(BOOKING_MANAGER);
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__HOTEL);
-		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD);
+		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING);
@@ -1794,6 +1803,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___EDIT_BOOKING__INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CANCEL_BOOKING__INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___GET_BOOKINGS__STRING);
+		createEOperation(bookingManagerEClass, BOOKING_MANAGER___INIT_BOOKING);
 
 		staffAdministrationEClass = createEClass(STAFF_ADMINISTRATION);
 		createEReference(staffAdministrationEClass, STAFF_ADMINISTRATION__HOTEL);
@@ -2012,11 +2022,12 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		initEClass(bookingManagerEClass, BookingManager.class, "BookingManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord(), null, "createBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int(), null, "createBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getHotel_Room(), "rooms", 1, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getCompany_GuestRecord(), "guest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "numberOfPeople", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingManager__FindAvailableRooms__Date_Date_EList(), null, "findAvailableRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2046,6 +2057,8 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		op = initEOperation(getBookingManager__GetBookings__String(), null, "getBookings", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getBookingManager__InitBooking(), null, "initBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffAdministrationEClass, StaffAdministration.class, "StaffAdministration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStaffAdministration_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, StaffAdministration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

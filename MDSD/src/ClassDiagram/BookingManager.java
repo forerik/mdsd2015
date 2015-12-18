@@ -54,18 +54,18 @@ public interface BookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomsRequired="true" roomsMany="true" roomsOrdered="false" guestRequired="true" guestOrdered="false"
+	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomsRequired="true" roomsMany="true" roomsOrdered="false" guestRequired="true" guestOrdered="false" numberOfPeopleRequired="true" numberOfPeopleOrdered="false"
 	 * @generated
 	 */
-	void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest);
+	void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomTypesRequired="true" roomTypesMany="true" roomTypesOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes);
+	EList<Hotel_Room> findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,5 +122,13 @@ public interface BookingManager extends EObject {
 	 * @generated
 	 */
 	void getBookings(String ssn);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void initBooking();
 
 } // BookingManager

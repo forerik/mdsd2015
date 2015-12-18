@@ -1,10 +1,11 @@
 package ClassDiagram.impl;
 
+import java.awt.List;
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
-
 import ClassDiagram.*;
+import org.eclipse.emf.common.util.BasicEList;
 
 public class main {
 
@@ -29,14 +30,20 @@ public class main {
 		
 		// Creating the room types
 		Room_RoomType single = factory.createRoom_RoomType();
+		single.setMaxNumberOfGuests(2);
 		
 		// Creating the rooms
 		Hotel_Room room1 = factory.createHotel_Room();
 		room1.setRoomNumber(1);
 		room1.setRoomType(single);
+
+		Hotel_Room room2 = factory.createHotel_Room();
+		room2.setRoomNumber(2);
+		room2.setRoomType(single);
 		
 		// Adding the rooms to the hotel
 		theHotel.getListOfRooms().add(room1);
+		theHotel.getListOfRooms().add(room2);
 		
 		// Creating the guest records
 		Company_GuestRecord guest1 = factory.createCompany_GuestRecord();
@@ -45,21 +52,29 @@ public class main {
 
 		company.getRecordsOf().add(guest1);
 
-		
+		EList<Hotel_Room> bookingRooms = new BasicEList<Hotel_Room>();
+		bookingRooms.add(room1);
 		
 		Date start = new Date();
 		Date end = new Date();
-
+		start.setMonth(1);;
+		end.setMonth(2);;
 		
 		
 		BookingManager bookingManager = factory.createBookingManager();
 		bookingManager.setHotel(theHotel);
-		bookingManager.createBooking(start, end, theHotel.getListOfRooms(), guest1);
+		bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
+
+		EList<Room_RoomType> roomTypes = new BasicEList<Room_RoomType>();
+		roomTypes.add(single);
 		
-		System.out.println(theHotel.getListOfBookings());
-		System.out.println(theHotel.getListOfRooms());
-		System.out.println(company.getOwns());
-		System.out.println(company.getRecordsOf());
+		EList<Hotel_Room> availableRooms = bookingManager.findAvailableRooms(start, end, roomTypes);
+		
+		System.out.println(availableRooms);
+		
+		System.out.println("Bookings \n" + theHotel.getListOfBookings());
+		System.out.println("Rooms \n" + theHotel.getListOfRooms());
+		System.out.println("Guests \n" + company.getRecordsOf());
 		
 		
 	}

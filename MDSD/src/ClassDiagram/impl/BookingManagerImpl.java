@@ -14,7 +14,6 @@ import ClassDiagram.Room_RoomType;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
@@ -23,6 +22,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.common.util.BasicEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -108,6 +108,17 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest) {
@@ -128,17 +139,28 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes) {
+	public EList<Hotel_Room> findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		
-		EList<Hotel_Room> rooms = hotel.getListOfRooms();
-		
+		EList<Hotel_Room> rooms = new BasicEList<Hotel_Room>(hotel.getListOfRooms());
+				
 		EList<Hotel_Booking> bookings = hotel.getListOfBookings();
 		
-
+		for(Hotel_Booking booking : bookings) {
+			
+			Date bStart = booking.getStartDate();
+			Date bEnd = booking.getEndDate();
+			
+			if (!(bEnd.before(start) || bStart.after(end))) {
+				for(Hotel_Room room : booking.getRooms()) {
+					rooms.remove(room);
+				}
+			}
+		}
+		return rooms;
 	}
 
 	/**
@@ -223,6 +245,17 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void initBooking() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -286,8 +319,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ClassDiagramPackage.BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD:
-				createBooking((Date)arguments.get(0), (Date)arguments.get(1), (EList<Hotel_Room>)arguments.get(2), (Company_GuestRecord)arguments.get(3));
+			case ClassDiagramPackage.BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT:
+				createBooking((Date)arguments.get(0), (Date)arguments.get(1), (EList<Hotel_Room>)arguments.get(2), (Company_GuestRecord)arguments.get(3), (Integer)arguments.get(4));
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ELIST:
 				findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (EList<Room_RoomType>)arguments.get(2));
@@ -312,6 +345,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___GET_BOOKINGS__STRING:
 				getBookings((String)arguments.get(0));
+				return null;
+			case ClassDiagramPackage.BOOKING_MANAGER___INIT_BOOKING:
+				initBooking();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
