@@ -7,6 +7,7 @@ import ClassDiagram.Company_Hotel;
 import ClassDiagram.Hotel_Booking;
 import ClassDiagram.Hotel_Room;
 import ClassDiagram.Hotel_Staff;
+import ClassDiagram.Room_RoomType;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getEmployees <em>Employees</em>}</li>
  *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getName <em>Name</em>}</li>
  *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getListOfBookings <em>List Of Bookings</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getListOfRoomTypes <em>List Of Room Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -85,6 +87,16 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	 * @ordered
 	 */
 	protected EList<Hotel_Booking> listOfBookings;
+
+	/**
+	 * The cached value of the '{@link #getListOfRoomTypes() <em>List Of Room Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getListOfRoomTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Room_RoomType> listOfRoomTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,6 +179,18 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Room_RoomType> getListOfRoomTypes() {
+		if (listOfRoomTypes == null) {
+			listOfRoomTypes = new EObjectResolvingEList<Room_RoomType>(Room_RoomType.class, this, ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOM_TYPES);
+		}
+		return listOfRoomTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -178,6 +202,8 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 				return getName();
 			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS:
 				return getListOfBookings();
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOM_TYPES:
+				return getListOfRoomTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -206,6 +232,10 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 				getListOfBookings().clear();
 				getListOfBookings().addAll((Collection<? extends Hotel_Booking>)newValue);
 				return;
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOM_TYPES:
+				getListOfRoomTypes().clear();
+				getListOfRoomTypes().addAll((Collection<? extends Room_RoomType>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -230,6 +260,9 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS:
 				getListOfBookings().clear();
 				return;
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOM_TYPES:
+				getListOfRoomTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -250,6 +283,8 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS:
 				return listOfBookings != null && !listOfBookings.isEmpty();
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOM_TYPES:
+				return listOfRoomTypes != null && !listOfRoomTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

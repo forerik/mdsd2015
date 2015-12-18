@@ -29,6 +29,11 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pVeeAKVpEeWrk5ny20Yhxg" value="*"/>
         <association xmi:type="uml:Association" href="Hotel%20system.uml#_n8FCIKVpEeWrk5ny20Yhxg"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RlC3QaWAEeWcLO0ArBstyQ" name="listOfRoomTypes" type="_qsswcJaTEeWbbuT46W9Kzg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VASPEKWAEeWcLO0ArBstyQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VAV5cKWAEeWcLO0ArBstyQ" value="*"/>
+        <association xmi:type="uml:Association" href="Hotel%20system.uml#_RlBpIKWAEeWcLO0ArBstyQ"/>
+      </ownedAttribute>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_olbGkJdyEeWjlOsjTCQaQw" name="Room">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_3qTbAJdyEeWjlOsjTCQaQw" name="roomNumber" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -82,16 +87,6 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_UjhiMJipEeWjlOsjTCQaQw" name="expirationDate" visibility="private">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedAttribute>
-        </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Association" xmi:id="_-fhw8JdzEeWjlOsjTCQaQw" memberEnd="_-fjmIJdzEeWjlOsjTCQaQw _-fkNMJdzEeWjlOsjTCQaQw" navigableOwnedEnd="_-fkNMJdzEeWjlOsjTCQaQw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-fi_EJdzEeWjlOsjTCQaQw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-fi_EZdzEeWjlOsjTCQaQw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_-fkNMJdzEeWjlOsjTCQaQw" name="listOfRoomTypes" type="_olbGkJdyEeWjlOsjTCQaQw" association="_-fhw8JdzEeWjlOsjTCQaQw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JeYrMJd0EeWjlOsjTCQaQw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JebugJd0EeWjlOsjTCQaQw" value="*"/>
-          </ownedEnd>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_-fjmIJdzEeWjlOsjTCQaQw" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA" association="_-fhw8JdzEeWjlOsjTCQaQw"/>
         </nestedClassifier>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_aJdmgJgmEeWjlOsjTCQaQw" name="Facility">

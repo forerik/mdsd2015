@@ -18,6 +18,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listOfBookings" ordered="false"
         upperBound="-1" eType="#//Hotel_Booking"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listOfRoomTypes" ordered="false"
+        upperBound="-1" eType="#//Room_RoomType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hotel_Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomNumber" ordered="false"

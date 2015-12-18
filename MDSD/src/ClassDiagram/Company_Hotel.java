@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ClassDiagram.Company_Hotel#getEmployees <em>Employees</em>}</li>
  *   <li>{@link ClassDiagram.Company_Hotel#getName <em>Name</em>}</li>
  *   <li>{@link ClassDiagram.Company_Hotel#getListOfBookings <em>List Of Bookings</em>}</li>
+ *   <li>{@link ClassDiagram.Company_Hotel#getListOfRoomTypes <em>List Of Room Types</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel()
@@ -98,5 +99,21 @@ public interface Company_Hotel extends EObject {
 	 * @generated
 	 */
 	EList<Hotel_Booking> getListOfBookings();
+
+	/**
+	 * Returns the value of the '<em><b>List Of Room Types</b></em>' reference list.
+	 * The list contents are of type {@link ClassDiagram.Room_RoomType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>List Of Room Types</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>List Of Room Types</em>' reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getCompany_Hotel_ListOfRoomTypes()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<Room_RoomType> getListOfRoomTypes();
 
 } // Company_Hotel

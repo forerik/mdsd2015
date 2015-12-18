@@ -245,6 +245,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	public void initBooking() {
 		Date start = new Date();
 		Date end = new Date();
+		System.out.println("Input start date: (yyyy-mm-dd)");
+		
 		Scanner s = new Scanner(System.in);
 		String input = s.nextLine();
 		String[] parts = input.split("-");
@@ -257,7 +259,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		start.setDate(day);
 		start.setHours(checkInHour);;
 		//System.out.println(start);
-		
+
+		System.out.println("Input end date: (yyyy-mm-dd)");
 		input = s.nextLine();
 		parts = input.split("-");
 		year = Integer.parseInt(parts[0]);
@@ -271,6 +274,11 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		//System.out.println(end);
 		s.close();
 		
+		System.out.println("Select room types that you want.");
+		EList roomTypes = hotel.getListOfRoomTypes();
+		for (Room_RoomType roomType : hotel.getListOfRoomTypes()) {
+			
+		}
 		System.out.println();
 		
 		

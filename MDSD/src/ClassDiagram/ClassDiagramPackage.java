@@ -160,13 +160,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int COMPANY_HOTEL__LIST_OF_BOOKINGS = 3;
 
 	/**
+	 * The feature id for the '<em><b>List Of Room Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPANY_HOTEL__LIST_OF_ROOM_TYPES = 4;
+
+	/**
 	 * The number of structural features of the '<em>Company Hotel</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPANY_HOTEL_FEATURE_COUNT = 4;
+	int COMPANY_HOTEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Company Hotel</em>' class.
@@ -2049,6 +2058,17 @@ public interface ClassDiagramPackage extends EPackage {
 	EReference getCompany_Hotel_ListOfBookings();
 
 	/**
+	 * Returns the meta object for the reference list '{@link ClassDiagram.Company_Hotel#getListOfRoomTypes <em>List Of Room Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>List Of Room Types</em>'.
+	 * @see ClassDiagram.Company_Hotel#getListOfRoomTypes()
+	 * @see #getCompany_Hotel()
+	 * @generated
+	 */
+	EReference getCompany_Hotel_ListOfRoomTypes();
+
+	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Hotel_Booking <em>Hotel Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3618,6 +3638,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPANY_HOTEL__LIST_OF_BOOKINGS = eINSTANCE.getCompany_Hotel_ListOfBookings();
+
+		/**
+		 * The meta object literal for the '<em><b>List Of Room Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPANY_HOTEL__LIST_OF_ROOM_TYPES = eINSTANCE.getCompany_Hotel_ListOfRoomTypes();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.Hotel_BookingImpl <em>Hotel Booking</em>}' class.
