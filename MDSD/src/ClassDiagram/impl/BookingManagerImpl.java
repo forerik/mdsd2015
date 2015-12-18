@@ -45,9 +45,13 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getHotel()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
+	
+	public static final int checkOutHour = 12;
+	public static final int checkInHour = 15;
+	
 	protected Company_Hotel hotel;
 
 	/**
@@ -110,20 +114,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest) {
+	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
@@ -137,6 +130,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		
 		hotel.getListOfBookings().add(booking);	
 	}
+
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -248,12 +243,37 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void initBooking() {
+		Date start = new Date();
+		Date end = new Date();
 		Scanner s = new Scanner(System.in);
 		String input = s.nextLine();
 		String[] parts = input.split("-");
 		int year = Integer.parseInt(parts[0]);
 		int month = Integer.parseInt(parts[1]);
 		int day = Integer.parseInt(parts[2]);
+		
+		start.setYear(year);
+		start.setMonth(month-1);
+		start.setDate(day);
+		start.setHours(checkInHour);;
+		//System.out.println(start);
+		
+		input = s.nextLine();
+		parts = input.split("-");
+		year = Integer.parseInt(parts[0]);
+		month = Integer.parseInt(parts[1]);
+		day = Integer.parseInt(parts[2]);
+		
+		end.setYear(year);
+		end.setMonth(month-1);
+		end.setDate(day);
+		end.setHours(checkOutHour);
+		//System.out.println(end);
+		s.close();
+		
+		System.out.println();
+		
+		
 		
 		
 		

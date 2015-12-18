@@ -76,6 +76,8 @@ public class main {
 		System.out.println("Rooms \n" + theHotel.getListOfRooms());
 		System.out.println("Guests \n" + company.getRecordsOf());
 		
+		bookingManager.initBooking();
+		
 		
 	}
 
