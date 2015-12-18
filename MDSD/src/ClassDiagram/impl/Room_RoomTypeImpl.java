@@ -3,7 +3,7 @@
 package ClassDiagram.impl;
 
 import ClassDiagram.ClassDiagramPackage;
-import ClassDiagram.Room_RoomAppliance;
+import ClassDiagram.RoomAppliance_ApplianceType;
 import ClassDiagram.Room_RoomType;
 
 import java.util.Collection;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getMaxNumberOfGuests <em>Max Number Of Guests</em>}</li>
  *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getArea <em>Area</em>}</li>
- *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getContains <em>Contains</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Room_RoomTypeImpl#getApplianceType <em>Appliance Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,14 +97,14 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 	protected double area = AREA_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getContains() <em>Contains</em>}' reference list.
+	 * The cached value of the '{@link #getApplianceType() <em>Appliance Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContains()
+	 * @see #getApplianceType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Room_RoomAppliance> contains;
+	protected EList<RoomAppliance_ApplianceType> applianceType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,11 +193,11 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Room_RoomAppliance> getContains() {
-		if (contains == null) {
-			contains = new EObjectResolvingEList<Room_RoomAppliance>(Room_RoomAppliance.class, this, ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS);
+	public EList<RoomAppliance_ApplianceType> getApplianceType() {
+		if (applianceType == null) {
+			applianceType = new EObjectResolvingEList<RoomAppliance_ApplianceType>(RoomAppliance_ApplianceType.class, this, ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE);
 		}
-		return contains;
+		return applianceType;
 	}
 
 	/**
@@ -214,8 +214,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 				return getMaxNumberOfGuests();
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				return getArea();
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
-				return getContains();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE:
+				return getApplianceType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -238,9 +238,9 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				setArea((Double)newValue);
 				return;
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
-				getContains().clear();
-				getContains().addAll((Collection<? extends Room_RoomAppliance>)newValue);
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE:
+				getApplianceType().clear();
+				getApplianceType().addAll((Collection<? extends RoomAppliance_ApplianceType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -263,8 +263,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				setArea(AREA_EDEFAULT);
 				return;
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
-				getContains().clear();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE:
+				getApplianceType().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -284,8 +284,8 @@ public class Room_RoomTypeImpl extends MinimalEObjectImpl.Container implements R
 				return maxNumberOfGuests != MAX_NUMBER_OF_GUESTS_EDEFAULT;
 			case ClassDiagramPackage.ROOM_ROOM_TYPE__AREA:
 				return area != AREA_EDEFAULT;
-			case ClassDiagramPackage.ROOM_ROOM_TYPE__CONTAINS:
-				return contains != null && !contains.isEmpty();
+			case ClassDiagramPackage.ROOM_ROOM_TYPE__APPLIANCE_TYPE:
+				return applianceType != null && !applianceType.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

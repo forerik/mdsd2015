@@ -84,9 +84,15 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE: {
-				Room_RoomAppliance room_RoomAppliance = (Room_RoomAppliance)theEObject;
-				T result = caseRoom_RoomAppliance(room_RoomAppliance);
+			case ClassDiagramPackage.ROOM_ROOM_KEY: {
+				Room_RoomKey room_RoomKey = (Room_RoomKey)theEObject;
+				T result = caseRoom_RoomKey(room_RoomKey);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.ROOM_ROOM_TYPE: {
+				Room_RoomType room_RoomType = (Room_RoomType)theEObject;
+				T result = caseRoom_RoomType(room_RoomType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,45 +108,15 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ClassDiagramPackage.ROOM_ROOM_TYPE: {
-				Room_RoomType room_RoomType = (Room_RoomType)theEObject;
-				T result = caseRoom_RoomType(room_RoomType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.ROOM_ROOM_KEY: {
-				Room_RoomKey room_RoomKey = (Room_RoomKey)theEObject;
-				T result = caseRoom_RoomKey(room_RoomKey);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.HOTEL_FACILITY: {
-				Hotel_Facility hotel_Facility = (Hotel_Facility)theEObject;
-				T result = caseHotel_Facility(hotel_Facility);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.FACILITY_FACILITY_TYPE: {
-				Facility_FacilityType facility_FacilityType = (Facility_FacilityType)theEObject;
-				T result = caseFacility_FacilityType(facility_FacilityType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.FACILITY_FACILITY_SERVICE: {
-				Facility_FacilityService facility_FacilityService = (Facility_FacilityService)theEObject;
-				T result = caseFacility_FacilityService(facility_FacilityService);
+			case ClassDiagramPackage.ROOM_ROOM_APPLIANCE: {
+				Room_RoomAppliance room_RoomAppliance = (Room_RoomAppliance)theEObject;
+				T result = caseRoom_RoomAppliance(room_RoomAppliance);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ClassDiagramPackage.HOTEL_STAFF: {
 				Hotel_Staff hotel_Staff = (Hotel_Staff)theEObject;
 				T result = caseHotel_Staff(hotel_Staff);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.BOOKING_MANAGER: {
-				BookingManager bookingManager = (BookingManager)theEObject;
-				T result = caseBookingManager(bookingManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -153,6 +129,12 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE: {
 				Booking_BookedService booking_BookedService = (Booking_BookedService)theEObject;
 				T result = caseBooking_BookedService(booking_BookedService);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.FACILITY_FACILITY_SERVICE: {
+				Facility_FacilityService facility_FacilityService = (Facility_FacilityService)theEObject;
+				T result = caseFacility_FacilityService(facility_FacilityService);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,51 +156,15 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ClassDiagramPackage.IGUEST_MANAGER: {
-				IGuestManager iGuestManager = (IGuestManager)theEObject;
-				T result = caseIGuestManager(iGuestManager);
+			case ClassDiagramPackage.HOTEL_FACILITY: {
+				Hotel_Facility hotel_Facility = (Hotel_Facility)theEObject;
+				T result = caseHotel_Facility(hotel_Facility);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ClassDiagramPackage.IBILL_MANAGER: {
-				IBillManager iBillManager = (IBillManager)theEObject;
-				T result = caseIBillManager(iBillManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.IFACILITY_MANAGER: {
-				IFacilityManager iFacilityManager = (IFacilityManager)theEObject;
-				T result = caseIFacilityManager(iFacilityManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.IAPPLIANCE_ADMINISTRATION: {
-				IApplianceAdministration iApplianceAdministration = (IApplianceAdministration)theEObject;
-				T result = caseIApplianceAdministration(iApplianceAdministration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.IROOM_ADMINISTRATION: {
-				IRoomAdministration iRoomAdministration = (IRoomAdministration)theEObject;
-				T result = caseIRoomAdministration(iRoomAdministration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.IFACILITY_ADMINISTRATION: {
-				IFacilityAdministration iFacilityAdministration = (IFacilityAdministration)theEObject;
-				T result = caseIFacilityAdministration(iFacilityAdministration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.ISTAFF_ADMINISTRATION: {
-				IStaffAdministration iStaffAdministration = (IStaffAdministration)theEObject;
-				T result = caseIStaffAdministration(iStaffAdministration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.IHOTEL_ADMINISTRATION: {
-				IHotelAdministration iHotelAdministration = (IHotelAdministration)theEObject;
-				T result = caseIHotelAdministration(iHotelAdministration);
+			case ClassDiagramPackage.FACILITY_FACILITY_TYPE: {
+				Facility_FacilityType facility_FacilityType = (Facility_FacilityType)theEObject;
+				T result = caseFacility_FacilityType(facility_FacilityType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -228,24 +174,15 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ClassDiagramPackage.FACILITY_MANAGER: {
-				FacilityManager facilityManager = (FacilityManager)theEObject;
-				T result = caseFacilityManager(facilityManager);
-				if (result == null) result = caseIFacilityManager(facilityManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.HOTEL_ADMINISTRATION: {
-				HotelAdministration hotelAdministration = (HotelAdministration)theEObject;
-				T result = caseHotelAdministration(hotelAdministration);
-				if (result == null) result = caseIHotelAdministration(hotelAdministration);
+			case ClassDiagramPackage.BOOKING_MANAGER: {
+				BookingManager bookingManager = (BookingManager)theEObject;
+				T result = caseBookingManager(bookingManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ClassDiagramPackage.STAFF_ADMINISTRATION: {
 				StaffAdministration staffAdministration = (StaffAdministration)theEObject;
 				T result = caseStaffAdministration(staffAdministration);
-				if (result == null) result = caseIStaffAdministration(staffAdministration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -258,14 +195,42 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 			case ClassDiagramPackage.ROOM_ADMINISTRATION: {
 				RoomAdministration roomAdministration = (RoomAdministration)theEObject;
 				T result = caseRoomAdministration(roomAdministration);
-				if (result == null) result = caseIRoomAdministration(roomAdministration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ClassDiagramPackage.APPLIANCE_ADMINISTRATION: {
 				ApplianceAdministration applianceAdministration = (ApplianceAdministration)theEObject;
 				T result = caseApplianceAdministration(applianceAdministration);
-				if (result == null) result = caseIApplianceAdministration(applianceAdministration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.GUEST_MANAGER: {
+				GuestManager guestManager = (GuestManager)theEObject;
+				T result = caseGuestManager(guestManager);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION: {
+				FacilityAdministration facilityAdministration = (FacilityAdministration)theEObject;
+				T result = caseFacilityAdministration(facilityAdministration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.HOTEL_ADMINISTRATION: {
+				HotelAdministration hotelAdministration = (HotelAdministration)theEObject;
+				T result = caseHotelAdministration(hotelAdministration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.BILL_MANAGER: {
+				BillManager billManager = (BillManager)theEObject;
+				T result = caseBillManager(billManager);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ClassDiagramPackage.FACILITY_MANAGER: {
+				FacilityManager facilityManager = (FacilityManager)theEObject;
+				T result = caseFacilityManager(facilityManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -544,126 +509,6 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IGuest Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IGuest Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIGuestManager(IGuestManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IBill Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IBill Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIBillManager(IBillManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IFacility Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IFacility Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIFacilityManager(IFacilityManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IAppliance Administration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IAppliance Administration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIApplianceAdministration(IApplianceAdministration object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IRoom Administration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IRoom Administration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIRoomAdministration(IRoomAdministration object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IFacility Administration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IFacility Administration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIFacilityAdministration(IFacilityAdministration object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IStaff Administration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IStaff Administration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIStaffAdministration(IStaffAdministration object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IHotel Administration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IHotel Administration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIHotelAdministration(IHotelAdministration object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IService Booking</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -705,6 +550,21 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseHotelAdministration(HotelAdministration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bill Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bill Manager</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBillManager(BillManager object) {
 		return null;
 	}
 
@@ -765,6 +625,36 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApplianceAdministration(ApplianceAdministration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Guest Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Guest Manager</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGuestManager(GuestManager object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Facility Administration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Facility Administration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFacilityAdministration(FacilityAdministration object) {
 		return null;
 	}
 

@@ -4,11 +4,10 @@ package ClassDiagram.impl;
 
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_Hotel;
-import ClassDiagram.Hotel_Room;
-import ClassDiagram.RoomAdministration;
-import ClassDiagram.RoomAppliance_ApplianceType;
-import ClassDiagram.Room_RoomAppliance;
-import ClassDiagram.Room_RoomType;
+import ClassDiagram.FacilityAdministration;
+import ClassDiagram.Facility_FacilityService;
+import ClassDiagram.Facility_FacilityType;
+import ClassDiagram.Hotel_Facility;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -23,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Room Administration</b></em>'.
+ * An implementation of the model object '<em><b>Facility Administration</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.impl.RoomAdministrationImpl#getHotel <em>Hotel</em>}</li>
+ *   <li>{@link ClassDiagram.impl.FacilityAdministrationImpl#getHotel <em>Hotel</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RoomAdministrationImpl extends MinimalEObjectImpl.Container implements RoomAdministration {
+public class FacilityAdministrationImpl extends MinimalEObjectImpl.Container implements FacilityAdministration {
 	/**
 	 * The cached value of the '{@link #getHotel() <em>Hotel</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -50,7 +49,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoomAdministrationImpl() {
+	protected FacilityAdministrationImpl() {
 		super();
 	}
 
@@ -61,7 +60,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ClassDiagramPackage.Literals.ROOM_ADMINISTRATION;
+		return ClassDiagramPackage.Literals.FACILITY_ADMINISTRATION;
 	}
 
 	/**
@@ -75,7 +74,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 			hotel = (Company_Hotel)eResolveProxy(oldHotel);
 			if (hotel != oldHotel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.ROOM_ADMINISTRATION__HOTEL, oldHotel, hotel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.FACILITY_ADMINISTRATION__HOTEL, oldHotel, hotel));
 			}
 		}
 		return hotel;
@@ -99,7 +98,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 		Company_Hotel oldHotel = hotel;
 		hotel = newHotel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.ROOM_ADMINISTRATION__HOTEL, oldHotel, hotel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.FACILITY_ADMINISTRATION__HOTEL, oldHotel, hotel));
 	}
 
 	/**
@@ -107,7 +106,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRoom(int roomNumber, Room_RoomType roomType, EList<Room_RoomAppliance> appliances) {
+	public void addFacility(String name, Facility_FacilityType facilityType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -118,7 +117,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoom(Hotel_Room room) {
+	public void editFacility(Hotel_Facility facility) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -129,7 +128,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editRoom(Hotel_Room room) {
+	public void addFacilityType(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -140,7 +139,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editRoomType(Room_RoomType roomType) {
+	public void editFacilityType(Facility_FacilityType facility) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -151,7 +150,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createRoomType(double price, int maxNumberOfGuests, double area, RoomAppliance_ApplianceType applianceTypes) {
+	public void removeFacility(Hotel_Facility facility) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -162,7 +161,40 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoomType(Room_RoomType roomType) {
+	public void removeFacilityType(Facility_FacilityType facility) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addService(Facility_FacilityType facility, String name, double price) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void editService(Facility_FacilityService service) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeService(Facility_FacilityService service) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -176,7 +208,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassDiagramPackage.ROOM_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION__HOTEL:
 				if (resolve) return getHotel();
 				return basicGetHotel();
 		}
@@ -191,7 +223,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassDiagramPackage.ROOM_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION__HOTEL:
 				setHotel((Company_Hotel)newValue);
 				return;
 		}
@@ -206,7 +238,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.ROOM_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION__HOTEL:
 				setHotel((Company_Hotel)null);
 				return;
 		}
@@ -221,7 +253,7 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.ROOM_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION__HOTEL:
 				return hotel != null;
 		}
 		return super.eIsSet(featureID);
@@ -233,29 +265,37 @@ public class RoomAdministrationImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ClassDiagramPackage.ROOM_ADMINISTRATION___ADD_ROOM__INT_ROOM_ROOMTYPE_ELIST:
-				addRoom((Integer)arguments.get(0), (Room_RoomType)arguments.get(1), (EList<Room_RoomAppliance>)arguments.get(2));
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___ADD_FACILITY__STRING_FACILITY_FACILITYTYPE:
+				addFacility((String)arguments.get(0), (Facility_FacilityType)arguments.get(1));
 				return null;
-			case ClassDiagramPackage.ROOM_ADMINISTRATION___REMOVE_ROOM__HOTEL_ROOM:
-				removeRoom((Hotel_Room)arguments.get(0));
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___EDIT_FACILITY__HOTEL_FACILITY:
+				editFacility((Hotel_Facility)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.ROOM_ADMINISTRATION___EDIT_ROOM__HOTEL_ROOM:
-				editRoom((Hotel_Room)arguments.get(0));
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___ADD_FACILITY_TYPE__STRING:
+				addFacilityType((String)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.ROOM_ADMINISTRATION___EDIT_ROOM_TYPE__ROOM_ROOMTYPE:
-				editRoomType((Room_RoomType)arguments.get(0));
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___EDIT_FACILITY_TYPE__FACILITY_FACILITYTYPE:
+				editFacilityType((Facility_FacilityType)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.ROOM_ADMINISTRATION___CREATE_ROOM_TYPE__DOUBLE_INT_DOUBLE_ROOMAPPLIANCE_APPLIANCETYPE:
-				createRoomType((Double)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2), (RoomAppliance_ApplianceType)arguments.get(3));
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___REMOVE_FACILITY__HOTEL_FACILITY:
+				removeFacility((Hotel_Facility)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.ROOM_ADMINISTRATION___REMOVE_ROOM_TYPE__ROOM_ROOMTYPE:
-				removeRoomType((Room_RoomType)arguments.get(0));
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___REMOVE_FACILITY_TYPE__FACILITY_FACILITYTYPE:
+				removeFacilityType((Facility_FacilityType)arguments.get(0));
+				return null;
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___ADD_SERVICE__FACILITY_FACILITYTYPE_STRING_DOUBLE:
+				addService((Facility_FacilityType)arguments.get(0), (String)arguments.get(1), (Double)arguments.get(2));
+				return null;
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___EDIT_SERVICE__FACILITY_FACILITYSERVICE:
+				editService((Facility_FacilityService)arguments.get(0));
+				return null;
+			case ClassDiagramPackage.FACILITY_ADMINISTRATION___REMOVE_SERVICE__FACILITY_FACILITYSERVICE:
+				removeService((Facility_FacilityService)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //RoomAdministrationImpl
+} //FacilityAdministrationImpl

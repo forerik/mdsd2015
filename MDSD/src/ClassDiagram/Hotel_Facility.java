@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.Hotel_Facility#getName <em>Name</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Facility#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Facility#getFacilityType <em>Facility Type</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getHotel_Facility()
@@ -49,29 +49,29 @@ public interface Hotel_Facility extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
+	 * Returns the value of the '<em><b>Facility Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
+	 * If the meaning of the '<em>Facility Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Belongs To</em>' reference.
-	 * @see #setBelongsTo(Facility_FacilityType)
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Facility_BelongsTo()
+	 * @return the value of the '<em>Facility Type</em>' reference.
+	 * @see #setFacilityType(Facility_FacilityType)
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Facility_FacilityType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Facility_FacilityType getBelongsTo();
+	Facility_FacilityType getFacilityType();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.Hotel_Facility#getBelongsTo <em>Belongs To</em>}' reference.
+	 * Sets the value of the '{@link ClassDiagram.Hotel_Facility#getFacilityType <em>Facility Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Belongs To</em>' reference.
-	 * @see #getBelongsTo()
+	 * @param value the new value of the '<em>Facility Type</em>' reference.
+	 * @see #getFacilityType()
 	 * @generated
 	 */
-	void setBelongsTo(Facility_FacilityType value);
+	void setFacilityType(Facility_FacilityType value);
 
 } // Hotel_Facility

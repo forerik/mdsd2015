@@ -33,10 +33,10 @@ public class main {
 		// Creating the rooms
 		Hotel_Room room1 = factory.createHotel_Room();
 		room1.setRoomNumber(1);
-		room1.setBelongsTo(single);
+		room1.setRoomType(single);
 		
 		// Adding the rooms to the hotel
-		theHotel.getConsistsOfRooms().add(room1);
+		theHotel.getListOfRooms().add(room1);
 		
 		// Creating the guest records
 		Company_GuestRecord guest1 = factory.createCompany_GuestRecord();
@@ -50,13 +50,14 @@ public class main {
 		Date start = new Date();
 		Date end = new Date();
 
-		BookingManager bookingManager = factory.createBookingManager();
-		theHotel.setBookingmanager(bookingManager);
-		bookingManager.getBookingList();
-		bookingManager.createBooking(start, end, theHotel.getConsistsOfRooms(), guest1);
 		
-		System.out.println(theHotel.getBookingmanager().getBookingList());
-		System.out.println(theHotel.getConsistsOfRooms());
+		
+		BookingManager bookingManager = factory.createBookingManager();
+		bookingManager.setHotel(theHotel);
+		bookingManager.createBooking(start, end, theHotel.getListOfRooms(), guest1);
+		
+		System.out.println(theHotel.getListOfBookings());
+		System.out.println(theHotel.getListOfRooms());
 		System.out.println(company.getOwns());
 		System.out.println(company.getRecordsOf());
 		

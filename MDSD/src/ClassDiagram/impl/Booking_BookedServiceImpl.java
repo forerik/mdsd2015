@@ -4,12 +4,14 @@ package ClassDiagram.impl;
 
 import ClassDiagram.Booking_BookedService;
 import ClassDiagram.ClassDiagramPackage;
+import ClassDiagram.Facility_FacilityService;
 
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -23,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.impl.Booking_BookedServiceImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Booking_BookedServiceImpl#getFacilityService <em>Facility Service</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,6 +50,16 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected Date date = DATE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFacilityService() <em>Facility Service</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFacilityService()
+	 * @generated
+	 * @ordered
+	 */
+	protected Facility_FacilityService facilityService;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,11 +106,52 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Facility_FacilityService getFacilityService() {
+		if (facilityService != null && facilityService.eIsProxy()) {
+			InternalEObject oldFacilityService = (InternalEObject)facilityService;
+			facilityService = (Facility_FacilityService)eResolveProxy(oldFacilityService);
+			if (facilityService != oldFacilityService) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.BOOKING_BOOKED_SERVICE__FACILITY_SERVICE, oldFacilityService, facilityService));
+			}
+		}
+		return facilityService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Facility_FacilityService basicGetFacilityService() {
+		return facilityService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFacilityService(Facility_FacilityService newFacilityService) {
+		Facility_FacilityService oldFacilityService = facilityService;
+		facilityService = newFacilityService;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_BOOKED_SERVICE__FACILITY_SERVICE, oldFacilityService, facilityService));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				return getDate();
+			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__FACILITY_SERVICE:
+				if (resolve) return getFacilityService();
+				return basicGetFacilityService();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,6 +166,9 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				setDate((Date)newValue);
+				return;
+			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__FACILITY_SERVICE:
+				setFacilityService((Facility_FacilityService)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,6 +185,9 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
+			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__FACILITY_SERVICE:
+				setFacilityService((Facility_FacilityService)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,6 +202,8 @@ public class Booking_BookedServiceImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
+			case ClassDiagramPackage.BOOKING_BOOKED_SERVICE__FACILITY_SERVICE:
+				return facilityService != null;
 		}
 		return super.eIsSet(featureID);
 	}

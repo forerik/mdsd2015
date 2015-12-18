@@ -10,36 +10,40 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Company_Hotel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOfRooms" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listOfRooms" ordered="false"
         upperBound="-1" eType="#//Hotel_Room"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOfFacilities" ordered="false"
-        upperBound="-1" eType="#//Hotel_Facility"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" ordered="false"
         upperBound="-1" eType="#//Hotel_Staff"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bookingmanager" ordered="false"
-        lowerBound="1" eType="#//BookingManager"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listOfBookings" ordered="false"
+        upperBound="-1" eType="#//Hotel_Booking"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hotel_Room">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomNumber" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="roomAppliances" ordered="false"
-        upperBound="-1" eType="#//Room_RoomAppliance"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" ordered="false"
-        lowerBound="1" eType="#//Room_RoomType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accessedBy" ordered="false"
         upperBound="-1" eType="#//Room_RoomKey"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cleaningStatus" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maintenceStatus" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomType" ordered="false"
+        lowerBound="1" eType="#//Room_RoomType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Room_RoomAppliance">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" ordered="false"
-        lowerBound="1" eType="#//RoomAppliance_ApplianceType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Room_RoomKey">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expirationDate" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Room_RoomType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxNumberOfGuests" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="area" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applianceType" ordered="false"
+        upperBound="-1" eType="#//RoomAppliance_ApplianceType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomAppliance_ApplianceType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
@@ -51,35 +55,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Room_RoomType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxNumberOfGuests" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="area" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" ordered="false"
-        upperBound="-1" eType="#//Room_RoomAppliance"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Room_RoomKey">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expirationDate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Hotel_Facility">
+  <eClassifiers xsi:type="ecore:EClass" name="Room_RoomAppliance">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" ordered="false"
-        lowerBound="1" eType="#//Facility_FacilityType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Facility_FacilityType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Facility_FacilityService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applianceType" ordered="false"
+        lowerBound="1" eType="#//RoomAppliance_ApplianceType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hotel_Staff">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssn" ordered="false" lowerBound="1"
@@ -96,6 +76,92 @@
     <eLiterals name="Receptionist" value="1"/>
     <eLiterals name="Janitor" value="2"/>
     <eLiterals name="HouseKeeper" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hotel_Booking">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedIn" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingID" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" ordered="false"
+        upperBound="-1" eType="#//Booking_BookedService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Hotel_Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsibleGuest" ordered="false"
+        lowerBound="1" eType="#//Company_GuestRecord"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Booking_BookedService">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facilityService" ordered="false"
+        lowerBound="1" eType="#//Facility_FacilityService"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Facility_FacilityService">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Company_GuestRecord">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adress" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phoneNumber" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssn" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentInformation" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Booking_Bill">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paidAmount" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" ordered="false"
+        upperBound="-1" eType="#//Booking_PurchasedService"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Booking_PurchasedService">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hotel_Facility">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facilityType" ordered="false"
+        lowerBound="1" eType="#//Facility_FacilityType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Facility_FacilityType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IServiceBooking" abstract="true" interface="true">
+    <eOperations name="bookFacilityService" ordered="false" lowerBound="1">
+      <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
+      <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Hotel_Facility"/>
+      <eParameters name="service" ordered="false" lowerBound="1" eType="#//Facility_FacilityService"/>
+      <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="guest" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="findAvailableServices" ordered="false" lowerBound="1">
+      <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Hotel_Facility"/>
+      <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eOperations>
+    <eOperations name="getBookedServices" ordered="false" lowerBound="1">
+      <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
+    </eOperations>
+    <eOperations name="findBookedService" ordered="false" lowerBound="1">
+      <eParameters name="bookedServiceID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="cancelBookedService" ordered="false" lowerBound="1">
+      <eParameters name="service" ordered="false" lowerBound="1" eType="#//Booking_BookedService"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingManager">
     <eOperations name="createBooking" ordered="false" lowerBound="1">
@@ -131,114 +197,69 @@
     <eOperations name="cancelBooking" ordered="false" lowerBound="1">
       <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
-    <eOperations name="findBooking" ordered="false" lowerBound="1">
-      <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
     <eOperations name="getBookings" ordered="false" lowerBound="1">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bookingList" ordered="false"
-        upperBound="-1" eType="#//Hotel_Booking"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Hotel_Booking">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedIn" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingID" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" ordered="false"
-        upperBound="-1" eType="#//Booking_BookedService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//Hotel_Room"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responsibleGuest" ordered="false"
-        lowerBound="1" eType="#//Company_GuestRecord"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Booking_BookedService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Company_GuestRecord">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adress" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phoneNumber" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssn" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentInformation" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Booking_Bill">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paidAmount" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" ordered="false"
-        upperBound="-1" eType="#//Booking_PurchasedService"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Booking_PurchasedService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IGuestManager" abstract="true" interface="true">
-    <eOperations name="createGuestRecord" ordered="false" lowerBound="1">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StaffAdministration">
+    <eOperations name="addStaff" ordered="false" lowerBound="1">
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="adress" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="phoneNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="editGuestRecord" ordered="false" lowerBound="1">
-      <eParameters name="guest" ordered="false" lowerBound="1" eType="#//Company_GuestRecord"/>
-    </eOperations>
-    <eOperations name="removeGuestRecord" ordered="false" lowerBound="1">
-      <eParameters name="guest" ordered="false" lowerBound="1" eType="#//Company_GuestRecord"/>
-    </eOperations>
-    <eOperations name="findGuestRecord" ordered="false" lowerBound="1">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="workTitel" ordered="false" lowerBound="1" eType="#//StaffType"/>
     </eOperations>
-    <eOperations name="findGuestRecords" ordered="false" lowerBound="1">
-      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="editStaff" ordered="false" lowerBound="1">
+      <eParameters name="staff" ordered="false" lowerBound="1" eType="#//Hotel_Staff"/>
     </eOperations>
+    <eOperations name="removeStaff" ordered="false" lowerBound="1">
+      <eParameters name="staff" ordered="false" lowerBound="1" eType="#//Hotel_Staff"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IBillManager" abstract="true" interface="true">
-    <eOperations name="addPurchesedService" ordered="false" lowerBound="1">
-      <eParameters name="bill" ordered="false" lowerBound="1" eType="#//Booking_Bill"/>
-      <eParameters name="item" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomManager">
+    <eOperations name="findRoom" ordered="false" lowerBound="1">
+      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
-    <eOperations name="findBill" ordered="false" lowerBound="1">
-      <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
+    <eOperations name="cleaningStatus" ordered="false" lowerBound="1">
+      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
     </eOperations>
-    <eOperations name="createReceipt" ordered="false" lowerBound="1">
-      <eParameters name="bill" ordered="false" lowerBound="1" eType="#//Booking_Bill"/>
+    <eOperations name="maintenanceStatus" ordered="false" lowerBound="1">
+      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
     </eOperations>
-    <eOperations name="getAmount" ordered="false" lowerBound="1">
-      <eParameters name="bill" ordered="false" lowerBound="1" eType="#//Booking_Bill"/>
-    </eOperations>
-    <eOperations name="pay" ordered="false" lowerBound="1">
-      <eParameters name="bill" ordered="false" lowerBound="1" eType="#//Booking_Bill"/>
-      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    </eOperations>
+    <eOperations name="getRoomsToClean" ordered="false" lowerBound="1"/>
+    <eOperations name="getRoomsToMaintain" ordered="false" lowerBound="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IFacilityManager" abstract="true" interface="true">
-    <eOperations name="findBookedService" ordered="false" lowerBound="1">
-      <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="facilityService" ordered="false" lowerBound="1" eType="#//Facility_FacilityService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomAdministration">
+    <eOperations name="addRoom" ordered="false" lowerBound="1">
+      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Room_RoomType"/>
+      <eParameters name="appliances" ordered="false" upperBound="-1" eType="#//Room_RoomAppliance"/>
     </eOperations>
-    <eOperations name="findBookedServices" ordered="false" lowerBound="1">
-      <eParameters name="guest" ordered="false" lowerBound="1" eType="#//Company_GuestRecord"/>
+    <eOperations name="removeRoom" ordered="false" lowerBound="1">
+      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
     </eOperations>
+    <eOperations name="editRoom" ordered="false" lowerBound="1">
+      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
+    </eOperations>
+    <eOperations name="editRoomType" ordered="false" lowerBound="1">
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Room_RoomType"/>
+    </eOperations>
+    <eOperations name="createRoomType" ordered="false" lowerBound="1">
+      <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="maxNumberOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="area" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="applianceTypes" ordered="false" lowerBound="1" eType="#//RoomAppliance_ApplianceType"/>
+    </eOperations>
+    <eOperations name="removeRoomType" ordered="false" lowerBound="1">
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Room_RoomType"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IApplianceAdministration" abstract="true"
-      interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="ApplianceAdministration">
     <eOperations name="addAppliance" ordered="false" lowerBound="1">
       <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
     </eOperations>
@@ -258,38 +279,43 @@
       <eParameters name="appliance" ordered="false" lowerBound="1" eType="#//Room_RoomAppliance"/>
     </eOperations>
     <eOperations name="addApplianceService" ordered="false" lowerBound="1">
-      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="applianceService" ordered="false" lowerBound="1" eType="#//ApplianceType_ApplianceService"/>
     </eOperations>
     <eOperations name="editApplianceService" ordered="false" lowerBound="1">
-      <eParameters name="service" ordered="false" lowerBound="1" eType="#//ApplianceType_ApplianceService"/>
+      <eParameters name="applianceService" ordered="false" lowerBound="1" eType="#//ApplianceType_ApplianceService"/>
     </eOperations>
-    <eOperations name="removeApplianceService" ordered="false" lowerBound="1">
-      <eParameters name="service" ordered="false" lowerBound="1" eType="#//ApplianceType_ApplianceService"/>
+    <eOperations name="removeApplianceServer" ordered="false" lowerBound="1">
+      <eParameters name="applianceService" ordered="false" lowerBound="1" eType="#//ApplianceType_ApplianceService"/>
     </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IRoomAdministration" abstract="true"
-      interface="true">
-    <eOperations name="addRoom" ordered="false" lowerBound="1">
-      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Room_RoomType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GuestManager">
+    <eOperations name="createGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="adress" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="phoneNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="paymentInformation" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eOperations name="removeRoom" ordered="false" lowerBound="1">
-      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
+    <eOperations name="editGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eOperations name="editRoom" ordered="false" lowerBound="1">
-      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
+    <eOperations name="removeGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eOperations name="createRoomType" ordered="false" lowerBound="1"/>
-    <eOperations name="editRoomType" ordered="false" lowerBound="1">
-      <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Room_RoomType"/>
+    <eOperations name="findGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eOperations name="removeRoomType" ordered="false" lowerBound="1">
-      <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Room_RoomType"/>
+    <eOperations name="findGuestRecords" ordered="false" lowerBound="1">
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IFacilityAdministration" abstract="true"
-      interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="FacilityAdministration">
     <eOperations name="addFacility" ordered="false" lowerBound="1">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="facilityType" ordered="false" lowerBound="1" eType="#//Facility_FacilityType"/>
@@ -297,17 +323,17 @@
     <eOperations name="editFacility" ordered="false" lowerBound="1">
       <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Hotel_Facility"/>
     </eOperations>
+    <eOperations name="addFacilityType" ordered="false" lowerBound="1">
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="editFacilityType" ordered="false" lowerBound="1">
+      <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Facility_FacilityType"/>
+    </eOperations>
     <eOperations name="removeFacility" ordered="false" lowerBound="1">
       <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Hotel_Facility"/>
     </eOperations>
-    <eOperations name="addFacilityType" ordered="false" lowerBound="1">
-      <eParameters name="kind" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="editFacilityType" ordered="false" lowerBound="1">
-      <eParameters name="facilityType" ordered="false" lowerBound="1" eType="#//Facility_FacilityType"/>
-    </eOperations>
     <eOperations name="removeFacilityType" ordered="false" lowerBound="1">
-      <eParameters name="facilityType" ordered="false" lowerBound="1" eType="#//Facility_FacilityType"/>
+      <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Facility_FacilityType"/>
     </eOperations>
     <eOperations name="addService" ordered="false" lowerBound="1">
       <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Facility_FacilityType"/>
@@ -320,23 +346,10 @@
     <eOperations name="removeService" ordered="false" lowerBound="1">
       <eParameters name="service" ordered="false" lowerBound="1" eType="#//Facility_FacilityService"/>
     </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IStaffAdministration" abstract="true"
-      interface="true">
-    <eOperations name="addStaff" ordered="false" lowerBound="1">
-      <eParameters name="firstname" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="lastname" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="editStaff" ordered="false" lowerBound="1">
-      <eParameters name="staff" ordered="false" lowerBound="1" eType="#//Hotel_Staff"/>
-    </eOperations>
-    <eOperations name="removeStaff" ordered="false" lowerBound="1">
-      <eParameters name="staff" ordered="false" lowerBound="1" eType="#//Hotel_Staff"/>
-    </eOperations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IHotelAdministration" abstract="true"
-      interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="HotelAdministration">
     <eOperations name="addHotel" ordered="false" lowerBound="1">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
@@ -346,45 +359,44 @@
     <eOperations name="removeHotel" ordered="false" lowerBound="1">
       <eParameters name="hotel" ordered="false" lowerBound="1" eType="#//Company_Hotel"/>
     </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="company" ordered="false"
+        lowerBound="1" eType="#//Company"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IServiceBooking" abstract="true" interface="true">
-    <eOperations name="bookFacilityService" ordered="false" lowerBound="1">
-      <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BillManager">
+    <eOperations name="addPurchasedService" ordered="false" lowerBound="1">
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="item" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="findBill" ordered="false" lowerBound="1">
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="createReceipt" ordered="false" lowerBound="1">
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getAmount" ordered="false" lowerBound="1">
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="pay" ordered="false" lowerBound="1">
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FacilityManager">
+    <eOperations name="findServices" ordered="false" lowerBound="1">
+      <eParameters name="start" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Hotel_Facility"/>
-      <eParameters name="service" ordered="false" lowerBound="1" eType="#//Facility_FacilityService"/>
-      <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="guest" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="end" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eOperations>
-    <eOperations name="findAvailableServices" ordered="false" lowerBound="1">
-      <eParameters name="facility" ordered="false" lowerBound="1" eType="#//Hotel_Facility"/>
+    <eOperations name="findServices" ordered="false" lowerBound="1">
       <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eOperations>
-    <eOperations name="getBookedServices" ordered="false" lowerBound="1">
-      <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
+    <eOperations name="findBookedServices" ordered="false" lowerBound="1">
+      <eParameters name="guest" ordered="false" lowerBound="1" eType="#//Company_GuestRecord"/>
     </eOperations>
-    <eOperations name="findBookedService" ordered="false" lowerBound="1">
-      <eParameters name="bookedServiceID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="cancelBookedService" ordered="false" lowerBound="1">
-      <eParameters name="service" ordered="false" lowerBound="1" eType="#//Booking_BookedService"/>
-    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FacilityManager" eSuperTypes="#//IFacilityManager"/>
-  <eClassifiers xsi:type="ecore:EClass" name="HotelAdministration" eSuperTypes="#//IHotelAdministration"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StaffAdministration" eSuperTypes="#//IStaffAdministration"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoomManager">
-    <eOperations name="findRoom" ordered="false" lowerBound="1">
-      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="cleaningStatus" ordered="false" lowerBound="1">
-      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
-    </eOperations>
-    <eOperations name="maintenanceStatus" ordered="false" lowerBound="1">
-      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
-    </eOperations>
-    <eOperations name="getRoomsToClean" ordered="false" lowerBound="1"/>
-    <eOperations name="getRoomsToMaintain" ordered="false" lowerBound="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RoomAdministration" eSuperTypes="#//IRoomAdministration"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ApplianceAdministration" eSuperTypes="#//IApplianceAdministration"/>
 </ecore:EPackage>

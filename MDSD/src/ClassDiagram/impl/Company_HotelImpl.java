@@ -2,13 +2,11 @@
  */
 package ClassDiagram.impl;
 
-import ClassDiagram.BookingManager;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_Hotel;
-import ClassDiagram.Hotel_Facility;
+import ClassDiagram.Hotel_Booking;
 import ClassDiagram.Hotel_Room;
 import ClassDiagram.Hotel_Staff;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,8 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -31,35 +27,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getConsistsOfRooms <em>Consists Of Rooms</em>}</li>
- *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getConsistsOfFacilities <em>Consists Of Facilities</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getListOfRooms <em>List Of Rooms</em>}</li>
  *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getEmployees <em>Employees</em>}</li>
  *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getName <em>Name</em>}</li>
- *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getBookingmanager <em>Bookingmanager</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Company_HotelImpl#getListOfBookings <em>List Of Bookings</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class Company_HotelImpl extends MinimalEObjectImpl.Container implements Company_Hotel {
 	/**
-	 * The cached value of the '{@link #getConsistsOfRooms() <em>Consists Of Rooms</em>}' reference list.
+	 * The cached value of the '{@link #getListOfRooms() <em>List Of Rooms</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConsistsOfRooms()
+	 * @see #getListOfRooms()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Hotel_Room> consistsOfRooms;
-
-	/**
-	 * The cached value of the '{@link #getConsistsOfFacilities() <em>Consists Of Facilities</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConsistsOfFacilities()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Hotel_Facility> consistsOfFacilities;
+	protected EList<Hotel_Room> listOfRooms;
 
 	/**
 	 * The cached value of the '{@link #getEmployees() <em>Employees</em>}' reference list.
@@ -92,14 +77,14 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBookingmanager() <em>Bookingmanager</em>}' reference.
+	 * The cached value of the '{@link #getListOfBookings() <em>List Of Bookings</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBookingmanager()
+	 * @see #getListOfBookings()
 	 * @generated
 	 * @ordered
 	 */
-	protected BookingManager bookingmanager;
+	protected EList<Hotel_Booking> listOfBookings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,23 +110,11 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Hotel_Room> getConsistsOfRooms() {
-		if (consistsOfRooms == null) {
-			consistsOfRooms = new EObjectResolvingEList<Hotel_Room>(Hotel_Room.class, this, ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_ROOMS);
+	public EList<Hotel_Room> getListOfRooms() {
+		if (listOfRooms == null) {
+			listOfRooms = new EObjectResolvingEList<Hotel_Room>(Hotel_Room.class, this, ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOMS);
 		}
-		return consistsOfRooms;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Hotel_Facility> getConsistsOfFacilities() {
-		if (consistsOfFacilities == null) {
-			consistsOfFacilities = new EObjectResolvingEList<Hotel_Facility>(Hotel_Facility.class, this, ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_FACILITIES);
-		}
-		return consistsOfFacilities;
+		return listOfRooms;
 	}
 
 	/**
@@ -182,37 +155,11 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingManager getBookingmanager() {
-		if (bookingmanager != null && bookingmanager.eIsProxy()) {
-			InternalEObject oldBookingmanager = (InternalEObject)bookingmanager;
-			bookingmanager = (BookingManager)eResolveProxy(oldBookingmanager);
-			if (bookingmanager != oldBookingmanager) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.COMPANY_HOTEL__BOOKINGMANAGER, oldBookingmanager, bookingmanager));
-			}
+	public EList<Hotel_Booking> getListOfBookings() {
+		if (listOfBookings == null) {
+			listOfBookings = new EObjectResolvingEList<Hotel_Booking>(Hotel_Booking.class, this, ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS);
 		}
-		return bookingmanager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingManager basicGetBookingmanager() {
-		return bookingmanager;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBookingmanager(BookingManager newBookingmanager) {
-		BookingManager oldBookingmanager = bookingmanager;
-		bookingmanager = newBookingmanager;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.COMPANY_HOTEL__BOOKINGMANAGER, oldBookingmanager, bookingmanager));
+		return listOfBookings;
 	}
 
 	/**
@@ -223,17 +170,14 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_ROOMS:
-				return getConsistsOfRooms();
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_FACILITIES:
-				return getConsistsOfFacilities();
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOMS:
+				return getListOfRooms();
 			case ClassDiagramPackage.COMPANY_HOTEL__EMPLOYEES:
 				return getEmployees();
 			case ClassDiagramPackage.COMPANY_HOTEL__NAME:
 				return getName();
-			case ClassDiagramPackage.COMPANY_HOTEL__BOOKINGMANAGER:
-				if (resolve) return getBookingmanager();
-				return basicGetBookingmanager();
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS:
+				return getListOfBookings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -247,13 +191,9 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_ROOMS:
-				getConsistsOfRooms().clear();
-				getConsistsOfRooms().addAll((Collection<? extends Hotel_Room>)newValue);
-				return;
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_FACILITIES:
-				getConsistsOfFacilities().clear();
-				getConsistsOfFacilities().addAll((Collection<? extends Hotel_Facility>)newValue);
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOMS:
+				getListOfRooms().clear();
+				getListOfRooms().addAll((Collection<? extends Hotel_Room>)newValue);
 				return;
 			case ClassDiagramPackage.COMPANY_HOTEL__EMPLOYEES:
 				getEmployees().clear();
@@ -262,8 +202,9 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 			case ClassDiagramPackage.COMPANY_HOTEL__NAME:
 				setName((String)newValue);
 				return;
-			case ClassDiagramPackage.COMPANY_HOTEL__BOOKINGMANAGER:
-				setBookingmanager((BookingManager)newValue);
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS:
+				getListOfBookings().clear();
+				getListOfBookings().addAll((Collection<? extends Hotel_Booking>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -277,11 +218,8 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_ROOMS:
-				getConsistsOfRooms().clear();
-				return;
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_FACILITIES:
-				getConsistsOfFacilities().clear();
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOMS:
+				getListOfRooms().clear();
 				return;
 			case ClassDiagramPackage.COMPANY_HOTEL__EMPLOYEES:
 				getEmployees().clear();
@@ -289,8 +227,8 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 			case ClassDiagramPackage.COMPANY_HOTEL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ClassDiagramPackage.COMPANY_HOTEL__BOOKINGMANAGER:
-				setBookingmanager((BookingManager)null);
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS:
+				getListOfBookings().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -304,16 +242,14 @@ public class Company_HotelImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_ROOMS:
-				return consistsOfRooms != null && !consistsOfRooms.isEmpty();
-			case ClassDiagramPackage.COMPANY_HOTEL__CONSISTS_OF_FACILITIES:
-				return consistsOfFacilities != null && !consistsOfFacilities.isEmpty();
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_ROOMS:
+				return listOfRooms != null && !listOfRooms.isEmpty();
 			case ClassDiagramPackage.COMPANY_HOTEL__EMPLOYEES:
 				return employees != null && !employees.isEmpty();
 			case ClassDiagramPackage.COMPANY_HOTEL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ClassDiagramPackage.COMPANY_HOTEL__BOOKINGMANAGER:
-				return bookingmanager != null;
+			case ClassDiagramPackage.COMPANY_HOTEL__LIST_OF_BOOKINGS:
+				return listOfBookings != null && !listOfBookings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

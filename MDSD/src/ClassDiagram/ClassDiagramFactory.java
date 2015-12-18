@@ -202,6 +202,15 @@ public interface ClassDiagramFactory extends EFactory {
 	HotelAdministration createHotelAdministration();
 
 	/**
+	 * Returns a new object of class '<em>Bill Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bill Manager</em>'.
+	 * @generated
+	 */
+	BillManager createBillManager();
+
+	/**
 	 * Returns a new object of class '<em>Staff Administration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,6 +245,24 @@ public interface ClassDiagramFactory extends EFactory {
 	 * @generated
 	 */
 	ApplianceAdministration createApplianceAdministration();
+
+	/**
+	 * Returns a new object of class '<em>Guest Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Guest Manager</em>'.
+	 * @generated
+	 */
+	GuestManager createGuestManager();
+
+	/**
+	 * Returns a new object of class '<em>Facility Administration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facility Administration</em>'.
+	 * @generated
+	 */
+	FacilityAdministration createFacilityAdministration();
 
 	/**
 	 * Returns the package supported by this factory.

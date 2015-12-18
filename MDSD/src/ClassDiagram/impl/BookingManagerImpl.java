@@ -3,21 +3,26 @@
 package ClassDiagram.impl;
 
 import ClassDiagram.BookingManager;
+import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
+import ClassDiagram.Company_Hotel;
 import ClassDiagram.Hotel_Booking;
 import ClassDiagram.Hotel_Room;
 import ClassDiagram.Room_RoomType;
 
 import java.lang.reflect.InvocationTargetException;
 
-import java.util.Collection;
 import java.util.Date;
+
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,21 +32,22 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getBookingList <em>Booking List</em>}</li>
+ *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getHotel <em>Hotel</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BookingManagerImpl extends MinimalEObjectImpl.Container implements BookingManager {
 	/**
-	 * The cached value of the '{@link #getBookingList() <em>Booking List</em>}' reference list.
+	 * The cached value of the '{@link #getHotel() <em>Hotel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBookingList()
+	 * @see #getHotel()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Hotel_Booking> bookingList;
+	protected Company_Hotel hotel;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,11 +72,37 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Hotel_Booking> getBookingList() {
-		if (bookingList == null) {
-			bookingList = new EObjectResolvingEList<Hotel_Booking>(Hotel_Booking.class, this, ClassDiagramPackage.BOOKING_MANAGER__BOOKING_LIST);
+	public Company_Hotel getHotel() {
+		if (hotel != null && hotel.eIsProxy()) {
+			InternalEObject oldHotel = (InternalEObject)hotel;
+			hotel = (Company_Hotel)eResolveProxy(oldHotel);
+			if (hotel != oldHotel) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.BOOKING_MANAGER__HOTEL, oldHotel, hotel));
+			}
 		}
-		return bookingList;
+		return hotel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Company_Hotel basicGetHotel() {
+		return hotel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHotel(Company_Hotel newHotel) {
+		Company_Hotel oldHotel = hotel;
+		hotel = newHotel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_MANAGER__HOTEL, oldHotel, hotel));
 	}
 
 	/**
@@ -81,14 +113,16 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		Hotel_BookingImpl booking = new Hotel_BookingImpl();
+		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
+		
+		Hotel_Booking booking = factory.createHotel_Booking();
 		booking.setStartDate(start);
 		booking.setEndDate(end);
 		booking.setStartDate(start);
 		booking.getRooms().addAll(rooms);
-		booking.setResponsibleGuest(guest);
+		booking.setResponsibleGuest(guest);		
 		
-		bookingList.add(booking);	
+		hotel.getListOfBookings().add(booking);	
 	}
 
 	/**
@@ -99,7 +133,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	public void findAvailableRooms(Date start, Date end, EList<Room_RoomType> roomTypes) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		EList<Hotel_Room> rooms = hotel.getListOfRooms();
+		
+		EList<Hotel_Booking> bookings = hotel.getListOfBookings();
+		
+
 	}
 
 	/**
@@ -173,17 +212,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void findBooking(int bookingId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void getBookings(String ssn) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -198,8 +226,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__BOOKING_LIST:
-				return getBookingList();
+			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+				if (resolve) return getHotel();
+				return basicGetHotel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -209,13 +238,11 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__BOOKING_LIST:
-				getBookingList().clear();
-				getBookingList().addAll((Collection<? extends Hotel_Booking>)newValue);
+			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+				setHotel((Company_Hotel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,8 +256,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__BOOKING_LIST:
-				getBookingList().clear();
+			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+				setHotel((Company_Hotel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -244,8 +271,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__BOOKING_LIST:
-				return bookingList != null && !bookingList.isEmpty();
+			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+				return hotel != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -282,9 +309,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___CANCEL_BOOKING__INT:
 				cancelBooking((Integer)arguments.get(0));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___FIND_BOOKING__INT:
-				findBooking((Integer)arguments.get(0));
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___GET_BOOKINGS__STRING:
 				getBookings((String)arguments.get(0));

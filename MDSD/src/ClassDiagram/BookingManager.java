@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.BookingManager#getBookingList <em>Booking List</em>}</li>
+ *   <li>{@link ClassDiagram.BookingManager#getHotel <em>Hotel</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getBookingManager()
@@ -26,20 +26,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface BookingManager extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Booking List</b></em>' reference list.
-	 * The list contents are of type {@link ClassDiagram.Hotel_Booking}.
+	 * Returns the value of the '<em><b>Hotel</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Booking List</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Hotel</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking List</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getBookingManager_BookingList()
-	 * @model ordered="false"
+	 * @return the value of the '<em>Hotel</em>' reference.
+	 * @see #setHotel(Company_Hotel)
+	 * @see ClassDiagram.ClassDiagramPackage#getBookingManager_Hotel()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<Hotel_Booking> getBookingList();
+	Company_Hotel getHotel();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.BookingManager#getHotel <em>Hotel</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hotel</em>' reference.
+	 * @see #getHotel()
+	 * @generated
+	 */
+	void setHotel(Company_Hotel value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,14 +114,6 @@ public interface BookingManager extends EObject {
 	 * @generated
 	 */
 	void cancelBooking(int bookingId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model bookingIdRequired="true" bookingIdOrdered="false"
-	 * @generated
-	 */
-	void findBooking(int bookingId);
 
 	/**
 	 * <!-- begin-user-doc -->

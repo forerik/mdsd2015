@@ -6,21 +6,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Appliance Administration</b></em>'.
+ * A representation of the model object '<em><b>Facility Administration</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.ApplianceAdministration#getHotel <em>Hotel</em>}</li>
+ *   <li>{@link ClassDiagram.FacilityAdministration#getHotel <em>Hotel</em>}</li>
  * </ul>
  *
- * @see ClassDiagram.ClassDiagramPackage#getApplianceAdministration()
+ * @see ClassDiagram.ClassDiagramPackage#getFacilityAdministration()
  * @model
  * @generated
  */
-public interface ApplianceAdministration extends EObject {
+public interface FacilityAdministration extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Hotel</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -31,14 +31,14 @@ public interface ApplianceAdministration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Hotel</em>' reference.
 	 * @see #setHotel(Company_Hotel)
-	 * @see ClassDiagram.ClassDiagramPackage#getApplianceAdministration_Hotel()
+	 * @see ClassDiagram.ClassDiagramPackage#getFacilityAdministration_Hotel()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	Company_Hotel getHotel();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.ApplianceAdministration#getHotel <em>Hotel</em>}' reference.
+	 * Sets the value of the '{@link ClassDiagram.FacilityAdministration#getHotel <em>Hotel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Hotel</em>' reference.
@@ -50,18 +50,18 @@ public interface ApplianceAdministration extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomRequired="true" roomOrdered="false"
+	 * @model nameRequired="true" nameOrdered="false" facilityTypeRequired="true" facilityTypeOrdered="false"
 	 * @generated
 	 */
-	void addAppliance(Hotel_Room room);
+	void addFacility(String name, Facility_FacilityType facilityType);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model applianceRequired="true" applianceOrdered="false"
+	 * @model facilityRequired="true" facilityOrdered="false"
 	 * @generated
 	 */
-	void removeAppliance(Room_RoomAppliance appliance);
+	void editFacility(Hotel_Facility facility);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,54 +69,54 @@ public interface ApplianceAdministration extends EObject {
 	 * @model nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void addApplianceType(String name);
+	void addFacilityType(String name);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model applianceTypeRequired="true" applianceTypeOrdered="false"
+	 * @model facilityRequired="true" facilityOrdered="false"
 	 * @generated
 	 */
-	void editApplianceType(RoomAppliance_ApplianceType applianceType);
+	void editFacilityType(Facility_FacilityType facility);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model applianceTypeRequired="true" applianceTypeOrdered="false"
+	 * @model facilityRequired="true" facilityOrdered="false"
 	 * @generated
 	 */
-	void removeApplianceType(RoomAppliance_ApplianceType applianceType);
+	void removeFacility(Hotel_Facility facility);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model applianceRequired="true" applianceOrdered="false"
+	 * @model facilityRequired="true" facilityOrdered="false"
 	 * @generated
 	 */
-	void editAppliance(Room_RoomAppliance appliance);
+	void removeFacilityType(Facility_FacilityType facility);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model applianceServiceRequired="true" applianceServiceOrdered="false"
+	 * @model facilityRequired="true" facilityOrdered="false" nameRequired="true" nameOrdered="false" priceRequired="true" priceOrdered="false"
 	 * @generated
 	 */
-	void addApplianceService(ApplianceType_ApplianceService applianceService);
+	void addService(Facility_FacilityType facility, String name, double price);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model applianceServiceRequired="true" applianceServiceOrdered="false"
+	 * @model serviceRequired="true" serviceOrdered="false"
 	 * @generated
 	 */
-	void editApplianceService(ApplianceType_ApplianceService applianceService);
+	void editService(Facility_FacilityService service);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model applianceServiceRequired="true" applianceServiceOrdered="false"
+	 * @model serviceRequired="true" serviceOrdered="false"
 	 * @generated
 	 */
-	void removeApplianceServer(ApplianceType_ApplianceService applianceService);
+	void removeService(Facility_FacilityService service);
 
-} // ApplianceAdministration
+} // FacilityAdministration

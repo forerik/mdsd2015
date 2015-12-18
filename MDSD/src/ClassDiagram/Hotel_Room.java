@@ -16,11 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.Hotel_Room#getRoomNumber <em>Room Number</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Room#getRoomAppliances <em>Room Appliances</em>}</li>
- *   <li>{@link ClassDiagram.Hotel_Room#getBelongsTo <em>Belongs To</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Room#getAccessedBy <em>Accessed By</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Room#isCleaningStatus <em>Cleaning Status</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Room#isMaintenceStatus <em>Maintence Status</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Room#getRoomType <em>Room Type</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getHotel_Room()
@@ -53,48 +52,6 @@ public interface Hotel_Room extends EObject {
 	 * @generated
 	 */
 	void setRoomNumber(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Room Appliances</b></em>' reference list.
-	 * The list contents are of type {@link ClassDiagram.Room_RoomAppliance}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Room Appliances</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Appliances</em>' reference list.
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Room_RoomAppliances()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Room_RoomAppliance> getRoomAppliances();
-
-	/**
-	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Belongs To</em>' reference.
-	 * @see #setBelongsTo(Room_RoomType)
-	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Room_BelongsTo()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	Room_RoomType getBelongsTo();
-
-	/**
-	 * Sets the value of the '{@link ClassDiagram.Hotel_Room#getBelongsTo <em>Belongs To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Belongs To</em>' reference.
-	 * @see #getBelongsTo()
-	 * @generated
-	 */
-	void setBelongsTo(Room_RoomType value);
 
 	/**
 	 * Returns the value of the '<em><b>Accessed By</b></em>' reference list.
@@ -163,5 +120,31 @@ public interface Hotel_Room extends EObject {
 	 * @generated
 	 */
 	void setMaintenceStatus(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Room Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Type</em>' reference.
+	 * @see #setRoomType(Room_RoomType)
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Room_RoomType()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Room_RoomType getRoomType();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.Hotel_Room#getRoomType <em>Room Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Type</em>' reference.
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	void setRoomType(Room_RoomType value);
 
 } // Hotel_Room

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.Room_RoomAppliance#getName <em>Name</em>}</li>
- *   <li>{@link ClassDiagram.Room_RoomAppliance#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link ClassDiagram.Room_RoomAppliance#getApplianceType <em>Appliance Type</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomAppliance()
@@ -49,29 +49,29 @@ public interface Room_RoomAppliance extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
+	 * Returns the value of the '<em><b>Appliance Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
+	 * If the meaning of the '<em>Appliance Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Belongs To</em>' reference.
-	 * @see #setBelongsTo(RoomAppliance_ApplianceType)
-	 * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomAppliance_BelongsTo()
+	 * @return the value of the '<em>Appliance Type</em>' reference.
+	 * @see #setApplianceType(RoomAppliance_ApplianceType)
+	 * @see ClassDiagram.ClassDiagramPackage#getRoom_RoomAppliance_ApplianceType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	RoomAppliance_ApplianceType getBelongsTo();
+	RoomAppliance_ApplianceType getApplianceType();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.Room_RoomAppliance#getBelongsTo <em>Belongs To</em>}' reference.
+	 * Sets the value of the '{@link ClassDiagram.Room_RoomAppliance#getApplianceType <em>Appliance Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Belongs To</em>' reference.
-	 * @see #getBelongsTo()
+	 * @param value the new value of the '<em>Appliance Type</em>' reference.
+	 * @see #getApplianceType()
 	 * @generated
 	 */
-	void setBelongsTo(RoomAppliance_ApplianceType value);
+	void setApplianceType(RoomAppliance_ApplianceType value);
 
 } // Room_RoomAppliance

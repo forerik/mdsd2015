@@ -6,7 +6,6 @@ import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company;
 import ClassDiagram.Company_GuestRecord;
 import ClassDiagram.Company_Hotel;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

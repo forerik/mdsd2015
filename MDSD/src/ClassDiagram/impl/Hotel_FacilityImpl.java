@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.impl.Hotel_FacilityImpl#getName <em>Name</em>}</li>
- *   <li>{@link ClassDiagram.impl.Hotel_FacilityImpl#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Hotel_FacilityImpl#getFacilityType <em>Facility Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,14 +50,14 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
+	 * The cached value of the '{@link #getFacilityType() <em>Facility Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBelongsTo()
+	 * @see #getFacilityType()
 	 * @generated
 	 * @ordered
 	 */
-	protected Facility_FacilityType belongsTo;
+	protected Facility_FacilityType facilityType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,16 +104,16 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Facility_FacilityType getBelongsTo() {
-		if (belongsTo != null && belongsTo.eIsProxy()) {
-			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
-			belongsTo = (Facility_FacilityType)eResolveProxy(oldBelongsTo);
-			if (belongsTo != oldBelongsTo) {
+	public Facility_FacilityType getFacilityType() {
+		if (facilityType != null && facilityType.eIsProxy()) {
+			InternalEObject oldFacilityType = (InternalEObject)facilityType;
+			facilityType = (Facility_FacilityType)eResolveProxy(oldFacilityType);
+			if (facilityType != oldFacilityType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.HOTEL_FACILITY__BELONGS_TO, oldBelongsTo, belongsTo));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.HOTEL_FACILITY__FACILITY_TYPE, oldFacilityType, facilityType));
 			}
 		}
-		return belongsTo;
+		return facilityType;
 	}
 
 	/**
@@ -121,8 +121,8 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Facility_FacilityType basicGetBelongsTo() {
-		return belongsTo;
+	public Facility_FacilityType basicGetFacilityType() {
+		return facilityType;
 	}
 
 	/**
@@ -130,11 +130,11 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBelongsTo(Facility_FacilityType newBelongsTo) {
-		Facility_FacilityType oldBelongsTo = belongsTo;
-		belongsTo = newBelongsTo;
+	public void setFacilityType(Facility_FacilityType newFacilityType) {
+		Facility_FacilityType oldFacilityType = facilityType;
+		facilityType = newFacilityType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_FACILITY__BELONGS_TO, oldBelongsTo, belongsTo));
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_FACILITY__FACILITY_TYPE, oldFacilityType, facilityType));
 	}
 
 	/**
@@ -147,9 +147,9 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ClassDiagramPackage.HOTEL_FACILITY__NAME:
 				return getName();
-			case ClassDiagramPackage.HOTEL_FACILITY__BELONGS_TO:
-				if (resolve) return getBelongsTo();
-				return basicGetBelongsTo();
+			case ClassDiagramPackage.HOTEL_FACILITY__FACILITY_TYPE:
+				if (resolve) return getFacilityType();
+				return basicGetFacilityType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,8 +165,8 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.HOTEL_FACILITY__NAME:
 				setName((String)newValue);
 				return;
-			case ClassDiagramPackage.HOTEL_FACILITY__BELONGS_TO:
-				setBelongsTo((Facility_FacilityType)newValue);
+			case ClassDiagramPackage.HOTEL_FACILITY__FACILITY_TYPE:
+				setFacilityType((Facility_FacilityType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,8 +183,8 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.HOTEL_FACILITY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ClassDiagramPackage.HOTEL_FACILITY__BELONGS_TO:
-				setBelongsTo((Facility_FacilityType)null);
+			case ClassDiagramPackage.HOTEL_FACILITY__FACILITY_TYPE:
+				setFacilityType((Facility_FacilityType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -200,8 +200,8 @@ public class Hotel_FacilityImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ClassDiagramPackage.HOTEL_FACILITY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ClassDiagramPackage.HOTEL_FACILITY__BELONGS_TO:
-				return belongsTo != null;
+			case ClassDiagramPackage.HOTEL_FACILITY__FACILITY_TYPE:
+				return facilityType != null;
 		}
 		return super.eIsSet(featureID);
 	}

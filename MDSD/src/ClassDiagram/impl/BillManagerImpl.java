@@ -2,12 +2,10 @@
  */
 package ClassDiagram.impl;
 
+import ClassDiagram.BillManager;
 import ClassDiagram.ClassDiagramPackage;
-import ClassDiagram.Company_Hotel;
-import ClassDiagram.Hotel_Staff;
-import ClassDiagram.StaffAdministration;
-import ClassDiagram.StaffType;
 
+import ClassDiagram.Company_Hotel;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,18 +19,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Staff Administration</b></em>'.
+ * An implementation of the model object '<em><b>Bill Manager</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.impl.StaffAdministrationImpl#getHotel <em>Hotel</em>}</li>
+ *   <li>{@link ClassDiagram.impl.BillManagerImpl#getHotel <em>Hotel</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implements StaffAdministration {
+public class BillManagerImpl extends MinimalEObjectImpl.Container implements BillManager {
 	/**
 	 * The cached value of the '{@link #getHotel() <em>Hotel</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -48,7 +46,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StaffAdministrationImpl() {
+	protected BillManagerImpl() {
 		super();
 	}
 
@@ -59,7 +57,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ClassDiagramPackage.Literals.STAFF_ADMINISTRATION;
+		return ClassDiagramPackage.Literals.BILL_MANAGER;
 	}
 
 	/**
@@ -73,7 +71,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 			hotel = (Company_Hotel)eResolveProxy(oldHotel);
 			if (hotel != oldHotel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.STAFF_ADMINISTRATION__HOTEL, oldHotel, hotel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.BILL_MANAGER__HOTEL, oldHotel, hotel));
 			}
 		}
 		return hotel;
@@ -97,7 +95,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 		Company_Hotel oldHotel = hotel;
 		hotel = newHotel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.STAFF_ADMINISTRATION__HOTEL, oldHotel, hotel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BILL_MANAGER__HOTEL, oldHotel, hotel));
 	}
 
 	/**
@@ -105,7 +103,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addStaff(String firstName, String lastName, String ssn, StaffType workTitel) {
+	public void addPurchasedService(String bookingID, String item, double amount) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -116,7 +114,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editStaff(Hotel_Staff staff) {
+	public void findBill(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -127,7 +125,29 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeStaff(Hotel_Staff staff) {
+	public void createReceipt(int bookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void getAmount(int bookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void pay(int bookingID, double amount) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -141,7 +161,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassDiagramPackage.STAFF_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.BILL_MANAGER__HOTEL:
 				if (resolve) return getHotel();
 				return basicGetHotel();
 		}
@@ -156,7 +176,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassDiagramPackage.STAFF_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.BILL_MANAGER__HOTEL:
 				setHotel((Company_Hotel)newValue);
 				return;
 		}
@@ -171,7 +191,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.STAFF_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.BILL_MANAGER__HOTEL:
 				setHotel((Company_Hotel)null);
 				return;
 		}
@@ -186,7 +206,7 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.STAFF_ADMINISTRATION__HOTEL:
+			case ClassDiagramPackage.BILL_MANAGER__HOTEL:
 				return hotel != null;
 		}
 		return super.eIsSet(featureID);
@@ -200,17 +220,23 @@ public class StaffAdministrationImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ClassDiagramPackage.STAFF_ADMINISTRATION___ADD_STAFF__STRING_STRING_STRING_STAFFTYPE:
-				addStaff((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (StaffType)arguments.get(3));
+			case ClassDiagramPackage.BILL_MANAGER___ADD_PURCHASED_SERVICE__STRING_STRING_DOUBLE:
+				addPurchasedService((String)arguments.get(0), (String)arguments.get(1), (Double)arguments.get(2));
 				return null;
-			case ClassDiagramPackage.STAFF_ADMINISTRATION___EDIT_STAFF__HOTEL_STAFF:
-				editStaff((Hotel_Staff)arguments.get(0));
+			case ClassDiagramPackage.BILL_MANAGER___FIND_BILL__INT:
+				findBill((Integer)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.STAFF_ADMINISTRATION___REMOVE_STAFF__HOTEL_STAFF:
-				removeStaff((Hotel_Staff)arguments.get(0));
+			case ClassDiagramPackage.BILL_MANAGER___CREATE_RECEIPT__INT:
+				createReceipt((Integer)arguments.get(0));
+				return null;
+			case ClassDiagramPackage.BILL_MANAGER___GET_AMOUNT__INT:
+				getAmount((Integer)arguments.get(0));
+				return null;
+			case ClassDiagramPackage.BILL_MANAGER___PAY__INT_DOUBLE:
+				pay((Integer)arguments.get(0), (Double)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //StaffAdministrationImpl
+} //BillManagerImpl

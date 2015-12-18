@@ -4,7 +4,6 @@ package ClassDiagram.impl;
 
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Hotel_Room;
-import ClassDiagram.Room_RoomAppliance;
 import ClassDiagram.Room_RoomKey;
 import ClassDiagram.Room_RoomType;
 
@@ -31,11 +30,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.impl.Hotel_RoomImpl#getRoomNumber <em>Room Number</em>}</li>
- *   <li>{@link ClassDiagram.impl.Hotel_RoomImpl#getRoomAppliances <em>Room Appliances</em>}</li>
- *   <li>{@link ClassDiagram.impl.Hotel_RoomImpl#getBelongsTo <em>Belongs To</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_RoomImpl#getAccessedBy <em>Accessed By</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_RoomImpl#isCleaningStatus <em>Cleaning Status</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_RoomImpl#isMaintenceStatus <em>Maintence Status</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Hotel_RoomImpl#getRoomType <em>Room Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,26 +58,6 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 	 * @ordered
 	 */
 	protected int roomNumber = ROOM_NUMBER_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getRoomAppliances() <em>Room Appliances</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoomAppliances()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Room_RoomAppliance> roomAppliances;
-
-	/**
-	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBelongsTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected Room_RoomType belongsTo;
 
 	/**
 	 * The cached value of the '{@link #getAccessedBy() <em>Accessed By</em>}' reference list.
@@ -132,6 +110,16 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 	protected boolean maintenceStatus = MAINTENCE_STATUS_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomType()
+	 * @generated
+	 * @ordered
+	 */
+	protected Room_RoomType roomType;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -169,56 +157,6 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 		roomNumber = newRoomNumber;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_ROOM__ROOM_NUMBER, oldRoomNumber, roomNumber));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Room_RoomAppliance> getRoomAppliances() {
-		if (roomAppliances == null) {
-			roomAppliances = new EObjectResolvingEList<Room_RoomAppliance>(Room_RoomAppliance.class, this, ClassDiagramPackage.HOTEL_ROOM__ROOM_APPLIANCES);
-		}
-		return roomAppliances;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Room_RoomType getBelongsTo() {
-		if (belongsTo != null && belongsTo.eIsProxy()) {
-			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
-			belongsTo = (Room_RoomType)eResolveProxy(oldBelongsTo);
-			if (belongsTo != oldBelongsTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.HOTEL_ROOM__BELONGS_TO, oldBelongsTo, belongsTo));
-			}
-		}
-		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Room_RoomType basicGetBelongsTo() {
-		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBelongsTo(Room_RoomType newBelongsTo) {
-		Room_RoomType oldBelongsTo = belongsTo;
-		belongsTo = newBelongsTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_ROOM__BELONGS_TO, oldBelongsTo, belongsTo));
 	}
 
 	/**
@@ -280,22 +218,58 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Room_RoomType getRoomType() {
+		if (roomType != null && roomType.eIsProxy()) {
+			InternalEObject oldRoomType = (InternalEObject)roomType;
+			roomType = (Room_RoomType)eResolveProxy(oldRoomType);
+			if (roomType != oldRoomType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.HOTEL_ROOM__ROOM_TYPE, oldRoomType, roomType));
+			}
+		}
+		return roomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Room_RoomType basicGetRoomType() {
+		return roomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomType(Room_RoomType newRoomType) {
+		Room_RoomType oldRoomType = roomType;
+		roomType = newRoomType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_ROOM__ROOM_TYPE, oldRoomType, roomType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ClassDiagramPackage.HOTEL_ROOM__ROOM_NUMBER:
 				return getRoomNumber();
-			case ClassDiagramPackage.HOTEL_ROOM__ROOM_APPLIANCES:
-				return getRoomAppliances();
-			case ClassDiagramPackage.HOTEL_ROOM__BELONGS_TO:
-				if (resolve) return getBelongsTo();
-				return basicGetBelongsTo();
 			case ClassDiagramPackage.HOTEL_ROOM__ACCESSED_BY:
 				return getAccessedBy();
 			case ClassDiagramPackage.HOTEL_ROOM__CLEANING_STATUS:
 				return isCleaningStatus();
 			case ClassDiagramPackage.HOTEL_ROOM__MAINTENCE_STATUS:
 				return isMaintenceStatus();
+			case ClassDiagramPackage.HOTEL_ROOM__ROOM_TYPE:
+				if (resolve) return getRoomType();
+				return basicGetRoomType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -312,13 +286,6 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 			case ClassDiagramPackage.HOTEL_ROOM__ROOM_NUMBER:
 				setRoomNumber((Integer)newValue);
 				return;
-			case ClassDiagramPackage.HOTEL_ROOM__ROOM_APPLIANCES:
-				getRoomAppliances().clear();
-				getRoomAppliances().addAll((Collection<? extends Room_RoomAppliance>)newValue);
-				return;
-			case ClassDiagramPackage.HOTEL_ROOM__BELONGS_TO:
-				setBelongsTo((Room_RoomType)newValue);
-				return;
 			case ClassDiagramPackage.HOTEL_ROOM__ACCESSED_BY:
 				getAccessedBy().clear();
 				getAccessedBy().addAll((Collection<? extends Room_RoomKey>)newValue);
@@ -328,6 +295,9 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 				return;
 			case ClassDiagramPackage.HOTEL_ROOM__MAINTENCE_STATUS:
 				setMaintenceStatus((Boolean)newValue);
+				return;
+			case ClassDiagramPackage.HOTEL_ROOM__ROOM_TYPE:
+				setRoomType((Room_RoomType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -344,12 +314,6 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 			case ClassDiagramPackage.HOTEL_ROOM__ROOM_NUMBER:
 				setRoomNumber(ROOM_NUMBER_EDEFAULT);
 				return;
-			case ClassDiagramPackage.HOTEL_ROOM__ROOM_APPLIANCES:
-				getRoomAppliances().clear();
-				return;
-			case ClassDiagramPackage.HOTEL_ROOM__BELONGS_TO:
-				setBelongsTo((Room_RoomType)null);
-				return;
 			case ClassDiagramPackage.HOTEL_ROOM__ACCESSED_BY:
 				getAccessedBy().clear();
 				return;
@@ -358,6 +322,9 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 				return;
 			case ClassDiagramPackage.HOTEL_ROOM__MAINTENCE_STATUS:
 				setMaintenceStatus(MAINTENCE_STATUS_EDEFAULT);
+				return;
+			case ClassDiagramPackage.HOTEL_ROOM__ROOM_TYPE:
+				setRoomType((Room_RoomType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -373,16 +340,14 @@ public class Hotel_RoomImpl extends MinimalEObjectImpl.Container implements Hote
 		switch (featureID) {
 			case ClassDiagramPackage.HOTEL_ROOM__ROOM_NUMBER:
 				return roomNumber != ROOM_NUMBER_EDEFAULT;
-			case ClassDiagramPackage.HOTEL_ROOM__ROOM_APPLIANCES:
-				return roomAppliances != null && !roomAppliances.isEmpty();
-			case ClassDiagramPackage.HOTEL_ROOM__BELONGS_TO:
-				return belongsTo != null;
 			case ClassDiagramPackage.HOTEL_ROOM__ACCESSED_BY:
 				return accessedBy != null && !accessedBy.isEmpty();
 			case ClassDiagramPackage.HOTEL_ROOM__CLEANING_STATUS:
 				return cleaningStatus != CLEANING_STATUS_EDEFAULT;
 			case ClassDiagramPackage.HOTEL_ROOM__MAINTENCE_STATUS:
 				return maintenceStatus != MAINTENCE_STATUS_EDEFAULT;
+			case ClassDiagramPackage.HOTEL_ROOM__ROOM_TYPE:
+				return roomType != null;
 		}
 		return super.eIsSet(featureID);
 	}
