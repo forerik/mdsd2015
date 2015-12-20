@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.BookingManager#getHotel <em>Hotel</em>}</li>
+ *   <li>{@link ClassDiagram.BookingManager#getRoomManager <em>Room Manager</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getBookingManager()
@@ -50,6 +51,32 @@ public interface BookingManager extends EObject {
 	 * @generated
 	 */
 	void setHotel(Company_Hotel value);
+
+	/**
+	 * Returns the value of the '<em><b>Room Manager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Manager</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Manager</em>' reference.
+	 * @see #setRoomManager(RoomManager)
+	 * @see ClassDiagram.ClassDiagramPackage#getBookingManager_RoomManager()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	RoomManager getRoomManager();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.BookingManager#getRoomManager <em>Room Manager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Manager</em>' reference.
+	 * @see #getRoomManager()
+	 * @generated
+	 */
+	void setRoomManager(RoomManager value);
 
 	/**
 	 * <!-- begin-user-doc -->

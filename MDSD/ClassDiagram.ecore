@@ -216,6 +216,27 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
         lowerBound="1" eType="#//Company_Hotel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roomManager" ordered="false"
+        lowerBound="1" eType="#//RoomManager"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomManager">
+    <eOperations name="findRoom" ordered="false" lowerBound="1">
+      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="cleaningStatus" ordered="false" lowerBound="1">
+      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
+    </eOperations>
+    <eOperations name="maintenanceStatus" ordered="false" lowerBound="1">
+      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
+    </eOperations>
+    <eOperations name="getRoomsToClean" ordered="false" lowerBound="1"/>
+    <eOperations name="getRoomsToMaintain" ordered="false" lowerBound="1"/>
+    <eOperations name="roomExists" ordered="false" lowerBound="1">
+      <eParameters name="rooms" ordered="false" lowerBound="1" upperBound="-1" eType="#//Hotel_Room"/>
+      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffAdministration">
     <eOperations name="addStaff" ordered="false" lowerBound="1">
@@ -230,21 +251,6 @@
     <eOperations name="removeStaff" ordered="false" lowerBound="1">
       <eParameters name="staff" ordered="false" lowerBound="1" eType="#//Hotel_Staff"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
-        lowerBound="1" eType="#//Company_Hotel"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RoomManager">
-    <eOperations name="findRoom" ordered="false" lowerBound="1">
-      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="cleaningStatus" ordered="false" lowerBound="1">
-      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
-    </eOperations>
-    <eOperations name="maintenanceStatus" ordered="false" lowerBound="1">
-      <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
-    </eOperations>
-    <eOperations name="getRoomsToClean" ordered="false" lowerBound="1"/>
-    <eOperations name="getRoomsToMaintain" ordered="false" lowerBound="1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
         lowerBound="1" eType="#//Company_Hotel"/>
   </eClassifiers>

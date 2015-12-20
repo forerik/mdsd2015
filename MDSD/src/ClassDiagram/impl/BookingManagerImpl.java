@@ -9,6 +9,7 @@ import ClassDiagram.Company_GuestRecord;
 import ClassDiagram.Company_Hotel;
 import ClassDiagram.Hotel_Booking;
 import ClassDiagram.Hotel_Room;
+import ClassDiagram.RoomManager;
 import ClassDiagram.Room_RoomType;
 
 import java.lang.reflect.InvocationTargetException;
@@ -35,6 +36,7 @@ import org.eclipse.emf.common.util.BasicEList;
  * </p>
  * <ul>
  *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getHotel <em>Hotel</em>}</li>
+ *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getRoomManager <em>Room Manager</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,6 +55,16 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	public static final int checkInHour = 15;
 	
 	protected Company_Hotel hotel;
+
+	/**
+	 * The cached value of the '{@link #getRoomManager() <em>Room Manager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomManager()
+	 * @generated
+	 * @ordered
+	 */
+	protected RoomManager roomManager;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,6 +121,44 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		hotel = newHotel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_MANAGER__HOTEL, oldHotel, hotel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomManager getRoomManager() {
+		if (roomManager != null && roomManager.eIsProxy()) {
+			InternalEObject oldRoomManager = (InternalEObject)roomManager;
+			roomManager = (RoomManager)eResolveProxy(oldRoomManager);
+			if (roomManager != oldRoomManager) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER, oldRoomManager, roomManager));
+			}
+		}
+		return roomManager;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomManager basicGetRoomManager() {
+		return roomManager;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomManager(RoomManager newRoomManager) {
+		RoomManager oldRoomManager = roomManager;
+		roomManager = newRoomManager;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER, oldRoomManager, roomManager));
 	}
 
 	/**
@@ -335,12 +385,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		EList<Hotel_Room> selectedRooms = new BasicEList<Hotel_Room>();
 		for (int i = 0; i < parts.length; i++) {
 			int roomNumber = Integer.parseInt(parts[i]);
-			if (roomExists(availableRooms, roomNumber)) {
-				//selectedRooms.add(hotel);
+			if (roomManager.roomExists(availableRooms, roomNumber)) {
+				selectedRooms.add(roomManager.findRoom(roomNumber));
 			}
 		}
 
-		//System.out.println(selectedRoomTypes);
+		System.out.println(selectedRooms);
 		
 		
 		//EList<Hotel_Room> availableRooms = findAvailableRooms(start, end, selectedRoomTypes);
@@ -348,22 +398,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		//System.out.println(availableRooms);
 		
 		s.close();
-		
-	}
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean roomExists(EList<Hotel_Room> rooms, int roomNumber) {
-		
-		for (Hotel_Room room : rooms) {
-			if (room.getRoomNumber() == roomNumber) {
-				return true;
-			}
-		}
-		
-		return false;
 		
 	}
 	
@@ -405,6 +439,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
 				if (resolve) return getHotel();
 				return basicGetHotel();
+			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+				if (resolve) return getRoomManager();
+				return basicGetRoomManager();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -419,6 +456,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
 				setHotel((Company_Hotel)newValue);
+				return;
+			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+				setRoomManager((RoomManager)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -435,6 +475,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
 				setHotel((Company_Hotel)null);
 				return;
+			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+				setRoomManager((RoomManager)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -449,6 +492,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
 				return hotel != null;
+			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+				return roomManager != null;
 		}
 		return super.eIsSet(featureID);
 	}

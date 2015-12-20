@@ -370,6 +370,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_pXeFQqVtEeWrk5ny20Yhxg" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA">
       <association xmi:type="uml:Association" href="Hotel%20system.uml#_pXdeMKVtEeWrk5ny20Yhxg"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1K5iAKcYEeW0vNy3QNyq_g" name="roomManager" visibility="private" type="_LzHtgJpfEeWudYIMZ7ExHw"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_avckoKSsEeW6u575sJ_x5Q" name="createBooking" visibility="public">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_ftRJgKSsEeW6u575sJ_x5Q" name="start">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
@@ -487,6 +488,15 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ELh9sKSqEeW6u575sJ_x5Q" name="getRoomsToClean"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_61VGgKStEeW6u575sJ_x5Q" name="getRoomsToMaintain"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2-me0KcZEeW0vNy3QNyq_g" name="roomExists">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_60fyUKcZEeW0vNy3QNyq_g" name="rooms" type="_olbGkJdyEeWjlOsjTCQaQw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8AOloKcZEeW0vNy3QNyq_g" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8AUFMKcZEeW0vNy3QNyq_g" value="*"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_999doKcZEeW0vNy3QNyq_g" name="roomNumber">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_PGHvUJpfEeWudYIMZ7ExHw" name="RoomAdministration">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Bg2VgqVtEeWrk5ny20Yhxg" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA">

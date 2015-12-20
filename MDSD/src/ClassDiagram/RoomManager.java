@@ -2,6 +2,7 @@
  */
 package ClassDiagram;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -87,5 +88,14 @@ public interface RoomManager extends EObject {
 	 * @generated
 	 */
 	void getRoomsToMaintain();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return 
+	 * @model roomsRequired="true" roomsMany="true" roomsOrdered="false" roomNumberRequired="true" roomNumberOrdered="false"
+	 * @generated NOT
+	 */
+	boolean roomExists(EList<Hotel_Room> rooms, int roomNumber);
 
 } // RoomManager

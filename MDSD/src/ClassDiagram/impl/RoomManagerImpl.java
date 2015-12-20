@@ -117,6 +117,23 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean roomExists(EList<Hotel_Room> rooms, int roomNumber) {
+		
+		for (Hotel_Room room : rooms) {
+			if (room.getRoomNumber() == roomNumber) {
+				return true;
+			}
+		}
+		
+		return false;
+		
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void cleaningStatus(Hotel_Room room) {
@@ -223,6 +240,7 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ClassDiagramPackage.ROOM_MANAGER___FIND_ROOM__INT:
@@ -239,6 +257,9 @@ public class RoomManagerImpl extends MinimalEObjectImpl.Container implements Roo
 				return null;
 			case ClassDiagramPackage.ROOM_MANAGER___GET_ROOMS_TO_MAINTAIN:
 				getRoomsToMaintain();
+				return null;
+			case ClassDiagramPackage.ROOM_MANAGER___ROOM_EXISTS__ELIST_INT:
+				roomExists((EList<Hotel_Room>)arguments.get(0), (Integer)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

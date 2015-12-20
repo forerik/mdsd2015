@@ -1095,13 +1095,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int BOOKING_MANAGER__HOTEL = 0;
 
 	/**
+	 * The feature id for the '<em><b>Room Manager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER__ROOM_MANAGER = 1;
+
+	/**
 	 * The number of structural features of the '<em>Booking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER_FEATURE_COUNT = 1;
+	int BOOKING_MANAGER_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Create Booking</em>' operation.
@@ -1249,61 +1258,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffAdministration()
 	 * @generated
 	 */
-	int STAFF_ADMINISTRATION = 19;
-
-	/**
-	 * The feature id for the '<em><b>Hotel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_ADMINISTRATION__HOTEL = 0;
-
-	/**
-	 * The number of structural features of the '<em>Staff Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_ADMINISTRATION_FEATURE_COUNT = 1;
-
-	/**
-	 * The operation id for the '<em>Add Staff</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_ADMINISTRATION___ADD_STAFF__STRING_STRING_STRING_STAFFTYPE = 0;
-
-	/**
-	 * The operation id for the '<em>Edit Staff</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_ADMINISTRATION___EDIT_STAFF__HOTEL_STAFF = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Staff</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_ADMINISTRATION___REMOVE_STAFF__HOTEL_STAFF = 2;
-
-	/**
-	 * The number of operations of the '<em>Staff Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_ADMINISTRATION_OPERATION_COUNT = 3;
+	int STAFF_ADMINISTRATION = 20;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.RoomManagerImpl <em>Room Manager</em>}' class.
@@ -1313,7 +1268,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomManager()
 	 * @generated
 	 */
-	int ROOM_MANAGER = 20;
+	int ROOM_MANAGER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Hotel</b></em>' reference.
@@ -1379,13 +1334,76 @@ public interface ClassDiagramPackage extends EPackage {
 	int ROOM_MANAGER___GET_ROOMS_TO_MAINTAIN = 4;
 
 	/**
+	 * The operation id for the '<em>Room Exists</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGER___ROOM_EXISTS__ELIST_INT = 5;
+
+	/**
 	 * The number of operations of the '<em>Room Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGER_OPERATION_COUNT = 5;
+	int ROOM_MANAGER_OPERATION_COUNT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Hotel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_ADMINISTRATION__HOTEL = 0;
+
+	/**
+	 * The number of structural features of the '<em>Staff Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_ADMINISTRATION_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Add Staff</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_ADMINISTRATION___ADD_STAFF__STRING_STRING_STRING_STAFFTYPE = 0;
+
+	/**
+	 * The operation id for the '<em>Edit Staff</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_ADMINISTRATION___EDIT_STAFF__HOTEL_STAFF = 1;
+
+	/**
+	 * The operation id for the '<em>Remove Staff</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_ADMINISTRATION___REMOVE_STAFF__HOTEL_STAFF = 2;
+
+	/**
+	 * The number of operations of the '<em>Staff Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_ADMINISTRATION_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.RoomAdministrationImpl <em>Room Administration</em>}' class.
@@ -2811,6 +2829,17 @@ public interface ClassDiagramPackage extends EPackage {
 	EReference getBookingManager_Hotel();
 
 	/**
+	 * Returns the meta object for the reference '{@link ClassDiagram.BookingManager#getRoomManager <em>Room Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Room Manager</em>'.
+	 * @see ClassDiagram.BookingManager#getRoomManager()
+	 * @see #getBookingManager()
+	 * @generated
+	 */
+	EReference getBookingManager_RoomManager();
+
+	/**
 	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord, int) <em>Create Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3214,6 +3243,16 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomManager__GetRoomsToMaintain();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagram.RoomManager#roomExists(org.eclipse.emf.common.util.EList, int) <em>Room Exists</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Room Exists</em>' operation.
+	 * @see ClassDiagram.RoomManager#roomExists(org.eclipse.emf.common.util.EList, int)
+	 * @generated
+	 */
+	EOperation getRoomManager__RoomExists__EList_int();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.RoomAdministration <em>Room Administration</em>}'.
@@ -4277,6 +4316,14 @@ public interface ClassDiagramPackage extends EPackage {
 		EReference BOOKING_MANAGER__HOTEL = eINSTANCE.getBookingManager_Hotel();
 
 		/**
+		 * The meta object literal for the '<em><b>Room Manager</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOKING_MANAGER__ROOM_MANAGER = eINSTANCE.getBookingManager_RoomManager();
+
+		/**
 		 * The meta object literal for the '<em><b>Create Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4605,6 +4652,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_MANAGER___GET_ROOMS_TO_MAINTAIN = eINSTANCE.getRoomManager__GetRoomsToMaintain();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Exists</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_MANAGER___ROOM_EXISTS__ELIST_INT = eINSTANCE.getRoomManager__RoomExists__EList_int();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.RoomAdministrationImpl <em>Room Administration</em>}' class.

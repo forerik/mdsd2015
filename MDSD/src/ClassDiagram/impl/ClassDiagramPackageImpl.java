@@ -670,6 +670,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBookingManager_RoomManager() {
+		return (EReference)bookingManagerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int() {
 		return bookingManagerEClass.getEOperations().get(0);
 	}
@@ -1212,6 +1221,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 */
 	public EOperation getRoomManager__GetRoomsToMaintain() {
 		return roomManagerEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomManager__RoomExists__EList_int() {
+		return roomManagerEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1832,6 +1850,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		bookingManagerEClass = createEClass(BOOKING_MANAGER);
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__HOTEL);
+		createEReference(bookingManagerEClass, BOOKING_MANAGER__ROOM_MANAGER);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING);
@@ -1844,12 +1863,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___INIT_BOOKING);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE);
 
-		staffAdministrationEClass = createEClass(STAFF_ADMINISTRATION);
-		createEReference(staffAdministrationEClass, STAFF_ADMINISTRATION__HOTEL);
-		createEOperation(staffAdministrationEClass, STAFF_ADMINISTRATION___ADD_STAFF__STRING_STRING_STRING_STAFFTYPE);
-		createEOperation(staffAdministrationEClass, STAFF_ADMINISTRATION___EDIT_STAFF__HOTEL_STAFF);
-		createEOperation(staffAdministrationEClass, STAFF_ADMINISTRATION___REMOVE_STAFF__HOTEL_STAFF);
-
 		roomManagerEClass = createEClass(ROOM_MANAGER);
 		createEReference(roomManagerEClass, ROOM_MANAGER__HOTEL);
 		createEOperation(roomManagerEClass, ROOM_MANAGER___FIND_ROOM__INT);
@@ -1857,6 +1870,13 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(roomManagerEClass, ROOM_MANAGER___MAINTENANCE_STATUS__HOTEL_ROOM);
 		createEOperation(roomManagerEClass, ROOM_MANAGER___GET_ROOMS_TO_CLEAN);
 		createEOperation(roomManagerEClass, ROOM_MANAGER___GET_ROOMS_TO_MAINTAIN);
+		createEOperation(roomManagerEClass, ROOM_MANAGER___ROOM_EXISTS__ELIST_INT);
+
+		staffAdministrationEClass = createEClass(STAFF_ADMINISTRATION);
+		createEReference(staffAdministrationEClass, STAFF_ADMINISTRATION__HOTEL);
+		createEOperation(staffAdministrationEClass, STAFF_ADMINISTRATION___ADD_STAFF__STRING_STRING_STRING_STAFFTYPE);
+		createEOperation(staffAdministrationEClass, STAFF_ADMINISTRATION___EDIT_STAFF__HOTEL_STAFF);
+		createEOperation(staffAdministrationEClass, STAFF_ADMINISTRATION___REMOVE_STAFF__HOTEL_STAFF);
 
 		roomAdministrationEClass = createEClass(ROOM_ADMINISTRATION);
 		createEReference(roomAdministrationEClass, ROOM_ADMINISTRATION__HOTEL);
@@ -2063,6 +2083,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		initEClass(bookingManagerEClass, BookingManager.class, "BookingManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingManager_RoomManager(), this.getRoomManager(), null, "roomManager", null, 1, 1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int(), null, "createBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2107,21 +2128,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		addEParameter(op, ecorePackage.getEDate(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(staffAdministrationEClass, StaffAdministration.class, "StaffAdministration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStaffAdministration_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, StaffAdministration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getStaffAdministration__AddStaff__String_String_String_StaffType(), null, "addStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getStaffType(), "workTitel", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getStaffAdministration__EditStaff__Hotel_Staff(), null, "editStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getHotel_Staff(), "staff", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getStaffAdministration__RemoveStaff__Hotel_Staff(), null, "removeStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getHotel_Staff(), "staff", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(roomManagerEClass, RoomManager.class, "RoomManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, RoomManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -2137,6 +2143,25 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		initEOperation(getRoomManager__GetRoomsToClean(), null, "getRoomsToClean", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomManager__GetRoomsToMaintain(), null, "getRoomsToMaintain", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getRoomManager__RoomExists__EList_int(), null, "roomExists", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getHotel_Room(), "rooms", 1, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(staffAdministrationEClass, StaffAdministration.class, "StaffAdministration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStaffAdministration_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, StaffAdministration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getStaffAdministration__AddStaff__String_String_String_StaffType(), null, "addStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getStaffType(), "workTitel", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getStaffAdministration__EditStaff__Hotel_Staff(), null, "editStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getHotel_Staff(), "staff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getStaffAdministration__RemoveStaff__Hotel_Staff(), null, "removeStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getHotel_Staff(), "staff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomAdministrationEClass, RoomAdministration.class, "RoomAdministration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomAdministration_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, RoomAdministration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

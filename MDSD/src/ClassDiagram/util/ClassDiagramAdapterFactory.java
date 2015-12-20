@@ -144,12 +144,12 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createBookingManagerAdapter();
 			}
 			@Override
-			public Adapter caseStaffAdministration(StaffAdministration object) {
-				return createStaffAdministrationAdapter();
-			}
-			@Override
 			public Adapter caseRoomManager(RoomManager object) {
 				return createRoomManagerAdapter();
+			}
+			@Override
+			public Adapter caseStaffAdministration(StaffAdministration object) {
+				return createStaffAdministrationAdapter();
 			}
 			@Override
 			public Adapter caseRoomAdministration(RoomAdministration object) {
