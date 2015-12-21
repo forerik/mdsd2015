@@ -13,7 +13,8 @@ import ClassDiagram.RoomManager;
 import ClassDiagram.Room_RoomType;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -51,8 +52,14 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	
-	public static final int checkOutHour = 12;
-	public static final int checkInHour = 15;
+	public static final String checkOutHour = "11:00:00";
+	public static final String checkInHour = "15:00:00";
+	
+	Date start = new Date();
+	Date end = new Date();
+	int numberOfPeople;
+	private EList<Room_RoomType> selectedRoomTypes;
+	private EList<Hotel_Room> selectedRooms;
 	
 	protected Company_Hotel hotel;
 
@@ -311,94 +318,234 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public void initBooking() {
-		Date start = new Date();
-		Date end = new Date();
-		System.out.println("Input start date: (yyyy-mm-dd)");
+
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
+		Date today = new Date();
 		
 		Scanner s = new Scanner(System.in);
-		String input = s.nextLine();
-		String[] parts = input.split("-");
-		int year = Integer.parseInt(parts[0]);
-		int month = Integer.parseInt(parts[1]);
-		int day = Integer.parseInt(parts[2]);
+		String input;
+		String[] parts;
 		
-		start.setYear(year);
-		start.setMonth(month-1);
-		start.setDate(day);
-		start.setHours(checkInHour);;
+		// Input the start date
+		System.out.println("Input start date: (yyyy-mm-dd)");
+		boolean allGood = false;
+		while (!allGood) {
+			input = s.nextLine();
+			parts = input.split("-");
+			if (parts.length != 3) {
+				System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
+			}
+			else 
+				allGood = isNumeric(parts[0]) && parts[0].length() == 4 && 
+						  isNumeric(parts[1]) && parts[1].length() == 2 && 
+						  isNumeric(parts[2]) && parts[2].length() == 2;
+
+			if (!allGood) 
+				System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
+			else {
+				String dateInString = input + " " + checkInHour;
+				try {
+					start = sdf.parse(dateInString);
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+							
+				if (!start.after(today)) {
+					allGood = false;
+					System.out.println("Wrong input. The start date needs to be in the future.");
+				}
+			}
+		}
 		//System.out.println(start);
 
+
+		// Input the end date
 		System.out.println("Input end date: (yyyy-mm-dd)");
-		input = s.nextLine();
-		parts = input.split("-");
-		year = Integer.parseInt(parts[0]);
-		month = Integer.parseInt(parts[1]);
-		day = Integer.parseInt(parts[2]);
-		
-		end.setYear(year);
-		end.setMonth(month-1);
-		end.setDate(day);
-		end.setHours(checkOutHour);
-		//System.out.println(end);
+		allGood = false;
+		while (!allGood) {
+			input = s.nextLine();
+			parts = input.split("-");
+			if (parts.length != 3) {
+				System.out.println("Wrong input. The end date needs to be in format 'yyyy-mm-dd'");
+			}
+			else 
+				allGood = isNumeric(parts[0]) && parts[0].length() == 4 && 
+						  isNumeric(parts[1]) && parts[1].length() == 2 && 
+						  isNumeric(parts[2]) && parts[2].length() == 2;
+
+			if (!allGood) 
+				System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
+			else {
+				String dateInString = input + " " + checkOutHour;
+				try {
+					end = sdf.parse(dateInString);
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+							
+				if (!end.after(start)) {
+					allGood = false;
+					System.out.println("Wrong input. The end date needs to be in after the start date.");
+				}
+			}
+		}
+		System.out.println(start + " - " + end);
 				
+		
+		// Input the number of people
 		System.out.println("Input number of people:");
 		input = s.nextLine();
-		int people = Integer.parseInt(input);
+		while (!isNumeric(input)) {
+			System.out.println("Wrong input. The number of people needs to be an integer.");
+				input = s.nextLine();
+				parts = input.split("-");	
+		}
+		numberOfPeople = Integer.parseInt(input);
 		
+		
+		// Get the room types
+		while(!getRoomTypes());
+		
+		selectedRooms = new BasicEList<Hotel_Room>();
+
+		// Get the rooms
+		while(!getRooms());
+
+		//System.out.println(selectedRooms);
+		
+		// createBooking(start, end, selectedRooms, guest, numberOfPeople);
+		
+		
+		s.close();
+		
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean getRoomTypes()  {  
 		EList<Room_RoomType> roomtypes = hotel.getListOfRoomTypes();
+		selectedRoomTypes = new BasicEList<Room_RoomType>();
 		
-		System.out.println("Select roomtypes that you want.");
+		System.out.println("Select roomtypes that you want. \n"
+				+  "(Input the indecies seperated by a '-' for the room types that you want.) \n"
+				+  "(Input 'all' if you want any kind of room.)");
 		for (int i = 0; i < roomtypes.size(); i++) {
 			Room_RoomType rt = (Room_RoomType) roomtypes.get(i);
 			System.out.println(i+1 + ": " + rt.getName()); 
 		}
-		input = s.nextLine();
-		parts = input.split("-");
-		EList<Room_RoomType> selectedRoomTypes = new BasicEList<Room_RoomType>();
-		for (int i = 0; i < parts.length; i++) {
-			if (parts[i].equals("all")) 
-				selectedRoomTypes = hotel.getListOfRoomTypes();
-			else {
-				int index = Integer.parseInt(parts[i]);
-				index--;
-				if (index < roomtypes.size()) {
-					Room_RoomType rt = (Room_RoomType) roomtypes.get(index);
-					selectedRoomTypes.add(rt);
+		Scanner s = new Scanner(System.in);
+		String input = s.nextLine();
+		if (input.equals("all")) {
+			selectedRoomTypes = hotel.getListOfRoomTypes();
+		}
+		else {
+			String[] parts = input.split("-");
+			for (int i = 0; i < parts.length; i++) {
+				if (!isNumeric(parts[i]))
+					return false;
+				else {
+					int index = Integer.parseInt(parts[i]);
+					index--;
+					if (index >= roomtypes.size()) 
+						return false;
+					else {
+						Room_RoomType rt = (Room_RoomType) roomtypes.get(index);
+						selectedRoomTypes.add(rt);							
+					}
 				}
 			}
 		}
+
+		EList<Hotel_Room> availableRooms = new BasicEList<>();
+		
+		for (Room_RoomType roomType: selectedRoomTypes) {	
+			EList<Hotel_Room> rooms = findAvailableRooms(start, end, roomType, numberOfPeople);
+			availableRooms.addAll(rooms);
+		}
+		
+		int coveredPeople = 0;
+		for (Hotel_Room room : availableRooms)
+			coveredPeople += room.getRoomType().getMaxNumberOfGuests();
+		
+		if (coveredPeople < numberOfPeople) {
+			System.out.println("There are not enough rooms of the selected type(s) to covered the amount guests.");
+			return false;
+		}
+		
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean getRooms()  {  
 		System.out.println("Select the rooms that you want by typing in the room numbers separated by '-'.");
 		
 		EList<Hotel_Room> availableRooms = new BasicEList<>();
 		
 		for (Room_RoomType roomType: selectedRoomTypes) {
 			System.out.println(roomType.getName());
-			EList<Hotel_Room> rooms = findAvailableRooms(start, end, roomType, people);
+			
+			EList<Hotel_Room> rooms = findAvailableRooms(start, end, roomType, numberOfPeople);
 			availableRooms.addAll(rooms);
+			
+			for (Hotel_Room room : selectedRooms) {
+				availableRooms.remove(room);
+				rooms.remove(room);
+			}
+			
 			for (Hotel_Room room : rooms) {
 				System.out.println(" Room: " + room.getRoomNumber());
 			}
 		}
 		
-		input = s.nextLine();
-		parts = input.split("-");
-		EList<Hotel_Room> selectedRooms = new BasicEList<Hotel_Room>();
+		Scanner s = new Scanner(System.in);
+		String input = s.nextLine();
+		String[] parts = input.split("-");
 		for (int i = 0; i < parts.length; i++) {
+			if (!isNumeric(parts[i]))
+				return false;
 			int roomNumber = Integer.parseInt(parts[i]);
-			if (roomManager.roomExists(availableRooms, roomNumber)) {
-				selectedRooms.add(roomManager.findRoom(roomNumber));
+			if (!roomManager.roomExists(availableRooms, roomNumber))
+				return false;
+			else { 
+				Hotel_Room room = roomManager.findRoom(roomNumber);
+				selectedRooms.add(room);
 			}
 		}
-
-		System.out.println(selectedRooms);
-		
-		
-		//EList<Hotel_Room> availableRooms = findAvailableRooms(start, end, selectedRoomTypes);
-		
-		//System.out.println(availableRooms);
-		
-		s.close();
-		
+		int coveredPeople = 0;
+		for (Hotel_Room room : selectedRooms)
+			coveredPeople += room.getRoomType().getMaxNumberOfGuests();
+		if (numberOfPeople > coveredPeople) {
+			System.out.println("The rooms that you have chosen does not covered the amount of guests you want to book. \n"
+							+  "This is the rooms you have so far:");
+			for (Hotel_Room room : selectedRooms) {
+				System.out.println(room.getRoomType().getName() + ": " + room.getRoomNumber());
+			}			
+			return false;
+		}
+		return true;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public static boolean isNumeric(String str)  {  
+	  try  {
+	    int d = Integer.parseInt(str);  
+	  } catch(NumberFormatException nfe) {  
+	    return false;  
+	  }
+	  return true;  
 	}
 	
 	/**
