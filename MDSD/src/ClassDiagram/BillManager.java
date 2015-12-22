@@ -4,6 +4,8 @@ package ClassDiagram;
 
 import org.eclipse.emf.ecore.EObject;
 
+import ClassDiagram.impl.Booking_BillImpl;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Bill Manager</b></em>'.
@@ -58,10 +60,11 @@ public interface BillManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model bookingIDRequired="true" bookingIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void findBill(int bookingID);
+	Booking_BillImpl findBill(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->

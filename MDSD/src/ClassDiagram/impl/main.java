@@ -77,6 +77,9 @@ public class main {
 		bookingManager.setRoomManager(roomManager);
 		
 		bookingRooms.add(roomManager.findRoom(1));
+		
+		BillManager billManager = factory.createBillManager();
+		billManager.setHotel(theHotel);
 
 		
 		

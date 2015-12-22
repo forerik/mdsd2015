@@ -6,6 +6,8 @@ import ClassDiagram.BillManager;
 import ClassDiagram.ClassDiagramPackage;
 
 import ClassDiagram.Company_Hotel;
+import ClassDiagram.Hotel_Booking;
+
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -112,12 +114,19 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void findBill(int bookingID) {
+	public Booking_BillImpl findBill(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (Hotel_Booking b: getHotel().getListOfBookings()){
+			if (bookingID == b.getBookingID()){
+				return null;
+				
+				// Booking has no reference to the bill?
+			}
+		}
+		return null;
 	}
 
 	/**
