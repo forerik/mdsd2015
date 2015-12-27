@@ -735,13 +735,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int HOTEL_BOOKING__RESPONSIBLE_GUEST = 7;
 
 	/**
+	 * The feature id for the '<em><b>Bill</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_BOOKING__BILL = 8;
+
+	/**
 	 * The number of structural features of the '<em>Hotel Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_BOOKING_FEATURE_COUNT = 8;
+	int HOTEL_BOOKING_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Hotel Booking</em>' class.
@@ -2210,6 +2219,17 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getHotel_Booking_ResponsibleGuest();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagram.Hotel_Booking#getBill <em>Bill</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bill</em>'.
+	 * @see ClassDiagram.Hotel_Booking#getBill()
+	 * @see #getHotel_Booking()
+	 * @generated
+	 */
+	EReference getHotel_Booking_Bill();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.Booking_BookedService <em>Booking Booked Service</em>}'.
@@ -3818,6 +3838,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference HOTEL_BOOKING__RESPONSIBLE_GUEST = eINSTANCE.getHotel_Booking_ResponsibleGuest();
+
+		/**
+		 * The meta object literal for the '<em><b>Bill</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HOTEL_BOOKING__BILL = eINSTANCE.getHotel_Booking_Bill();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.Booking_BookedServiceImpl <em>Booking Booked Service</em>}' class.

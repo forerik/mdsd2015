@@ -157,6 +157,9 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-F-W8KP0EeWUwcbdMa7OeQ" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_in04YKP3EeWUwcbdMa7OeQ" name="responsibleGuest" visibility="private" type="_z1e_MJKIEeW9h7ibhzFKTA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Y0s1IKyBEeWtTf6oWt_WHA" name="bill" type="_LRoYEJQfEeW5-sogSMH7bA">
+          <association xmi:type="uml:Association" href="Hotel%20system.uml#_Y0ojsKyBEeWtTf6oWt_WHA"/>
+        </ownedAttribute>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_cNC3gJZoEeWWZpdeo7QpdA" name="BookedService">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_DR-0QJgtEeWjlOsjTCQaQw" name="date" visibility="private">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
@@ -189,13 +192,6 @@
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XgYtsJKPEeWP5cy1qBGqJw"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XggCcJKPEeWP5cy1qBGqJw" value="*"/>
           </ownedEnd>
-        </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Association" xmi:id="_flut8JQgEeW5-sogSMH7bA" memberEnd="_flvVApQgEeW5-sogSMH7bA _flxKMJQgEeW5-sogSMH7bA" navigableOwnedEnd="_flxKMJQgEeW5-sogSMH7bA">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_flvVAJQgEeW5-sogSMH7bA" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_flvVAZQgEeW5-sogSMH7bA" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_flxKMJQgEeW5-sogSMH7bA" name="hasBill" type="_LRoYEJQfEeW5-sogSMH7bA" association="_flut8JQgEeW5-sogSMH7bA"/>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_flvVApQgEeW5-sogSMH7bA" name="billFor" type="_Lbg1UJKJEeW9h7ibhzFKTA" association="_flut8JQgEeW5-sogSMH7bA"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_ur9xkJdzEeWjlOsjTCQaQw" memberEnd="_usAN0JdzEeWjlOsjTCQaQw _usA04JdzEeWjlOsjTCQaQw" navigableOwnedEnd="_usA04JdzEeWjlOsjTCQaQw">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ur-_sJdzEeWjlOsjTCQaQw" source="org.eclipse.papyrus">

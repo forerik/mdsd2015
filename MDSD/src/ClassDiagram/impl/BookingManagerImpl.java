@@ -541,7 +541,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public static boolean isNumeric(String str)  {  
 	  try  {
-	    int d = Integer.parseInt(str);  
+	    Integer.parseInt(str);  
 	  } catch(NumberFormatException nfe) {  
 	    return false;  
 	  }

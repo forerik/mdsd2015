@@ -220,4 +220,14 @@
       <type xmi:type="uml:Class" href="ClassDiagram.uml#_LzHtgJpfEeWudYIMZ7ExHw"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Y0ojsKyBEeWtTf6oWt_WHA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y0rnAKyBEeWtTf6oWt_WHA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y0rnAayBEeWtTf6oWt_WHA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="ClassDiagram.uml#_Y0s1IKyBEeWtTf6oWt_WHA"/>
+    <memberEnd xmi:type="uml:Property" href="#_Y0uqUKyBEeWtTf6oWt_WHA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Y0uqUKyBEeWtTf6oWt_WHA" name="booking" association="_Y0ojsKyBEeWtTf6oWt_WHA">
+      <type xmi:type="uml:Class" href="ClassDiagram.uml#_Lbg1UJKJEeW9h7ibhzFKTA"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>

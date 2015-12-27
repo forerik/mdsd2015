@@ -2,6 +2,7 @@
  */
 package ClassDiagram.impl;
 
+import ClassDiagram.Booking_Bill;
 import ClassDiagram.Booking_BookedService;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
@@ -39,6 +40,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getIncludes <em>Includes</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getRooms <em>Rooms</em>}</li>
  *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getResponsibleGuest <em>Responsible Guest</em>}</li>
+ *   <li>{@link ClassDiagram.impl.Hotel_BookingImpl#getBill <em>Bill</em>}</li>
  * </ul>
  *
  * @generated
@@ -173,6 +175,16 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 	 * @ordered
 	 */
 	protected Company_GuestRecord responsibleGuest;
+
+	/**
+	 * The cached value of the '{@link #getBill() <em>Bill</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBill()
+	 * @generated
+	 * @ordered
+	 */
+	protected Booking_Bill bill;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -365,6 +377,44 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Booking_Bill getBill() {
+		if (bill != null && bill.eIsProxy()) {
+			InternalEObject oldBill = (InternalEObject)bill;
+			bill = (Booking_Bill)eResolveProxy(oldBill);
+			if (bill != oldBill) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.HOTEL_BOOKING__BILL, oldBill, bill));
+			}
+		}
+		return bill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Booking_Bill basicGetBill() {
+		return bill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBill(Booking_Bill newBill) {
+		Booking_Bill oldBill = bill;
+		bill = newBill;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.HOTEL_BOOKING__BILL, oldBill, bill));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -385,6 +435,9 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
 				if (resolve) return getResponsibleGuest();
 				return basicGetResponsibleGuest();
+			case ClassDiagramPackage.HOTEL_BOOKING__BILL:
+				if (resolve) return getBill();
+				return basicGetBill();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -424,6 +477,9 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
 				setResponsibleGuest((Company_GuestRecord)newValue);
 				return;
+			case ClassDiagramPackage.HOTEL_BOOKING__BILL:
+				setBill((Booking_Bill)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -460,6 +516,9 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
 				setResponsibleGuest((Company_GuestRecord)null);
 				return;
+			case ClassDiagramPackage.HOTEL_BOOKING__BILL:
+				setBill((Booking_Bill)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -488,6 +547,8 @@ public class Hotel_BookingImpl extends MinimalEObjectImpl.Container implements H
 				return rooms != null && !rooms.isEmpty();
 			case ClassDiagramPackage.HOTEL_BOOKING__RESPONSIBLE_GUEST:
 				return responsibleGuest != null;
+			case ClassDiagramPackage.HOTEL_BOOKING__BILL:
+				return bill != null;
 		}
 		return super.eIsSet(featureID);
 	}

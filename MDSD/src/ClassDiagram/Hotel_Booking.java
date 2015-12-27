@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ClassDiagram.Hotel_Booking#getIncludes <em>Includes</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Booking#getRooms <em>Rooms</em>}</li>
  *   <li>{@link ClassDiagram.Hotel_Booking#getResponsibleGuest <em>Responsible Guest</em>}</li>
+ *   <li>{@link ClassDiagram.Hotel_Booking#getBill <em>Bill</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking()
@@ -219,5 +220,31 @@ public interface Hotel_Booking extends EObject {
 	 * @generated
 	 */
 	void setResponsibleGuest(Company_GuestRecord value);
+
+	/**
+	 * Returns the value of the '<em><b>Bill</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bill</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bill</em>' reference.
+	 * @see #setBill(Booking_Bill)
+	 * @see ClassDiagram.ClassDiagramPackage#getHotel_Booking_Bill()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Booking_Bill getBill();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.Hotel_Booking#getBill <em>Bill</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bill</em>' reference.
+	 * @see #getBill()
+	 * @generated
+	 */
+	void setBill(Booking_Bill value);
 
 } // Hotel_Booking

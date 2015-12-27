@@ -913,6 +913,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getHotel_Booking_Bill() {
+		return (EReference)hotel_BookingEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBooking_BookedService() {
 		return booking_BookedServiceEClass;
 	}
@@ -1810,6 +1819,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEReference(hotel_BookingEClass, HOTEL_BOOKING__INCLUDES);
 		createEReference(hotel_BookingEClass, HOTEL_BOOKING__ROOMS);
 		createEReference(hotel_BookingEClass, HOTEL_BOOKING__RESPONSIBLE_GUEST);
+		createEReference(hotel_BookingEClass, HOTEL_BOOKING__BILL);
 
 		booking_BookedServiceEClass = createEClass(BOOKING_BOOKED_SERVICE);
 		createEAttribute(booking_BookedServiceEClass, BOOKING_BOOKED_SERVICE__DATE);
@@ -2028,6 +2038,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		initEReference(getHotel_Booking_Includes(), this.getBooking_BookedService(), null, "includes", null, 0, -1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getHotel_Booking_Rooms(), this.getHotel_Room(), null, "rooms", null, 1, -1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getHotel_Booking_ResponsibleGuest(), this.getCompany_GuestRecord(), null, "responsibleGuest", null, 1, 1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHotel_Booking_Bill(), this.getBooking_Bill(), null, "bill", null, 1, 1, Hotel_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(booking_BookedServiceEClass, Booking_BookedService.class, "Booking_BookedService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBooking_BookedService_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Booking_BookedService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

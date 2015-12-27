@@ -98,6 +98,8 @@
         lowerBound="1" upperBound="-1" eType="#//Hotel_Room"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsibleGuest" ordered="false"
         lowerBound="1" eType="#//Company_GuestRecord"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bill" ordered="false" lowerBound="1"
+        eType="#//Booking_Bill"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Booking_BookedService">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
