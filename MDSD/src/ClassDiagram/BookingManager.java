@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link ClassDiagram.BookingManager#getHotel <em>Hotel</em>}</li>
  *   <li>{@link ClassDiagram.BookingManager#getRoomManager <em>Room Manager</em>}</li>
+ *   <li>{@link ClassDiagram.BookingManager#getGuestManager <em>Guest Manager</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getBookingManager()
@@ -77,6 +78,32 @@ public interface BookingManager extends EObject {
 	 * @generated
 	 */
 	void setRoomManager(RoomManager value);
+
+	/**
+	 * Returns the value of the '<em><b>Guest Manager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Guest Manager</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Guest Manager</em>' reference.
+	 * @see #setGuestManager(GuestManager)
+	 * @see ClassDiagram.ClassDiagramPackage#getBookingManager_GuestManager()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	GuestManager getGuestManager();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.BookingManager#getGuestManager <em>Guest Manager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Guest Manager</em>' reference.
+	 * @see #getGuestManager()
+	 * @generated
+	 */
+	void setGuestManager(GuestManager value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -168,5 +195,13 @@ public interface BookingManager extends EObject {
 	 * @generated NOT
 	 */
 	EList<Room_RoomType> findAvailableRoomTypes(Date start, Date end);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
+	 * @generated
+	 */
+	void findBooking(int bookingID);
 
 } // BookingManager

@@ -216,10 +216,15 @@
       <eParameters name="start" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eParameters name="end" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eOperations>
+    <eOperations name="findBooking" ordered="false" lowerBound="1">
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
         lowerBound="1" eType="#//Company_Hotel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roomManager" ordered="false"
         lowerBound="1" eType="#//RoomManager"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="guestManager" ordered="false"
+        lowerBound="1" eType="#//GuestManager"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomManager">
     <eOperations name="findRoom" ordered="false" lowerBound="1">
@@ -236,6 +241,31 @@
     <eOperations name="roomExists" ordered="false" lowerBound="1">
       <eParameters name="rooms" ordered="false" lowerBound="1" upperBound="-1" eType="#//Hotel_Room"/>
       <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        lowerBound="1" eType="#//Company_Hotel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GuestManager">
+    <eOperations name="createGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="adress" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="phoneNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="paymentInformation" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="editGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="removeGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="findGuestRecord" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="findGuestRecords" ordered="false" lowerBound="1">
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
         lowerBound="1" eType="#//Company_Hotel"/>
@@ -310,31 +340,6 @@
     </eOperations>
     <eOperations name="removeApplianceServer" ordered="false" lowerBound="1">
       <eParameters name="applianceService" ordered="false" lowerBound="1" eType="#//ApplianceType_ApplianceService"/>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
-        lowerBound="1" eType="#//Company_Hotel"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GuestManager">
-    <eOperations name="createGuestRecord" ordered="false" lowerBound="1">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="adress" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="phoneNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="paymentInformation" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="editGuestRecord" ordered="false" lowerBound="1">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="removeGuestRecord" ordered="false" lowerBound="1">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="findGuestRecord" ordered="false" lowerBound="1">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="findGuestRecords" ordered="false" lowerBound="1">
-      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
         lowerBound="1" eType="#//Company_Hotel"/>

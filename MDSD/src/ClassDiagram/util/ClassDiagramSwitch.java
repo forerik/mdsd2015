@@ -186,6 +186,12 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ClassDiagramPackage.GUEST_MANAGER: {
+				GuestManager guestManager = (GuestManager)theEObject;
+				T result = caseGuestManager(guestManager);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ClassDiagramPackage.STAFF_ADMINISTRATION: {
 				StaffAdministration staffAdministration = (StaffAdministration)theEObject;
 				T result = caseStaffAdministration(staffAdministration);
@@ -201,12 +207,6 @@ public class ClassDiagramSwitch<T> extends Switch<T> {
 			case ClassDiagramPackage.APPLIANCE_ADMINISTRATION: {
 				ApplianceAdministration applianceAdministration = (ApplianceAdministration)theEObject;
 				T result = caseApplianceAdministration(applianceAdministration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ClassDiagramPackage.GUEST_MANAGER: {
-				GuestManager guestManager = (GuestManager)theEObject;
-				T result = caseGuestManager(guestManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

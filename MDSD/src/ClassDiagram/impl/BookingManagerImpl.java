@@ -7,6 +7,7 @@ import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
 import ClassDiagram.Company_Hotel;
+import ClassDiagram.GuestManager;
 import ClassDiagram.Hotel_Booking;
 import ClassDiagram.Hotel_Room;
 import ClassDiagram.RoomManager;
@@ -38,6 +39,7 @@ import org.eclipse.emf.common.util.BasicEList;
  * <ul>
  *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getHotel <em>Hotel</em>}</li>
  *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getRoomManager <em>Room Manager</em>}</li>
+ *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getGuestManager <em>Guest Manager</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,6 +74,16 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected RoomManager roomManager;
+
+	/**
+	 * The cached value of the '{@link #getGuestManager() <em>Guest Manager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGuestManager()
+	 * @generated
+	 * @ordered
+	 */
+	protected GuestManager guestManager;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,6 +178,44 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		roomManager = newRoomManager;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER, oldRoomManager, roomManager));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GuestManager getGuestManager() {
+		if (guestManager != null && guestManager.eIsProxy()) {
+			InternalEObject oldGuestManager = (InternalEObject)guestManager;
+			guestManager = (GuestManager)eResolveProxy(oldGuestManager);
+			if (guestManager != oldGuestManager) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER, oldGuestManager, guestManager));
+			}
+		}
+		return guestManager;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GuestManager basicGetGuestManager() {
+		return guestManager;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGuestManager(GuestManager newGuestManager) {
+		GuestManager oldGuestManager = guestManager;
+		guestManager = newGuestManager;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER, oldGuestManager, guestManager));
 	}
 
 	/**
@@ -318,13 +368,29 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public void initBooking() {
-
+		
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
 		Date today = new Date();
 		
 		Scanner s = new Scanner(System.in);
 		String input;
 		String[] parts;
+		
+		
+		
+		// Find or create guest
+		System.out.println("Input ssn or input 'New' to create a new guest record");
+		boolean gotGuest = false;
+		while (!gotGuest) {
+			input = s.nextLine();
+			if (input.equals("New")) {
+				
+			}
+			else {
+				guestManager.findGuestRecord(input);
+			}
+		}
 		
 		// Input the start date
 		System.out.println("Input start date: (yyyy-mm-dd)");
@@ -413,7 +479,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		// Get the rooms
 		while(!getRooms());
 
-		//System.out.println(selectedRooms);
+		System.out.println(selectedRooms);
 		
 		// createBooking(start, end, selectedRooms, guest, numberOfPeople);
 		
@@ -580,6 +646,17 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void findBooking(int bookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -589,6 +666,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
 				if (resolve) return getRoomManager();
 				return basicGetRoomManager();
+			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+				if (resolve) return getGuestManager();
+				return basicGetGuestManager();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -606,6 +686,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
 				setRoomManager((RoomManager)newValue);
+				return;
+			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+				setGuestManager((GuestManager)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -625,6 +708,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
 				setRoomManager((RoomManager)null);
 				return;
+			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+				setGuestManager((GuestManager)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -641,6 +727,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return hotel != null;
 			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
 				return roomManager != null;
+			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+				return guestManager != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -686,6 +774,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE:
 				findAvailableRoomTypes((Date)arguments.get(0), (Date)arguments.get(1));
+				return null;
+			case ClassDiagramPackage.BOOKING_MANAGER___FIND_BOOKING__INT:
+				findBooking((Integer)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

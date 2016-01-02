@@ -76,10 +76,10 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 			case ClassDiagramPackage.FACILITY_FACILITY_TYPE: return createFacility_FacilityType();
 			case ClassDiagramPackage.BOOKING_MANAGER: return createBookingManager();
 			case ClassDiagramPackage.ROOM_MANAGER: return createRoomManager();
+			case ClassDiagramPackage.GUEST_MANAGER: return createGuestManager();
 			case ClassDiagramPackage.STAFF_ADMINISTRATION: return createStaffAdministration();
 			case ClassDiagramPackage.ROOM_ADMINISTRATION: return createRoomAdministration();
 			case ClassDiagramPackage.APPLIANCE_ADMINISTRATION: return createApplianceAdministration();
-			case ClassDiagramPackage.GUEST_MANAGER: return createGuestManager();
 			case ClassDiagramPackage.FACILITY_ADMINISTRATION: return createFacilityAdministration();
 			case ClassDiagramPackage.HOTEL_ADMINISTRATION: return createHotelAdministration();
 			case ClassDiagramPackage.BILL_MANAGER: return createBillManager();
