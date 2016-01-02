@@ -190,16 +190,6 @@
       <type xmi:type="uml:Class" href="ClassDiagram.uml#_bNZHEKS7EeW6u575sJ_x5Q"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_QEXM0KVuEeWrk5ny20Yhxg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QEXz4KVuEeWrk5ny20Yhxg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QEXz4aVuEeWrk5ny20Yhxg" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <memberEnd xmi:type="uml:Property" href="ClassDiagram.uml#_QEXz4qVuEeWrk5ny20Yhxg"/>
-    <memberEnd xmi:type="uml:Property" href="#_QEYa8KVuEeWrk5ny20Yhxg"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_QEYa8KVuEeWrk5ny20Yhxg" name="guestmanager" association="_QEXM0KVuEeWrk5ny20Yhxg">
-      <type xmi:type="uml:Class" href="ClassDiagram.uml#_db9xEKSzEeW6u575sJ_x5Q"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_RlBpIKWAEeWcLO0ArBstyQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RlCQMKWAEeWcLO0ArBstyQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RlC3QKWAEeWcLO0ArBstyQ" key="nature" value="UML_Nature"/>
@@ -228,6 +218,16 @@
     <memberEnd xmi:type="uml:Property" href="#_Y0uqUKyBEeWtTf6oWt_WHA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Y0uqUKyBEeWtTf6oWt_WHA" name="booking" association="_Y0ojsKyBEeWtTf6oWt_WHA">
       <type xmi:type="uml:Class" href="ClassDiagram.uml#_Lbg1UJKJEeW9h7ibhzFKTA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Y-o1ELEzEeW9D7gxslLV6g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y-tGgLEzEeW9D7gxslLV6g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y-ttkLEzEeW9D7gxslLV6g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="ClassDiagram.uml#_Y-ww4LEzEeW9D7gxslLV6g"/>
+    <memberEnd xmi:type="uml:Property" href="#_Y-x_ALEzEeW9D7gxslLV6g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Y-x_ALEzEeW9D7gxslLV6g" name="guestmanager" association="_Y-o1ELEzEeW9D7gxslLV6g">
+      <type xmi:type="uml:Class" href="ClassDiagram.uml#_db9xEKSzEeW6u575sJ_x5Q"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>

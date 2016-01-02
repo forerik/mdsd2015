@@ -59,29 +59,29 @@ public class main {
 
 		
 		
-		
+		/*
 		EList<Hotel_Room> bookingRooms = new BasicEList<Hotel_Room>();
 		
 		Date start = new Date();
 		Date end = new Date();
 		start.setMonth(1);;
-		end.setMonth(2);;
+		end.setMonth(2);; */
 		
 		// Creating the managers for the hotel
 		BookingManager bookingManager = factory.createBookingManager();
 		bookingManager.setHotel(theHotel);
-		bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
+		//bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
 
 		RoomManager roomManager = factory.createRoomManager();
 		roomManager.setHotel(theHotel);
 		bookingManager.setRoomManager(roomManager);
 		
 		GuestManager guestManager = factory.createGuestManager();
-		guestManager.setHotel(theHotel);
+		guestManager.setCompany(company);
 		bookingManager.setGuestManager(guestManager);
 
 		
-		bookingRooms.add(roomManager.findRoom(1));
+		//bookingRooms.add(roomManager.findRoom(1));
 		
 		BillManager billManager = factory.createBillManager();
 		billManager.setHotel(theHotel);

@@ -2,8 +2,10 @@
  */
 package ClassDiagram.impl;
 
+import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
-import ClassDiagram.Company_Hotel;
+import ClassDiagram.Company;
+import ClassDiagram.Company_GuestRecord;
 import ClassDiagram.GuestManager;
 
 import java.lang.reflect.InvocationTargetException;
@@ -25,22 +27,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.impl.GuestManagerImpl#getHotel <em>Hotel</em>}</li>
+ *   <li>{@link ClassDiagram.impl.GuestManagerImpl#getCompany <em>Company</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GuestManagerImpl extends MinimalEObjectImpl.Container implements GuestManager {
 	/**
-	 * The cached value of the '{@link #getHotel() <em>Hotel</em>}' reference.
+	 * The cached value of the '{@link #getCompany() <em>Company</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHotel()
+	 * @see #getCompany()
 	 * @generated
 	 * @ordered
 	 */
-	protected Company_Hotel hotel;
-
+	protected Company company;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,16 +66,16 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Company_Hotel getHotel() {
-		if (hotel != null && hotel.eIsProxy()) {
-			InternalEObject oldHotel = (InternalEObject)hotel;
-			hotel = (Company_Hotel)eResolveProxy(oldHotel);
-			if (hotel != oldHotel) {
+	public Company getCompany() {
+		if (company != null && company.eIsProxy()) {
+			InternalEObject oldCompany = (InternalEObject)company;
+			company = (Company)eResolveProxy(oldCompany);
+			if (company != oldCompany) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.GUEST_MANAGER__HOTEL, oldHotel, hotel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.GUEST_MANAGER__COMPANY, oldCompany, company));
 			}
 		}
-		return hotel;
+		return company;
 	}
 
 	/**
@@ -82,8 +83,8 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Company_Hotel basicGetHotel() {
-		return hotel;
+	public Company basicGetCompany() {
+		return company;
 	}
 
 	/**
@@ -91,11 +92,11 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHotel(Company_Hotel newHotel) {
-		Company_Hotel oldHotel = hotel;
-		hotel = newHotel;
+	public void setCompany(Company newCompany) {
+		Company oldCompany = company;
+		company = newCompany;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.GUEST_MANAGER__HOTEL, oldHotel, hotel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.GUEST_MANAGER__COMPANY, oldCompany, company));
 	}
 
 	/**
@@ -134,12 +135,17 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void findGuestRecord(String ssn) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Company_GuestRecord findGuestRecord(String ssn) {
+
+		for(Company_GuestRecord guest: company.getRecordsOf()) {
+			if (guest.getSsn().equals(ssn))
+				return guest;
+		}
+		
+		return null;
+		
 	}
 
 	/**
@@ -161,9 +167,9 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassDiagramPackage.GUEST_MANAGER__HOTEL:
-				if (resolve) return getHotel();
-				return basicGetHotel();
+			case ClassDiagramPackage.GUEST_MANAGER__COMPANY:
+				if (resolve) return getCompany();
+				return basicGetCompany();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,8 +182,8 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassDiagramPackage.GUEST_MANAGER__HOTEL:
-				setHotel((Company_Hotel)newValue);
+			case ClassDiagramPackage.GUEST_MANAGER__COMPANY:
+				setCompany((Company)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -191,8 +197,8 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.GUEST_MANAGER__HOTEL:
-				setHotel((Company_Hotel)null);
+			case ClassDiagramPackage.GUEST_MANAGER__COMPANY:
+				setCompany((Company)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -206,8 +212,8 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.GUEST_MANAGER__HOTEL:
-				return hotel != null;
+			case ClassDiagramPackage.GUEST_MANAGER__COMPANY:
+				return company != null;
 		}
 		return super.eIsSet(featureID);
 	}

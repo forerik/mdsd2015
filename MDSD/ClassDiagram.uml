@@ -574,8 +574,8 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_db9xEKSzEeW6u575sJ_x5Q" name="GuestManager">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_QEXz4qVuEeWrk5ny20Yhxg" name="hotel" type="_zJvf8JZsEeWWZpdeo7QpdA">
-      <association xmi:type="uml:Association" href="Hotel%20system.uml#_QEXM0KVuEeWrk5ny20Yhxg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Y-ww4LEzEeW9D7gxslLV6g" name="company" type="_1pT5sJZsEeWWZpdeo7QpdA">
+      <association xmi:type="uml:Association" href="Hotel%20system.uml#_Y-o1ELEzEeW9D7gxslLV6g"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_gLvKAKSzEeW6u575sJ_x5Q" name="createGuestRecord">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_nT2cMKSzEeW6u575sJ_x5Q" name="ssn">

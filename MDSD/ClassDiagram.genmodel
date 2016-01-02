@@ -237,7 +237,7 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagram.ecore#//GuestManager">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//GuestManager/hotel"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagram.ecore#//GuestManager/company"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagram.ecore#//GuestManager/createGuestRecord">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//GuestManager/createGuestRecord/ssn"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagram.ecore#//GuestManager/createGuestRecord/firstName"/>

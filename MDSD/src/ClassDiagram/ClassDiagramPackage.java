@@ -1409,13 +1409,13 @@ public interface ClassDiagramPackage extends EPackage {
 	int GUEST_MANAGER = 20;
 
 	/**
-	 * The feature id for the '<em><b>Hotel</b></em>' reference.
+	 * The feature id for the '<em><b>Company</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_MANAGER__HOTEL = 0;
+	int GUEST_MANAGER__COMPANY = 0;
 
 	/**
 	 * The number of structural features of the '<em>Guest Manager</em>' class.
@@ -3516,15 +3516,15 @@ public interface ClassDiagramPackage extends EPackage {
 	EClass getGuestManager();
 
 	/**
-	 * Returns the meta object for the reference '{@link ClassDiagram.GuestManager#getHotel <em>Hotel</em>}'.
+	 * Returns the meta object for the reference '{@link ClassDiagram.GuestManager#getCompany <em>Company</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Hotel</em>'.
-	 * @see ClassDiagram.GuestManager#getHotel()
+	 * @return the meta object for the reference '<em>Company</em>'.
+	 * @see ClassDiagram.GuestManager#getCompany()
 	 * @see #getGuestManager()
 	 * @generated
 	 */
-	EReference getGuestManager_Hotel();
+	EReference getGuestManager_Company();
 
 	/**
 	 * Returns the meta object for the '{@link ClassDiagram.GuestManager#createGuestRecord(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Create Guest Record</em>}' operation.
@@ -4911,12 +4911,12 @@ public interface ClassDiagramPackage extends EPackage {
 		EClass GUEST_MANAGER = eINSTANCE.getGuestManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Hotel</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Company</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GUEST_MANAGER__HOTEL = eINSTANCE.getGuestManager_Hotel();
+		EReference GUEST_MANAGER__COMPANY = eINSTANCE.getGuestManager_Company();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Guest Record</b></em>' operation.

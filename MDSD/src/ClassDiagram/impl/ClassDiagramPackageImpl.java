@@ -1444,7 +1444,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGuestManager_Hotel() {
+	public EReference getGuestManager_Company() {
 		return (EReference)guestManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1903,7 +1903,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(roomManagerEClass, ROOM_MANAGER___ROOM_EXISTS__ELIST_INT);
 
 		guestManagerEClass = createEClass(GUEST_MANAGER);
-		createEReference(guestManagerEClass, GUEST_MANAGER__HOTEL);
+		createEReference(guestManagerEClass, GUEST_MANAGER__COMPANY);
 		createEOperation(guestManagerEClass, GUEST_MANAGER___CREATE_GUEST_RECORD__STRING_STRING_STRING_STRING_STRING_STRING);
 		createEOperation(guestManagerEClass, GUEST_MANAGER___EDIT_GUEST_RECORD__STRING);
 		createEOperation(guestManagerEClass, GUEST_MANAGER___REMOVE_GUEST_RECORD__STRING);
@@ -2184,7 +2184,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(guestManagerEClass, GuestManager.class, "GuestManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGuestManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, GuestManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getGuestManager_Company(), this.getCompany(), null, "company", null, 1, 1, GuestManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getGuestManager__CreateGuestRecord__String_String_String_String_String_String(), null, "createGuestRecord", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);

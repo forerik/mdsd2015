@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ClassDiagram.GuestManager#getHotel <em>Hotel</em>}</li>
+ *   <li>{@link ClassDiagram.GuestManager#getCompany <em>Company</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getGuestManager()
@@ -22,30 +22,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GuestManager extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Hotel</b></em>' reference.
+	 * Returns the value of the '<em><b>Company</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Hotel</em>' reference isn't clear,
+	 * If the meaning of the '<em>Company</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hotel</em>' reference.
-	 * @see #setHotel(Company_Hotel)
-	 * @see ClassDiagram.ClassDiagramPackage#getGuestManager_Hotel()
+	 * @return the value of the '<em>Company</em>' reference.
+	 * @see #setCompany(Company)
+	 * @see ClassDiagram.ClassDiagramPackage#getGuestManager_Company()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Company_Hotel getHotel();
+	Company getCompany();
 
 	/**
-	 * Sets the value of the '{@link ClassDiagram.GuestManager#getHotel <em>Hotel</em>}' reference.
+	 * Sets the value of the '{@link ClassDiagram.GuestManager#getCompany <em>Company</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Hotel</em>' reference.
-	 * @see #getHotel()
+	 * @param value the new value of the '<em>Company</em>' reference.
+	 * @see #getCompany()
 	 * @generated
 	 */
-	void setHotel(Company_Hotel value);
+	void setCompany(Company value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,10 +74,11 @@ public interface GuestManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model ssnRequired="true" ssnOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void findGuestRecord(String ssn);
+	Company_GuestRecord findGuestRecord(String ssn);
 
 	/**
 	 * <!-- begin-user-doc -->

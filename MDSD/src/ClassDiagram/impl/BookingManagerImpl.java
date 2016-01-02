@@ -374,31 +374,45 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		Date today = new Date();
 		
 		Scanner s = new Scanner(System.in);
-		String input;
+		String input = "";
 		String[] parts;
 		
+		boolean cancel = false;
 		
 		
 		// Find or create guest
-		System.out.println("Input ssn or input 'New' to create a new guest record");
-		boolean gotGuest = false;
-		while (!gotGuest) {
+		Company_GuestRecord guest = null;
+		while (guest == null && !cancel) {
+			System.out.println("Input ssn or input 'New' to create a new guest record:");
 			input = s.nextLine();
-			if (input.equals("New")) {
-				
+			if (input.equals("Cancel")) {
+				cancel = true;
+				System.out.println("Canceled");
+			}
+			else if (input.equals("New")) {
+				System.out.println("Needs to be implemented!");		
+
 			}
 			else {
-				guestManager.findGuestRecord(input);
+				Company_GuestRecord foundGuest = guestManager.findGuestRecord(input);
+				if (foundGuest != null)
+					guest = foundGuest;
 			}
 		}
 		
 		// Input the start date
-		System.out.println("Input start date: (yyyy-mm-dd)");
+		if (!cancel)
+			System.out.println("Input start date: (yyyy-mm-dd)");
 		boolean allGood = false;
-		while (!allGood) {
+		while (!allGood && !cancel) {
 			input = s.nextLine();
 			parts = input.split("-");
-			if (parts.length != 3) {
+			if (input.equals("Cancel")) {
+				cancel = true;
+				System.out.println("Canceled");
+				break;
+			}
+			else if (parts.length != 3) {
 				System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
 			}
 			else 
@@ -427,12 +441,18 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 
 
 		// Input the end date
-		System.out.println("Input end date: (yyyy-mm-dd)");
+		if (!cancel)
+			System.out.println("Input end date: (yyyy-mm-dd)");
 		allGood = false;
-		while (!allGood) {
+		while (!allGood && !cancel) {
 			input = s.nextLine();
 			parts = input.split("-");
-			if (parts.length != 3) {
+			if (input.equals("Cancel")) {
+				cancel = true;
+				System.out.println("Canceled");
+				break;
+			}
+			else if (parts.length != 3) {
 				System.out.println("Wrong input. The end date needs to be in format 'yyyy-mm-dd'");
 			}
 			else 
@@ -457,31 +477,39 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				}
 			}
 		}
-		System.out.println(start + " - " + end);
+		if (!cancel) {
+			System.out.println(start + " - " + end);
 				
 		
-		// Input the number of people
-		System.out.println("Input number of people:");
-		input = s.nextLine();
-		while (!isNumeric(input)) {
+			// Input the number of people
+			System.out.println("Input number of people:");
+			input = s.nextLine();
+		}
+		while (!isNumeric(input) && !cancel) {
 			System.out.println("Wrong input. The number of people needs to be an integer.");
 				input = s.nextLine();
 				parts = input.split("-");	
 		}
-		numberOfPeople = Integer.parseInt(input);
+		if (!cancel)
+			numberOfPeople = Integer.parseInt(input);
 		
 		
 		// Get the room types
-		while(!getRoomTypes());
+		while(!cancel && !getRoomTypes());
+		if (selectedRoomTypes.size() == 0)
+			cancel = true;
 		
 		selectedRooms = new BasicEList<Hotel_Room>();
 
 		// Get the rooms
-		while(!getRooms());
-
-		System.out.println(selectedRooms);
+		while(!cancel && !getRooms());
+		if (selectedRooms.size() == 0)
+			cancel = true;
 		
-		// createBooking(start, end, selectedRooms, guest, numberOfPeople);
+		if (!cancel)
+			createBooking(start, end, selectedRooms, guest, numberOfPeople);
+		
+		// System.out.println("Bookings \n" + hotel.getListOfBookings());
 		
 		
 		s.close();
@@ -497,7 +525,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		EList<Room_RoomType> roomtypes = hotel.getListOfRoomTypes();
 		selectedRoomTypes = new BasicEList<Room_RoomType>();
 		
-		System.out.println("Select roomtypes that you want. \n"
+		System.out.println("Select roomtypes that you want: \n"
 				+  "(Input the indecies seperated by a '-' for the room types that you want.) \n"
 				+  "(Input 'all' if you want any kind of room.)");
 		for (int i = 0; i < roomtypes.size(); i++) {
@@ -506,7 +534,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		}
 		Scanner s = new Scanner(System.in);
 		String input = s.nextLine();
-		if (input.equals("all")) {
+		if (input.equals("Cancel")) {
+			System.out.println("Canceled");
+			selectedRoomTypes = new BasicEList<Room_RoomType>();
+			return true;
+		}
+		else if (input.equals("all")) {
 			selectedRoomTypes = hotel.getListOfRoomTypes();
 		}
 		else {
@@ -552,7 +585,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean getRooms()  {  
-		System.out.println("Select the rooms that you want by typing in the room numbers separated by '-'.");
+		System.out.println("Select the rooms that you want by typing in the room numbers separated by '-':");
 		
 		EList<Hotel_Room> availableRooms = new BasicEList<>();
 		
@@ -576,7 +609,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		String input = s.nextLine();
 		String[] parts = input.split("-");
 		for (int i = 0; i < parts.length; i++) {
-			if (!isNumeric(parts[i]))
+			if (input.equals("Cancel")) {
+				System.out.println("Canceled");
+				selectedRooms = new BasicEList<>();
+				return true;
+			}
+			else if (!isNumeric(parts[i]))
 				return false;
 			int roomNumber = Integer.parseInt(parts[i]);
 			if (!roomManager.roomExists(availableRooms, roomNumber))

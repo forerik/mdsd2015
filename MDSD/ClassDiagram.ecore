@@ -267,8 +267,8 @@
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
-        lowerBound="1" eType="#//Company_Hotel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="company" ordered="false"
+        lowerBound="1" eType="#//Company"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffAdministration">
     <eOperations name="addStaff" ordered="false" lowerBound="1">
