@@ -512,7 +512,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		// System.out.println("Bookings \n" + hotel.getListOfBookings());
 		
 		
-		s.close();
 		
 	}
 	
