@@ -230,4 +230,34 @@
       <type xmi:type="uml:Class" href="ClassDiagram.uml#_db9xEKSzEeW6u575sJ_x5Q"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_m9UbwLIKEeW9D7gxslLV6g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m9Vp4LIKEeW9D7gxslLV6g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m9Vp4bIKEeW9D7gxslLV6g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="ClassDiagram.uml#_m9Vp4rIKEeW9D7gxslLV6g"/>
+    <memberEnd xmi:type="uml:Property" href="#_m9Vp47IKEeW9D7gxslLV6g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_m9Vp47IKEeW9D7gxslLV6g" name="bookingmanager" association="_m9UbwLIKEeW9D7gxslLV6g">
+      <type xmi:type="uml:Class" href="ClassDiagram.uml#_BhMAIJpeEeWudYIMZ7ExHw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ulB0ALIKEeW9D7gxslLV6g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ulCbELIKEeW9D7gxslLV6g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ulDCILIKEeW9D7gxslLV6g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="ClassDiagram.uml#_ulDCIbIKEeW9D7gxslLV6g"/>
+    <memberEnd xmi:type="uml:Property" href="#_ulDpMLIKEeW9D7gxslLV6g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ulDpMLIKEeW9D7gxslLV6g" name="bookingmanager" association="_ulB0ALIKEeW9D7gxslLV6g">
+      <type xmi:type="uml:Class" href="ClassDiagram.uml#_BhMAIJpeEeWudYIMZ7ExHw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1xT0gLIKEeW9D7gxslLV6g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1xUbkLIKEeW9D7gxslLV6g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1xUbkbIKEeW9D7gxslLV6g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="ClassDiagram.uml#_1xUbkrIKEeW9D7gxslLV6g"/>
+    <memberEnd xmi:type="uml:Property" href="#_1xVCoLIKEeW9D7gxslLV6g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1xVCoLIKEeW9D7gxslLV6g" name="bookingmanager" association="_1xT0gLIKEeW9D7gxslLV6g">
+      <type xmi:type="uml:Class" href="ClassDiagram.uml#_BhMAIJpeEeWudYIMZ7ExHw"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>

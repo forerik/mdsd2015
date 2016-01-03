@@ -798,14 +798,13 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Hotel_Booking findBooking(int bookingID) {
-		for (Hotel_Booking b: getHotel().getListOfBookings()){
-			if (bookingID == b.getBookingID()){
+
+		for (Hotel_Booking b: hotel.getListOfBookings())
+			if (b.getBookingID() == bookingID)
 				return b;
-			}
-		}
 		return null;
 	}
 

@@ -229,9 +229,8 @@ public interface BookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return 
 	 * @model bookingIDRequired="true" bookingIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Hotel_Booking findBooking(int bookingID);
 

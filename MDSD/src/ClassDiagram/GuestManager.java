@@ -50,9 +50,8 @@ public interface GuestManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return 
 	 * @model ssnRequired="true" ssnOrdered="false" firstNameRequired="true" firstNameOrdered="false" lastNameRequired="true" lastNameOrdered="false" adressRequired="true" adressOrdered="false" phoneNumberRequired="true" phoneNumberOrdered="false" paymentInformationRequired="true" paymentInformationOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Company_GuestRecord createGuestRecord(String ssn, String firstName, String lastName, String adress, String phoneNumber, String paymentInformation);
 
@@ -75,9 +74,8 @@ public interface GuestManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return 
 	 * @model ssnRequired="true" ssnOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Company_GuestRecord findGuestRecord(String ssn);
 
