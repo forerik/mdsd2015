@@ -159,11 +159,12 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void pay(int bookingID) {
+	public double pay(int bookingID) {
 		double toBePayed = getAmount(bookingID);
 		//API call to bank here
 		findBill(bookingID).setPaidAmount(toBePayed);
-	}
+		return toBePayed;
+	}	
 
 	/**
 	 * <!-- begin-user-doc -->
