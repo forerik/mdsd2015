@@ -155,6 +155,7 @@ public class main {
 			else if (input.equals("3")) {
 				System.out.println("All bookings in the hotel:");
 				for(Hotel_Booking booking: theHotel.getListOfBookings()) {
+					System.out.println("Booking number: " + booking.getBookingID());
 					System.out.println("  Responsible guest: " + showGuest(booking.getResponsibleGuest()));
 					System.out.println("    Price " + booking.getPrice() + ":-");
 					System.out.println("    Payed " + booking.getBill().getPaidAmount() + ":-");
@@ -167,10 +168,31 @@ public class main {
 			}
 			else if (input.equals("4"))
 				bookingManager.initBooking();				
-			else if (input.equals("5"))
-				System.out.println("Not implemented yet");
-			else if (input.equals("6"))
-				System.out.println("Not implemented yet");
+			else if (input.equals("5")){
+				System.out.println("Check in. Type in the booking number:");
+				input = s.nextLine();
+				int bookingID = Integer.parseInt(input);
+				if(bookingManager.findBooking(bookingID).equals(null)){
+					System.out.println("Booking does not exist!");
+				}else{
+					bookingManager.checkIn(bookingID);
+					System.out.println("Checked in: " + bookingManager.findBooking(bookingID).isCheckedIn());
+				}
+				
+				
+			}
+			else if (input.equals("6")){
+				System.out.println("Check out. Type in the booking number");
+				input = s.nextLine();
+				int bookingID = Integer.parseInt(input);
+				if(bookingManager.findBooking(bookingID).equals(null)){
+					System.out.println("Booking does not exist!");
+				}else{
+					bookingManager.checkOut(bookingID);
+					System.out.println("Checked out: " + bookingManager.findBooking(bookingID).isCheckedIn());
+				}
+				
+			}
 
 			
 			System.out.println();
