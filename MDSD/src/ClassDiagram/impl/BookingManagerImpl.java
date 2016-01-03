@@ -288,6 +288,10 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		
 		hotel.getListOfBookings().add(booking);	
 		
+		Booking_Bill bill = factory.createBooking_Bill();
+		booking.setBill(bill);
+		booking.setBookingID(hotel.getListOfBookings().size());
+		
 		return booking;
 	}
 
@@ -441,8 +445,24 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				System.out.println("Canceled");
 			}
 			else if (input.equals("New")) {
-				System.out.println("Needs to be implemented!");		
-
+				boolean guestExists = false;
+				System.out.println("Input ssn:");
+				input = s.nextLine();
+				guest = guestManager.findGuestRecord(input);
+				if (guest != null) {
+					System.out.println("Guest already exists: " + guest.getName());
+					guestExists = true;
+				}
+				if (!guestExists) {		
+					String ssn = input;
+					System.out.println("Input first name:");
+					input = s.nextLine();
+					String firstName = input;
+					System.out.println("Input last name:");
+					input = s.nextLine();
+					String lastName = input;
+					guest = guestManager.createGuestRecord(ssn, firstName, lastName, null, null, null);	
+				}
 			}
 			else {
 				Company_GuestRecord foundGuest = guestManager.findGuestRecord(input);
@@ -546,43 +566,41 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		
 		
 		// Get the room types
-		while(!cancel && !getRoomTypes());
-		if (selectedRoomTypes.size() == 0)
-			cancel = true;
+		while(!cancel && !getRoomTypes())
+		if (!cancel)
+			if (selectedRoomTypes.size() == 0)
+				cancel = true;
 		
 		selectedRooms = new BasicEList<Hotel_Room>();
 
 		// Get the rooms
 		while(!cancel && !getRooms());
-		if (selectedRooms.size() == 0)
-			cancel = true;
+		if (!cancel)
+			if (selectedRooms.size() == 0)
+				cancel = true;
+		
 		Hotel_Booking booking = null;
 		if (!cancel) {
 			booking = createBooking(start, end, selectedRooms, guest, numberOfPeople);
-	
+
 			double price = 0;
 			for (Hotel_Room room: selectedRooms) {
 				price += room.getRoomType().getPrice();
 			}
 			
 			booking.setPrice(price);
-			
-			ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
-			Booking_Bill bill = factory.createBooking_Bill();
-			booking.setBill(bill);
-	//		booking.getBill().setPaidAmount(0);;
-						
 		}
 		boolean payed = false;
 		if (!payed && !cancel) {
 
 			System.out.println("Do you want to pay? (y/n)");
 			input = s.nextLine();
-			if (input == "y") {
-				billManager.pay(booking.getBookingID());
+			if (input.equals("y")) {
+				double amount = billManager.pay(booking.getBookingID());
+				System.out.println("Payed in full: " + amount + ":-");
 				payed = true;
 			}
-			else if (input == "n") {
+			else if (input.equals("n")) {
 				payed = true;
 			}
 		}

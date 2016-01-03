@@ -118,8 +118,6 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 	 * @generated NOT
 	 */
 	public Booking_Bill findBill(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
 		for (Hotel_Booking b: getHotel().getListOfBookings()){
 			if (bookingID == b.getBookingID()){
 				return b.getBill();
@@ -148,7 +146,7 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 		double sum = 0;
 		for (Hotel_Booking b: getHotel().getListOfBookings()){
 			if (bookingID == b.getBookingID()){
-				sum = b.getPrice() - findBill(bookingID).getPaidAmount();
+				sum = b.getPrice() - b.getBill().getPaidAmount();
 			}
 		}
 		return sum;

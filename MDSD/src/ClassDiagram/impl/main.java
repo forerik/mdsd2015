@@ -11,15 +11,12 @@ import ClassDiagram.*;
 import org.eclipse.emf.common.util.BasicEList;
 
 public class main {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		// Creating the factory
-		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
-//		ClassDiagramPackage classes = ClassDiagramPackage.init();
-		// Creating the company
-//		Company company2 = factory.create(classes.getCompany());		
+		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();	
 
 		Company company = factory.createCompany();		
 		company.setName("The company");
@@ -30,7 +27,79 @@ public class main {
 		
 		// Adding the hotels to the company
 		company.getOwns().add(theHotel);
+
+		BookingManager bookingManager = factory.createBookingManager();
+
+		init(company, theHotel, bookingManager);
 		
+
+		
+		
+		Scanner s = new Scanner(System.in);
+		String input;
+		
+		while(true) {
+			System.out.println("Select what you want to do:");
+			System.out.println("1: View all guests");
+			System.out.println("2: View all rooms");
+			System.out.println("3: View all bookings");
+			System.out.println("4: Create a new booking");
+			System.out.println("5: Check in");
+			System.out.println("6: Check out");
+			input = s.nextLine();
+			System.out.println();
+
+			if (input.equals("1")) {
+				System.out.println("All guests in the company:");
+				for(Company_GuestRecord guest: company.getRecordsOf()) {
+					System.out.println(showGuest(guest) );
+				}
+			}
+			else if (input.equals("2")) {
+				System.out.println("All rooms in the hotel:");
+				for(Hotel_Room aRoom: theHotel.getListOfRooms()) {
+					System.out.println(showRoom(aRoom));
+				}
+			}
+			else if (input.equals("3")) {
+				System.out.println("All bookings in the hotel:");
+				for(Hotel_Booking booking: theHotel.getListOfBookings()) {
+					System.out.println("  Responsible guest: " + showGuest(booking.getResponsibleGuest()));
+					System.out.println("    Price " + booking.getPrice() + ":-");
+					System.out.println("    Payed " + booking.getBill().getPaidAmount() + ":-");
+					System.out.println("    Checked in " + booking.isCheckedIn());
+					System.out.println("    " + booking.getStartDate() + " - " + booking.getEndDate());
+					for(Hotel_Room aRoom: booking.getRooms()) {
+						System.out.println("    " + showRoom(aRoom));
+					}
+				}
+			}
+			else if (input.equals("4"))
+				bookingManager.initBooking();				
+			else if (input.equals("5"))
+				bookingManager.checkIn(0);
+			else if (input.equals("6"))
+				bookingManager.checkOut(0);
+
+			
+			System.out.println();
+		
+		}
+		
+		
+	}
+	
+	public static String showGuest(Company_GuestRecord guest) {
+		return "  " +guest.getName() + " - " + guest.getSsn();
+	}
+	public static String showRoom(Hotel_Room room) {
+		return "  " + room.getRoomNumber() + " - " + room.getRoomType().getName();
+	}
+	
+	public static void init(Company company, Company_Hotel theHotel, BookingManager bookingManager) {
+
+		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();	
+
 		// Creating the room types
 		Room_RoomType singleRoom = factory.createRoom_RoomType();
 		Room_RoomType doubleRoom = factory.createRoom_RoomType();
@@ -82,7 +151,6 @@ public class main {
 		
 			
 		// Creating the managers for the hotel and company
-		BookingManager bookingManager = factory.createBookingManager();
 		bookingManager.setHotel(theHotel);
 
 		RoomManager roomManager = factory.createRoomManager();
@@ -95,6 +163,7 @@ public class main {
 		
 		BillManager billManager = factory.createBillManager();
 		billManager.setHotel(theHotel);	
+		bookingManager.setBillManager(billManager);
 
 		// Creating bookings
 		EList<Hotel_Room> bookingRooms = new BasicEList<Hotel_Room>();
@@ -105,7 +174,7 @@ public class main {
 		Date end = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
 		String dateInString = "2016-02-01 15:00:00";
-		String dateInString2 = "2016-02-10 11:00:00";
+		String dateInString2 = "2016-02-15 11:00:00";
 		try {
 			start = sdf.parse(dateInString);
 			end = sdf.parse(dateInString2);
@@ -121,10 +190,12 @@ public class main {
 			price += theRoom.getRoomType().getPrice();
 		}
 		
+		theBooking.setBookingID(theHotel.getListOfBookings().size());
 		theBooking.setPrice(price);
 		
 		Booking_Bill bill = factory.createBooking_Bill();
 		theBooking.setBill(bill);
+<<<<<<< HEAD
 		
 		Scanner s = new Scanner(System.in);
 		String input;
@@ -200,13 +271,7 @@ public class main {
 		}
 		
 		
+=======
+>>>>>>> origin/master
 	}
-	
-	public static String showGuest(Company_GuestRecord guest) {
-		return "  " +guest.getName() + " - " + guest.getSsn();
-	}
-	public static String showRoom(Hotel_Room room) {
-		return "  " + room.getRoomNumber() + " - " + room.getRoomType().getName();
-	}
-	
 }
