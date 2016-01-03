@@ -703,6 +703,10 @@
         <element xmi:type="uml:Property" href="ClassDiagram.uml#_U7rn4LExEeW9D7gxslLV6g"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_VFC_QbExEeW9D7gxslLV6g"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_qXp9ALH8EeW9D7gxslLV6g" type="3012">
+        <element xmi:type="uml:Property" href="ClassDiagram.uml#_qWITALH8EeW9D7gxslLV6g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qXp9AbH8EeW9D7gxslLV6g"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_Fzgw8ZpeEeWudYIMZ7ExHw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_Fzgw8ppeEeWudYIMZ7ExHw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Fzgw85peEeWudYIMZ7ExHw"/>

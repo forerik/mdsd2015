@@ -152,6 +152,10 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 				return createGuestManagerAdapter();
 			}
 			@Override
+			public Adapter caseBillManager(BillManager object) {
+				return createBillManagerAdapter();
+			}
+			@Override
 			public Adapter caseStaffAdministration(StaffAdministration object) {
 				return createStaffAdministrationAdapter();
 			}
@@ -170,10 +174,6 @@ public class ClassDiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseHotelAdministration(HotelAdministration object) {
 				return createHotelAdministrationAdapter();
-			}
-			@Override
-			public Adapter caseBillManager(BillManager object) {
-				return createBillManagerAdapter();
 			}
 			@Override
 			public Adapter caseFacilityManager(FacilityManager object) {

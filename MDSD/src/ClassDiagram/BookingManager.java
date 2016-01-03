@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ClassDiagram.BookingManager#getHotel <em>Hotel</em>}</li>
  *   <li>{@link ClassDiagram.BookingManager#getRoomManager <em>Room Manager</em>}</li>
  *   <li>{@link ClassDiagram.BookingManager#getGuestManager <em>Guest Manager</em>}</li>
+ *   <li>{@link ClassDiagram.BookingManager#getBillManager <em>Bill Manager</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getBookingManager()
@@ -104,6 +105,32 @@ public interface BookingManager extends EObject {
 	 * @generated
 	 */
 	void setGuestManager(GuestManager value);
+
+	/**
+	 * Returns the value of the '<em><b>Bill Manager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bill Manager</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bill Manager</em>' reference.
+	 * @see #setBillManager(BillManager)
+	 * @see ClassDiagram.ClassDiagramPackage#getBookingManager_BillManager()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	BillManager getBillManager();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.BookingManager#getBillManager <em>Bill Manager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bill Manager</em>' reference.
+	 * @see #getBillManager()
+	 * @generated
+	 */
+	void setBillManager(BillManager value);
 
 	/**
 	 * <!-- begin-user-doc -->

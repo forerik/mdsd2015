@@ -154,6 +154,8 @@ public class main {
 				for(Hotel_Booking booking: theHotel.getListOfBookings()) {
 					System.out.println("  Responsible guest: " + showGuest(booking.getResponsibleGuest()));
 					System.out.println("    Price " + booking.getPrice() + ":-");
+					System.out.println("    Payed " + booking.getBill().getPaidAmount() + ":-");
+					System.out.println("    Checked in " + booking.isCheckedIn());
 					System.out.println("    " + booking.getStartDate() + " - " + booking.getEndDate());
 					for(Hotel_Room aRoom: booking.getRooms()) {
 						System.out.println("    " + showRoom(aRoom));

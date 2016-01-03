@@ -77,12 +77,12 @@ public class ClassDiagramFactoryImpl extends EFactoryImpl implements ClassDiagra
 			case ClassDiagramPackage.BOOKING_MANAGER: return createBookingManager();
 			case ClassDiagramPackage.ROOM_MANAGER: return createRoomManager();
 			case ClassDiagramPackage.GUEST_MANAGER: return createGuestManager();
+			case ClassDiagramPackage.BILL_MANAGER: return createBillManager();
 			case ClassDiagramPackage.STAFF_ADMINISTRATION: return createStaffAdministration();
 			case ClassDiagramPackage.ROOM_ADMINISTRATION: return createRoomAdministration();
 			case ClassDiagramPackage.APPLIANCE_ADMINISTRATION: return createApplianceAdministration();
 			case ClassDiagramPackage.FACILITY_ADMINISTRATION: return createFacilityAdministration();
 			case ClassDiagramPackage.HOTEL_ADMINISTRATION: return createHotelAdministration();
-			case ClassDiagramPackage.BILL_MANAGER: return createBillManager();
 			case ClassDiagramPackage.FACILITY_MANAGER: return createFacilityManager();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");

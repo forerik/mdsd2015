@@ -2,7 +2,9 @@
  */
 package ClassDiagram.impl;
 
+import ClassDiagram.BillManager;
 import ClassDiagram.BookingManager;
+import ClassDiagram.Booking_Bill;
 import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
@@ -40,6 +42,7 @@ import org.eclipse.emf.common.util.BasicEList;
  *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getHotel <em>Hotel</em>}</li>
  *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getRoomManager <em>Room Manager</em>}</li>
  *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getGuestManager <em>Guest Manager</em>}</li>
+ *   <li>{@link ClassDiagram.impl.BookingManagerImpl#getBillManager <em>Bill Manager</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,6 +87,16 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected GuestManager guestManager;
+
+	/**
+	 * The cached value of the '{@link #getBillManager() <em>Bill Manager</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBillManager()
+	 * @generated
+	 * @ordered
+	 */
+	protected BillManager billManager;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,6 +229,44 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		guestManager = newGuestManager;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER, oldGuestManager, guestManager));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BillManager getBillManager() {
+		if (billManager != null && billManager.eIsProxy()) {
+			InternalEObject oldBillManager = (InternalEObject)billManager;
+			billManager = (BillManager)eResolveProxy(oldBillManager);
+			if (billManager != oldBillManager) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER, oldBillManager, billManager));
+			}
+		}
+		return billManager;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BillManager basicGetBillManager() {
+		return billManager;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBillManager(BillManager newBillManager) {
+		BillManager oldBillManager = billManager;
+		billManager = newBillManager;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER, oldBillManager, billManager));
 	}
 
 	/**
@@ -504,9 +555,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		while(!cancel && !getRooms());
 		if (selectedRooms.size() == 0)
 			cancel = true;
-		
+		Hotel_Booking booking = null;
 		if (!cancel) {
-			Hotel_Booking booking = createBooking(start, end, selectedRooms, guest, numberOfPeople);
+			booking = createBooking(start, end, selectedRooms, guest, numberOfPeople);
 	
 			double price = 0;
 			for (Hotel_Room room: selectedRooms) {
@@ -514,19 +565,24 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			}
 			
 			booking.setPrice(price);
-/*			
+			
 			ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
 			Booking_Bill bill = factory.createBooking_Bill();
 			booking.setBill(bill);
-			*/			
+			booking.getBill().setPaidAmount(0);;
+						
 		}
 		boolean payed = false;
 		if (!payed && !cancel) {
 
-			System.out.println("Do you want to pay? (y/n");
+			System.out.println("Do you want to pay? (y/n)");
 			input = s.nextLine();
-			if (input == "") {
-				
+			if (input == "y") {
+				billManager.pay(booking.getBookingID());
+				payed = true;
+			}
+			else if (input == "n") {
+				payed = true;
 			}
 		}
 
@@ -732,6 +788,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
 				if (resolve) return getGuestManager();
 				return basicGetGuestManager();
+			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+				if (resolve) return getBillManager();
+				return basicGetBillManager();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -752,6 +811,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
 				setGuestManager((GuestManager)newValue);
+				return;
+			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+				setBillManager((BillManager)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -774,6 +836,9 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
 				setGuestManager((GuestManager)null);
 				return;
+			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+				setBillManager((BillManager)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -792,6 +857,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 				return roomManager != null;
 			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
 				return guestManager != null;
+			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+				return billManager != null;
 		}
 		return super.eIsSet(featureID);
 	}

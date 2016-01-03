@@ -688,6 +688,15 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBookingManager_BillManager() {
+		return (EReference)bookingManagerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int() {
 		return bookingManagerEClass.getEOperations().get(0);
 	}
@@ -1880,6 +1889,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__HOTEL);
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__ROOM_MANAGER);
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__GUEST_MANAGER);
+		createEReference(bookingManagerEClass, BOOKING_MANAGER__BILL_MANAGER);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_IN__INT);
@@ -1909,6 +1919,14 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(guestManagerEClass, GUEST_MANAGER___REMOVE_GUEST_RECORD__STRING);
 		createEOperation(guestManagerEClass, GUEST_MANAGER___FIND_GUEST_RECORD__STRING);
 		createEOperation(guestManagerEClass, GUEST_MANAGER___FIND_GUEST_RECORDS__STRING_STRING);
+
+		billManagerEClass = createEClass(BILL_MANAGER);
+		createEReference(billManagerEClass, BILL_MANAGER__HOTEL);
+		createEOperation(billManagerEClass, BILL_MANAGER___ADD_PURCHASED_SERVICE__STRING_STRING_DOUBLE);
+		createEOperation(billManagerEClass, BILL_MANAGER___FIND_BILL__INT);
+		createEOperation(billManagerEClass, BILL_MANAGER___CREATE_RECEIPT__INT);
+		createEOperation(billManagerEClass, BILL_MANAGER___GET_AMOUNT__INT);
+		createEOperation(billManagerEClass, BILL_MANAGER___PAY__INT);
 
 		staffAdministrationEClass = createEClass(STAFF_ADMINISTRATION);
 		createEReference(staffAdministrationEClass, STAFF_ADMINISTRATION__HOTEL);
@@ -1954,14 +1972,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(hotelAdministrationEClass, HOTEL_ADMINISTRATION___ADD_HOTEL__STRING);
 		createEOperation(hotelAdministrationEClass, HOTEL_ADMINISTRATION___EDIT_HOTEL__COMPANY_HOTEL);
 		createEOperation(hotelAdministrationEClass, HOTEL_ADMINISTRATION___REMOVE_HOTEL__COMPANY_HOTEL);
-
-		billManagerEClass = createEClass(BILL_MANAGER);
-		createEReference(billManagerEClass, BILL_MANAGER__HOTEL);
-		createEOperation(billManagerEClass, BILL_MANAGER___ADD_PURCHASED_SERVICE__STRING_STRING_DOUBLE);
-		createEOperation(billManagerEClass, BILL_MANAGER___FIND_BILL__INT);
-		createEOperation(billManagerEClass, BILL_MANAGER___CREATE_RECEIPT__INT);
-		createEOperation(billManagerEClass, BILL_MANAGER___GET_AMOUNT__INT);
-		createEOperation(billManagerEClass, BILL_MANAGER___PAY__INT);
 
 		facilityManagerEClass = createEClass(FACILITY_MANAGER);
 		createEReference(facilityManagerEClass, FACILITY_MANAGER__HOTEL);
@@ -2116,6 +2126,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		initEReference(getBookingManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingManager_RoomManager(), this.getRoomManager(), null, "roomManager", null, 1, 1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingManager_GuestManager(), this.getGuestManager(), null, "guestManager", null, 1, 1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingManager_BillManager(), this.getBillManager(), null, "billManager", null, 1, 1, BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getBookingManager__CreateBooking__Date_Date_EList_Company_GuestRecord_int(), null, "createBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2206,6 +2217,26 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		op = initEOperation(getGuestManager__FindGuestRecords__String_String(), null, "findGuestRecords", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(billManagerEClass, BillManager.class, "BillManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBillManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, BillManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getBillManager__AddPurchasedService__String_String_double(), null, "addPurchasedService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "item", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBillManager__FindBill__int(), null, "findBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBillManager__CreateReceipt__int(), null, "createReceipt", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBillManager__GetAmount__int(), null, "getAmount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBillManager__Pay__int(), null, "pay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffAdministrationEClass, StaffAdministration.class, "StaffAdministration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStaffAdministration_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, StaffAdministration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2322,26 +2353,6 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 
 		op = initEOperation(getHotelAdministration__RemoveHotel__Company_Hotel(), null, "removeHotel", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getCompany_Hotel(), "hotel", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(billManagerEClass, BillManager.class, "BillManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBillManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, BillManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getBillManager__AddPurchasedService__String_String_double(), null, "addPurchasedService", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "item", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBillManager__FindBill__int(), null, "findBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBillManager__CreateReceipt__int(), null, "createReceipt", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBillManager__GetAmount__int(), null, "getAmount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBillManager__Pay__int(), null, "pay", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(facilityManagerEClass, FacilityManager.class, "FacilityManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFacilityManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, FacilityManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -1122,13 +1122,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int BOOKING_MANAGER__GUEST_MANAGER = 2;
 
 	/**
+	 * The feature id for the '<em><b>Bill Manager</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_MANAGER__BILL_MANAGER = 3;
+
+	/**
 	 * The number of structural features of the '<em>Booking Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER_FEATURE_COUNT = 3;
+	int BOOKING_MANAGER_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Create Booking</em>' operation.
@@ -1265,7 +1274,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getHotelAdministration()
 	 * @generated
 	 */
-	int HOTEL_ADMINISTRATION = 25;
+	int HOTEL_ADMINISTRATION = 26;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.BillManagerImpl <em>Bill Manager</em>}' class.
@@ -1275,7 +1284,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBillManager()
 	 * @generated
 	 */
-	int BILL_MANAGER = 26;
+	int BILL_MANAGER = 21;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.StaffAdministrationImpl <em>Staff Administration</em>}' class.
@@ -1285,7 +1294,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getStaffAdministration()
 	 * @generated
 	 */
-	int STAFF_ADMINISTRATION = 21;
+	int STAFF_ADMINISTRATION = 22;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.RoomManagerImpl <em>Room Manager</em>}' class.
@@ -1386,7 +1395,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getRoomAdministration()
 	 * @generated
 	 */
-	int ROOM_ADMINISTRATION = 22;
+	int ROOM_ADMINISTRATION = 23;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.ApplianceAdministrationImpl <em>Appliance Administration</em>}' class.
@@ -1396,7 +1405,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getApplianceAdministration()
 	 * @generated
 	 */
-	int APPLIANCE_ADMINISTRATION = 23;
+	int APPLIANCE_ADMINISTRATION = 24;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagram.impl.GuestManagerImpl <em>Guest Manager</em>}' class.
@@ -1479,6 +1488,88 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int GUEST_MANAGER_OPERATION_COUNT = 5;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.FacilityAdministrationImpl <em>Facility Administration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.FacilityAdministrationImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacilityAdministration()
+	 * @generated
+	 */
+	int FACILITY_ADMINISTRATION = 25;
+
+	/**
+	 * The feature id for the '<em><b>Hotel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER__HOTEL = 0;
+
+	/**
+	 * The number of structural features of the '<em>Bill Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Add Purchased Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER___ADD_PURCHASED_SERVICE__STRING_STRING_DOUBLE = 0;
+
+	/**
+	 * The operation id for the '<em>Find Bill</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER___FIND_BILL__INT = 1;
+
+	/**
+	 * The operation id for the '<em>Create Receipt</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER___CREATE_RECEIPT__INT = 2;
+
+	/**
+	 * The operation id for the '<em>Get Amount</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER___GET_AMOUNT__INT = 3;
+
+	/**
+	 * The operation id for the '<em>Pay</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER___PAY__INT = 4;
+
+	/**
+	 * The number of operations of the '<em>Bill Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL_MANAGER_OPERATION_COUNT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Hotel</b></em>' reference.
@@ -1724,16 +1815,6 @@ public interface ClassDiagramPackage extends EPackage {
 	int APPLIANCE_ADMINISTRATION_OPERATION_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link ClassDiagram.impl.FacilityAdministrationImpl <em>Facility Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ClassDiagram.impl.FacilityAdministrationImpl
-	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getFacilityAdministration()
-	 * @generated
-	 */
-	int FACILITY_ADMINISTRATION = 24;
-
-	/**
 	 * The feature id for the '<em><b>Hotel</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1894,78 +1975,6 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int HOTEL_ADMINISTRATION_OPERATION_COUNT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Hotel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER__HOTEL = 0;
-
-	/**
-	 * The number of structural features of the '<em>Bill Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER_FEATURE_COUNT = 1;
-
-	/**
-	 * The operation id for the '<em>Add Purchased Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___ADD_PURCHASED_SERVICE__STRING_STRING_DOUBLE = 0;
-
-	/**
-	 * The operation id for the '<em>Find Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___FIND_BILL__INT = 1;
-
-	/**
-	 * The operation id for the '<em>Create Receipt</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___CREATE_RECEIPT__INT = 2;
-
-	/**
-	 * The operation id for the '<em>Get Amount</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___GET_AMOUNT__INT = 3;
-
-	/**
-	 * The operation id for the '<em>Pay</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER___PAY__INT = 4;
-
-	/**
-	 * The number of operations of the '<em>Bill Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILL_MANAGER_OPERATION_COUNT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Hotel</b></em>' reference.
@@ -2887,6 +2896,17 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBookingManager_GuestManager();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagram.BookingManager#getBillManager <em>Bill Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bill Manager</em>'.
+	 * @see ClassDiagram.BookingManager#getBillManager()
+	 * @see #getBookingManager()
+	 * @generated
+	 */
+	EReference getBookingManager_BillManager();
 
 	/**
 	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#createBooking(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, ClassDiagram.Company_GuestRecord, int) <em>Create Booking</em>}' operation.
@@ -4397,6 +4417,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BOOKING_MANAGER__GUEST_MANAGER = eINSTANCE.getBookingManager_GuestManager();
+
+		/**
+		 * The meta object literal for the '<em><b>Bill Manager</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOKING_MANAGER__BILL_MANAGER = eINSTANCE.getBookingManager_BillManager();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Booking</b></em>' operation.
