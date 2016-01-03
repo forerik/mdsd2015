@@ -541,7 +541,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-							
 				if (!end.after(start)) {
 					allGood = false;
 					System.out.println("Wrong input. The end date needs to be in after the start date.");

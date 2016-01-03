@@ -183,19 +183,60 @@ public class main {
 			e.printStackTrace();
 		}
 
-		Hotel_Booking theBooking = bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
+		Hotel_Booking newBooking = bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
 		
 		double price = 0;
 		for (Hotel_Room theRoom: bookingRooms) {
 			price += theRoom.getRoomType().getPrice();
 		}
 		
-		theBooking.setBookingID(theHotel.getListOfBookings().size());
-		theBooking.setPrice(price);
+		newBooking.setBookingID(theHotel.getListOfBookings().size());
+		newBooking.setPrice(price);
 		
-		Booking_Bill bill = factory.createBooking_Bill();
-		theBooking.setBill(bill);
+		// A checked in booking that can be checked out today
+		dateInString = "2016-01-01 15:00:00";
+		end = new Date();		
+		try {
+			start = sdf.parse(dateInString);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+		newBooking = bookingManager.createBooking(start, end, bookingRooms, guest3, 2);
+		
+		price = 0;
+		for (Hotel_Room theRoom: bookingRooms) {
+			price += theRoom.getRoomType().getPrice();
+		}
+		
+		newBooking.setBookingID(theHotel.getListOfBookings().size());
+		newBooking.setPrice(price);
+		
+		newBooking.setCheckedIn(true);
+
+		// A booking that can be checked in today
+		dateInString = "2016-02-01 11:00:00";
+		start = new Date();		
+		try {
+			end = sdf.parse(dateInString);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		bookingRooms.add(theHotel.getListOfRooms().get(5));
+		bookingRooms.add(theHotel.getListOfRooms().get(6));
+		newBooking = bookingManager.createBooking(start, end, bookingRooms, guest4, 4);
+		
+		price = 0;
+		for (Hotel_Room theRoom: bookingRooms) {
+			price += theRoom.getRoomType().getPrice();
+		}
+		
+		newBooking.setBookingID(theHotel.getListOfBookings().size());
+		newBooking.setPrice(price);
+
+		
 		Scanner s = new Scanner(System.in);
 		String input;
 		
