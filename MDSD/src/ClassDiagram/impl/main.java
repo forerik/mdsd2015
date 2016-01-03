@@ -1,6 +1,8 @@
 package ClassDiagram.impl;
 
 import java.awt.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -36,16 +38,18 @@ public class main {
 		doubleRoom.setMaxNumberOfGuests(2);
 		singleRoom.setName("Single");
 		doubleRoom.setName("Double");
+		singleRoom.setPrice(100);
+		doubleRoom.setPrice(200);
 		theHotel.getListOfRoomTypes().add(singleRoom);
 		theHotel.getListOfRoomTypes().add(doubleRoom);
 
 		// Creating 20 single and 20 double rooms and adding them to the hotel
 		Hotel_Room room;
 		
-		for (int i = 1; i < 40; i++) {
+		for (int i = 1; i < 10; i++) {
 			room = factory.createHotel_Room();
 			room.setRoomNumber(i);
-			if (i < 21)
+			if (i < 6)
 				room.setRoomType(singleRoom);
 			else 
 				room.setRoomType(doubleRoom);
@@ -74,10 +78,10 @@ public class main {
 		guest4.setName("Lord Elrond");
 		company.getRecordsOf().add(guest4);
 		
-		
+			
 		
 			
-		// Creating the managers for the hotel
+		// Creating the managers for the hotel and company
 		BookingManager bookingManager = factory.createBookingManager();
 		bookingManager.setHotel(theHotel);
 
@@ -91,6 +95,26 @@ public class main {
 		
 		BillManager billManager = factory.createBillManager();
 		billManager.setHotel(theHotel);	
+
+		// Creating bookings
+		EList<Hotel_Room> bookingRooms = new BasicEList<Hotel_Room>();
+		bookingRooms.add(theHotel.getListOfRooms().get(1));
+		bookingRooms.add(theHotel.getListOfRooms().get(2));
+		Date start = new Date();
+		Date end = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
+		String dateInString = "2016-02-01 15:00:00";
+		String dateInString2 = "2016-02-10 11:00:00";
+		try {
+			start = sdf.parse(dateInString);
+			end = sdf.parse(dateInString2);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
+		
 		
 		Scanner s = new Scanner(System.in);
 		String input;
@@ -122,6 +146,7 @@ public class main {
 				System.out.println("All bookings in the hotel:");
 				for(Hotel_Booking booking: theHotel.getListOfBookings()) {
 					System.out.println("  Responsible guest: " + showGuest(booking.getResponsibleGuest()));
+					System.out.println("    Price " + booking.getPrice());
 					System.out.println("    " + booking.getStartDate() + " - " + booking.getEndDate());
 					for(Hotel_Room aRoom: booking.getRooms()) {
 						System.out.println("    " + showRoom(aRoom));
