@@ -236,6 +236,27 @@ public class main {
 		newBooking.setBookingID(theHotel.getListOfBookings().size());
 		newBooking.setPrice(price);
 
+		// A booking that books all rooms for a certain period
+		dateInString = "2016-06-01 11:00:00";
+		dateInString2 = "2016-06-31 11:00:00";
+		start = new Date();		
+		try {
+			start = sdf.parse(dateInString);
+			end = sdf.parse(dateInString2);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		EList<Hotel_Room> bookingRooms2 = new BasicEList<Hotel_Room>();
+		newBooking = bookingManager.createBooking(start, end, theHotel.getListOfRooms(), guest4, 30);
+		
+		price = 0;
+		for (Hotel_Room theRoom: theHotel.getListOfRooms()) {
+			price += theRoom.getRoomType().getPrice();
+		}
+		
+		newBooking.setBookingID(theHotel.getListOfBookings().size());
+		newBooking.setPrice(price);
 		
 		Scanner s = new Scanner(System.in);
 		String input;
@@ -289,7 +310,6 @@ public class main {
 					bookingManager.checkIn(bookingID);
 					System.out.println("Checked in: " + bookingManager.findBooking(bookingID).isCheckedIn());
 				}
-				
 				
 			}
 			else if (input.equals("6")){

@@ -653,6 +653,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		if (input.equals("Cancel")) {
 			System.out.println("Canceled");
 			selectedRoomTypes = new BasicEList<Room_RoomType>();
+			System.out.println("roomTypes " + selectedRoomTypes.size());
 			return true;
 		}
 		else if (input.equals("all")) {
