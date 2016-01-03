@@ -3,6 +3,7 @@
 package ClassDiagram.impl;
 
 import ClassDiagram.BillManager;
+import ClassDiagram.Booking_Bill;
 import ClassDiagram.ClassDiagramPackage;
 
 import ClassDiagram.Company_Hotel;
@@ -116,14 +117,12 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Booking_BillImpl findBill(int bookingID) {
+	public Booking_Bill findBill(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		for (Hotel_Booking b: getHotel().getListOfBookings()){
 			if (bookingID == b.getBookingID()){
-				return null;
-				
-				// Booking has no reference to the bill?
+				return b.getBill();
 			}
 		}
 		return null;
@@ -143,20 +142,24 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getAmount(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public double getAmount(int bookingID) {	
+		double sum = 0;
+		for (Hotel_Booking b: getHotel().getListOfBookings()){
+			if (bookingID == b.getBookingID()){
+				sum = b.getPrice() - findBill(bookingID).getPaidAmount();
+			}
+		}
+		return sum;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void pay(int bookingID, double amount) {
+	public void pay(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

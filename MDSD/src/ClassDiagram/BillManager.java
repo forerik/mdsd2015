@@ -64,7 +64,7 @@ public interface BillManager extends EObject {
 	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated NOT
 	 */
-	Booking_BillImpl findBill(int bookingID);
+	Booking_Bill findBill(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,17 +77,18 @@ public interface BillManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void getAmount(int bookingID);
+	double getAmount(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model bookingIDRequired="true" bookingIDOrdered="false" amountRequired="true" amountOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void pay(int bookingID, double amount);
+	void pay(int bookingID);
 
 } // BillManager
