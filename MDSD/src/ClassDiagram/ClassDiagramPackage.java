@@ -1155,7 +1155,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING = 2;
+	int BOOKING_MANAGER___CHECK_IN__INT = 2;
 
 	/**
 	 * The operation id for the '<em>Check Out</em>' operation.
@@ -1164,7 +1164,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING = 3;
+	int BOOKING_MANAGER___CHECK_OUT__INT = 3;
 
 	/**
 	 * The operation id for the '<em>Assign Key</em>' operation.
@@ -1956,7 +1956,7 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILL_MANAGER___PAY__INT_DOUBLE = 4;
+	int BILL_MANAGER___PAY__INT = 4;
 
 	/**
 	 * The number of operations of the '<em>Bill Manager</em>' class.
@@ -2909,24 +2909,24 @@ public interface ClassDiagramPackage extends EPackage {
 	EOperation getBookingManager__FindAvailableRooms__Date_Date_Room_RoomType_int();
 
 	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkIn(ClassDiagram.Hotel_Booking) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkIn(int) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see ClassDiagram.BookingManager#checkIn(ClassDiagram.Hotel_Booking)
+	 * @see ClassDiagram.BookingManager#checkIn(int)
 	 * @generated
 	 */
-	EOperation getBookingManager__CheckIn__Hotel_Booking();
+	EOperation getBookingManager__CheckIn__int();
 
 	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkOut(ClassDiagram.Hotel_Booking) <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#checkOut(int) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see ClassDiagram.BookingManager#checkOut(ClassDiagram.Hotel_Booking)
+	 * @see ClassDiagram.BookingManager#checkOut(int)
 	 * @generated
 	 */
-	EOperation getBookingManager__CheckOut__Hotel_Booking();
+	EOperation getBookingManager__CheckOut__int();
 
 	/**
 	 * Returns the meta object for the '{@link ClassDiagram.BookingManager#assignKey(ClassDiagram.Hotel_Room, ClassDiagram.Hotel_Booking, java.util.Date) <em>Assign Key</em>}' operation.
@@ -3172,14 +3172,14 @@ public interface ClassDiagramPackage extends EPackage {
 	EOperation getBillManager__GetAmount__int();
 
 	/**
-	 * Returns the meta object for the '{@link ClassDiagram.BillManager#pay(int, double) <em>Pay</em>}' operation.
+	 * Returns the meta object for the '{@link ClassDiagram.BillManager#pay(int) <em>Pay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay</em>' operation.
-	 * @see ClassDiagram.BillManager#pay(int, double)
+	 * @see ClassDiagram.BillManager#pay(int)
 	 * @generated
 	 */
-	EOperation getBillManager__Pay__int_double();
+	EOperation getBillManager__Pay__int();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagram.StaffAdministration <em>Staff Administration</em>}'.
@@ -4420,7 +4420,7 @@ public interface ClassDiagramPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING = eINSTANCE.getBookingManager__CheckIn__Hotel_Booking();
+		EOperation BOOKING_MANAGER___CHECK_IN__INT = eINSTANCE.getBookingManager__CheckIn__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out</b></em>' operation.
@@ -4428,7 +4428,7 @@ public interface ClassDiagramPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING = eINSTANCE.getBookingManager__CheckOut__Hotel_Booking();
+		EOperation BOOKING_MANAGER___CHECK_OUT__INT = eINSTANCE.getBookingManager__CheckOut__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Assign Key</b></em>' operation.
@@ -4634,7 +4634,7 @@ public interface ClassDiagramPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BILL_MANAGER___PAY__INT_DOUBLE = eINSTANCE.getBillManager__Pay__int_double();
+		EOperation BILL_MANAGER___PAY__INT = eINSTANCE.getBillManager__Pay__int();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagram.impl.StaffAdministrationImpl <em>Staff Administration</em>}' class.

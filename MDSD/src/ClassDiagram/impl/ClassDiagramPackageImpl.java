@@ -706,7 +706,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingManager__CheckIn__Hotel_Booking() {
+	public EOperation getBookingManager__CheckIn__int() {
 		return bookingManagerEClass.getEOperations().get(2);
 	}
 
@@ -715,7 +715,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingManager__CheckOut__Hotel_Booking() {
+	public EOperation getBookingManager__CheckOut__int() {
 		return bookingManagerEClass.getEOperations().get(3);
 	}
 
@@ -1696,7 +1696,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBillManager__Pay__int_double() {
+	public EOperation getBillManager__Pay__int() {
 		return billManagerEClass.getEOperations().get(4);
 	}
 
@@ -1882,8 +1882,8 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEReference(bookingManagerEClass, BOOKING_MANAGER__GUEST_MANAGER);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT);
-		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING);
-		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING);
+		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_IN__INT);
+		createEOperation(bookingManagerEClass, BOOKING_MANAGER___CHECK_OUT__INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___FIND_BOOKING__DATE_INT);
 		createEOperation(bookingManagerEClass, BOOKING_MANAGER___EDIT_BOOKING__INT);
@@ -1961,7 +1961,7 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		createEOperation(billManagerEClass, BILL_MANAGER___FIND_BILL__INT);
 		createEOperation(billManagerEClass, BILL_MANAGER___CREATE_RECEIPT__INT);
 		createEOperation(billManagerEClass, BILL_MANAGER___GET_AMOUNT__INT);
-		createEOperation(billManagerEClass, BILL_MANAGER___PAY__INT_DOUBLE);
+		createEOperation(billManagerEClass, BILL_MANAGER___PAY__INT);
 
 		facilityManagerEClass = createEClass(FACILITY_MANAGER);
 		createEReference(facilityManagerEClass, FACILITY_MANAGER__HOTEL);
@@ -2130,11 +2130,11 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		addEParameter(op, this.getRoom_RoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "_people", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingManager__CheckIn__Hotel_Booking(), null, "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getHotel_Booking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingManager__CheckIn__int(), null, "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingManager__CheckOut__Hotel_Booking(), null, "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getHotel_Booking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingManager__CheckOut__int(), null, "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingManager__AssignKey__Hotel_Room_Hotel_Booking_Date(), null, "assignKey", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getHotel_Room(), "room", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2340,9 +2340,8 @@ public class ClassDiagramPackageImpl extends EPackageImpl implements ClassDiagra
 		op = initEOperation(getBillManager__GetAmount__int(), null, "getAmount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBillManager__Pay__int_double(), null, "pay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBillManager__Pay__int(), null, "pay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(facilityManagerEClass, FacilityManager.class, "FacilityManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFacilityManager_Hotel(), this.getCompany_Hotel(), null, "hotel", null, 1, 1, FacilityManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

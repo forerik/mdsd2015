@@ -127,18 +127,18 @@ public interface BookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingRequired="true" bookingOrdered="false"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void checkIn(Hotel_Booking booking);
+	void checkIn(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingRequired="true" bookingOrdered="false"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void checkOut(Hotel_Booking booking);
+	void checkOut(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->

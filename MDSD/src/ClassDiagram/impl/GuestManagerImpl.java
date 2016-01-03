@@ -2,7 +2,6 @@
  */
 package ClassDiagram.impl;
 
-import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company;
 import ClassDiagram.Company_GuestRecord;

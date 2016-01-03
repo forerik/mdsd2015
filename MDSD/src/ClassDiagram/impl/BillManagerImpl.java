@@ -244,8 +244,8 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 			case ClassDiagramPackage.BILL_MANAGER___GET_AMOUNT__INT:
 				getAmount((Integer)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.BILL_MANAGER___PAY__INT_DOUBLE:
-				pay((Integer)arguments.get(0), (Double)arguments.get(1));
+			case ClassDiagramPackage.BILL_MANAGER___PAY__INT:
+				pay((Integer)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

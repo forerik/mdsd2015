@@ -3,7 +3,6 @@
 package ClassDiagram.impl;
 
 import ClassDiagram.BookingManager;
-import ClassDiagram.Booking_Bill;
 import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
@@ -293,7 +292,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkIn(Hotel_Booking booking) {
+	public void checkIn(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -304,7 +303,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkOut(Hotel_Booking booking) {
+	public void checkOut(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -526,7 +525,12 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		}
 		boolean payed = false;
 		if (!payed && !cancel) {
-			
+
+			System.out.println("Do you want to pay? (y/n");
+			input = s.nextLine();
+			if (input == "") {
+				
+			}
 		}
 
 		
@@ -807,11 +811,11 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT:
 				findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (Room_RoomType)arguments.get(2), (Integer)arguments.get(3));
 				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___CHECK_IN__HOTEL_BOOKING:
-				checkIn((Hotel_Booking)arguments.get(0));
+			case ClassDiagramPackage.BOOKING_MANAGER___CHECK_IN__INT:
+				checkIn((Integer)arguments.get(0));
 				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___CHECK_OUT__HOTEL_BOOKING:
-				checkOut((Hotel_Booking)arguments.get(0));
+			case ClassDiagramPackage.BOOKING_MANAGER___CHECK_OUT__INT:
+				checkOut((Integer)arguments.get(0));
 				return null;
 			case ClassDiagramPackage.BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE:
 				assignKey((Hotel_Room)arguments.get(0), (Hotel_Booking)arguments.get(1), (Date)arguments.get(2));

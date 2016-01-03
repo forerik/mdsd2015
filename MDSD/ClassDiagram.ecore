@@ -188,10 +188,10 @@
       </eParameters>
     </eOperations>
     <eOperations name="checkIn" ordered="false" lowerBound="1">
-      <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
     <eOperations name="checkOut" ordered="false" lowerBound="1">
-      <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Hotel_Booking"/>
+      <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
     <eOperations name="assignKey" ordered="false" lowerBound="1">
       <eParameters name="room" ordered="false" lowerBound="1" eType="#//Hotel_Room"/>
@@ -408,7 +408,6 @@
     </eOperations>
     <eOperations name="pay" ordered="false" lowerBound="1">
       <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
         lowerBound="1" eType="#//Company_Hotel"/>

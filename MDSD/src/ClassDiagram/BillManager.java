@@ -4,8 +4,6 @@ package ClassDiagram;
 
 import org.eclipse.emf.ecore.EObject;
 
-import ClassDiagram.impl.Booking_BillImpl;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Bill Manager</b></em>'.
@@ -79,7 +77,7 @@ public interface BillManager extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return 
 	 * @model bookingIDRequired="true" bookingIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	double getAmount(int bookingID);
 
@@ -89,6 +87,6 @@ public interface BillManager extends EObject {
 	 * @model bookingIDRequired="true" bookingIDOrdered="false" amountRequired="true" amountOrdered="false"
 	 * @generated NOT
 	 */
-	void pay(int bookingID, double amount);
+	void pay(int bookingID);
 
 } // BillManager
