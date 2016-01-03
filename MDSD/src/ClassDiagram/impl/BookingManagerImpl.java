@@ -354,6 +354,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public void checkOut(int bookingID) {
 		Hotel_Booking theBooking = findBooking(bookingID);
+		billManager.pay(bookingID);
 		theBooking.setCheckedIn(false);
 	}
 
