@@ -123,6 +123,9 @@ public class main {
 		
 		theBooking.setPrice(price);
 		
+		Booking_Bill bill = factory.createBooking_Bill();
+		theBooking.setBill(bill);
+		
 		Scanner s = new Scanner(System.in);
 		String input;
 		

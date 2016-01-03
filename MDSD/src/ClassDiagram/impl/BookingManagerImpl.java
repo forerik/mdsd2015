@@ -569,7 +569,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
 			Booking_Bill bill = factory.createBooking_Bill();
 			booking.setBill(bill);
-			booking.getBill().setPaidAmount(0);;
+	//		booking.getBill().setPaidAmount(0);;
 						
 		}
 		boolean payed = false;
