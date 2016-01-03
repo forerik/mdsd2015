@@ -3,6 +3,7 @@
 package ClassDiagram.impl;
 
 import ClassDiagram.BookingManager;
+import ClassDiagram.Booking_Bill;
 import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company_GuestRecord;
@@ -223,7 +224,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople) {
+	public Hotel_Booking createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
@@ -236,6 +237,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		booking.setResponsibleGuest(guest);		
 		
 		hotel.getListOfBookings().add(booking);	
+		
+		return booking;
 	}
 
 
@@ -506,8 +509,27 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		if (selectedRooms.size() == 0)
 			cancel = true;
 		
-		if (!cancel)
-			createBooking(start, end, selectedRooms, guest, numberOfPeople);
+		if (!cancel) {
+			Hotel_Booking booking = createBooking(start, end, selectedRooms, guest, numberOfPeople);
+	
+			double price = 0;
+			for (Hotel_Room room: selectedRooms) {
+				price += room.getRoomType().getPrice();
+			}
+			
+			booking.setPrice(price);
+/*			
+			ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
+			Booking_Bill bill = factory.createBooking_Bill();
+			booking.setBill(bill);
+			*/			
+		}
+		boolean payed = false;
+		if (!payed && !cancel) {
+			
+		}
+
+		
 		
 		// System.out.println("Bookings \n" + hotel.getListOfBookings());
 		

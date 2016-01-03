@@ -108,10 +108,11 @@ public interface BookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model startRequired="true" startOrdered="false" endRequired="true" endOrdered="false" roomsRequired="true" roomsMany="true" roomsOrdered="false" guestRequired="true" guestOrdered="false" numberOfPeopleRequired="true" numberOfPeopleOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople);
+	Hotel_Booking createBooking(Date start, Date end, EList<Hotel_Room> rooms, Company_GuestRecord guest, int numberOfPeople);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -400,10 +400,14 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ECsDYKStEeW6u575sJ_x5Q" name="checkIn">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_HtIU0KStEeW6u575sJ_x5Q" name="booking" type="_Lbg1UJKJEeW9h7ibhzFKTA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_HtIU0KStEeW6u575sJ_x5Q" name="bookingID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_I6e4wKStEeW6u575sJ_x5Q" name="checkOut">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LcqhoKStEeW6u575sJ_x5Q" name="booking" type="_Lbg1UJKJEeW9h7ibhzFKTA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LcqhoKStEeW6u575sJ_x5Q" name="bookingID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_MoSAMKStEeW6u575sJ_x5Q" name="assignKey">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_QPZ34KStEeW6u575sJ_x5Q" name="room" type="_olbGkJdyEeWjlOsjTCQaQw"/>

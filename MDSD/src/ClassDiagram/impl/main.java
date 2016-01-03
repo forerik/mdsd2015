@@ -100,6 +100,7 @@ public class main {
 		EList<Hotel_Room> bookingRooms = new BasicEList<Hotel_Room>();
 		bookingRooms.add(theHotel.getListOfRooms().get(1));
 		bookingRooms.add(theHotel.getListOfRooms().get(2));
+
 		Date start = new Date();
 		Date end = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
@@ -113,8 +114,14 @@ public class main {
 			e.printStackTrace();
 		}
 
-		bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
+		Hotel_Booking theBooking = bookingManager.createBooking(start, end, bookingRooms, guest1, 2);
 		
+		double price = 0;
+		for (Hotel_Room theRoom: bookingRooms) {
+			price += theRoom.getRoomType().getPrice();
+		}
+		
+		theBooking.setPrice(price);
 		
 		Scanner s = new Scanner(System.in);
 		String input;
@@ -146,7 +153,7 @@ public class main {
 				System.out.println("All bookings in the hotel:");
 				for(Hotel_Booking booking: theHotel.getListOfBookings()) {
 					System.out.println("  Responsible guest: " + showGuest(booking.getResponsibleGuest()));
-					System.out.println("    Price " + booking.getPrice());
+					System.out.println("    Price " + booking.getPrice() + ":-");
 					System.out.println("    " + booking.getStartDate() + " - " + booking.getEndDate());
 					for(Hotel_Room aRoom: booking.getRooms()) {
 						System.out.println("    " + showRoom(aRoom));
