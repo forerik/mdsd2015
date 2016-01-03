@@ -293,9 +293,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void checkIn(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		findBooking(bookingID).setCheckedIn(true);
 	}
 
 	/**
@@ -304,9 +302,8 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void checkOut(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Hotel_Booking theBooking = findBooking(bookingID);
+		theBooking.setCheckedIn(false);
 	}
 
 	/**
@@ -709,10 +706,13 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void findBooking(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Hotel_Booking findBooking(int bookingID) {
+		for (Hotel_Booking b: getHotel().getListOfBookings()){
+			if (bookingID == b.getBookingID()){
+				return b;
+			}
+		}
+		return null;
 	}
 
 	/**
