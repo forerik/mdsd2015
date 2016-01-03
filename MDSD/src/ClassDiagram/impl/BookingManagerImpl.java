@@ -347,7 +347,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void checkIn(int bookingID) {
+	public boolean checkIn(int bookingID) {
 		Hotel_Booking theBooking = findBooking(bookingID);
 		Date today = new Date();
 		if(theBooking.getStartDate().getYear() == today.getYear() && 
@@ -358,6 +358,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			System.out.println("Wrong check-in day");
 
 		}
+		return theBooking.isCheckedIn();
 	}
 
 	/**
@@ -365,16 +366,18 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void checkOut(int bookingID) {
+	public boolean checkOut(int bookingID) {
 		Hotel_Booking theBooking = findBooking(bookingID);
 		Date today = new Date();
 		if(theBooking.getEndDate().getYear() == today.getYear() && 
 				theBooking.getEndDate().getMonth() == today.getMonth() &&
-				theBooking.getEndDate().getDate() == today.getDate()){
+				theBooking.getEndDate().getDate() == today.getDate() && theBooking.isCheckedIn()){
 			billManager.pay(bookingID);
 			theBooking.setCheckedIn(false);
+			return true;
 		}else{
 			System.out.println("Wrong check-out day");
+			return false;
 		}
 
 	}

@@ -154,18 +154,20 @@ public interface BookingManager extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model bookingIDRequired="true" bookingIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void checkIn(int bookingID);
+	boolean checkIn(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model bookingIDRequired="true" bookingIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void checkOut(int bookingID);
+	boolean checkOut(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
