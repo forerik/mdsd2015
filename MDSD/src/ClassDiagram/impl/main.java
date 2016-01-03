@@ -195,8 +195,7 @@ public class main {
 		
 		Booking_Bill bill = factory.createBooking_Bill();
 		theBooking.setBill(bill);
-<<<<<<< HEAD
-		
+
 		Scanner s = new Scanner(System.in);
 		String input;
 		
@@ -260,7 +259,7 @@ public class main {
 					System.out.println("Booking does not exist!");
 				}else{
 					bookingManager.checkOut(bookingID);
-					System.out.println("Checked out: " + bookingManager.findBooking(bookingID).isCheckedIn());
+					System.out.println("Checked out and paid in full");
 				}
 				
 			}
@@ -271,7 +270,7 @@ public class main {
 		}
 		
 		
-=======
->>>>>>> origin/master
+
+
 	}
 }
