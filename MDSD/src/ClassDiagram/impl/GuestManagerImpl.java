@@ -2,6 +2,7 @@
  */
 package ClassDiagram.impl;
 
+import ClassDiagram.ClassDiagramFactory;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.Company;
 import ClassDiagram.Company_GuestRecord;
@@ -101,12 +102,18 @@ public class GuestManagerImpl extends MinimalEObjectImpl.Container implements Gu
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void createGuestRecord(String ssn, String firstName, String lastName, String adress, String phoneNumber, String paymentInformation) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Company_GuestRecord createGuestRecord(String ssn, String firstName, String lastName, String adress, String phoneNumber, String paymentInformation) {
+		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
+		Company_GuestRecord newGuest = factory.createCompany_GuestRecord();
+		newGuest.setSsn(ssn);
+		newGuest.setName(firstName + " " + lastName);
+		newGuest.setPhoneNumber(phoneNumber);
+		newGuest.setPaymentInformation(paymentInformation);
+		newGuest.setAdress(adress);
+		
+		return newGuest;
 	}
 
 	/**
