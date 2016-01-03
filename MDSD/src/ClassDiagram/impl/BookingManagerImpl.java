@@ -345,21 +345,38 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void checkIn(int bookingID) {
-		findBooking(bookingID).setCheckedIn(true);
+		Hotel_Booking theBooking = findBooking(bookingID);
+		Date today = new Date();
+		if(theBooking.getStartDate().getYear() == today.getYear() && 
+				theBooking.getStartDate().getMonth() == today.getMonth() &&
+				theBooking.getStartDate().getDate() == today.getDate()){
+			theBooking.setCheckedIn(true);
+		}else{
+			System.out.println("Wrong check-in day");
+
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void checkOut(int bookingID) {
 		Hotel_Booking theBooking = findBooking(bookingID);
-		billManager.pay(bookingID);
-		theBooking.setCheckedIn(false);
+		Date today = new Date();
+		if(theBooking.getEndDate().getYear() == today.getYear() && 
+				theBooking.getEndDate().getMonth() == today.getMonth() &&
+				theBooking.getEndDate().getDate() == today.getDate()){
+			billManager.pay(bookingID);
+			theBooking.setCheckedIn(false);
+		}else{
+			System.out.println("Wrong check-out day");
+		}
+
 	}
 
 	/**
