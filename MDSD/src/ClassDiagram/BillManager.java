@@ -89,6 +89,6 @@ public interface BillManager extends EObject {
 	 * @model bookingIDRequired="true" bookingIDOrdered="false" amountRequired="true" amountOrdered="false"
 	 * @generated NOT
 	 */
-	void pay(int bookingID);
+	void pay(int bookingID, double amount);
 
 } // BillManager

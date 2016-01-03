@@ -159,7 +159,7 @@ public class BillManagerImpl extends MinimalEObjectImpl.Container implements Bil
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void pay(int bookingID) {
+	public void pay(int bookingID, double amount) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
