@@ -56,16 +56,16 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 * @ordered
 	 */
-	
+
 	public static final String checkOutHour = "11:00:00";
 	public static final String checkInHour = "15:00:00";
-	
+
 	Date start = new Date();
 	Date end = new Date();
 	int numberOfPeople;
 	private EList<Room_RoomType> selectedRoomTypes;
 	private EList<Hotel_Room> selectedRooms;
-	
+
 	protected Company_Hotel hotel;
 
 	/**
@@ -278,20 +278,20 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();
-		
+
 		Hotel_Booking booking = factory.createHotel_Booking();
 		booking.setStartDate(start);
 		booking.setEndDate(end);
 		booking.setStartDate(start);
 		booking.getRooms().addAll(rooms);
 		booking.setResponsibleGuest(guest);		
-		
+
 		hotel.getListOfBookings().add(booking);	
-		
+
 		Booking_Bill bill = factory.createBooking_Bill();
 		booking.setBill(bill);
 		booking.setBookingID(hotel.getListOfBookings().size());
-		
+
 		return booking;
 	}
 
@@ -307,20 +307,20 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		// Ensure that you remove @generated or mark it @generated NOT
 		EList<Hotel_Room> rooms = new BasicEList<Hotel_Room>(hotel.getListOfRooms());
 		EList<Hotel_Room> tempRooms = new BasicEList<Hotel_Room>(hotel.getListOfRooms());
-		
+
 		for (Hotel_Room room : tempRooms) {
 			if (!(room.getRoomType().getName().equals(roomType.getName()))) {
 				rooms.remove(room);				
 			}
 		}
-		
+
 		EList<Hotel_Booking> bookings = hotel.getListOfBookings();
-		
+
 		for(Hotel_Booking booking : bookings) {
-			
+
 			Date bStart = booking.getStartDate();
 			Date bEnd = booking.getEndDate();
-			
+
 			if (!(bEnd.before(start) || bStart.after(end))) {
 				for(Hotel_Room room : booking.getRooms()) {
 					rooms.remove(room);
@@ -331,13 +331,13 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		if (_people % roomType.getMaxNumberOfGuests() != 0)
 			numberOfRooms++;
 		numberOfRooms = Math.min(rooms.size(), numberOfRooms);
-		
+
 		EList<Hotel_Room> selectedRooms = new BasicEList<Hotel_Room>();
-		
+
 		for (int i = 0; i < numberOfRooms; i++) {
 			selectedRooms.add(rooms.get(i));
 		}
-		
+
 		return selectedRooms;	
 	}
 
@@ -443,195 +443,202 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public void initBooking() {
-		
-		
+
+
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
 		Date today = new Date();
-		
+
 		Scanner s = new Scanner(System.in);
 		String input = "";
 		String[] parts;
-		
+
 		boolean cancel = false;
-		
-		
-		// Find or create guest
-		Company_GuestRecord guest = null;
-		while (guest == null && !cancel) {
-			System.out.println("Input ssn or input 'New' to create a new guest record:");
-			input = s.nextLine();
-			if (input.equals("Cancel")) {
-				cancel = true;
-				System.out.println("Canceled");
-			}
-			else if (input.equals("New")) {
-				boolean guestExists = false;
-				System.out.println("Input ssn:");
+
+		while (!cancel) {
+			// Find or create guest
+			Company_GuestRecord guest = null;
+			while (guest == null) {
+				System.out.println("Input ssn or input 'New' to create a new guest record:");
 				input = s.nextLine();
-				guest = guestManager.findGuestRecord(input);
-				if (guest != null) {
-					System.out.println("Guest already exists: " + guest.getName());
-					guestExists = true;
+				if (input.equals("Cancel")) {
+					cancel = true;
+					System.out.println("Canceled");
+					break;
 				}
-				if (!guestExists) {		
-					String ssn = input;
-					System.out.println("Input first name:");
+				else if (input.equals("New")) {
+					boolean guestExists = false;
+					System.out.println("Input ssn:");
 					input = s.nextLine();
-					String firstName = input;
-					System.out.println("Input last name:");
-					input = s.nextLine();
-					String lastName = input;
-					guest = guestManager.createGuestRecord(ssn, firstName, lastName, null, null, null);	
+					guest = guestManager.findGuestRecord(input);
+					if (guest != null) {
+						System.out.println("Guest already exists: " + guest.getName());
+						guestExists = true;
+					}
+					if (!guestExists) {		
+						String ssn = input;
+						System.out.println("Input first name:");
+						input = s.nextLine();
+						String firstName = input;
+						System.out.println("Input last name:");
+						input = s.nextLine();
+						String lastName = input;
+						guest = guestManager.createGuestRecord(ssn, firstName, lastName, null, null, null);	
+					}
+				}
+				else {
+					Company_GuestRecord foundGuest = guestManager.findGuestRecord(input);
+					if (foundGuest != null)
+						guest = foundGuest;
 				}
 			}
-			else {
-				Company_GuestRecord foundGuest = guestManager.findGuestRecord(input);
-				if (foundGuest != null)
-					guest = foundGuest;
-			}
-		}
-		
-		// Input the start date
-		if (!cancel)
+			if (cancel)
+				break;
+
+
+			// Input the start date
 			System.out.println("Input start date: (yyyy-mm-dd)");
-		boolean allGood = false;
-		while (!allGood && !cancel) {
-			input = s.nextLine();
-			parts = input.split("-");
-			if (input.equals("Cancel")) {
-				cancel = true;
-				System.out.println("Canceled");
+			boolean allGood = false;
+			while (!allGood) {
+				input = s.nextLine();
+				parts = input.split("-");
+				if (input.equals("Cancel")) {
+					cancel = true;
+					System.out.println("Canceled");
+					break;
+				}
+				else if (parts.length != 3) {
+					System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
+				}
+				else 
+					allGood = isNumeric(parts[0]) && parts[0].length() == 4 && 
+					isNumeric(parts[1]) && parts[1].length() == 2 && 
+					isNumeric(parts[2]) && parts[2].length() == 2;
+
+				if (!allGood) 
+					System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
+				else {
+					String dateInString = input + " " + checkInHour;
+					try {
+						start = sdf.parse(dateInString);
+					} catch (ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+					if (!start.after(today)) {
+						allGood = false;
+						System.out.println("Wrong input. The start date needs to be in the future.");
+					}
+				}
+			}
+			if (cancel)
 				break;
-			}
-			else if (parts.length != 3) {
-				System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
-			}
-			else 
-				allGood = isNumeric(parts[0]) && parts[0].length() == 4 && 
-						  isNumeric(parts[1]) && parts[1].length() == 2 && 
-						  isNumeric(parts[2]) && parts[2].length() == 2;
-
-			if (!allGood) 
-				System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
-			else {
-				String dateInString = input + " " + checkInHour;
-				try {
-					start = sdf.parse(dateInString);
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-							
-				if (!start.after(today)) {
-					allGood = false;
-					System.out.println("Wrong input. The start date needs to be in the future.");
-				}
-			}
-		}
-		//System.out.println(start);
+			//System.out.println(start);
 
 
-		// Input the end date
-		if (!cancel)
+			// Input the end date
 			System.out.println("Input end date: (yyyy-mm-dd)");
-		allGood = false;
-		while (!allGood && !cancel) {
-			input = s.nextLine();
-			parts = input.split("-");
-			if (input.equals("Cancel")) {
-				cancel = true;
-				System.out.println("Canceled");
-				break;
-			}
-			else if (parts.length != 3) {
-				System.out.println("Wrong input. The end date needs to be in format 'yyyy-mm-dd'");
-			}
-			else 
-				allGood = isNumeric(parts[0]) && parts[0].length() == 4 && 
-						  isNumeric(parts[1]) && parts[1].length() == 2 && 
-						  isNumeric(parts[2]) && parts[2].length() == 2;
+			allGood = false;
+			while (!allGood) {
+				input = s.nextLine();
+				parts = input.split("-");
+				if (input.equals("Cancel")) {
+					cancel = true;
+					System.out.println("Canceled");
+					break;
+				}
+				else if (parts.length != 3) {
+					System.out.println("Wrong input. The end date needs to be in format 'yyyy-mm-dd'");
+				}
+				else 
+					allGood = isNumeric(parts[0]) && parts[0].length() == 4 && 
+					isNumeric(parts[1]) && parts[1].length() == 2 && 
+					isNumeric(parts[2]) && parts[2].length() == 2;
 
-			if (!allGood) 
-				System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
-			else {
-				String dateInString = input + " " + checkOutHour;
-				try {
-					end = sdf.parse(dateInString);
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				if (!end.after(start)) {
-					allGood = false;
-					System.out.println("Wrong input. The end date needs to be in after the start date.");
+				if (!allGood) 
+					System.out.println("Wrong input. The start date needs to be in format 'yyyy-mm-dd'");
+				else {
+					String dateInString = input + " " + checkOutHour;
+					try {
+						end = sdf.parse(dateInString);
+					} catch (ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					if (!end.after(start)) {
+						allGood = false;
+						System.out.println("Wrong input. The end date needs to be in after the start date.");
+					}
 				}
 			}
-		}
-		if (!cancel) {
+			if (cancel)
+				break;
 			System.out.println(start + " - " + end);
-				
-		
+
+
 			// Input the number of people
 			System.out.println("Input number of people:");
 			input = s.nextLine();
-		}
-		while (!isNumeric(input) && !cancel) {
-			System.out.println("Wrong input. The number of people needs to be an integer.");
+
+			while (!isNumeric(input)) {
+				System.out.println("Wrong input. The number of people needs to be an integer.");
 				input = s.nextLine();
 				parts = input.split("-");	
-		}
-		if (!cancel)
+			}
 			numberOfPeople = Integer.parseInt(input);
-		
-		
-		// Get the room types
-		while(!cancel && !getRoomTypes())
-		if (!cancel)
-			if (selectedRoomTypes.size() == 0)
-				cancel = true;
-		
-		selectedRooms = new BasicEList<Hotel_Room>();
 
-		// Get the rooms
-		while(!cancel && !getRooms());
-		if (!cancel)
-			if (selectedRooms.size() == 0)
+
+			// Get the room types
+			while(!getRoomTypes()); 
+			if (selectedRoomTypes.size() == 0) {
 				cancel = true;
-		
-		Hotel_Booking booking = null;
-		if (!cancel) {
+				break;
+			}
+
+			selectedRooms = new BasicEList<Hotel_Room>();
+
+			// Get the rooms
+			while(!getRooms());
+			if (selectedRooms.size() == 0) {
+				cancel = true;
+				break;
+			}	
+
+			Hotel_Booking booking = null;
 			booking = createBooking(start, end, selectedRooms, guest, numberOfPeople);
 
 			double price = 0;
 			for (Hotel_Room room: selectedRooms) {
 				price += room.getRoomType().getPrice();
 			}
-			
+
 			booking.setPrice(price);
-		}
-		boolean payed = false;
-		if (!payed && !cancel) {
 
-			System.out.println("Do you want to pay? (y/n)");
-			input = s.nextLine();
-			if (input.equals("y")) {
-				double amount = billManager.pay(booking.getBookingID());
-				System.out.println("Payed in full: " + amount + ":-");
-				payed = true;
+			boolean payed = false;
+			if (!payed) {
+
+				System.out.println("Do you want to pay? (y/n)");
+				input = s.nextLine();
+				if (input.equals("y")) {
+					double amount = billManager.pay(booking.getBookingID());
+					System.out.println("Payed in full: " + amount + ":-");
+					payed = true;
+				}
+				else if (input.equals("n")) {
+					payed = true;
+				}
 			}
-			else if (input.equals("n")) {
-				payed = true;
-			}
+			break;
 		}
 
-		
-		
+
+
 		// System.out.println("Bookings \n" + hotel.getListOfBookings());
-		
-		
-		
+
+
+
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -640,7 +647,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	public boolean getRoomTypes()  {  
 		EList<Room_RoomType> roomtypes = hotel.getListOfRoomTypes();
 		selectedRoomTypes = new BasicEList<Room_RoomType>();
-		
+
 		System.out.println("Select roomtypes that you want: \n"
 				+  "(Input the indecies seperated by a '-' for the room types that you want.) \n"
 				+  "(Input 'all' if you want any kind of room.)");
@@ -653,7 +660,6 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		if (input.equals("Cancel")) {
 			System.out.println("Canceled");
 			selectedRoomTypes = new BasicEList<Room_RoomType>();
-			System.out.println("roomTypes " + selectedRoomTypes.size());
 			return true;
 		}
 		else if (input.equals("all")) {
@@ -678,21 +684,21 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		}
 
 		EList<Hotel_Room> availableRooms = new BasicEList<>();
-		
+
 		for (Room_RoomType roomType: selectedRoomTypes) {	
 			EList<Hotel_Room> rooms = findAvailableRooms(start, end, roomType, numberOfPeople);
 			availableRooms.addAll(rooms);
 		}
-		
+
 		int coveredPeople = 0;
 		for (Hotel_Room room : availableRooms)
 			coveredPeople += room.getRoomType().getMaxNumberOfGuests();
-		
+
 		if (coveredPeople < numberOfPeople) {
 			System.out.println("There are not enough rooms of the selected type(s) to covered the amount guests.");
 			return false;
 		}
-		
+
 		return true;
 	}
 
@@ -703,25 +709,25 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public boolean getRooms()  {  
 		System.out.println("Select the rooms that you want by typing in the room numbers separated by '-':");
-		
+
 		EList<Hotel_Room> availableRooms = new BasicEList<>();
-		
+
 		for (Room_RoomType roomType: selectedRoomTypes) {
 			System.out.println(roomType.getName());
-			
+
 			EList<Hotel_Room> rooms = findAvailableRooms(start, end, roomType, numberOfPeople);
 			availableRooms.addAll(rooms);
-			
+
 			for (Hotel_Room room : selectedRooms) {
 				availableRooms.remove(room);
 				rooms.remove(room);
 			}
-			
+
 			for (Hotel_Room room : rooms) {
 				System.out.println(" Room: " + room.getRoomNumber());
 			}
 		}
-		
+
 		Scanner s = new Scanner(System.in);
 		String input = s.nextLine();
 		String[] parts = input.split("-");
@@ -746,7 +752,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			coveredPeople += room.getRoomType().getMaxNumberOfGuests();
 		if (numberOfPeople > coveredPeople) {
 			System.out.println("The rooms that you have chosen does not covered the amount of guests you want to book. \n"
-							+  "This is the rooms you have so far:");
+					+  "This is the rooms you have so far:");
 			for (Hotel_Room room : selectedRooms) {
 				System.out.println(room.getRoomType().getName() + ": " + room.getRoomNumber());
 			}			
@@ -754,21 +760,21 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		}
 		return true;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public static boolean isNumeric(String str)  {  
-	  try  {
-	    Integer.parseInt(str);  
-	  } catch(NumberFormatException nfe) {  
-	    return false;  
-	  }
-	  return true;  
+		try  {
+			Integer.parseInt(str);  
+		} catch(NumberFormatException nfe) {  
+			return false;  
+		}
+		return true;  
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -778,14 +784,14 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		EList<Room_RoomType> roomTypes = new BasicEList<Room_RoomType>(hotel.getListOfRoomTypes());
-		
+
 		EList<Hotel_Booking> bookings = hotel.getListOfBookings();
-		
+
 		for(Hotel_Booking booking : bookings) {
-			
+
 			Date bStart = booking.getStartDate();
 			Date bEnd = booking.getEndDate();
-			
+
 			if (!(bEnd.before(start) || bStart.after(end))) {
 				for(Hotel_Room room : booking.getRooms()) {
 					roomTypes.remove(room.getRoomType());
@@ -793,7 +799,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			}
 		}
 		return roomTypes;
-		
+
 	}
 
 	/**
@@ -817,18 +823,18 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
-				if (resolve) return getHotel();
-				return basicGetHotel();
-			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
-				if (resolve) return getRoomManager();
-				return basicGetRoomManager();
-			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
-				if (resolve) return getGuestManager();
-				return basicGetGuestManager();
-			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
-				if (resolve) return getBillManager();
-				return basicGetBillManager();
+		case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+			if (resolve) return getHotel();
+			return basicGetHotel();
+		case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+			if (resolve) return getRoomManager();
+			return basicGetRoomManager();
+		case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+			if (resolve) return getGuestManager();
+			return basicGetGuestManager();
+		case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+			if (resolve) return getBillManager();
+			return basicGetBillManager();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -841,18 +847,18 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
-				setHotel((Company_Hotel)newValue);
-				return;
-			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
-				setRoomManager((RoomManager)newValue);
-				return;
-			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
-				setGuestManager((GuestManager)newValue);
-				return;
-			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
-				setBillManager((BillManager)newValue);
-				return;
+		case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+			setHotel((Company_Hotel)newValue);
+			return;
+		case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+			setRoomManager((RoomManager)newValue);
+			return;
+		case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+			setGuestManager((GuestManager)newValue);
+			return;
+		case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+			setBillManager((BillManager)newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -865,18 +871,18 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
-				setHotel((Company_Hotel)null);
-				return;
-			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
-				setRoomManager((RoomManager)null);
-				return;
-			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
-				setGuestManager((GuestManager)null);
-				return;
-			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
-				setBillManager((BillManager)null);
-				return;
+		case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+			setHotel((Company_Hotel)null);
+			return;
+		case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+			setRoomManager((RoomManager)null);
+			return;
+		case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+			setGuestManager((GuestManager)null);
+			return;
+		case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+			setBillManager((BillManager)null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -889,14 +895,14 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
-				return hotel != null;
-			case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
-				return roomManager != null;
-			case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
-				return guestManager != null;
-			case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
-				return billManager != null;
+		case ClassDiagramPackage.BOOKING_MANAGER__HOTEL:
+			return hotel != null;
+		case ClassDiagramPackage.BOOKING_MANAGER__ROOM_MANAGER:
+			return roomManager != null;
+		case ClassDiagramPackage.BOOKING_MANAGER__GUEST_MANAGER:
+			return guestManager != null;
+		case ClassDiagramPackage.BOOKING_MANAGER__BILL_MANAGER:
+			return billManager != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -910,42 +916,42 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ClassDiagramPackage.BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT:
-				createBooking((Date)arguments.get(0), (Date)arguments.get(1), (EList<Hotel_Room>)arguments.get(2), (Company_GuestRecord)arguments.get(3), (Integer)arguments.get(4));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT:
-				findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (Room_RoomType)arguments.get(2), (Integer)arguments.get(3));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___CHECK_IN__INT:
-				checkIn((Integer)arguments.get(0));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___CHECK_OUT__INT:
-				checkOut((Integer)arguments.get(0));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE:
-				assignKey((Hotel_Room)arguments.get(0), (Hotel_Booking)arguments.get(1), (Date)arguments.get(2));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___FIND_BOOKING__DATE_INT:
-				findBooking((Date)arguments.get(0), (Integer)arguments.get(1));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___EDIT_BOOKING__INT:
-				editBooking((Integer)arguments.get(0));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___CANCEL_BOOKING__INT:
-				cancelBooking((Integer)arguments.get(0));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___GET_BOOKINGS__STRING:
-				getBookings((String)arguments.get(0));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___INIT_BOOKING:
-				initBooking();
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE:
-				findAvailableRoomTypes((Date)arguments.get(0), (Date)arguments.get(1));
-				return null;
-			case ClassDiagramPackage.BOOKING_MANAGER___FIND_BOOKING__INT:
-				findBooking((Integer)arguments.get(0));
-				return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___CREATE_BOOKING__DATE_DATE_ELIST_COMPANY_GUESTRECORD_INT:
+			createBooking((Date)arguments.get(0), (Date)arguments.get(1), (EList<Hotel_Room>)arguments.get(2), (Company_GuestRecord)arguments.get(3), (Integer)arguments.get(4));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOMS__DATE_DATE_ROOM_ROOMTYPE_INT:
+			findAvailableRooms((Date)arguments.get(0), (Date)arguments.get(1), (Room_RoomType)arguments.get(2), (Integer)arguments.get(3));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___CHECK_IN__INT:
+			checkIn((Integer)arguments.get(0));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___CHECK_OUT__INT:
+			checkOut((Integer)arguments.get(0));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___ASSIGN_KEY__HOTEL_ROOM_HOTEL_BOOKING_DATE:
+			assignKey((Hotel_Room)arguments.get(0), (Hotel_Booking)arguments.get(1), (Date)arguments.get(2));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___FIND_BOOKING__DATE_INT:
+			findBooking((Date)arguments.get(0), (Integer)arguments.get(1));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___EDIT_BOOKING__INT:
+			editBooking((Integer)arguments.get(0));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___CANCEL_BOOKING__INT:
+			cancelBooking((Integer)arguments.get(0));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___GET_BOOKINGS__STRING:
+			getBookings((String)arguments.get(0));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___INIT_BOOKING:
+			initBooking();
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___FIND_AVAILABLE_ROOM_TYPES__DATE_DATE:
+			findAvailableRoomTypes((Date)arguments.get(0), (Date)arguments.get(1));
+			return null;
+		case ClassDiagramPackage.BOOKING_MANAGER___FIND_BOOKING__INT:
+			findBooking((Integer)arguments.get(0));
+			return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
