@@ -376,7 +376,7 @@ public class BookingManagerImpl extends MinimalEObjectImpl.Container implements 
 			theBooking.setCheckedIn(false);
 			return true;
 		}else{
-			System.out.println("Wrong check-out day");
+			System.out.println("Wrong check-out day or booking not checked in");
 			return false;
 		}
 

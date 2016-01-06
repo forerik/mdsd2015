@@ -96,6 +96,8 @@ public class main {
 		return "  " + room.getRoomNumber() + " - " + room.getRoomType().getName();
 	}
 	
+	//Init() creates hard coded rooms and guests and sets the managers
+	
 	public static void init(Company company, Company_Hotel theHotel, BookingManager bookingManager) {
 
 		ClassDiagramFactory factory = ClassDiagramFactoryImpl.init();	
@@ -112,7 +114,7 @@ public class main {
 		theHotel.getListOfRoomTypes().add(singleRoom);
 		theHotel.getListOfRoomTypes().add(doubleRoom);
 
-		// Creating 20 single and 20 double rooms and adding them to the hotel
+		// Creating 5 single and 5 double rooms and adding them to the hotel
 		Hotel_Room room;
 		
 		for (int i = 1; i < 10; i++) {
@@ -287,7 +289,7 @@ public class main {
 			else if (input.equals("3")) {
 				System.out.println("All bookings in the hotel:");
 				for(Hotel_Booking booking: theHotel.getListOfBookings()) {
-					System.out.println("Booking number: " + booking.getBookingID());
+					System.out.println("  Booking number: " + booking.getBookingID());
 					System.out.println("  Responsible guest: " + showGuest(booking.getResponsibleGuest()));
 					System.out.println("    Price " + booking.getPrice() + ":-");
 					System.out.println("    Payed " + booking.getBill().getPaidAmount() + ":-");
@@ -326,7 +328,8 @@ public class main {
 			}
 
 			System.out.println();
-		
+			
+			
 		}
 	}
 }
